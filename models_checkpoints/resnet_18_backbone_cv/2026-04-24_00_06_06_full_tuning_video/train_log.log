@@ -1,0 +1,1394 @@
+2026-04-24 00:06:06,001 - INFO -  
+===== general parameters =====
+SEED: 42
+DEVICE: cuda
+
+BATCH_SIZE: 16
+input_img_shape: (3, 224, 224)
+split_level: video_id
+
+===== train parameters =====
+
+LR: 1e-05
+
+
+CV_N: 5
+EPOCHS: 10
+STEP_BATCH_LOG: 50
+
+===== about model and save =====
+base_dir_for_model_save: ..\models_checkpoints
+
+model_name: resnet_18_backbone_cv
+prefix_train: full_tuning_video
+
+===== comments =====
+LCA
+cross-validation
+split patient level
+SGDM optimizer
+use augmentation
+use ImageNet stats for (mean, std) normalization 
+
+2026-04-24 00:06:06,078 - INFO - Fold 1
+2026-04-24 00:06:06,085 - INFO - 
+    ======= about folds =======
+    ((5601, 8), (1679, 8))
+    set()
+    label
+0    2619
+1    2982
+Name: image_path, dtype: int64     
+    label
+0    1021
+1     658
+Name: image_path, dtype: int64
+    
+2026-04-24 00:06:06,894 - INFO - 
+    Всего параметров: 11,177,538
+    Обучаемых:       11,177,538
+    
+2026-04-24 00:06:11,383 - INFO - epoch 1 | batch 50 | train_loss: 0.03566176
+2026-04-24 00:06:23,971 - INFO - metrics:
+{'accuracy': 0.5491363907087552, 'balanced_accuracy': 0.6055107186767845, 'f1': 0.6009488666315235, 'precision': 0.4600484261501211, 'recall': 0.8662613981762918}
+2026-04-24 00:06:24,076 - INFO - save checkpoint: ..\models_checkpoints/resnet_18_backbone_cv/2026-04-24_00_06_06_full_tuning_video/fold1/checkpoint/best_model.pth
+2026-04-24 00:06:27,955 - INFO - epoch 1 | batch 100 | train_loss: 0.03466265
+2026-04-24 00:06:40,337 - INFO - metrics:
+{'accuracy': 0.5783204288266826, 'balanced_accuracy': 0.6143777034851701, 'f1': 0.5921658986175116, 'precision': 0.47680890538033394, 'recall': 0.7811550151975684}
+2026-04-24 00:06:40,528 - INFO - save checkpoint: ..\models_checkpoints/resnet_18_backbone_cv/2026-04-24_00_06_06_full_tuning_video/fold1/checkpoint/best_model.pth
+2026-04-24 00:06:44,515 - INFO - epoch 1 | batch 150 | train_loss: 0.03214493
+2026-04-24 00:06:56,827 - INFO - metrics:
+{'accuracy': 0.5884455032757594, 'balanced_accuracy': 0.6383722972590791, 'f1': 0.623433242506812, 'precision': 0.48598130841121495, 'recall': 0.8693009118541033}
+2026-04-24 00:06:56,957 - INFO - save checkpoint: ..\models_checkpoints/resnet_18_backbone_cv/2026-04-24_00_06_06_full_tuning_video/fold1/checkpoint/best_model.pth
+2026-04-24 00:07:01,007 - INFO - epoch 1 | batch 200 | train_loss: 0.02925796
+2026-04-24 00:07:13,389 - INFO - metrics:
+{'accuracy': 0.5675997617629541, 'balanced_accuracy': 0.5998894045708808, 'f1': 0.5759345794392523, 'precision': 0.46774193548387094, 'recall': 0.7492401215805471}
+2026-04-24 00:07:17,277 - INFO - epoch 1 | batch 250 | train_loss: 0.02744023
+2026-04-24 00:07:29,731 - INFO - metrics:
+{'accuracy': 0.5461584276354973, 'balanced_accuracy': 0.5868523915703361, 'f1': 0.5723905723905723, 'precision': 0.45373665480427045, 'recall': 0.7750759878419453}
+2026-04-24 00:07:33,618 - INFO - epoch 1 | batch 300 | train_loss: 0.02535758
+2026-04-24 00:07:45,515 - INFO - metrics:
+{'accuracy': 0.4919594997022037, 'balanced_accuracy': 0.5711956214331857, 'f1': 0.5912793483469094, 'precision': 0.43177046885934217, 'recall': 0.9376899696048632}
+2026-04-24 00:07:49,411 - INFO - epoch 1 | batch 350 | train_loss: 0.02361952
+2026-04-24 00:08:01,308 - INFO - metrics:
+{'accuracy': 0.6212030970815962, 'balanced_accuracy': 0.6039797981000807, 'f1': 0.5203619909502263, 'precision': 0.5164670658682635, 'recall': 0.5243161094224924}
+2026-04-24 00:08:13,171 - INFO - ================= epoch end =================
+2026-04-24 00:08:13,172 - INFO - epoch 1 | train_loss: 0.37705506 | valid_loss: 0.93200248 | valid balanc. acc.: 0.57445915
+2026-04-24 00:08:13,172 - INFO - metrics:
+{'accuracy': 0.5521143537820131, 'balanced_accuracy': 0.5744591541161446, 'f1': 0.5425790754257908, 'precision': 0.45233265720081134, 'recall': 0.6778115501519757}
+2026-04-24 00:08:17,277 - INFO - epoch 2 | batch 50 | train_loss: 0.02128342
+2026-04-24 00:08:29,178 - INFO - metrics:
+{'accuracy': 0.5735556879094699, 'balanced_accuracy': 0.6193753367727569, 'f1': 0.6044198895027625, 'precision': 0.4748263888888889, 'recall': 0.831306990881459}
+2026-04-24 00:08:33,450 - INFO - epoch 2 | batch 100 | train_loss: 0.01776766
+2026-04-24 00:08:46,637 - INFO - metrics:
+{'accuracy': 0.5991661703394878, 'balanced_accuracy': 0.6115257406023655, 'f1': 0.5666452028332261, 'precision': 0.49162011173184356, 'recall': 0.668693009118541}
+2026-04-24 00:08:50,668 - INFO - epoch 2 | batch 150 | train_loss: 0.01555637
+2026-04-24 00:09:03,056 - INFO - metrics:
+{'accuracy': 0.5753424657534246, 'balanced_accuracy': 0.5986911633805585, 'f1': 0.5660377358490566, 'precision': 0.4720812182741117, 'recall': 0.7066869300911854}
+2026-04-24 00:09:06,982 - INFO - epoch 2 | batch 200 | train_loss: 0.01416126
+2026-04-24 00:09:18,782 - INFO - metrics:
+{'accuracy': 0.5711733174508636, 'balanced_accuracy': 0.5933720144443881, 'f1': 0.5599022004889975, 'precision': 0.46830265848670755, 'recall': 0.6960486322188449}
+2026-04-24 00:09:22,730 - INFO - epoch 2 | batch 250 | train_loss: 0.01301302
+2026-04-24 00:09:34,511 - INFO - metrics:
+{'accuracy': 0.5086360929124479, 'balanced_accuracy': 0.5751818200762706, 'f1': 0.5848012078510317, 'precision': 0.43717080511662904, 'recall': 0.8829787234042553}
+2026-04-24 00:09:38,393 - INFO - epoch 2 | batch 300 | train_loss: 0.01231952
+2026-04-24 00:09:50,562 - INFO - metrics:
+{'accuracy': 0.6092912447885647, 'balanced_accuracy': 0.6247138361877771, 'f1': 0.5826972010178118, 'precision': 0.5010940919037199, 'recall': 0.6960486322188449}
+2026-04-24 00:09:54,443 - INFO - epoch 2 | batch 350 | train_loss: 0.01163848
+2026-04-24 00:10:06,658 - INFO - metrics:
+{'accuracy': 0.5205479452054794, 'balanced_accuracy': 0.5714680166354578, 'f1': 0.5688269951794322, 'precision': 0.4392059553349876, 'recall': 0.8069908814589666}
+2026-04-24 00:10:18,457 - INFO - ================= epoch end =================
+2026-04-24 00:10:18,458 - INFO - epoch 2 | train_loss: 0.18583448 | valid_loss: 1.04987717 | valid balanc. acc.: 0.58749542
+2026-04-24 00:10:18,458 - INFO - metrics:
+{'accuracy': 0.5640262060750447, 'balanced_accuracy': 0.5874954228675028, 'f1': 0.5558252427184466, 'precision': 0.4626262626262626, 'recall': 0.6960486322188449}
+2026-04-24 00:10:22,454 - INFO - epoch 3 | batch 50 | train_loss: 0.01459389
+2026-04-24 00:10:34,391 - INFO - metrics:
+{'accuracy': 0.5699821322215605, 'balanced_accuracy': 0.6086023297976535, 'f1': 0.5893060295790671, 'precision': 0.4709090909090909, 'recall': 0.7872340425531915}
+2026-04-24 00:10:38,420 - INFO - epoch 3 | batch 100 | train_loss: 0.01106641
+2026-04-24 00:10:51,079 - INFO - metrics:
+{'accuracy': 0.5163787969029184, 'balanced_accuracy': 0.5758747160689354, 'f1': 0.5797101449275363, 'precision': 0.43956043956043955, 'recall': 0.851063829787234}
+2026-04-24 00:10:55,020 - INFO - epoch 3 | batch 150 | train_loss: 0.00986302
+2026-04-24 00:11:07,361 - INFO - metrics:
+{'accuracy': 0.5306730196545563, 'balanced_accuracy': 0.5743899389417967, 'f1': 0.5646408839779006, 'precision': 0.4435763888888889, 'recall': 0.776595744680851}
+2026-04-24 00:11:11,352 - INFO - epoch 3 | batch 200 | train_loss: 0.00852510
+2026-04-24 00:11:23,566 - INFO - metrics:
+{'accuracy': 0.5104228707564026, 'balanced_accuracy': 0.5690864192385439, 'f1': 0.5736514522821576, 'precision': 0.43543307086614175, 'recall': 0.8404255319148937}
+2026-04-24 00:11:28,323 - INFO - epoch 3 | batch 250 | train_loss: 0.00781753
+2026-04-24 00:11:46,504 - INFO - metrics:
+{'accuracy': 0.5634306134603931, 'balanced_accuracy': 0.6013243170025215, 'f1': 0.5823361823361823, 'precision': 0.4658158614402917, 'recall': 0.776595744680851}
+2026-04-24 00:11:50,395 - INFO - epoch 3 | batch 300 | train_loss: 0.00730166
+2026-04-24 00:12:02,605 - INFO - metrics:
+{'accuracy': 0.5116140559857058, 'balanced_accuracy': 0.5587190280701023, 'f1': 0.5548317046688382, 'precision': 0.43158783783783783, 'recall': 0.776595744680851}
+2026-04-24 00:12:06,493 - INFO - epoch 3 | batch 350 | train_loss: 0.00675008
+2026-04-24 00:12:18,736 - INFO - metrics:
+{'accuracy': 0.4949374627754616, 'balanced_accuracy': 0.5493295803327687, 'f1': 0.5541535226077813, 'precision': 0.42363344051446944, 'recall': 0.8009118541033434}
+2026-04-24 00:12:30,587 - INFO - ================= epoch end =================
+2026-04-24 00:12:30,588 - INFO - epoch 3 | train_loss: 0.10769502 | valid_loss: 2.03221990 | valid balanc. acc.: 0.54905942
+2026-04-24 00:12:30,589 - INFO - metrics:
+{'accuracy': 0.4949374627754616, 'balanced_accuracy': 0.5490594178780562, 'f1': 0.5536842105263158, 'precision': 0.42351046698872785, 'recall': 0.7993920972644377}
+2026-04-24 00:12:34,605 - INFO - epoch 4 | batch 50 | train_loss: 0.01005063
+2026-04-24 00:12:46,518 - INFO - metrics:
+{'accuracy': 0.5485407980941036, 'balanced_accuracy': 0.5917830424311347, 'f1': 0.5788888888888889, 'precision': 0.45621716287215414, 'recall': 0.7917933130699089}
+2026-04-24 00:12:50,407 - INFO - epoch 4 | batch 100 | train_loss: 0.00701000
+2026-04-24 00:13:02,289 - INFO - metrics:
+{'accuracy': 0.4889815366289458, 'balanced_accuracy': 0.5636139549699473, 'f1': 0.5822784810126582, 'precision': 0.4283667621776504, 'recall': 0.9088145896656535}
+2026-04-24 00:13:06,179 - INFO - epoch 4 | batch 150 | train_loss: 0.00633433
+2026-04-24 00:13:18,059 - INFO - metrics:
+{'accuracy': 0.5306730196545563, 'balanced_accuracy': 0.5822246501284574, 'f1': 0.5781584582441114, 'precision': 0.4462809917355372, 'recall': 0.8206686930091185}
+2026-04-24 00:13:21,947 - INFO - epoch 4 | batch 200 | train_loss: 0.00543124
+2026-04-24 00:13:34,220 - INFO - metrics:
+{'accuracy': 0.521143537820131, 'balanced_accuracy': 0.5716875701454858, 'f1': 0.5686695278969958, 'precision': 0.439469320066335, 'recall': 0.8054711246200608}
+2026-04-24 00:13:38,190 - INFO - epoch 4 | batch 250 | train_loss: 0.00564437
+2026-04-24 00:13:50,539 - INFO - metrics:
+{'accuracy': 0.5223347230494342, 'balanced_accuracy': 0.5807718757163398, 'f1': 0.5827263267429761, 'precision': 0.4430379746835443, 'recall': 0.851063829787234}
+2026-04-24 00:13:54,876 - INFO - epoch 4 | batch 300 | train_loss: 0.00491020
+2026-04-24 00:14:06,918 - INFO - metrics:
+{'accuracy': 0.5104228707564026, 'balanced_accuracy': 0.5650339824178572, 'f1': 0.5669125395152792, 'precision': 0.4338709677419355, 'recall': 0.817629179331307}
+2026-04-24 00:14:11,611 - INFO - epoch 4 | batch 350 | train_loss: 0.00448652
+2026-04-24 00:14:23,705 - INFO - metrics:
+{'accuracy': 0.5032757593805837, 'balanced_accuracy': 0.5596977157503966, 'f1': 0.5642633228840125, 'precision': 0.4299363057324841, 'recall': 0.8206686930091185}
+2026-04-24 00:14:36,031 - INFO - ================= epoch end =================
+2026-04-24 00:14:36,033 - INFO - epoch 4 | train_loss: 0.07159390 | valid_loss: 2.21806498 | valid balanc. acc.: 0.56596281
+2026-04-24 00:14:36,033 - INFO - metrics:
+{'accuracy': 0.5122096486003573, 'balanced_accuracy': 0.5659628054026538, 'f1': 0.5668958223162348, 'precision': 0.43471208434712083, 'recall': 0.8145896656534954}
+2026-04-24 00:14:40,063 - INFO - epoch 5 | batch 50 | train_loss: 0.00755385
+2026-04-24 00:14:51,894 - INFO - metrics:
+{'accuracy': 0.5711733174508636, 'balanced_accuracy': 0.603097862814036, 'f1': 0.5784543325526932, 'precision': 0.4704761904761905, 'recall': 0.7507598784194529}
+2026-04-24 00:14:55,776 - INFO - epoch 5 | batch 100 | train_loss: 0.00557836
+2026-04-24 00:15:07,574 - INFO - metrics:
+{'accuracy': 0.5151876116736153, 'balanced_accuracy': 0.5719234971376176, 'f1': 0.5742677824267782, 'precision': 0.43779904306220097, 'recall': 0.8343465045592705}
+2026-04-24 00:15:11,466 - INFO - epoch 5 | batch 150 | train_loss: 0.00445781
+2026-04-24 00:15:23,909 - INFO - metrics:
+{'accuracy': 0.5145920190589637, 'balanced_accuracy': 0.571974106082302, 'f1': 0.5748565466875326, 'precision': 0.43764892772041303, 'recall': 0.837386018237082}
+2026-04-24 00:15:27,792 - INFO - epoch 5 | batch 200 | train_loss: 0.00363591
+2026-04-24 00:15:40,485 - INFO - metrics:
+{'accuracy': 0.5080405002977963, 'balanced_accuracy': 0.5630751185588954, 'f1': 0.5657202944269191, 'precision': 0.432475884244373, 'recall': 0.817629179331307}
+2026-04-24 00:15:44,400 - INFO - epoch 5 | batch 250 | train_loss: 0.00304972
+2026-04-24 00:15:57,421 - INFO - metrics:
+{'accuracy': 0.5044669446098868, 'balanced_accuracy': 0.5595964978610278, 'f1': 0.5630252100840336, 'precision': 0.4301765650080257, 'recall': 0.8145896656534954}
+2026-04-24 00:16:01,992 - INFO - epoch 5 | batch 300 | train_loss: 0.00383940
+2026-04-24 00:16:14,921 - INFO - metrics:
+{'accuracy': 0.5241215008933889, 'balanced_accuracy': 0.5719748503314885, 'f1': 0.566467715680955, 'precision': 0.44050632911392407, 'recall': 0.7933130699088146}
+2026-04-24 00:16:18,816 - INFO - epoch 5 | batch 350 | train_loss: 0.00340984
+2026-04-24 00:16:30,562 - INFO - metrics:
+{'accuracy': 0.5294818344252531, 'balanced_accuracy': 0.5753016441953029, 'f1': 0.5673603504928806, 'precision': 0.4434931506849315, 'recall': 0.7872340425531915}
+2026-04-24 00:16:42,594 - INFO - ================= epoch end =================
+2026-04-24 00:16:42,594 - INFO - epoch 5 | train_loss: 0.05440214 | valid_loss: 2.08560131 | valid balanc. acc.: 0.57579136
+2026-04-24 00:16:42,594 - INFO - metrics:
+{'accuracy': 0.5300774270399047, 'balanced_accuracy': 0.5757913601600434, 'f1': 0.5676712328767123, 'precision': 0.4438731790916881, 'recall': 0.7872340425531915}
+2026-04-24 00:16:46,651 - INFO - epoch 6 | batch 50 | train_loss: 0.00619423
+2026-04-24 00:16:58,577 - INFO - metrics:
+{'accuracy': 0.5473496128648004, 'balanced_accuracy': 0.5870213361356796, 'f1': 0.5715896279594137, 'precision': 0.4543010752688172, 'recall': 0.770516717325228}
+2026-04-24 00:17:02,498 - INFO - epoch 6 | batch 100 | train_loss: 0.00408976
+2026-04-24 00:17:14,597 - INFO - metrics:
+{'accuracy': 0.55092316855271, 'balanced_accuracy': 0.5910402817429721, 'f1': 0.5754504504504504, 'precision': 0.45706618962432916, 'recall': 0.776595744680851}
+2026-04-24 00:17:18,646 - INFO - epoch 6 | batch 150 | train_loss: 0.00316337
+2026-04-24 00:17:31,265 - INFO - metrics:
+{'accuracy': 0.5241215008933889, 'balanced_accuracy': 0.5749466373333254, 'f1': 0.5715817694369973, 'precision': 0.4415907207953604, 'recall': 0.8100303951367781}
+2026-04-24 00:17:35,149 - INFO - epoch 6 | batch 200 | train_loss: 0.00262063
+2026-04-24 00:17:47,131 - INFO - metrics:
+{'accuracy': 0.535437760571769, 'balanced_accuracy': 0.5815496161162697, 'f1': 0.5728368017524644, 'precision': 0.4477739726027397, 'recall': 0.7948328267477204}
+2026-04-24 00:17:51,195 - INFO - epoch 6 | batch 250 | train_loss: 0.00222140
+2026-04-24 00:18:04,611 - INFO - metrics:
+{'accuracy': 0.49434187016081, 'balanced_accuracy': 0.5609971748300879, 'f1': 0.5740090316106372, 'precision': 0.42846441947565544, 'recall': 0.8693009118541033}
+2026-04-24 00:18:08,525 - INFO - epoch 6 | batch 300 | train_loss: 0.00263601
+2026-04-24 00:18:21,491 - INFO - metrics:
+{'accuracy': 0.5151876116736153, 'balanced_accuracy': 0.5635484610415321, 'f1': 0.56, 'precision': 0.43456375838926176, 'recall': 0.7872340425531915}
+2026-04-24 00:18:25,412 - INFO - epoch 6 | batch 350 | train_loss: 0.00231181
+2026-04-24 00:18:37,893 - INFO - metrics:
+{'accuracy': 0.5068493150684932, 'balanced_accuracy': 0.5583134122634404, 'f1': 0.55863539445629, 'precision': 0.4302134646962233, 'recall': 0.7963525835866262}
+2026-04-24 00:18:50,094 - INFO - ================= epoch end =================
+2026-04-24 00:18:50,094 - INFO - epoch 6 | train_loss: 0.03688363 | valid_loss: 2.35911997 | valid balanc. acc.: 0.55831341
+2026-04-24 00:18:50,095 - INFO - metrics:
+{'accuracy': 0.5068493150684932, 'balanced_accuracy': 0.5583134122634404, 'f1': 0.55863539445629, 'precision': 0.4302134646962233, 'recall': 0.7963525835866262}
+2026-04-24 00:18:54,099 - INFO - epoch 7 | batch 50 | train_loss: 0.00400215
+2026-04-24 00:19:06,627 - INFO - metrics:
+{'accuracy': 0.5378201310303752, 'balanced_accuracy': 0.5799963680639697, 'f1': 0.5679287305122495, 'precision': 0.44815465729349735, 'recall': 0.7750759878419453}
+2026-04-24 00:19:10,534 - INFO - epoch 7 | batch 100 | train_loss: 0.00231192
+2026-04-24 00:19:22,931 - INFO - metrics:
+{'accuracy': 0.5151876116736153, 'balanced_accuracy': 0.5738146343206046, 'f1': 0.5773624091381101, 'precision': 0.4384858044164038, 'recall': 0.8449848024316109}
+2026-04-24 00:19:26,860 - INFO - epoch 7 | batch 150 | train_loss: 0.00336488
+2026-04-24 00:19:39,354 - INFO - metrics:
+{'accuracy': 0.5026801667659321, 'balanced_accuracy': 0.5616394618780681, 'f1': 0.5680289705121573, 'precision': 0.43058823529411766, 'recall': 0.8343465045592705}
+2026-04-24 00:19:43,259 - INFO - epoch 7 | batch 200 | train_loss: 0.00262131
+2026-04-24 00:19:55,414 - INFO - metrics:
+{'accuracy': 0.5020845741512805, 'balanced_accuracy': 0.5622303957321775, 'f1': 0.5695159629248198, 'precision': 0.43068535825545173, 'recall': 0.8404255319148937}
+2026-04-24 00:19:59,330 - INFO - epoch 7 | batch 250 | train_loss: 0.00216091
+2026-04-24 00:20:11,610 - INFO - metrics:
+{'accuracy': 0.5092316855270994, 'balanced_accuracy': 0.5643247129430887, 'f1': 0.5667718191377498, 'precision': 0.4332797427652733, 'recall': 0.8191489361702128}
+2026-04-24 00:20:15,528 - INFO - epoch 7 | batch 300 | train_loss: 0.00184427
+2026-04-24 00:20:27,855 - INFO - metrics:
+{'accuracy': 0.5074449076831448, 'balanced_accuracy': 0.5652870271412793, 'f1': 0.5699427977119085, 'precision': 0.433201581027668, 'recall': 0.8328267477203647}
+2026-04-24 00:20:31,739 - INFO - epoch 7 | batch 350 | train_loss: 0.00160247
+2026-04-24 00:20:43,968 - INFO - metrics:
+{'accuracy': 0.5223347230494342, 'balanced_accuracy': 0.5826630128993269, 'f1': 0.5857438016528925, 'precision': 0.44366197183098594, 'recall': 0.8617021276595744}
+2026-04-24 00:20:56,826 - INFO - ================= epoch end =================
+2026-04-24 00:20:56,828 - INFO - epoch 7 | train_loss: 0.02560203 | valid_loss: 2.50706740 | valid balanc. acc.: 0.60213406
+2026-04-24 00:20:56,828 - INFO - metrics:
+{'accuracy': 0.5539011316259679, 'balanced_accuracy': 0.6021340601174723, 'f1': 0.591825613079019, 'precision': 0.4613423959218352, 'recall': 0.8252279635258358}
+2026-04-24 00:21:00,897 - INFO - epoch 8 | batch 50 | train_loss: 0.00293830
+2026-04-24 00:21:14,334 - INFO - metrics:
+{'accuracy': 0.5205479452054794, 'balanced_accuracy': 0.5679559047241962, 'f1': 0.5627376425855514, 'precision': 0.4378698224852071, 'recall': 0.7872340425531915}
+2026-04-24 00:21:18,255 - INFO - epoch 8 | batch 100 | train_loss: 0.00170225
+2026-04-24 00:21:30,904 - INFO - metrics:
+{'accuracy': 0.4812388326384753, 'balanced_accuracy': 0.5658928459791194, 'f1': 0.5912717034256217, 'precision': 0.42769857433808556, 'recall': 0.9574468085106383}
+2026-04-24 00:21:34,826 - INFO - epoch 8 | batch 150 | train_loss: 0.00216893
+2026-04-24 00:21:47,708 - INFO - metrics:
+{'accuracy': 0.5026801667659321, 'balanced_accuracy': 0.5527241008725577, 'f1': 0.5527584359935725, 'precision': 0.4267990074441687, 'recall': 0.78419452887538}
+2026-04-24 00:21:51,646 - INFO - epoch 8 | batch 200 | train_loss: 0.00166177
+2026-04-24 00:22:04,784 - INFO - metrics:
+{'accuracy': 0.5062537224538416, 'balanced_accuracy': 0.5572833713892751, 'f1': 0.5573945541911373, 'precision': 0.42962962962962964, 'recall': 0.7933130699088146}
+2026-04-24 00:22:08,976 - INFO - epoch 8 | batch 250 | train_loss: 0.00136347
+2026-04-24 00:22:21,489 - INFO - metrics:
+{'accuracy': 0.5068493150684932, 'balanced_accuracy': 0.5564222750804533, 'f1': 0.5553168635875403, 'precision': 0.42940199335548174, 'recall': 0.7857142857142857}
+2026-04-24 00:22:25,440 - INFO - epoch 8 | batch 300 | train_loss: 0.00114989
+2026-04-24 00:22:37,835 - INFO - metrics:
+{'accuracy': 0.4949374627754616, 'balanced_accuracy': 0.5493295803327687, 'f1': 0.5541535226077813, 'precision': 0.42363344051446944, 'recall': 0.8009118541033434}
+2026-04-24 00:22:41,752 - INFO - epoch 8 | batch 350 | train_loss: 0.00099363
+2026-04-24 00:22:54,170 - INFO - metrics:
+{'accuracy': 0.4991066110780226, 'balanced_accuracy': 0.5557293790877886, 'f1': 0.5612936880542514, 'precision': 0.4273232724384432, 'recall': 0.817629179331307}
+2026-04-24 00:23:06,655 - INFO - ================= epoch end =================
+2026-04-24 00:23:06,656 - INFO - epoch 8 | train_loss: 0.01585489 | valid_loss: 3.64415305 | valid balanc. acc.: 0.55615137
+2026-04-24 00:23:06,658 - INFO - metrics:
+{'accuracy': 0.4973198332340679, 'balanced_accuracy': 0.5561513683765544, 'f1': 0.5635987590486039, 'precision': 0.427115987460815, 'recall': 0.8282674772036475}
+2026-04-24 00:23:10,746 - INFO - epoch 9 | batch 50 | train_loss: 0.00404703
+2026-04-24 00:23:22,850 - INFO - metrics:
+{'accuracy': 0.5014889815366289, 'balanced_accuracy': 0.5625511671315743, 'f1': 0.5705489994869164, 'precision': 0.43067389620449265, 'recall': 0.8449848024316109}
+2026-04-24 00:23:26,754 - INFO - epoch 9 | batch 100 | train_loss: 0.00214449
+2026-04-24 00:23:39,534 - INFO - metrics:
+{'accuracy': 0.5044669446098868, 'balanced_accuracy': 0.5595964978610278, 'f1': 0.5630252100840336, 'precision': 0.4301765650080257, 'recall': 0.8145896656534954}
+2026-04-24 00:23:43,623 - INFO - epoch 9 | batch 150 | train_loss: 0.00144310
+2026-04-24 00:23:55,999 - INFO - metrics:
+{'accuracy': 0.5038713519952353, 'balanced_accuracy': 0.5601874317151371, 'f1': 0.5645582854155776, 'precision': 0.4302788844621514, 'recall': 0.8206686930091185}
+2026-04-24 00:23:59,985 - INFO - epoch 9 | batch 200 | train_loss: 0.00110589
+2026-04-24 00:24:12,668 - INFO - metrics:
+{'accuracy': 0.467540202501489, 'balanced_accuracy': 0.5605729527937626, 'f1': 0.5932666060054596, 'precision': 0.42337662337662335, 'recall': 0.9908814589665653}
+2026-04-24 00:24:16,637 - INFO - epoch 9 | batch 250 | train_loss: 0.00205951
+2026-04-24 00:24:28,699 - INFO - metrics:
+{'accuracy': 0.49672424061941634, 'balanced_accuracy': 0.5535003527741145, 'f1': 0.559666492965086, 'precision': 0.42585249801744646, 'recall': 0.8161094224924013}
+2026-04-24 00:24:32,588 - INFO - epoch 9 | batch 300 | train_loss: 0.00175380
+2026-04-24 00:24:44,860 - INFO - metrics:
+{'accuracy': 0.4925550923168553, 'balanced_accuracy': 0.5527739655680557, 'f1': 0.5621788283658787, 'precision': 0.4246894409937888, 'recall': 0.831306990881459}
+2026-04-24 00:24:48,761 - INFO - epoch 9 | batch 350 | train_loss: 0.00151824
+2026-04-24 00:25:01,632 - INFO - metrics:
+{'accuracy': 0.5110184633710542, 'balanced_accuracy': 0.5641728861090355, 'f1': 0.5649178590355061, 'precision': 0.43368592351505286, 'recall': 0.8100303951367781}
+2026-04-24 00:25:13,579 - INFO - ================= epoch end =================
+2026-04-24 00:25:13,580 - INFO - epoch 9 | train_loss: 0.02422264 | valid_loss: 2.82068722 | valid balanc. acc.: 0.56417289
+2026-04-24 00:25:13,581 - INFO - metrics:
+{'accuracy': 0.5110184633710542, 'balanced_accuracy': 0.5641728861090355, 'f1': 0.5649178590355061, 'precision': 0.43368592351505286, 'recall': 0.8100303951367781}
+2026-04-24 00:25:17,581 - INFO - epoch 10 | batch 50 | train_loss: 0.00200934
+2026-04-24 00:25:29,747 - INFO - metrics:
+{'accuracy': 0.5026801667659321, 'balanced_accuracy': 0.5583975124215189, 'f1': 0.5625982189628077, 'precision': 0.4292565947242206, 'recall': 0.8161094224924013}
+2026-04-24 00:25:33,631 - INFO - epoch 10 | batch 100 | train_loss: 0.00108586
+2026-04-24 00:25:45,492 - INFO - metrics:
+{'accuracy': 0.5050625372245384, 'balanced_accuracy': 0.5625176759181802, 'f1': 0.5674128058302967, 'precision': 0.43151227236737927, 'recall': 0.8282674772036475}
+2026-04-24 00:25:49,420 - INFO - epoch 10 | batch 150 | train_loss: 0.00073602
+2026-04-24 00:26:01,812 - INFO - metrics:
+{'accuracy': 0.5175699821322216, 'balanced_accuracy': 0.5706404115400302, 'f1': 0.5700636942675159, 'precision': 0.43800978792822187, 'recall': 0.8161094224924013}
+2026-04-24 00:26:05,700 - INFO - epoch 10 | batch 200 | train_loss: 0.00056241
+2026-04-24 00:26:18,188 - INFO - metrics:
+{'accuracy': 0.5128052412150089, 'balanced_accuracy': 0.5672630087315315, 'f1': 0.5685654008438819, 'precision': 0.43537964458804523, 'recall': 0.8191489361702128}
+2026-04-24 00:26:22,135 - INFO - epoch 10 | batch 250 | train_loss: 0.00192337
+2026-04-24 00:26:35,139 - INFO - metrics:
+{'accuracy': 0.5253126861226921, 'balanced_accuracy': 0.5729542822609694, 'f1': 0.5670831070070613, 'precision': 0.44125105663567205, 'recall': 0.7933130699088146}
+2026-04-24 00:26:39,027 - INFO - epoch 10 | batch 300 | train_loss: 0.00169706
+2026-04-24 00:26:51,304 - INFO - metrics:
+{'accuracy': 0.4949374627754616, 'balanced_accuracy': 0.5520312048798931, 'f1': 0.558792924037461, 'precision': 0.4248417721518987, 'recall': 0.8161094224924013}
+2026-04-24 00:26:55,215 - INFO - epoch 10 | batch 350 | train_loss: 0.00147432
+2026-04-24 00:27:08,042 - INFO - metrics:
+{'accuracy': 0.509827278141751, 'balanced_accuracy': 0.5618426419059924, 'f1': 0.5620010643959553, 'precision': 0.43243243243243246, 'recall': 0.8024316109422492}
+2026-04-24 00:27:20,006 - INFO - ================= epoch end =================
+2026-04-24 00:27:20,007 - INFO - epoch 10 | train_loss: 0.02352662 | valid_loss: 2.64420663 | valid balanc. acc.: 0.56172431
+2026-04-24 00:27:20,007 - INFO - metrics:
+{'accuracy': 0.5080405002977963, 'balanced_accuracy': 0.5617243062853332, 'f1': 0.5634249471458774, 'precision': 0.4319286871961102, 'recall': 0.8100303951367781}
+2026-04-24 00:27:20,023 - INFO - Fold 2
+2026-04-24 00:27:20,052 - INFO - 
+    ======= about folds =======
+    ((5771, 8), (1509, 8))
+    set()
+    label
+0    2993
+1    2778
+Name: image_path, dtype: int64     
+    label
+0    647
+1    862
+Name: image_path, dtype: int64
+    
+2026-04-24 00:27:20,290 - INFO - 
+    Всего параметров: 11,177,538
+    Обучаемых:       11,177,538
+    
+2026-04-24 00:27:24,327 - INFO - epoch 1 | batch 50 | train_loss: 0.03746188
+2026-04-24 00:27:35,430 - INFO - metrics:
+{'accuracy': 0.5891318754141815, 'balanced_accuracy': 0.5937254578511567, 'f1': 0.6095717884130982, 'precision': 0.6666666666666666, 'recall': 0.5614849187935035}
+2026-04-24 00:27:35,534 - INFO - save checkpoint: ..\models_checkpoints/resnet_18_backbone_cv/2026-04-24_00_06_06_full_tuning_video/fold2/checkpoint/best_model.pth
+2026-04-24 00:27:39,441 - INFO - epoch 1 | batch 100 | train_loss: 0.03581919
+2026-04-24 00:27:50,442 - INFO - metrics:
+{'accuracy': 0.6050364479787939, 'balanced_accuracy': 0.6134291052403202, 'f1': 0.615979381443299, 'precision': 0.6927536231884058, 'recall': 0.5545243619489559}
+2026-04-24 00:27:50,576 - INFO - save checkpoint: ..\models_checkpoints/resnet_18_backbone_cv/2026-04-24_00_06_06_full_tuning_video/fold2/checkpoint/best_model.pth
+2026-04-24 00:27:54,487 - INFO - epoch 1 | batch 150 | train_loss: 0.03272559
+2026-04-24 00:28:06,002 - INFO - metrics:
+{'accuracy': 0.5964214711729622, 'balanced_accuracy': 0.6109000311987864, 'f1': 0.5904505716207128, 'precision': 0.7024, 'recall': 0.5092807424593968}
+2026-04-24 00:28:09,889 - INFO - epoch 1 | batch 200 | train_loss: 0.03040432
+2026-04-24 00:28:21,147 - INFO - metrics:
+{'accuracy': 0.588469184890656, 'balanced_accuracy': 0.5671240097971362, 'f1': 0.6655896607431341, 'precision': 0.6211055276381909, 'recall': 0.7169373549883991}
+2026-04-24 00:28:25,071 - INFO - epoch 1 | batch 250 | train_loss: 0.02803974
+2026-04-24 00:28:36,707 - INFO - metrics:
+{'accuracy': 0.5957587806494367, 'balanced_accuracy': 0.5617467017144988, 'f1': 0.6934673366834171, 'precision': 0.6117021276595744, 'recall': 0.8004640371229699}
+2026-04-24 00:28:40,747 - INFO - epoch 1 | batch 300 | train_loss: 0.02607823
+2026-04-24 00:28:52,145 - INFO - metrics:
+{'accuracy': 0.5520212060967529, 'balanced_accuracy': 0.5891917721269324, 'f1': 0.4557165861513688, 'precision': 0.7447368421052631, 'recall': 0.32830626450116007}
+2026-04-24 00:28:56,068 - INFO - epoch 1 | batch 350 | train_loss: 0.02479396
+2026-04-24 00:29:07,691 - INFO - metrics:
+{'accuracy': 0.5778661365142479, 'balanced_accuracy': 0.547049204430945, 'f1': 0.6738351254480287, 'precision': 0.6031164069660861, 'recall': 0.7633410672853829}
+2026-04-24 00:29:19,512 - INFO - ================= epoch end =================
+2026-04-24 00:29:19,512 - INFO - epoch 1 | train_loss: 0.38911383 | valid_loss: 1.01621545 | valid balanc. acc.: 0.60787160
+2026-04-24 00:29:19,512 - INFO - metrics:
+{'accuracy': 0.6169648774022531, 'balanced_accuracy': 0.6078715972702855, 'f1': 0.6670506912442397, 'precision': 0.6624713958810069, 'recall': 0.6716937354988399}
+2026-04-24 00:29:23,539 - INFO - epoch 2 | batch 50 | train_loss: 0.02113221
+2026-04-24 00:29:34,196 - INFO - metrics:
+{'accuracy': 0.6189529489728297, 'balanced_accuracy': 0.6275375909516347, 'f1': 0.6297488731487444, 'precision': 0.7076700434153401, 'recall': 0.5672853828306265}
+2026-04-24 00:29:34,305 - INFO - save checkpoint: ..\models_checkpoints/resnet_18_backbone_cv/2026-04-24_00_06_06_full_tuning_video/fold2/checkpoint/best_model.pth
+2026-04-24 00:29:38,177 - INFO - epoch 2 | batch 100 | train_loss: 0.01872751
+2026-04-24 00:29:48,770 - INFO - metrics:
+{'accuracy': 0.6110006626905236, 'balanced_accuracy': 0.6404303998106556, 'f1': 0.5602996254681648, 'precision': 0.7906976744186046, 'recall': 0.43387470997679817}
+2026-04-24 00:29:48,880 - INFO - save checkpoint: ..\models_checkpoints/resnet_18_backbone_cv/2026-04-24_00_06_06_full_tuning_video/fold2/checkpoint/best_model.pth
+2026-04-24 00:29:52,749 - INFO - epoch 2 | batch 150 | train_loss: 0.01673714
+2026-04-24 00:30:03,541 - INFO - metrics:
+{'accuracy': 0.6315440689198144, 'balanced_accuracy': 0.6219818760153053, 'f1': 0.6811926605504587, 'precision': 0.673469387755102, 'recall': 0.6890951276102089}
+2026-04-24 00:30:07,412 - INFO - epoch 2 | batch 200 | train_loss: 0.01519331
+2026-04-24 00:30:18,094 - INFO - metrics:
+{'accuracy': 0.5659377070907886, 'balanced_accuracy': 0.5130927321171783, 'f1': 0.6994033960532354, 'precision': 0.5785876993166287, 'recall': 0.8839907192575406}
+2026-04-24 00:30:21,972 - INFO - epoch 2 | batch 250 | train_loss: 0.01421275
+2026-04-24 00:30:32,602 - INFO - metrics:
+{'accuracy': 0.6269052352551359, 'balanced_accuracy': 0.6134882753526001, 'f1': 0.6842400448681997, 'precision': 0.6623235613463626, 'recall': 0.7076566125290024}
+2026-04-24 00:30:36,471 - INFO - epoch 2 | batch 300 | train_loss: 0.01336474
+2026-04-24 00:30:47,096 - INFO - metrics:
+{'accuracy': 0.6169648774022531, 'balanced_accuracy': 0.5995832989668539, 'f1': 0.6827661909989023, 'precision': 0.6479166666666667, 'recall': 0.7215777262180975}
+2026-04-24 00:30:51,011 - INFO - epoch 2 | batch 350 | train_loss: 0.01252223
+2026-04-24 00:31:01,848 - INFO - metrics:
+{'accuracy': 0.6361829025844931, 'balanced_accuracy': 0.6329812412813736, 'f1': 0.6730196545562835, 'precision': 0.6915544675642595, 'recall': 0.6554524361948956}
+2026-04-24 00:31:14,025 - INFO - ================= epoch end =================
+2026-04-24 00:31:14,025 - INFO - epoch 2 | train_loss: 0.19996421 | valid_loss: 1.20501696 | valid balanc. acc.: 0.64724662
+2026-04-24 00:31:14,025 - INFO - metrics:
+{'accuracy': 0.6368455931080186, 'balanced_accuracy': 0.6472466174419147, 'f1': 0.6436931079323797, 'precision': 0.7322485207100592, 'recall': 0.574245939675174}
+2026-04-24 00:31:14,158 - INFO - save checkpoint: ..\models_checkpoints/resnet_18_backbone_cv/2026-04-24_00_06_06_full_tuning_video/fold2/checkpoint/best_model.pth
+2026-04-24 00:31:18,163 - INFO - epoch 3 | batch 50 | train_loss: 0.01321626
+2026-04-24 00:31:28,750 - INFO - metrics:
+{'accuracy': 0.6308813783962889, 'balanced_accuracy': 0.6304611324083671, 'f1': 0.6622195269860521, 'precision': 0.6937738246505718, 'recall': 0.6334106728538283}
+2026-04-24 00:31:32,630 - INFO - epoch 3 | batch 100 | train_loss: 0.01084245
+2026-04-24 00:31:43,352 - INFO - metrics:
+{'accuracy': 0.5931080185553347, 'balanced_accuracy': 0.5663655565397319, 'f1': 0.6792058516196448, 'precision': 0.6178707224334601, 'recall': 0.7540603248259861}
+2026-04-24 00:31:47,256 - INFO - epoch 3 | batch 150 | train_loss: 0.00905379
+2026-04-24 00:31:57,978 - INFO - metrics:
+{'accuracy': 0.614314115308151, 'balanced_accuracy': 0.6165382256855665, 'f1': 0.6402966625463535, 'precision': 0.6851851851851852, 'recall': 0.6009280742459396}
+2026-04-24 00:32:01,860 - INFO - epoch 3 | batch 200 | train_loss: 0.00829317
+2026-04-24 00:32:12,401 - INFO - metrics:
+{'accuracy': 0.6129887342611001, 'balanced_accuracy': 0.5885857267344912, 'f1': 0.6916578669482577, 'precision': 0.6346899224806202, 'recall': 0.759860788863109}
+2026-04-24 00:32:16,260 - INFO - epoch 3 | batch 250 | train_loss: 0.00796099
+2026-04-24 00:32:27,085 - INFO - metrics:
+{'accuracy': 0.6216037110669318, 'balanced_accuracy': 0.6227259850030661, 'f1': 0.6499080318822809, 'precision': 0.6892067620286085, 'recall': 0.6148491879350348}
+2026-04-24 00:32:31,041 - INFO - epoch 3 | batch 300 | train_loss: 0.00738945
+2026-04-24 00:32:41,982 - INFO - metrics:
+{'accuracy': 0.6275679257786614, 'balanced_accuracy': 0.6225493711830795, 'f1': 0.6686320754716981, 'precision': 0.6798561151079137, 'recall': 0.6577726218097448}
+2026-04-24 00:32:45,868 - INFO - epoch 3 | batch 350 | train_loss: 0.00719810
+2026-04-24 00:32:57,443 - INFO - metrics:
+{'accuracy': 0.6030483764082174, 'balanced_accuracy': 0.6357828564461354, 'f1': 0.5388760585065435, 'precision': 0.8009153318077803, 'recall': 0.4060324825986079}
+2026-04-24 00:33:08,942 - INFO - ================= epoch end =================
+2026-04-24 00:33:08,942 - INFO - epoch 3 | train_loss: 0.11412278 | valid_loss: 1.21499928 | valid balanc. acc.: 0.59669562
+2026-04-24 00:33:08,942 - INFO - metrics:
+{'accuracy': 0.6182902584493042, 'balanced_accuracy': 0.5966956181842307, 'f1': 0.6913183279742765, 'precision': 0.6424302788844621, 'recall': 0.7482598607888631}
+2026-04-24 00:33:12,940 - INFO - epoch 4 | batch 50 | train_loss: 0.01173348
+2026-04-24 00:33:23,657 - INFO - metrics:
+{'accuracy': 0.6408217362491716, 'balanced_accuracy': 0.6407038374507363, 'f1': 0.6711165048543689, 'precision': 0.7035623409669212, 'recall': 0.6415313225058005}
+2026-04-24 00:33:27,526 - INFO - epoch 4 | batch 100 | train_loss: 0.00774757
+2026-04-24 00:33:38,084 - INFO - metrics:
+{'accuracy': 0.6408217362491716, 'balanced_accuracy': 0.6374270683540308, 'f1': 0.6777645659928656, 'precision': 0.6951219512195121, 'recall': 0.6612529002320185}
+2026-04-24 00:33:41,963 - INFO - epoch 4 | batch 150 | train_loss: 0.00615781
+2026-04-24 00:33:52,481 - INFO - metrics:
+{'accuracy': 0.633532140490391, 'balanced_accuracy': 0.6410696163266477, 'f1': 0.6470963624760689, 'precision': 0.7191489361702128, 'recall': 0.5881670533642691}
+2026-04-24 00:33:56,369 - INFO - epoch 4 | batch 200 | train_loss: 0.00551841
+2026-04-24 00:34:07,485 - INFO - metrics:
+{'accuracy': 0.6182902584493042, 'balanced_accuracy': 0.5974666226775731, 'f1': 0.689989235737352, 'precision': 0.643574297188755, 'recall': 0.7436194895591647}
+2026-04-24 00:34:11,449 - INFO - epoch 4 | batch 250 | train_loss: 0.00507890
+2026-04-24 00:34:24,938 - INFO - metrics:
+{'accuracy': 0.6169648774022531, 'balanced_accuracy': 0.614617886587032, 'f1': 0.6530612244897959, 'precision': 0.6766169154228856, 'recall': 0.6310904872389791}
+2026-04-24 00:34:28,952 - INFO - epoch 4 | batch 300 | train_loss: 0.00461638
+2026-04-24 00:34:40,948 - INFO - metrics:
+{'accuracy': 0.588469184890656, 'balanced_accuracy': 0.5607632227270608, 'f1': 0.6770670826833073, 'precision': 0.6135721017907634, 'recall': 0.7552204176334106}
+2026-04-24 00:34:44,913 - INFO - epoch 4 | batch 350 | train_loss: 0.00485702
+2026-04-24 00:34:57,227 - INFO - metrics:
+{'accuracy': 0.6315440689198144, 'balanced_accuracy': 0.6294991698253943, 'f1': 0.6662665066026411, 'precision': 0.6902985074626866, 'recall': 0.6438515081206496}
+2026-04-24 00:35:09,012 - INFO - ================= epoch end =================
+2026-04-24 00:35:09,014 - INFO - epoch 4 | train_loss: 0.07700575 | valid_loss: 1.28206196 | valid balanc. acc.: 0.63528350
+2026-04-24 00:35:09,015 - INFO - metrics:
+{'accuracy': 0.6322067594433399, 'balanced_accuracy': 0.6352834965591683, 'f1': 0.6559206447613143, 'precision': 0.7043941411451398, 'recall': 0.6136890951276102}
+2026-04-24 00:35:13,052 - INFO - epoch 5 | batch 50 | train_loss: 0.00882050
+2026-04-24 00:35:26,117 - INFO - metrics:
+{'accuracy': 0.634857521537442, 'balanced_accuracy': 0.6266168681438874, 'f1': 0.681686886192952, 'precision': 0.6789413118527042, 'recall': 0.6844547563805105}
+2026-04-24 00:35:30,134 - INFO - epoch 5 | batch 100 | train_loss: 0.00550896
+2026-04-24 00:35:42,698 - INFO - metrics:
+{'accuracy': 0.6169648774022531, 'balanced_accuracy': 0.636784265770628, 'f1': 0.5974930362116991, 'precision': 0.7473867595818815, 'recall': 0.4976798143851508}
+2026-04-24 00:35:46,947 - INFO - epoch 5 | batch 150 | train_loss: 0.00442526
+2026-04-24 00:36:01,077 - INFO - metrics:
+{'accuracy': 0.6010603048376408, 'balanced_accuracy': 0.5883607010044575, 'f1': 0.6598870056497175, 'precision': 0.6431718061674009, 'recall': 0.6774941995359629}
+2026-04-24 00:36:05,112 - INFO - epoch 5 | batch 200 | train_loss: 0.00436100
+2026-04-24 00:36:17,475 - INFO - metrics:
+{'accuracy': 0.6163021868787276, 'balanced_accuracy': 0.6146160935533266, 'f1': 0.650994575045208, 'precision': 0.6775407779171895, 'recall': 0.6264501160092807}
+2026-04-24 00:36:21,684 - INFO - epoch 5 | batch 250 | train_loss: 0.00364092
+2026-04-24 00:36:33,934 - INFO - metrics:
+{'accuracy': 0.6050364479787939, 'balanced_accuracy': 0.5956960018934436, 'f1': 0.6566820276497696, 'precision': 0.6521739130434783, 'recall': 0.6612529002320185}
+2026-04-24 00:36:37,821 - INFO - epoch 5 | batch 300 | train_loss: 0.00349998
+2026-04-24 00:36:48,967 - INFO - metrics:
+{'accuracy': 0.5990722332670643, 'balanced_accuracy': 0.5868133129166562, 'f1': 0.6572237960339944, 'precision': 0.6423034330011074, 'recall': 0.6728538283062645}
+2026-04-24 00:36:52,853 - INFO - epoch 5 | batch 350 | train_loss: 0.00314374
+2026-04-24 00:37:03,833 - INFO - metrics:
+{'accuracy': 0.5904572564612326, 'balanced_accuracy': 0.5813929720250881, 'f1': 0.6427745664739885, 'precision': 0.6405529953917051, 'recall': 0.6450116009280742}
+2026-04-24 00:37:16,686 - INFO - ================= epoch end =================
+2026-04-24 00:37:16,687 - INFO - epoch 5 | train_loss: 0.04897452 | valid_loss: 1.63977487 | valid balanc. acc.: 0.56595137
+2026-04-24 00:37:16,688 - INFO - metrics:
+{'accuracy': 0.5825049701789264, 'balanced_accuracy': 0.5659513657537735, 'f1': 0.6511627906976745, 'precision': 0.6228813559322034, 'recall': 0.6821345707656613}
+2026-04-24 00:37:20,698 - INFO - epoch 6 | batch 50 | train_loss: 0.00671876
+2026-04-24 00:37:34,674 - INFO - metrics:
+{'accuracy': 0.6242544731610338, 'balanced_accuracy': 0.6200346414111892, 'f1': 0.6639004149377593, 'precision': 0.6787878787878788, 'recall': 0.6496519721577726}
+2026-04-24 00:37:39,228 - INFO - epoch 6 | batch 100 | train_loss: 0.00408541
+2026-04-24 00:37:52,020 - INFO - metrics:
+{'accuracy': 0.5964214711729622, 'balanced_accuracy': 0.585071380671814, 'f1': 0.652991452991453, 'precision': 0.6416573348264277, 'recall': 0.6647331786542924}
+2026-04-24 00:37:56,058 - INFO - epoch 6 | batch 150 | train_loss: 0.00455582
+2026-04-24 00:38:07,856 - INFO - metrics:
+{'accuracy': 0.610337972166998, 'balanced_accuracy': 0.6130579472632927, 'f1': 0.6352357320099256, 'precision': 0.6826666666666666, 'recall': 0.5939675174013921}
+2026-04-24 00:38:11,865 - INFO - epoch 6 | batch 200 | train_loss: 0.00378349
+2026-04-24 00:38:23,165 - INFO - metrics:
+{'accuracy': 0.6189529489728297, 'balanced_accuracy': 0.6173217814148471, 'f1': 0.6534056660638939, 'precision': 0.6800501882057717, 'recall': 0.62877030162413}
+2026-04-24 00:38:27,270 - INFO - epoch 6 | batch 250 | train_loss: 0.00318033
+2026-04-24 00:38:38,604 - INFO - metrics:
+{'accuracy': 0.6023856858846919, 'balanced_accuracy': 0.588557038195204, 'f1': 0.6632996632996633, 'precision': 0.6423913043478261, 'recall': 0.685614849187935}
+2026-04-24 00:38:42,650 - INFO - epoch 6 | batch 300 | train_loss: 0.00322721
+2026-04-24 00:38:53,732 - INFO - metrics:
+{'accuracy': 0.6209410205434063, 'balanced_accuracy': 0.6088461110891963, 'f1': 0.6764705882352942, 'precision': 0.6600441501103753, 'recall': 0.6937354988399071}
+2026-04-24 00:38:57,793 - INFO - epoch 6 | batch 350 | train_loss: 0.00287687
+2026-04-24 00:39:09,015 - INFO - metrics:
+{'accuracy': 0.5977468522200132, 'balanced_accuracy': 0.5870024779725809, 'f1': 0.6529445397369925, 'precision': 0.6437429537767756, 'recall': 0.6624129930394431}
+2026-04-24 00:39:20,934 - INFO - ================= epoch end =================
+2026-04-24 00:39:20,935 - INFO - epoch 6 | train_loss: 0.04514511 | valid_loss: 1.68538911 | valid balanc. acc.: 0.64471934
+2026-04-24 00:39:20,935 - INFO - metrics:
+{'accuracy': 0.6288933068257124, 'balanced_accuracy': 0.6447193364340862, 'f1': 0.6216216216216216, 'precision': 0.7443365695792881, 'recall': 0.5336426914153132}
+2026-04-24 00:39:24,964 - INFO - epoch 7 | batch 50 | train_loss: 0.00472362
+2026-04-24 00:39:35,928 - INFO - metrics:
+{'accuracy': 0.6156394963552021, 'balanced_accuracy': 0.6078680112028746, 'f1': 0.6631823461091754, 'precision': 0.663953488372093, 'recall': 0.6624129930394431}
+2026-04-24 00:39:39,875 - INFO - epoch 7 | batch 100 | train_loss: 0.00270858
+2026-04-24 00:39:51,756 - INFO - metrics:
+{'accuracy': 0.6123260437375746, 'balanced_accuracy': 0.5986069921142378, 'f1': 0.6719012899607403, 'precision': 0.6503800217155266, 'recall': 0.6948955916473318}
+2026-04-24 00:39:55,777 - INFO - epoch 7 | batch 150 | train_loss: 0.00239901
+2026-04-24 00:40:08,269 - INFO - metrics:
+{'accuracy': 0.6262425447316103, 'balanced_accuracy': 0.6217747806223262, 'f1': 0.6662721893491125, 'precision': 0.6799516908212561, 'recall': 0.6531322505800464}
+2026-04-24 00:40:12,235 - INFO - epoch 7 | batch 200 | train_loss: 0.00204217
+2026-04-24 00:40:24,034 - INFO - metrics:
+{'accuracy': 0.6123260437375746, 'balanced_accuracy': 0.5970649831275529, 'f1': 0.6748193440800445, 'precision': 0.647812166488794, 'recall': 0.7041763341067285}
+2026-04-24 00:40:28,134 - INFO - epoch 7 | batch 250 | train_loss: 0.00170073
+2026-04-24 00:40:39,249 - INFO - metrics:
+{'accuracy': 0.6010603048376408, 'balanced_accuracy': 0.5868186920177725, 'f1': 0.6629339305711086, 'precision': 0.6406926406926406, 'recall': 0.6867749419953596}
+2026-04-24 00:40:43,225 - INFO - epoch 7 | batch 300 | train_loss: 0.00218884
+2026-04-24 00:40:54,715 - INFO - metrics:
+{'accuracy': 0.6169648774022531, 'balanced_accuracy': 0.6180874068070732, 'f1': 0.645398773006135, 'precision': 0.6848958333333334, 'recall': 0.6102088167053364}
+2026-04-24 00:40:59,026 - INFO - epoch 7 | batch 350 | train_loss: 0.00204686
+2026-04-24 00:41:10,840 - INFO - metrics:
+{'accuracy': 0.5838303512259775, 'balanced_accuracy': 0.5657622006978487, 'f1': 0.6553238199780461, 'precision': 0.621875, 'recall': 0.6925754060324826}
+2026-04-24 00:41:23,091 - INFO - ================= epoch end =================
+2026-04-24 00:41:23,092 - INFO - epoch 7 | train_loss: 0.03193793 | valid_loss: 1.80379092 | valid balanc. acc.: 0.54955676
+2026-04-24 00:41:23,093 - INFO - metrics:
+{'accuracy': 0.5785288270377733, 'balanced_accuracy': 0.5495567620680133, 'f1': 0.671147880041365, 'precision': 0.605410447761194, 'recall': 0.7529002320185615}
+2026-04-24 00:41:27,191 - INFO - epoch 8 | batch 50 | train_loss: 0.00432481
+2026-04-24 00:41:39,103 - INFO - metrics:
+{'accuracy': 0.6003976143141153, 'balanced_accuracy': 0.5854676411207178, 'f1': 0.6636921360847742, 'precision': 0.6390977443609023, 'recall': 0.6902552204176334}
+2026-04-24 00:41:43,071 - INFO - epoch 8 | batch 100 | train_loss: 0.00241234
+2026-04-24 00:41:54,593 - INFO - metrics:
+{'accuracy': 0.5957587806494367, 'balanced_accuracy': 0.5765885382113413, 'f1': 0.6677559912854031, 'precision': 0.6293634496919918, 'recall': 0.7111368909512761}
+2026-04-24 00:41:58,511 - INFO - epoch 8 | batch 150 | train_loss: 0.00172102
+2026-04-24 00:42:09,824 - INFO - metrics:
+{'accuracy': 0.6070245195493704, 'balanced_accuracy': 0.5943521231312107, 'f1': 0.6651609260304913, 'precision': 0.647964796479648, 'recall': 0.6832946635730859}
+2026-04-24 00:42:13,738 - INFO - epoch 8 | batch 200 | train_loss: 0.00132738
+2026-04-24 00:42:24,820 - INFO - metrics:
+{'accuracy': 0.5997349237905898, 'balanced_accuracy': 0.5802615677569507, 'f1': 0.6717391304347826, 'precision': 0.6319018404907976, 'recall': 0.7169373549883991}
+2026-04-24 00:42:28,736 - INFO - epoch 8 | batch 250 | train_loss: 0.00108420
+2026-04-24 00:42:39,859 - INFO - metrics:
+{'accuracy': 0.5957587806494367, 'balanced_accuracy': 0.5792870539380399, 'f1': 0.6626106194690266, 'precision': 0.6331923890063424, 'recall': 0.6948955916473318}
+2026-04-24 00:42:43,754 - INFO - epoch 8 | batch 300 | train_loss: 0.00091491
+2026-04-24 00:42:54,966 - INFO - metrics:
+{'accuracy': 0.5950960901259112, 'balanced_accuracy': 0.5802490165210126, 'f1': 0.6588498045784478, 'precision': 0.635091496232508, 'recall': 0.6844547563805105}
+2026-04-24 00:42:58,862 - INFO - epoch 8 | batch 350 | train_loss: 0.00199179
+2026-04-24 00:43:09,974 - INFO - metrics:
+{'accuracy': 0.6023856858846919, 'balanced_accuracy': 0.6024351190753684, 'f1': 0.6336996336996337, 'precision': 0.6688144329896907, 'recall': 0.6020881670533643}
+2026-04-24 00:43:21,774 - INFO - ================= epoch end =================
+2026-04-24 00:43:21,775 - INFO - epoch 8 | train_loss: 0.03201722 | valid_loss: 1.11629087 | valid balanc. acc.: 0.57793421
+2026-04-24 00:43:21,777 - INFO - metrics:
+{'accuracy': 0.5944333996023857, 'balanced_accuracy': 0.5779342100072797, 'f1': 0.661504424778761, 'precision': 0.6321353065539113, 'recall': 0.6937354988399071}
+2026-04-24 00:43:25,864 - INFO - epoch 9 | batch 50 | train_loss: 0.00266849
+2026-04-24 00:43:37,119 - INFO - metrics:
+{'accuracy': 0.6096752816434725, 'balanced_accuracy': 0.5945520463893681, 'f1': 0.6722314969393434, 'precision': 0.6459893048128342, 'recall': 0.7006960556844548}
+2026-04-24 00:43:41,008 - INFO - epoch 9 | batch 100 | train_loss: 0.00157462
+2026-04-24 00:43:52,119 - INFO - metrics:
+{'accuracy': 0.6070245195493704, 'balanced_accuracy': 0.5854855714577722, 'f1': 0.6816961889425658, 'precision': 0.6343656343656343, 'recall': 0.7366589327146171}
+2026-04-24 00:43:56,018 - INFO - epoch 9 | batch 150 | train_loss: 0.00113194
+2026-04-24 00:44:07,172 - INFO - metrics:
+{'accuracy': 0.5944333996023857, 'balanced_accuracy': 0.5746574409105742, 'f1': 0.6677524429967426, 'precision': 0.6275510204081632, 'recall': 0.7134570765661253}
+2026-04-24 00:44:11,066 - INFO - epoch 9 | batch 200 | train_loss: 0.00087153
+2026-04-24 00:44:22,120 - INFO - metrics:
+{'accuracy': 0.5937707090788602, 'balanced_accuracy': 0.5746556478768687, 'f1': 0.6659400544959128, 'precision': 0.6279547790339157, 'recall': 0.7088167053364269}
+2026-04-24 00:44:26,029 - INFO - epoch 9 | batch 250 | train_loss: 0.00070867
+2026-04-24 00:44:37,142 - INFO - metrics:
+{'accuracy': 0.6037110669317429, 'balanced_accuracy': 0.5843200995492314, 'f1': 0.675, 'precision': 0.6349693251533742, 'recall': 0.7204176334106729}
+2026-04-24 00:44:41,071 - INFO - epoch 9 | batch 300 | train_loss: 0.00059919
+2026-04-24 00:44:52,119 - INFO - metrics:
+{'accuracy': 0.5970841616964877, 'balanced_accuracy': 0.5758211197854097, 'f1': 0.6727664155005382, 'precision': 0.6275100401606426, 'recall': 0.7250580046403712}
+2026-04-24 00:44:56,061 - INFO - epoch 9 | batch 350 | train_loss: 0.00051810
+2026-04-24 00:45:07,006 - INFO - metrics:
+{'accuracy': 0.5924453280318092, 'balanced_accuracy': 0.5657855101360195, 'f1': 0.6785154208050183, 'precision': 0.6175071360608944, 'recall': 0.7529002320185615}
+2026-04-24 00:45:18,756 - INFO - ================= epoch end =================
+2026-04-24 00:45:18,757 - INFO - epoch 9 | train_loss: 0.00804535 | valid_loss: 2.20122678 | valid balanc. acc.: 0.56867498
+2026-04-24 00:45:18,758 - INFO - metrics:
+{'accuracy': 0.5917826375082836, 'balanced_accuracy': 0.5686749839523483, 'f1': 0.6716417910447762, 'precision': 0.621301775147929, 'recall': 0.7308584686774942}
+2026-04-24 00:45:22,779 - INFO - epoch 10 | batch 50 | train_loss: 0.00362785
+2026-04-24 00:45:33,779 - INFO - metrics:
+{'accuracy': 0.6182902584493042, 'balanced_accuracy': 0.6125012102977512, 'f1': 0.6615746180963572, 'precision': 0.6702380952380952, 'recall': 0.6531322505800464}
+2026-04-24 00:45:37,665 - INFO - epoch 10 | batch 100 | train_loss: 0.00208378
+2026-04-24 00:45:48,793 - INFO - metrics:
+{'accuracy': 0.5931080185553347, 'balanced_accuracy': 0.5729190947331428, 'f1': 0.66738894907909, 'precision': 0.6260162601626016, 'recall': 0.7146171693735499}
+2026-04-24 00:45:52,711 - INFO - epoch 10 | batch 150 | train_loss: 0.00140568
+2026-04-24 00:46:04,042 - INFO - metrics:
+{'accuracy': 0.5917826375082836, 'balanced_accuracy': 0.5702169929390333, 'f1': 0.6688172043010753, 'precision': 0.6232464929859719, 'recall': 0.7215777262180975}
+2026-04-24 00:46:07,934 - INFO - epoch 10 | batch 200 | train_loss: 0.00105994
+2026-04-24 00:46:20,029 - INFO - metrics:
+{'accuracy': 0.5897945659377071, 'balanced_accuracy': 0.5671275958645471, 'f1': 0.6691608765366115, 'precision': 0.6204162537165511, 'recall': 0.7262180974477959}
+2026-04-24 00:46:24,010 - INFO - epoch 10 | batch 250 | train_loss: 0.00140144
+2026-04-24 00:46:36,121 - INFO - metrics:
+{'accuracy': 0.6242544731610338, 'balanced_accuracy': 0.6184926324245044, 'f1': 0.6670581327069877, 'precision': 0.6753864447086801, 'recall': 0.6589327146171694}
+2026-04-24 00:46:40,012 - INFO - epoch 10 | batch 300 | train_loss: 0.00122111
+2026-04-24 00:46:51,151 - INFO - metrics:
+{'accuracy': 0.6129887342611001, 'balanced_accuracy': 0.5962957716679158, 'f1': 0.6780595369349504, 'precision': 0.6460084033613446, 'recall': 0.7134570765661253}
+2026-04-24 00:46:55,039 - INFO - epoch 10 | batch 350 | train_loss: 0.00106210
+2026-04-24 00:47:06,167 - INFO - metrics:
+{'accuracy': 0.6110006626905236, 'balanced_accuracy': 0.5926281212234228, 'f1': 0.679410158383397, 'precision': 0.6418988648090815, 'recall': 0.7215777262180975}
+2026-04-24 00:47:17,976 - INFO - ================= epoch end =================
+2026-04-24 00:47:17,977 - INFO - epoch 10 | train_loss: 0.01649265 | valid_loss: 1.94468963 | valid balanc. acc.: 0.59571214
+2026-04-24 00:47:17,978 - INFO - metrics:
+{'accuracy': 0.6110006626905236, 'balanced_accuracy': 0.5957121391967927, 'f1': 0.6737076153418566, 'precision': 0.6467449306296692, 'recall': 0.703016241299304}
+2026-04-24 00:47:18,011 - INFO - Fold 3
+2026-04-24 00:47:18,041 - INFO - 
+    ======= about folds =======
+    ((5937, 8), (1343, 8))
+    set()
+    label
+0    2961
+1    2976
+Name: image_path, dtype: int64     
+    label
+0    679
+1    664
+Name: image_path, dtype: int64
+    
+2026-04-24 00:47:18,514 - INFO - 
+    Всего параметров: 11,177,538
+    Обучаемых:       11,177,538
+    
+2026-04-24 00:47:22,572 - INFO - epoch 1 | batch 50 | train_loss: 0.03706653
+2026-04-24 00:47:32,550 - INFO - metrics:
+{'accuracy': 0.6358897989575577, 'balanced_accuracy': 0.6341392817218802, 'f1': 0.5645592163846839, 'precision': 0.690631808278867, 'recall': 0.47740963855421686}
+2026-04-24 00:47:32,656 - INFO - save checkpoint: ..\models_checkpoints/resnet_18_backbone_cv/2026-04-24_00_06_06_full_tuning_video/fold3/checkpoint/best_model.pth
+2026-04-24 00:47:36,588 - INFO - epoch 1 | batch 100 | train_loss: 0.03595106
+2026-04-24 00:47:46,501 - INFO - metrics:
+{'accuracy': 0.5971705137751303, 'balanced_accuracy': 0.5990249658427524, 'f1': 0.6525369299935774, 'precision': 0.568868980963046, 'recall': 0.7650602409638554}
+2026-04-24 00:47:50,417 - INFO - epoch 1 | batch 150 | train_loss: 0.03214624
+2026-04-24 00:48:00,266 - INFO - metrics:
+{'accuracy': 0.6336559940431868, 'balanced_accuracy': 0.6307324289795412, 'f1': 0.4989816700610998, 'precision': 0.7704402515723271, 'recall': 0.3689759036144578}
+2026-04-24 00:48:04,178 - INFO - epoch 1 | batch 200 | train_loss: 0.02985462
+2026-04-24 00:48:14,010 - INFO - metrics:
+{'accuracy': 0.6008935219657483, 'balanced_accuracy': 0.6014259541849283, 'f1': 0.6165951359084406, 'precision': 0.5871934604904632, 'recall': 0.6490963855421686}
+2026-04-24 00:48:17,941 - INFO - epoch 1 | batch 250 | train_loss: 0.02743852
+2026-04-24 00:48:27,757 - INFO - metrics:
+{'accuracy': 0.6440804169769173, 'balanced_accuracy': 0.6443021718686233, 'f1': 0.6485294117647059, 'precision': 0.6336206896551724, 'recall': 0.6641566265060241}
+2026-04-24 00:48:27,879 - INFO - save checkpoint: ..\models_checkpoints/resnet_18_backbone_cv/2026-04-24_00_06_06_full_tuning_video/fold3/checkpoint/best_model.pth
+2026-04-24 00:48:31,763 - INFO - epoch 1 | batch 300 | train_loss: 0.02535422
+2026-04-24 00:48:41,626 - INFO - metrics:
+{'accuracy': 0.6701414743112435, 'balanced_accuracy': 0.6701086377912238, 'f1': 0.6666666666666666, 'precision': 0.6661654135338346, 'recall': 0.6671686746987951}
+2026-04-24 00:48:41,749 - INFO - save checkpoint: ..\models_checkpoints/resnet_18_backbone_cv/2026-04-24_00_06_06_full_tuning_video/fold3/checkpoint/best_model.pth
+2026-04-24 00:48:45,633 - INFO - epoch 1 | batch 350 | train_loss: 0.02389644
+2026-04-24 00:48:55,447 - INFO - metrics:
+{'accuracy': 0.6306775874906925, 'balanced_accuracy': 0.6318292315062903, 'f1': 0.6630434782608695, 'precision': 0.6039603960396039, 'recall': 0.7349397590361446}
+2026-04-24 00:49:06,979 - INFO - ================= epoch end =================
+2026-04-24 00:49:06,979 - INFO - epoch 1 | train_loss: 0.37056209 | valid_loss: 0.88335571 | valid balanc. acc.: 0.64587917
+2026-04-24 00:49:06,979 - INFO - metrics:
+{'accuracy': 0.6463142218912882, 'balanced_accuracy': 0.6458791720638075, 'f1': 0.6291959406713505, 'precision': 0.653160453808752, 'recall': 0.6069277108433735}
+2026-04-24 00:49:11,004 - INFO - epoch 2 | batch 50 | train_loss: 0.02112334
+2026-04-24 00:49:20,837 - INFO - metrics:
+{'accuracy': 0.6537602382725242, 'balanced_accuracy': 0.6539582483098816, 'f1': 0.6573323507737656, 'precision': 0.6435786435786436, 'recall': 0.6716867469879518}
+2026-04-24 00:49:24,730 - INFO - epoch 2 | batch 100 | train_loss: 0.01747074
+2026-04-24 00:49:34,613 - INFO - metrics:
+{'accuracy': 0.6180193596425912, 'balanced_accuracy': 0.6192110119417287, 'f1': 0.6526743398781314, 'precision': 0.5928659286592866, 'recall': 0.7259036144578314}
+2026-04-24 00:49:38,500 - INFO - epoch 2 | batch 150 | train_loss: 0.01552801
+2026-04-24 00:49:48,367 - INFO - metrics:
+{'accuracy': 0.6396128071481757, 'balanced_accuracy': 0.6408321060382915, 'f1': 0.672972972972973, 'precision': 0.6102941176470589, 'recall': 0.75}
+2026-04-24 00:49:52,262 - INFO - epoch 2 | batch 200 | train_loss: 0.01414506
+2026-04-24 00:50:02,076 - INFO - metrics:
+{'accuracy': 0.6589724497393894, 'balanced_accuracy': 0.6587635519988644, 'f1': 0.6498470948012233, 'precision': 0.6599378881987578, 'recall': 0.6400602409638554}
+2026-04-24 00:50:05,980 - INFO - epoch 2 | batch 250 | train_loss: 0.01301412
+2026-04-24 00:50:15,876 - INFO - metrics:
+{'accuracy': 0.5927029039463887, 'balanced_accuracy': 0.5955382649892649, 'f1': 0.6734328358208955, 'precision': 0.5578635014836796, 'recall': 0.8493975903614458}
+2026-04-24 00:50:19,778 - INFO - epoch 2 | batch 300 | train_loss: 0.01230415
+2026-04-24 00:50:29,595 - INFO - metrics:
+{'accuracy': 0.6485480268056589, 'balanced_accuracy': 0.6500512358713203, 'f1': 0.6882430647291942, 'precision': 0.6129411764705882, 'recall': 0.7846385542168675}
+2026-04-24 00:50:33,493 - INFO - epoch 2 | batch 350 | train_loss: 0.01142726
+2026-04-24 00:50:43,301 - INFO - metrics:
+{'accuracy': 0.6656738644825019, 'balanced_accuracy': 0.6668714622850755, 'f1': 0.6960054163845633, 'precision': 0.6322263222632226, 'recall': 0.7740963855421686}
+2026-04-24 00:50:54,772 - INFO - ================= epoch end =================
+2026-04-24 00:50:54,773 - INFO - epoch 2 | train_loss: 0.17984824 | valid_loss: 0.89851046 | valid balanc. acc.: 0.67240538
+2026-04-24 00:50:54,774 - INFO - metrics:
+{'accuracy': 0.6731198808637379, 'balanced_accuracy': 0.672405379988289, 'f1': 0.6479550922213312, 'precision': 0.692967409948542, 'recall': 0.608433734939759}
+2026-04-24 00:50:54,888 - INFO - save checkpoint: ..\models_checkpoints/resnet_18_backbone_cv/2026-04-24_00_06_06_full_tuning_video/fold3/checkpoint/best_model.pth
+2026-04-24 00:50:58,916 - INFO - epoch 3 | batch 50 | train_loss: 0.01429132
+2026-04-24 00:51:08,774 - INFO - metrics:
+{'accuracy': 0.6723752792256142, 'balanced_accuracy': 0.6725173891442057, 'f1': 0.674074074074074, 'precision': 0.6632653061224489, 'recall': 0.6852409638554217}
+2026-04-24 00:51:08,892 - INFO - save checkpoint: ..\models_checkpoints/resnet_18_backbone_cv/2026-04-24_00_06_06_full_tuning_video/fold3/checkpoint/best_model.pth
+2026-04-24 00:51:12,818 - INFO - epoch 3 | batch 100 | train_loss: 0.01076636
+2026-04-24 00:51:23,047 - INFO - metrics:
+{'accuracy': 0.6857781087118392, 'balanced_accuracy': 0.6842251184413648, 'f1': 0.631762652705061, 'precision': 0.7510373443983402, 'recall': 0.5451807228915663}
+2026-04-24 00:51:23,166 - INFO - save checkpoint: ..\models_checkpoints/resnet_18_backbone_cv/2026-04-24_00_06_06_full_tuning_video/fold3/checkpoint/best_model.pth
+2026-04-24 00:51:27,211 - INFO - epoch 3 | batch 150 | train_loss: 0.00906464
+2026-04-24 00:51:36,809 - INFO - metrics:
+{'accuracy': 0.6418466120625466, 'balanced_accuracy': 0.6415607200525223, 'f1': 0.6297151655119323, 'precision': 0.6440944881889764, 'recall': 0.6159638554216867}
+2026-04-24 00:51:40,688 - INFO - epoch 3 | batch 200 | train_loss: 0.00828767
+2026-04-24 00:51:50,635 - INFO - metrics:
+{'accuracy': 0.6016381236038719, 'balanced_accuracy': 0.6030273524140746, 'f1': 0.6435709526982012, 'precision': 0.5770609318996416, 'recall': 0.7274096385542169}
+2026-04-24 00:51:54,553 - INFO - epoch 3 | batch 250 | train_loss: 0.00760079
+2026-04-24 00:52:04,858 - INFO - metrics:
+{'accuracy': 0.6276991809381981, 'balanced_accuracy': 0.6296988395407846, 'f1': 0.6823379923761118, 'precision': 0.5901098901098901, 'recall': 0.8087349397590361}
+2026-04-24 00:52:08,746 - INFO - epoch 3 | batch 300 | train_loss: 0.00743333
+2026-04-24 00:52:20,106 - INFO - metrics:
+{'accuracy': 0.5703648548026806, 'balanced_accuracy': 0.5729978086129496, 'f1': 0.6505148394912175, 'precision': 0.5440729483282675, 'recall': 0.8087349397590361}
+2026-04-24 00:52:24,812 - INFO - epoch 3 | batch 350 | train_loss: 0.00681611
+2026-04-24 00:52:35,753 - INFO - metrics:
+{'accuracy': 0.6299329858525688, 'balanced_accuracy': 0.631242569689657, 'f1': 0.6666666666666666, 'precision': 0.6009673518742442, 'recall': 0.7484939759036144}
+2026-04-24 00:52:46,974 - INFO - ================= epoch end =================
+2026-04-24 00:52:46,975 - INFO - epoch 3 | train_loss: 0.10582348 | valid_loss: 1.81439708 | valid balanc. acc.: 0.59664061
+2026-04-24 00:52:46,976 - INFO - metrics:
+{'accuracy': 0.5934475055845123, 'balanced_accuracy': 0.5966406125237327, 'f1': 0.6821885913853318, 'precision': 0.5559772296015181, 'recall': 0.8825301204819277}
+2026-04-24 00:52:51,060 - INFO - epoch 4 | batch 50 | train_loss: 0.00937582
+2026-04-24 00:53:01,282 - INFO - metrics:
+{'accuracy': 0.6552494415487714, 'balanced_accuracy': 0.6561296733325053, 'f1': 0.6782487838776928, 'precision': 0.6296774193548387, 'recall': 0.7349397590361446}
+2026-04-24 00:53:05,378 - INFO - epoch 4 | batch 100 | train_loss: 0.00697723
+2026-04-24 00:53:15,357 - INFO - metrics:
+{'accuracy': 0.62397617274758, 'balanced_accuracy': 0.6263163848324077, 'f1': 0.6873065015479877, 'precision': 0.583596214511041, 'recall': 0.8358433734939759}
+2026-04-24 00:53:20,086 - INFO - epoch 4 | batch 150 | train_loss: 0.00543627
+2026-04-24 00:53:30,599 - INFO - metrics:
+{'accuracy': 0.6209977661950856, 'balanced_accuracy': 0.6227387458523342, 'f1': 0.6701231367465975, 'precision': 0.5881683731513083, 'recall': 0.7786144578313253}
+2026-04-24 00:53:35,452 - INFO - epoch 4 | batch 200 | train_loss: 0.00584621
+2026-04-24 00:53:45,470 - INFO - metrics:
+{'accuracy': 0.6321667907669397, 'balanced_accuracy': 0.6331689053711163, 'f1': 0.6602475928473177, 'precision': 0.6075949367088608, 'recall': 0.7228915662650602}
+2026-04-24 00:53:49,815 - INFO - epoch 4 | batch 250 | train_loss: 0.00496637
+2026-04-24 00:54:00,348 - INFO - metrics:
+{'accuracy': 0.6150409530900968, 'balanced_accuracy': 0.6172636052309385, 'f1': 0.6770768269831355, 'precision': 0.5784418356456777, 'recall': 0.8162650602409639}
+2026-04-24 00:54:04,309 - INFO - epoch 4 | batch 300 | train_loss: 0.00447940
+2026-04-24 00:54:15,475 - INFO - metrics:
+{'accuracy': 0.5778108711839166, 'balanced_accuracy': 0.5807441843959047, 'f1': 0.6639004149377593, 'precision': 0.5474095796676441, 'recall': 0.8433734939759037}
+2026-04-24 00:54:20,293 - INFO - epoch 4 | batch 350 | train_loss: 0.00406829
+2026-04-24 00:54:31,404 - INFO - metrics:
+{'accuracy': 0.6120625465376024, 'balanced_accuracy': 0.6139687616445162, 'f1': 0.6666666666666666, 'precision': 0.5795328142380423, 'recall': 0.7846385542168675}
+2026-04-24 00:54:44,345 - INFO - ================= epoch end =================
+2026-04-24 00:54:44,346 - INFO - epoch 4 | train_loss: 0.06186771 | valid_loss: 1.37158003 | valid balanc. acc.: 0.60260704
+2026-04-24 00:54:44,347 - INFO - metrics:
+{'accuracy': 0.6008935219657483, 'balanced_accuracy': 0.6026070408290009, 'f1': 0.6519480519480519, 'precision': 0.5730593607305936, 'recall': 0.7560240963855421}
+2026-04-24 00:54:48,606 - INFO - epoch 5 | batch 50 | train_loss: 0.00676199
+2026-04-24 00:55:00,631 - INFO - metrics:
+{'accuracy': 0.6731198808637379, 'balanced_accuracy': 0.6730042408219032, 'f1': 0.6671721000758151, 'precision': 0.6717557251908397, 'recall': 0.6626506024096386}
+2026-04-24 00:55:05,170 - INFO - epoch 5 | batch 100 | train_loss: 0.00431806
+2026-04-24 00:55:17,180 - INFO - metrics:
+{'accuracy': 0.6455696202531646, 'balanced_accuracy': 0.6464070567986231, 'f1': 0.6680613668061367, 'precision': 0.6220779220779221, 'recall': 0.7213855421686747}
+2026-04-24 00:55:21,077 - INFO - epoch 5 | batch 150 | train_loss: 0.00472140
+2026-04-24 00:55:35,879 - INFO - metrics:
+{'accuracy': 0.6068503350707372, 'balanced_accuracy': 0.608597867168231, 'f1': 0.6580310880829016, 'precision': 0.5772727272727273, 'recall': 0.7650602409638554}
+2026-04-24 00:55:40,089 - INFO - epoch 5 | batch 200 | train_loss: 0.00377326
+2026-04-24 00:55:52,292 - INFO - metrics:
+{'accuracy': 0.5919583023082651, 'balanced_accuracy': 0.5942529322000816, 'f1': 0.6596273291925466, 'precision': 0.5613107822410148, 'recall': 0.7996987951807228}
+2026-04-24 00:55:56,794 - INFO - epoch 5 | batch 250 | train_loss: 0.00317573
+2026-04-24 00:56:10,662 - INFO - metrics:
+{'accuracy': 0.6314221891288161, 'balanced_accuracy': 0.6318336675124652, 'f1': 0.6420824295010846, 'precision': 0.6175243393602226, 'recall': 0.6686746987951807}
+2026-04-24 00:56:14,663 - INFO - epoch 5 | batch 300 | train_loss: 0.00289224
+2026-04-24 00:56:24,716 - INFO - metrics:
+{'accuracy': 0.6291883842144452, 'balanced_accuracy': 0.6307058129424916, 'f1': 0.6715039577836411, 'precision': 0.5974178403755869, 'recall': 0.766566265060241}
+2026-04-24 00:56:29,289 - INFO - epoch 5 | batch 350 | train_loss: 0.00252078
+2026-04-24 00:56:41,660 - INFO - metrics:
+{'accuracy': 0.6612062546537603, 'balanced_accuracy': 0.6614384637223416, 'f1': 0.665686994856723, 'precision': 0.6499282639885222, 'recall': 0.6822289156626506}
+2026-04-24 00:56:54,022 - INFO - ================= epoch end =================
+2026-04-24 00:56:54,023 - INFO - epoch 5 | train_loss: 0.04328772 | valid_loss: 1.39674291 | valid balanc. acc.: 0.62030892
+2026-04-24 00:56:54,025 - INFO - metrics:
+{'accuracy': 0.6180193596425912, 'balanced_accuracy': 0.6203089234700215, 'f1': 0.6811684275947794, 'precision': 0.5798941798941799, 'recall': 0.8253012048192772}
+2026-04-24 00:56:58,201 - INFO - epoch 6 | batch 50 | train_loss: 0.00482573
+2026-04-24 00:57:09,903 - INFO - metrics:
+{'accuracy': 0.6463142218912882, 'balanced_accuracy': 0.6470436236847241, 'f1': 0.6657283603096411, 'precision': 0.6248348745046235, 'recall': 0.7123493975903614}
+2026-04-24 00:57:14,031 - INFO - epoch 6 | batch 100 | train_loss: 0.00295680
+2026-04-24 00:57:28,472 - INFO - metrics:
+{'accuracy': 0.6686522710349962, 'balanced_accuracy': 0.6665398708235002, 'f1': 0.58758109360519, 'precision': 0.763855421686747, 'recall': 0.47740963855421686}
+2026-04-24 00:57:33,392 - INFO - epoch 6 | batch 150 | train_loss: 0.00237099
+2026-04-24 00:57:47,668 - INFO - metrics:
+{'accuracy': 0.6023827252419955, 'balanced_accuracy': 0.6044624004116613, 'f1': 0.6628787878787878, 'precision': 0.5706521739130435, 'recall': 0.7906626506024096}
+2026-04-24 00:57:52,701 - INFO - epoch 6 | batch 200 | train_loss: 0.00186728
+2026-04-24 00:58:08,477 - INFO - metrics:
+{'accuracy': 0.6344005956813105, 'balanced_accuracy': 0.6355111166314744, 'f1': 0.665303340149966, 'precision': 0.6077210460772104, 'recall': 0.7349397590361446}
+2026-04-24 00:58:12,720 - INFO - epoch 6 | batch 250 | train_loss: 0.00192602
+2026-04-24 00:58:27,730 - INFO - metrics:
+{'accuracy': 0.5919583023082651, 'balanced_accuracy': 0.5940366768990543, 'f1': 0.6540404040404041, 'precision': 0.5630434782608695, 'recall': 0.7801204819277109}
+2026-04-24 00:58:33,601 - INFO - epoch 6 | batch 300 | train_loss: 0.00206989
+2026-04-24 00:58:50,101 - INFO - metrics:
+{'accuracy': 0.5748324646314222, 'balanced_accuracy': 0.5776489610873539, 'f1': 0.6586969515839809, 'precision': 0.5460852329038652, 'recall': 0.8298192771084337}
+2026-04-24 00:58:55,689 - INFO - epoch 6 | batch 350 | train_loss: 0.00182549
+2026-04-24 00:59:13,096 - INFO - metrics:
+{'accuracy': 0.6061057334326135, 'balanced_accuracy': 0.6080777454442217, 'f1': 0.6632718014003819, 'precision': 0.5744211686879823, 'recall': 0.7846385542168675}
+2026-04-24 00:59:31,474 - INFO - ================= epoch end =================
+2026-04-24 00:59:31,476 - INFO - epoch 6 | train_loss: 0.02768498 | valid_loss: 1.57376292 | valid balanc. acc.: 0.62175284
+2026-04-24 00:59:31,477 - INFO - metrics:
+{'accuracy': 0.620253164556962, 'balanced_accuracy': 0.6217528434799581, 'f1': 0.6631439894319683, 'precision': 0.5905882352941176, 'recall': 0.7560240963855421}
+2026-04-24 00:59:36,328 - INFO - epoch 7 | batch 50 | train_loss: 0.00445277
+2026-04-24 00:59:48,088 - INFO - metrics:
+{'accuracy': 0.637379002233805, 'balanced_accuracy': 0.6376747786432919, 'f1': 0.6442658875091307, 'precision': 0.625531914893617, 'recall': 0.6641566265060241}
+2026-04-24 00:59:52,305 - INFO - epoch 7 | batch 100 | train_loss: 0.00252959
+2026-04-24 01:00:02,266 - INFO - metrics:
+{'accuracy': 0.6589724497393894, 'balanced_accuracy': 0.6594954930177264, 'f1': 0.671919770773639, 'precision': 0.6407103825136612, 'recall': 0.7063253012048193}
+2026-04-24 01:00:06,167 - INFO - epoch 7 | batch 150 | train_loss: 0.00173860
+2026-04-24 01:00:17,141 - INFO - metrics:
+{'accuracy': 0.6262099776619509, 'balanced_accuracy': 0.6274608744255372, 'f1': 0.6617250673854448, 'precision': 0.598780487804878, 'recall': 0.7394578313253012}
+2026-04-24 01:00:21,407 - INFO - epoch 7 | batch 200 | train_loss: 0.00246875
+2026-04-24 01:00:34,159 - INFO - metrics:
+{'accuracy': 0.6098287416232315, 'balanced_accuracy': 0.6118428056851855, 'f1': 0.6675126903553299, 'precision': 0.5767543859649122, 'recall': 0.7921686746987951}
+2026-04-24 01:00:38,225 - INFO - epoch 7 | batch 250 | train_loss: 0.00206140
+2026-04-24 01:00:50,563 - INFO - metrics:
+{'accuracy': 0.6187639612807149, 'balanced_accuracy': 0.6204298046382881, 'f1': 0.666232073011734, 'precision': 0.5873563218390805, 'recall': 0.7695783132530121}
+2026-04-24 01:00:54,601 - INFO - epoch 7 | batch 300 | train_loss: 0.00175842
+2026-04-24 01:01:06,235 - INFO - metrics:
+{'accuracy': 0.6053611317944899, 'balanced_accuracy': 0.6071084780950015, 'f1': 0.6567357512953368, 'precision': 0.5761363636363637, 'recall': 0.7635542168674698}
+2026-04-24 01:01:10,317 - INFO - epoch 7 | batch 350 | train_loss: 0.00231833
+2026-04-24 01:01:22,146 - INFO - metrics:
+{'accuracy': 0.6135517498138496, 'balanced_accuracy': 0.6153749756019661, 'f1': 0.6658081133290406, 'precision': 0.5815523059617548, 'recall': 0.7786144578313253}
+2026-04-24 01:01:35,749 - INFO - ================= epoch end =================
+2026-04-24 01:01:35,750 - INFO - epoch 7 | train_loss: 0.03561517 | valid_loss: 1.30319802 | valid balanc. acc.: 0.62399524
+2026-04-24 01:01:35,751 - INFO - metrics:
+{'accuracy': 0.6224869694713329, 'balanced_accuracy': 0.6239952446013804, 'f1': 0.6653465346534654, 'precision': 0.5922444183313749, 'recall': 0.7590361445783133}
+2026-04-24 01:01:39,931 - INFO - epoch 8 | batch 50 | train_loss: 0.00392819
+2026-04-24 01:01:51,728 - INFO - metrics:
+{'accuracy': 0.6649292628443783, 'balanced_accuracy': 0.665319969125397, 'f1': 0.6739130434782609, 'precision': 0.6494413407821229, 'recall': 0.7003012048192772}
+2026-04-24 01:01:55,716 - INFO - epoch 8 | batch 100 | train_loss: 0.00222995
+2026-04-24 01:02:07,818 - INFO - metrics:
+{'accuracy': 0.6403574087862993, 'balanced_accuracy': 0.6417514683180439, 'f1': 0.6782145236508994, 'precision': 0.6081242532855436, 'recall': 0.766566265060241}
+2026-04-24 01:02:11,917 - INFO - epoch 8 | batch 150 | train_loss: 0.00153108
+2026-04-24 01:02:23,617 - INFO - metrics:
+{'accuracy': 0.6180193596425912, 'balanced_accuracy': 0.620142573238462, 'f1': 0.6771554436752675, 'precision': 0.5816216216216217, 'recall': 0.8102409638554217}
+2026-04-24 01:02:27,785 - INFO - epoch 8 | batch 200 | train_loss: 0.00118299
+2026-04-24 01:02:39,244 - INFO - metrics:
+{'accuracy': 0.6195085629188384, 'balanced_accuracy': 0.6211994517096368, 'f1': 0.6675341574495771, 'precision': 0.5876288659793815, 'recall': 0.7725903614457831}
+2026-04-24 01:02:43,379 - INFO - epoch 8 | batch 250 | train_loss: 0.00095798
+2026-04-24 01:02:55,030 - INFO - metrics:
+{'accuracy': 0.6254653760238272, 'balanced_accuracy': 0.6271071029330872, 'f1': 0.6714565643370346, 'precision': 0.5928489042675894, 'recall': 0.7740963855421686}
+2026-04-24 01:02:59,479 - INFO - epoch 8 | batch 300 | train_loss: 0.00080487
+2026-04-24 01:03:10,188 - INFO - metrics:
+{'accuracy': 0.6336559940431868, 'balanced_accuracy': 0.6349078197916851, 'f1': 0.6684636118598383, 'precision': 0.6048780487804878, 'recall': 0.7469879518072289}
+2026-04-24 01:03:14,415 - INFO - epoch 8 | batch 350 | train_loss: 0.00069853
+2026-04-24 01:03:26,477 - INFO - metrics:
+{'accuracy': 0.6403574087862993, 'balanced_accuracy': 0.6417847383643558, 'f1': 0.6790697674418604, 'precision': 0.6076099881093936, 'recall': 0.7695783132530121}
+2026-04-24 01:03:40,033 - INFO - ================= epoch end =================
+2026-04-24 01:03:40,035 - INFO - epoch 8 | train_loss: 0.02654641 | valid_loss: 1.23891665 | valid balanc. acc.: 0.60108438
+2026-04-24 01:03:40,036 - INFO - metrics:
+{'accuracy': 0.5994043186895012, 'balanced_accuracy': 0.6010843817094593, 'f1': 0.6497395833333334, 'precision': 0.5722477064220184, 'recall': 0.7515060240963856}
+2026-04-24 01:03:44,230 - INFO - epoch 9 | batch 50 | train_loss: 0.00321752
+2026-04-24 01:03:55,735 - INFO - metrics:
+{'accuracy': 0.6545048399106478, 'balanced_accuracy': 0.6550439608211934, 'f1': 0.6680972818311874, 'precision': 0.6362397820163488, 'recall': 0.7033132530120482}
+2026-04-24 01:03:59,780 - INFO - epoch 9 | batch 100 | train_loss: 0.00180715
+2026-04-24 01:04:11,470 - INFO - metrics:
+{'accuracy': 0.6545048399106478, 'balanced_accuracy': 0.655210311052753, 'f1': 0.6727785613540197, 'precision': 0.6326259946949602, 'recall': 0.7183734939759037}
+2026-04-24 01:04:15,658 - INFO - epoch 9 | batch 150 | train_loss: 0.00125180
+2026-04-24 01:04:25,962 - INFO - metrics:
+{'accuracy': 0.652271034996277, 'balanced_accuracy': 0.6531176251397341, 'f1': 0.6745644599303136, 'precision': 0.6277561608300908, 'recall': 0.7289156626506024}
+2026-04-24 01:04:29,896 - INFO - epoch 9 | batch 200 | train_loss: 0.00096017
+2026-04-24 01:04:40,066 - INFO - metrics:
+{'accuracy': 0.6232315711094565, 'balanced_accuracy': 0.6248813368348208, 'f1': 0.6697127937336814, 'precision': 0.5910138248847926, 'recall': 0.7725903614457831}
+2026-04-24 01:04:44,239 - INFO - epoch 9 | batch 250 | train_loss: 0.00077901
+2026-04-24 01:04:55,867 - INFO - metrics:
+{'accuracy': 0.6455696202531646, 'balanced_accuracy': 0.6465068669375588, 'f1': 0.6708160442600276, 'precision': 0.6202046035805626, 'recall': 0.7304216867469879}
+2026-04-24 01:04:59,904 - INFO - epoch 9 | batch 300 | train_loss: 0.00065621
+2026-04-24 01:05:11,124 - INFO - metrics:
+{'accuracy': 0.6515264333581534, 'balanced_accuracy': 0.6522980729989176, 'f1': 0.6718092566619915, 'precision': 0.6286089238845144, 'recall': 0.7213855421686747}
+2026-04-24 01:05:15,208 - INFO - epoch 9 | batch 350 | train_loss: 0.00064404
+2026-04-24 01:05:26,971 - INFO - metrics:
+{'accuracy': 0.4973938942665674, 'balanced_accuracy': 0.5029455081001473, 'f1': 0.6630054917623565, 'precision': 0.4958924570575056, 'recall': 1.0}
+2026-04-24 01:05:40,186 - INFO - ================= epoch end =================
+2026-04-24 01:05:40,187 - INFO - epoch 9 | train_loss: 0.03121668 | valid_loss: 1.19560677 | valid balanc. acc.: 0.59889189
+2026-04-24 01:05:40,188 - INFO - metrics:
+{'accuracy': 0.5971705137751303, 'balanced_accuracy': 0.5988918856575048, 'f1': 0.6489292667099286, 'precision': 0.5701254275940707, 'recall': 0.7530120481927711}
+2026-04-24 01:05:44,335 - INFO - epoch 10 | batch 50 | train_loss: 0.00255504
+2026-04-24 01:05:56,671 - INFO - metrics:
+{'accuracy': 0.6209977661950856, 'balanced_accuracy': 0.6225890306439307, 'f1': 0.6662295081967213, 'precision': 0.5900116144018583, 'recall': 0.7650602409638554}
+2026-04-24 01:06:00,717 - INFO - epoch 10 | batch 100 | train_loss: 0.00144131
+2026-04-24 01:06:12,775 - INFO - metrics:
+{'accuracy': 0.6478034251675354, 'balanced_accuracy': 0.6485829178274216, 'f1': 0.6685353889278206, 'precision': 0.6251638269986893, 'recall': 0.7183734939759037}
+2026-04-24 01:06:17,006 - INFO - epoch 10 | batch 150 | train_loss: 0.00101138
+2026-04-24 01:06:28,982 - INFO - metrics:
+{'accuracy': 0.6403574087862993, 'balanced_accuracy': 0.6416350231559522, 'f1': 0.6751849361129791, 'precision': 0.6099635479951397, 'recall': 0.7560240963855421}
+2026-04-24 01:06:32,953 - INFO - epoch 10 | batch 200 | train_loss: 0.00078313
+2026-04-24 01:06:44,289 - INFO - metrics:
+{'accuracy': 0.6306775874906925, 'balanced_accuracy': 0.6325112674556843, 'f1': 0.6808236808236808, 'precision': 0.5943820224719101, 'recall': 0.7966867469879518}
+2026-04-24 01:06:48,339 - INFO - epoch 10 | batch 250 | train_loss: 0.00063729
+2026-04-24 01:06:59,965 - INFO - metrics:
+{'accuracy': 0.6381236038719286, 'balanced_accuracy': 0.6393593519882179, 'f1': 0.6720647773279352, 'precision': 0.60880195599022, 'recall': 0.75}
+2026-04-24 01:07:03,972 - INFO - epoch 10 | batch 300 | train_loss: 0.00053816
+2026-04-24 01:07:15,879 - INFO - metrics:
+{'accuracy': 0.6172747580044676, 'balanced_accuracy': 0.6193562911439573, 'f1': 0.6755050505050505, 'precision': 0.5815217391304348, 'recall': 0.8057228915662651}
+2026-04-24 01:07:19,939 - INFO - epoch 10 | batch 350 | train_loss: 0.00046511
+2026-04-24 01:07:32,275 - INFO - metrics:
+{'accuracy': 0.6336559940431868, 'balanced_accuracy': 0.6351074400695566, 'f1': 0.6737400530503979, 'precision': 0.6018957345971564, 'recall': 0.7650602409638554}
+2026-04-24 01:07:45,802 - INFO - ================= epoch end =================
+2026-04-24 01:07:45,803 - INFO - epoch 10 | train_loss: 0.00702525 | valid_loss: 1.78235812 | valid balanc. acc.: 0.62570089
+2026-04-24 01:07:45,804 - INFO - metrics:
+{'accuracy': 0.62397617274758, 'balanced_accuracy': 0.6257008889756375, 'f1': 0.6722907203114861, 'precision': 0.5906499429874572, 'recall': 0.7801204819277109}
+2026-04-24 01:07:45,834 - INFO - Fold 4
+2026-04-24 01:07:45,885 - INFO - 
+    ======= about folds =======
+    ((5888, 8), (1392, 8))
+    set()
+    label
+0    3010
+1    2878
+Name: image_path, dtype: int64     
+    label
+0    630
+1    762
+Name: image_path, dtype: int64
+    
+2026-04-24 01:07:46,296 - INFO - 
+    Всего параметров: 11,177,538
+    Обучаемых:       11,177,538
+    
+2026-04-24 01:07:50,577 - INFO - epoch 1 | batch 50 | train_loss: 0.03930881
+2026-04-24 01:08:02,801 - INFO - metrics:
+{'accuracy': 0.5984195402298851, 'balanced_accuracy': 0.6050181227346583, 'f1': 0.5934545454545455, 'precision': 0.6655791190864601, 'recall': 0.5354330708661418}
+2026-04-24 01:08:02,921 - INFO - save checkpoint: ..\models_checkpoints/resnet_18_backbone_cv/2026-04-24_00_06_06_full_tuning_video/fold4/checkpoint/best_model.pth
+2026-04-24 01:08:06,849 - INFO - epoch 1 | batch 100 | train_loss: 0.03572090
+2026-04-24 01:08:20,846 - INFO - metrics:
+{'accuracy': 0.5725574712643678, 'balanced_accuracy': 0.5426259217597801, 'f1': 0.6873357856016815, 'precision': 0.5731814198071867, 'recall': 0.8582677165354331}
+2026-04-24 01:08:24,917 - INFO - epoch 1 | batch 150 | train_loss: 0.03226531
+2026-04-24 01:08:35,997 - INFO - metrics:
+{'accuracy': 0.6537356321839081, 'balanced_accuracy': 0.6562304711911011, 'f1': 0.665742024965326, 'precision': 0.7058823529411765, 'recall': 0.6299212598425197}
+2026-04-24 01:08:36,137 - INFO - save checkpoint: ..\models_checkpoints/resnet_18_backbone_cv/2026-04-24_00_06_06_full_tuning_video/fold4/checkpoint/best_model.pth
+2026-04-24 01:08:40,533 - INFO - epoch 1 | batch 200 | train_loss: 0.03012643
+2026-04-24 01:08:52,201 - INFO - metrics:
+{'accuracy': 0.6479885057471264, 'balanced_accuracy': 0.6513935758030247, 'f1': 0.6568627450980392, 'precision': 0.7042042042042042, 'recall': 0.615485564304462}
+2026-04-24 01:08:56,403 - INFO - epoch 1 | batch 250 | train_loss: 0.02794684
+2026-04-24 01:09:08,537 - INFO - metrics:
+{'accuracy': 0.5890804597701149, 'balanced_accuracy': 0.5562054743157105, 'f1': 0.7063655030800822, 'precision': 0.5801011804384486, 'recall': 0.9028871391076115}
+2026-04-24 01:09:13,314 - INFO - epoch 1 | batch 300 | train_loss: 0.02584864
+2026-04-24 01:09:25,217 - INFO - metrics:
+{'accuracy': 0.5596264367816092, 'balanced_accuracy': 0.5312273465816773, 'f1': 0.6737626397019691, 'precision': 0.5666965085049239, 'recall': 0.8307086614173228}
+2026-04-24 01:09:29,517 - INFO - epoch 1 | batch 350 | train_loss: 0.02450557
+2026-04-24 01:09:41,631 - INFO - metrics:
+{'accuracy': 0.5998563218390804, 'balanced_accuracy': 0.5748468941382328, 'f1': 0.6964577656675749, 'precision': 0.5955265610438024, 'recall': 0.8385826771653543}
+2026-04-24 01:09:54,938 - INFO - ================= epoch end =================
+2026-04-24 01:09:54,939 - INFO - epoch 1 | train_loss: 0.38360734 | valid_loss: 0.97391659 | valid balanc. acc.: 0.54050119
+2026-04-24 01:09:54,940 - INFO - metrics:
+{'accuracy': 0.5739942528735632, 'balanced_accuracy': 0.540501187351581, 'f1': 0.6966751918158568, 'precision': 0.5708298407376362, 'recall': 0.8937007874015748}
+2026-04-24 01:09:59,270 - INFO - epoch 2 | batch 50 | train_loss: 0.02084409
+2026-04-24 01:10:13,489 - INFO - metrics:
+{'accuracy': 0.6099137931034483, 'balanced_accuracy': 0.5906324209473816, 'f1': 0.6902452937820879, 'precision': 0.6104944500504541, 'recall': 0.7939632545931758}
+2026-04-24 01:10:17,939 - INFO - epoch 2 | batch 100 | train_loss: 0.01769984
+2026-04-24 01:10:32,942 - INFO - metrics:
+{'accuracy': 0.6336206896551724, 'balanced_accuracy': 0.6346956630421198, 'f1': 0.6506849315068494, 'precision': 0.6805157593123209, 'recall': 0.6233595800524935}
+2026-04-24 01:10:37,492 - INFO - epoch 2 | batch 150 | train_loss: 0.01598957
+2026-04-24 01:10:53,582 - INFO - metrics:
+{'accuracy': 0.6443965517241379, 'balanced_accuracy': 0.632302212223472, 'f1': 0.7005444646098004, 'precision': 0.6498316498316499, 'recall': 0.7598425196850394}
+2026-04-24 01:10:58,630 - INFO - epoch 2 | batch 200 | train_loss: 0.01494909
+2026-04-24 01:11:13,528 - INFO - metrics:
+{'accuracy': 0.6357758620689655, 'balanced_accuracy': 0.6204411948506436, 'f1': 0.7015891701000588, 'precision': 0.6360725720384205, 'recall': 0.7821522309711286}
+2026-04-24 01:11:18,077 - INFO - epoch 2 | batch 250 | train_loss: 0.01401917
+2026-04-24 01:11:33,112 - INFO - metrics:
+{'accuracy': 0.5704022988505747, 'balanced_accuracy': 0.5363954505686789, 'f1': 0.6952089704383282, 'precision': 0.5683333333333334, 'recall': 0.89501312335958}
+2026-04-24 01:11:37,613 - INFO - epoch 2 | batch 300 | train_loss: 0.01335281
+2026-04-24 01:11:52,313 - INFO - metrics:
+{'accuracy': 0.6120689655172413, 'balanced_accuracy': 0.583252093488314, 'f1': 0.7145877378435518, 'precision': 0.5982300884955752, 'recall': 0.8871391076115486}
+2026-04-24 01:11:56,355 - INFO - epoch 2 | batch 350 | train_loss: 0.01267016
+2026-04-24 01:12:08,647 - INFO - metrics:
+{'accuracy': 0.6487068965517241, 'balanced_accuracy': 0.6374765654293213, 'f1': 0.7020109689213894, 'precision': 0.6552901023890785, 'recall': 0.7559055118110236}
+2026-04-24 01:12:21,799 - INFO - ================= epoch end =================
+2026-04-24 01:12:21,800 - INFO - epoch 2 | train_loss: 0.19780445 | valid_loss: 1.15443584 | valid balanc. acc.: 0.57632796
+2026-04-24 01:12:21,800 - INFO - metrics:
+{'accuracy': 0.6005747126436781, 'balanced_accuracy': 0.5763279590051243, 'f1': 0.6951754385964912, 'precision': 0.5969868173258004, 'recall': 0.8320209973753281}
+2026-04-24 01:12:26,026 - INFO - epoch 3 | batch 50 | train_loss: 0.01495412
+2026-04-24 01:12:38,755 - INFO - metrics:
+{'accuracy': 0.6293103448275862, 'balanced_accuracy': 0.6139857517810273, 'f1': 0.696113074204947, 'precision': 0.6314102564102564, 'recall': 0.7755905511811023}
+2026-04-24 01:12:42,877 - INFO - epoch 3 | batch 100 | train_loss: 0.01143157
+2026-04-24 01:12:54,880 - INFO - metrics:
+{'accuracy': 0.5761494252873564, 'balanced_accuracy': 0.5479690038745157, 'f1': 0.6858359957401491, 'precision': 0.5770609318996416, 'recall': 0.8451443569553806}
+2026-04-24 01:12:59,055 - INFO - epoch 3 | batch 150 | train_loss: 0.00986162
+2026-04-24 01:13:11,740 - INFO - metrics:
+{'accuracy': 0.5890804597701149, 'balanced_accuracy': 0.5577177852768405, 'f1': 0.7030114226375909, 'precision': 0.5816151202749141, 'recall': 0.8884514435695539}
+2026-04-24 01:13:15,812 - INFO - epoch 3 | batch 200 | train_loss: 0.00936198
+2026-04-24 01:13:27,455 - INFO - metrics:
+{'accuracy': 0.6350574712643678, 'balanced_accuracy': 0.6115360579927509, 'f1': 0.7205720572057206, 'precision': 0.6202651515151515, 'recall': 0.8595800524934383}
+2026-04-24 01:13:31,665 - INFO - epoch 3 | batch 250 | train_loss: 0.00833053
+2026-04-24 01:13:44,098 - INFO - metrics:
+{'accuracy': 0.6386494252873564, 'balanced_accuracy': 0.6194913135858018, 'f1': 0.7133903133903133, 'precision': 0.6304128902316214, 'recall': 0.821522309711286}
+2026-04-24 01:13:48,156 - INFO - epoch 3 | batch 300 | train_loss: 0.00806921
+2026-04-24 01:14:00,482 - INFO - metrics:
+{'accuracy': 0.6386494252873564, 'balanced_accuracy': 0.6186664166979128, 'f1': 0.7153367289190719, 'precision': 0.6288557213930348, 'recall': 0.8293963254593176}
+2026-04-24 01:14:04,745 - INFO - epoch 3 | batch 350 | train_loss: 0.00750231
+2026-04-24 01:14:16,560 - INFO - metrics:
+{'accuracy': 0.6709770114942529, 'balanced_accuracy': 0.68655168103987, 'f1': 0.6347687400318979, 'precision': 0.8089430894308943, 'recall': 0.5223097112860893}
+2026-04-24 01:14:16,687 - INFO - save checkpoint: ..\models_checkpoints/resnet_18_backbone_cv/2026-04-24_00_06_06_full_tuning_video/fold4/checkpoint/best_model.pth
+2026-04-24 01:14:30,492 - INFO - ================= epoch end =================
+2026-04-24 01:14:30,493 - INFO - epoch 3 | train_loss: 0.11966284 | valid_loss: 1.06814953 | valid balanc. acc.: 0.59858143
+2026-04-24 01:14:30,494 - INFO - metrics:
+{'accuracy': 0.6199712643678161, 'balanced_accuracy': 0.5985814273215848, 'f1': 0.7036414565826331, 'precision': 0.613880742913001, 'recall': 0.8241469816272966}
+2026-04-24 01:14:34,646 - INFO - epoch 4 | batch 50 | train_loss: 0.01158192
+2026-04-24 01:14:47,244 - INFO - metrics:
+{'accuracy': 0.6278735632183908, 'balanced_accuracy': 0.6115735533058368, 'f1': 0.697429906542056, 'precision': 0.628421052631579, 'recall': 0.7834645669291339}
+2026-04-24 01:14:51,340 - INFO - epoch 4 | batch 100 | train_loss: 0.00868955
+2026-04-24 01:15:03,791 - INFO - metrics:
+{'accuracy': 0.5890804597701149, 'balanced_accuracy': 0.559780027496563, 'f1': 0.6983122362869199, 'precision': 0.5837742504409171, 'recall': 0.868766404199475}
+2026-04-24 01:15:07,920 - INFO - epoch 4 | batch 150 | train_loss: 0.00863690
+2026-04-24 01:15:19,715 - INFO - metrics:
+{'accuracy': 0.6120689655172413, 'balanced_accuracy': 0.5851768528933883, 'f1': 0.7103004291845494, 'precision': 0.6007259528130672, 'recall': 0.868766404199475}
+2026-04-24 01:15:23,740 - INFO - epoch 4 | batch 200 | train_loss: 0.00718039
+2026-04-24 01:15:35,516 - INFO - metrics:
+{'accuracy': 0.646551724137931, 'balanced_accuracy': 0.6262967129108861, 'f1': 0.7223476297968398, 'precision': 0.6336633663366337, 'recall': 0.8398950131233596}
+2026-04-24 01:15:39,567 - INFO - epoch 4 | batch 250 | train_loss: 0.00630586
+2026-04-24 01:15:51,390 - INFO - metrics:
+{'accuracy': 0.6443965517241379, 'balanced_accuracy': 0.63546431696038, 'f1': 0.6919726197884256, 'precision': 0.6579881656804734, 'recall': 0.7296587926509186}
+2026-04-24 01:15:55,450 - INFO - epoch 4 | batch 300 | train_loss: 0.00567524
+2026-04-24 01:16:08,347 - INFO - metrics:
+{'accuracy': 0.6580459770114943, 'balanced_accuracy': 0.6398200224971878, 'f1': 0.7270642201834863, 'precision': 0.6456211812627292, 'recall': 0.8320209973753281}
+2026-04-24 01:16:12,475 - INFO - epoch 4 | batch 350 | train_loss: 0.00524767
+2026-04-24 01:16:24,226 - INFO - metrics:
+{'accuracy': 0.6185344827586207, 'balanced_accuracy': 0.5982314710661167, 'f1': 0.6998304126625212, 'precision': 0.6146971201588878, 'recall': 0.8123359580052494}
+2026-04-24 01:16:37,977 - INFO - ================= epoch end =================
+2026-04-24 01:16:37,978 - INFO - epoch 4 | train_loss: 0.08164540 | valid_loss: 1.60859544 | valid balanc. acc.: 0.59305087
+2026-04-24 01:16:37,979 - INFO - metrics:
+{'accuracy': 0.6206896551724138, 'balanced_accuracy': 0.5930508686414198, 'f1': 0.7185501066098081, 'precision': 0.6050269299820467, 'recall': 0.884514435695538}
+2026-04-24 01:16:42,288 - INFO - epoch 5 | batch 50 | train_loss: 0.00880333
+2026-04-24 01:16:54,871 - INFO - metrics:
+{'accuracy': 0.6285919540229885, 'balanced_accuracy': 0.6104424446944132, 'f1': 0.7027027027027027, 'precision': 0.6253838280450358, 'recall': 0.8018372703412073}
+2026-04-24 01:16:59,003 - INFO - epoch 5 | batch 100 | train_loss: 0.00574266
+2026-04-24 01:17:11,617 - INFO - metrics:
+{'accuracy': 0.5998563218390804, 'balanced_accuracy': 0.5703099612548431, 'f1': 0.7069963177275118, 'precision': 0.5899912203687445, 'recall': 0.8818897637795275}
+2026-04-24 01:17:15,865 - INFO - epoch 5 | batch 150 | train_loss: 0.00600525
+2026-04-24 01:17:27,841 - INFO - metrics:
+{'accuracy': 0.6221264367816092, 'balanced_accuracy': 0.6056367954005749, 'f1': 0.6931155192532089, 'precision': 0.6239495798319328, 'recall': 0.7795275590551181}
+2026-04-24 01:17:31,940 - INFO - epoch 5 | batch 200 | train_loss: 0.00493026
+2026-04-24 01:17:44,105 - INFO - metrics:
+{'accuracy': 0.6271551724137931, 'balanced_accuracy': 0.6110548681414822, 'f1': 0.6963136337039204, 'precision': 0.6282998944033791, 'recall': 0.7808398950131233}
+2026-04-24 01:17:48,188 - INFO - epoch 5 | batch 250 | train_loss: 0.00419414
+2026-04-24 01:18:01,483 - INFO - metrics:
+{'accuracy': 0.6199712643678161, 'balanced_accuracy': 0.5967941507311586, 'f1': 0.7078961899503037, 'precision': 0.6110581506196378, 'recall': 0.8412073490813649}
+2026-04-24 01:18:05,750 - INFO - epoch 5 | batch 300 | train_loss: 0.00445461
+2026-04-24 01:18:18,422 - INFO - metrics:
+{'accuracy': 0.6630747126436781, 'balanced_accuracy': 0.6503249593800775, 'f1': 0.7183183183183183, 'precision': 0.6622369878183831, 'recall': 0.7847769028871391}
+2026-04-24 01:18:22,497 - INFO - epoch 5 | batch 350 | train_loss: 0.00408399
+2026-04-24 01:18:35,040 - INFO - metrics:
+{'accuracy': 0.6300287356321839, 'balanced_accuracy': 0.6098300212473441, 'f1': 0.7088750706613907, 'precision': 0.6226415094339622, 'recall': 0.8228346456692913}
+2026-04-24 01:18:49,728 - INFO - ================= epoch end =================
+2026-04-24 01:18:49,729 - INFO - epoch 5 | train_loss: 0.06290428 | valid_loss: 1.28678597 | valid balanc. acc.: 0.61863517
+2026-04-24 01:18:49,730 - INFO - metrics:
+{'accuracy': 0.639367816091954, 'balanced_accuracy': 0.6186351706036746, 'f1': 0.7176602924634421, 'precision': 0.6279527559055118, 'recall': 0.8372703412073491}
+2026-04-24 01:18:53,865 - INFO - epoch 6 | batch 50 | train_loss: 0.00658094
+2026-04-24 01:19:05,493 - INFO - metrics:
+{'accuracy': 0.6142241379310345, 'balanced_accuracy': 0.5971816022997125, 'f1': 0.6879721092388147, 'precision': 0.6173096976016684, 'recall': 0.7769028871391076}
+2026-04-24 01:19:09,985 - INFO - epoch 6 | batch 100 | train_loss: 0.00404322
+2026-04-24 01:19:23,048 - INFO - metrics:
+{'accuracy': 0.6012931034482759, 'balanced_accuracy': 0.5734095738032746, 'f1': 0.7043153969099627, 'precision': 0.5928251121076233, 'recall': 0.8674540682414699}
+2026-04-24 01:19:27,235 - INFO - epoch 6 | batch 150 | train_loss: 0.00332105
+2026-04-24 01:19:39,581 - INFO - metrics:
+{'accuracy': 0.6508620689655172, 'balanced_accuracy': 0.6317460317460317, 'f1': 0.7232346241457859, 'precision': 0.6388329979879276, 'recall': 0.8333333333333334}
+2026-04-24 01:19:43,715 - INFO - epoch 6 | batch 200 | train_loss: 0.00262206
+2026-04-24 01:19:56,640 - INFO - metrics:
+{'accuracy': 0.646551724137931, 'balanced_accuracy': 0.6289088863892014, 'f1': 0.7162629757785467, 'precision': 0.6388888888888888, 'recall': 0.8149606299212598}
+2026-04-24 01:20:00,663 - INFO - epoch 6 | batch 250 | train_loss: 0.00435337
+2026-04-24 01:20:14,056 - INFO - metrics:
+{'accuracy': 0.6206896551724138, 'balanced_accuracy': 0.5964879390076241, 'f1': 0.7108433734939759, 'precision': 0.6099624060150376, 'recall': 0.8517060367454068}
+2026-04-24 01:20:18,153 - INFO - epoch 6 | batch 300 | train_loss: 0.00377743
+2026-04-24 01:20:30,539 - INFO - metrics:
+{'accuracy': 0.6551724137931034, 'balanced_accuracy': 0.6410448693913261, 'f1': 0.7149643705463183, 'precision': 0.6529284164859002, 'recall': 0.7900262467191601}
+2026-04-24 01:20:34,927 - INFO - epoch 6 | batch 350 | train_loss: 0.00332474
+2026-04-24 01:20:49,096 - INFO - metrics:
+{'accuracy': 0.6336206896551724, 'balanced_accuracy': 0.6088488938882639, 'f1': 0.7222222222222222, 'precision': 0.61731843575419, 'recall': 0.8700787401574803}
+2026-04-24 01:21:07,096 - INFO - ================= epoch end =================
+2026-04-24 01:21:07,098 - INFO - epoch 6 | train_loss: 0.05102505 | valid_loss: 1.53223692 | valid balanc. acc.: 0.60353706
+2026-04-24 01:21:07,100 - INFO - metrics:
+{'accuracy': 0.6293103448275862, 'balanced_accuracy': 0.6035370578677666, 'f1': 0.721081081081081, 'precision': 0.6130514705882353, 'recall': 0.8753280839895013}
+2026-04-24 01:21:11,626 - INFO - epoch 7 | batch 50 | train_loss: 0.00529431
+2026-04-24 01:21:27,402 - INFO - metrics:
+{'accuracy': 0.646551724137931, 'balanced_accuracy': 0.6346831646044244, 'f1': 0.7018181818181818, 'precision': 0.652027027027027, 'recall': 0.7598425196850394}
+2026-04-24 01:21:32,368 - INFO - epoch 7 | batch 100 | train_loss: 0.00322974
+2026-04-24 01:21:45,079 - INFO - metrics:
+{'accuracy': 0.6149425287356322, 'balanced_accuracy': 0.5858767654043244, 'f1': 0.7172995780590717, 'precision': 0.599647266313933, 'recall': 0.8923884514435696}
+2026-04-24 01:21:49,733 - INFO - epoch 7 | batch 150 | train_loss: 0.00376794
+2026-04-24 01:22:04,783 - INFO - metrics:
+{'accuracy': 0.6163793103448276, 'balanced_accuracy': 0.5911761029871266, 'f1': 0.7097826086956521, 'precision': 0.6057513914656771, 'recall': 0.8569553805774278}
+2026-04-24 01:22:09,547 - INFO - epoch 7 | batch 200 | train_loss: 0.00300929
+2026-04-24 01:22:24,485 - INFO - metrics:
+{'accuracy': 0.6408045977011494, 'balanced_accuracy': 0.6228346456692914, 'f1': 0.7123130034522439, 'precision': 0.6342213114754098, 'recall': 0.8123359580052494}
+2026-04-24 01:22:29,357 - INFO - epoch 7 | batch 250 | train_loss: 0.00245939
+2026-04-24 01:22:41,565 - INFO - metrics:
+{'accuracy': 0.6350574712643678, 'balanced_accuracy': 0.6144231971003624, 'f1': 0.713963963963964, 'precision': 0.6252465483234714, 'recall': 0.8320209973753281}
+2026-04-24 01:22:45,515 - INFO - epoch 7 | batch 300 | train_loss: 0.00311076
+2026-04-24 01:22:58,406 - INFO - metrics:
+{'accuracy': 0.6558908045977011, 'balanced_accuracy': 0.6406011748531434, 'f1': 0.7184009406231628, 'precision': 0.650692225772098, 'recall': 0.8018372703412073}
+2026-04-24 01:23:02,518 - INFO - epoch 7 | batch 350 | train_loss: 0.00278001
+2026-04-24 01:23:14,702 - INFO - metrics:
+{'accuracy': 0.6372126436781609, 'balanced_accuracy': 0.6124046994125734, 'f1': 0.7250952640174197, 'precision': 0.6195348837209302, 'recall': 0.8740157480314961}
+2026-04-24 01:23:28,152 - INFO - ================= epoch end =================
+2026-04-24 01:23:28,153 - INFO - epoch 7 | train_loss: 0.04250271 | valid_loss: 1.33326221 | valid balanc. acc.: 0.61667917
+2026-04-24 01:23:28,155 - INFO - metrics:
+{'accuracy': 0.6400862068965517, 'balanced_accuracy': 0.6166791651043619, 'f1': 0.7242707760044028, 'precision': 0.623696682464455, 'recall': 0.863517060367454}
+2026-04-24 01:23:32,880 - INFO - epoch 8 | batch 50 | train_loss: 0.00445650
+2026-04-24 01:23:46,798 - INFO - metrics:
+{'accuracy': 0.6443965517241379, 'balanced_accuracy': 0.6280402449693788, 'f1': 0.7113702623906706, 'precision': 0.640083945435467, 'recall': 0.800524934383202}
+2026-04-24 01:23:51,050 - INFO - epoch 8 | batch 100 | train_loss: 0.00262378
+2026-04-24 01:24:03,126 - INFO - metrics:
+{'accuracy': 0.6257183908045977, 'balanced_accuracy': 0.6024559430071241, 'f1': 0.7126309983452841, 'precision': 0.6146527117031398, 'recall': 0.847769028871391}
+2026-04-24 01:24:07,354 - INFO - epoch 8 | batch 150 | train_loss: 0.00193966
+2026-04-24 01:24:20,915 - INFO - metrics:
+{'accuracy': 0.6544540229885057, 'balanced_accuracy': 0.6364016997875266, 'f1': 0.7237219988512349, 'precision': 0.6435137895812053, 'recall': 0.8267716535433071}
+2026-04-24 01:24:25,268 - INFO - epoch 8 | batch 200 | train_loss: 0.00162250
+2026-04-24 01:24:37,945 - INFO - metrics:
+{'accuracy': 0.5984195402298851, 'balanced_accuracy': 0.5680352455943007, 'f1': 0.7077888133821223, 'precision': 0.5881841876629018, 'recall': 0.8884514435695539}
+2026-04-24 01:24:42,235 - INFO - epoch 8 | batch 250 | train_loss: 0.00223002
+2026-04-24 01:24:55,287 - INFO - metrics:
+{'accuracy': 0.5783045977011494, 'balanced_accuracy': 0.5492500937382827, 'f1': 0.6895822316234796, 'precision': 0.5775022143489814, 'recall': 0.8556430446194225}
+2026-04-24 01:24:59,446 - INFO - epoch 8 | batch 300 | train_loss: 0.00197425
+2026-04-24 01:25:12,013 - INFO - metrics:
+{'accuracy': 0.6300287356321839, 'balanced_accuracy': 0.6107924009498813, 'f1': 0.7065527065527065, 'precision': 0.6243705941591138, 'recall': 0.8136482939632546}
+2026-04-24 01:25:17,166 - INFO - epoch 8 | batch 350 | train_loss: 0.00172569
+2026-04-24 01:25:29,306 - INFO - metrics:
+{'accuracy': 0.6314655172413793, 'balanced_accuracy': 0.612517185351831, 'f1': 0.7070245573957739, 'precision': 0.6258847320525783, 'recall': 0.8123359580052494}
+2026-04-24 01:25:42,537 - INFO - ================= epoch end =================
+2026-04-24 01:25:42,538 - INFO - epoch 8 | train_loss: 0.02638877 | valid_loss: 1.49320336 | valid balanc. acc.: 0.62335333
+2026-04-24 01:25:42,539 - INFO - metrics:
+{'accuracy': 0.6415229885057471, 'balanced_accuracy': 0.6233533308336459, 'f1': 0.7133831131533601, 'precision': 0.634320735444331, 'recall': 0.8149606299212598}
+2026-04-24 01:25:46,655 - INFO - epoch 9 | batch 50 | train_loss: 0.00380764
+2026-04-24 01:26:02,960 - INFO - metrics:
+{'accuracy': 0.6637931034482759, 'balanced_accuracy': 0.6531808523934508, 'f1': 0.7135862913096696, 'precision': 0.6685779816513762, 'recall': 0.7650918635170604}
+2026-04-24 01:26:07,814 - INFO - epoch 9 | batch 100 | train_loss: 0.00237090
+2026-04-24 01:26:23,873 - INFO - metrics:
+{'accuracy': 0.6688218390804598, 'balanced_accuracy': 0.6550243719535058, 'f1': 0.7257584770969661, 'precision': 0.6637649619151251, 'recall': 0.800524934383202}
+2026-04-24 01:26:28,893 - INFO - epoch 9 | batch 150 | train_loss: 0.00175766
+2026-04-24 01:26:43,167 - INFO - metrics:
+{'accuracy': 0.6343390804597702, 'balanced_accuracy': 0.6128046494188226, 'f1': 0.7154835103409726, 'precision': 0.6231742940603701, 'recall': 0.8398950131233596}
+2026-04-24 01:26:47,141 - INFO - epoch 9 | batch 200 | train_loss: 0.00196071
+2026-04-24 01:26:58,675 - INFO - metrics:
+{'accuracy': 0.6566091954022989, 'balanced_accuracy': 0.6415323084614423, 'f1': 0.71849234393404, 'precision': 0.6517094017094017, 'recall': 0.800524934383202}
+2026-04-24 01:27:03,493 - INFO - epoch 9 | batch 250 | train_loss: 0.00164818
+2026-04-24 01:27:21,913 - INFO - metrics:
+{'accuracy': 0.6214080459770115, 'balanced_accuracy': 0.5992063492063492, 'f1': 0.7067334446299388, 'precision': 0.6135265700483091, 'recall': 0.8333333333333334}
+2026-04-24 01:27:27,062 - INFO - epoch 9 | batch 300 | train_loss: 0.00139326
+2026-04-24 01:27:40,306 - INFO - metrics:
+{'accuracy': 0.6099137931034483, 'balanced_accuracy': 0.5840332458442694, 'f1': 0.7063277447268794, 'precision': 0.6007359705611776, 'recall': 0.8569553805774278}
+2026-04-24 01:27:44,251 - INFO - epoch 9 | batch 350 | train_loss: 0.00153494
+2026-04-24 01:27:56,608 - INFO - metrics:
+{'accuracy': 0.610632183908046, 'balanced_accuracy': 0.5849643794525684, 'f1': 0.7063921993499458, 'precision': 0.6014760147601476, 'recall': 0.8556430446194225}
+2026-04-24 01:28:10,514 - INFO - ================= epoch end =================
+2026-04-24 01:28:10,515 - INFO - epoch 9 | train_loss: 0.02355351 | valid_loss: 1.57684459 | valid balanc. acc.: 0.59627547
+2026-04-24 01:28:10,516 - INFO - metrics:
+{'accuracy': 0.6192528735632183, 'balanced_accuracy': 0.5962754655668041, 'f1': 0.706858407079646, 'precision': 0.6108986615678776, 'recall': 0.8385826771653543}
+2026-04-24 01:28:14,625 - INFO - epoch 10 | batch 50 | train_loss: 0.00227277
+2026-04-24 01:28:26,867 - INFO - metrics:
+{'accuracy': 0.646551724137931, 'balanced_accuracy': 0.6308336457942757, 'f1': 0.7116060961313013, 'precision': 0.6430084745762712, 'recall': 0.7965879265091863}
+2026-04-24 01:28:31,022 - INFO - epoch 10 | batch 100 | train_loss: 0.00129963
+2026-04-24 01:28:42,797 - INFO - metrics:
+{'accuracy': 0.6566091954022989, 'balanced_accuracy': 0.6402949631296089, 'f1': 0.7214452214452215, 'precision': 0.6488469601677149, 'recall': 0.8123359580052494}
+2026-04-24 01:28:47,193 - INFO - epoch 10 | batch 150 | train_loss: 0.00091892
+2026-04-24 01:28:59,325 - INFO - metrics:
+{'accuracy': 0.6307471264367817, 'balanced_accuracy': 0.6077365329333834, 'f1': 0.7160220994475138, 'precision': 0.6183206106870229, 'recall': 0.8503937007874016}
+2026-04-24 01:29:03,743 - INFO - epoch 10 | batch 200 | train_loss: 0.00265264
+2026-04-24 01:29:16,391 - INFO - metrics:
+{'accuracy': 0.6602011494252874, 'balanced_accuracy': 0.6426134233220847, 'f1': 0.7273775216138328, 'precision': 0.6485097636176773, 'recall': 0.8280839895013123}
+2026-04-24 01:29:20,738 - INFO - epoch 10 | batch 250 | train_loss: 0.00219574
+2026-04-24 01:29:32,948 - INFO - metrics:
+{'accuracy': 0.6458333333333334, 'balanced_accuracy': 0.6241282339707537, 'f1': 0.7250418293363079, 'precision': 0.6304558680892337, 'recall': 0.8530183727034121}
+2026-04-24 01:29:36,946 - INFO - epoch 10 | batch 300 | train_loss: 0.00185615
+2026-04-24 01:29:48,783 - INFO - metrics:
+{'accuracy': 0.6372126436781609, 'balanced_accuracy': 0.6157042869641295, 'f1': 0.7177193963107882, 'precision': 0.6251217137293087, 'recall': 0.84251968503937}
+2026-04-24 01:29:52,732 - INFO - epoch 10 | batch 350 | train_loss: 0.00160408
+2026-04-24 01:30:04,188 - INFO - metrics:
+{'accuracy': 0.6293103448275862, 'balanced_accuracy': 0.6061492313460818, 'f1': 0.7152317880794702, 'precision': 0.6171428571428571, 'recall': 0.8503937007874016}
+2026-04-24 01:30:17,217 - INFO - ================= epoch end =================
+2026-04-24 01:30:17,218 - INFO - epoch 10 | train_loss: 0.02444677 | valid_loss: 1.61579747 | valid balanc. acc.: 0.60363080
+2026-04-24 01:30:17,219 - INFO - metrics:
+{'accuracy': 0.6271551724137931, 'balanced_accuracy': 0.6036307961504812, 'f1': 0.7143643368189323, 'precision': 0.6151658767772512, 'recall': 0.8517060367454068}
+2026-04-24 01:30:17,255 - INFO - Fold 5
+2026-04-24 01:30:17,303 - INFO - 
+    ======= about folds =======
+    ((5923, 8), (1357, 8))
+    set()
+    label
+0    2977
+1    2946
+Name: image_path, dtype: int64     
+    label
+0    663
+1    694
+Name: image_path, dtype: int64
+    
+2026-04-24 01:30:17,806 - INFO - 
+    Всего параметров: 11,177,538
+    Обучаемых:       11,177,538
+    
+2026-04-24 01:30:22,686 - INFO - epoch 1 | batch 50 | train_loss: 0.04636740
+2026-04-24 01:30:33,931 - INFO - metrics:
+{'accuracy': 0.6086956521739131, 'balanced_accuracy': 0.6143696671752275, 'f1': 0.48893166506256014, 'precision': 0.736231884057971, 'recall': 0.3659942363112392}
+2026-04-24 01:30:34,085 - INFO - save checkpoint: ..\models_checkpoints/resnet_18_backbone_cv/2026-04-24_00_06_06_full_tuning_video/fold5/checkpoint/best_model.pth
+2026-04-24 01:30:38,076 - INFO - epoch 1 | batch 100 | train_loss: 0.04046011
+2026-04-24 01:30:50,254 - INFO - metrics:
+{'accuracy': 0.6595431098010317, 'balanced_accuracy': 0.6573778258809619, 'f1': 0.6932270916334662, 'precision': 0.6428571428571429, 'recall': 0.7521613832853026}
+2026-04-24 01:30:50,474 - INFO - save checkpoint: ..\models_checkpoints/resnet_18_backbone_cv/2026-04-24_00_06_06_full_tuning_video/fold5/checkpoint/best_model.pth
+2026-04-24 01:30:54,662 - INFO - epoch 1 | batch 150 | train_loss: 0.03579486
+2026-04-24 01:31:06,605 - INFO - metrics:
+{'accuracy': 0.6153279292557111, 'balanced_accuracy': 0.6092318993658203, 'f1': 0.6996547756041427, 'precision': 0.5823754789272031, 'recall': 0.8760806916426513}
+2026-04-24 01:31:10,839 - INFO - epoch 1 | batch 200 | train_loss: 0.03253646
+2026-04-24 01:31:22,832 - INFO - metrics:
+{'accuracy': 0.6565954310980103, 'balanced_accuracy': 0.6604585305636331, 'f1': 0.5940766550522648, 'precision': 0.751101321585903, 'recall': 0.49135446685878964}
+2026-04-24 01:31:22,954 - INFO - save checkpoint: ..\models_checkpoints/resnet_18_backbone_cv/2026-04-24_00_06_06_full_tuning_video/fold5/checkpoint/best_model.pth
+2026-04-24 01:31:26,978 - INFO - epoch 1 | batch 250 | train_loss: 0.02993192
+2026-04-24 01:31:39,385 - INFO - metrics:
+{'accuracy': 0.6742815033161386, 'balanced_accuracy': 0.6749535992628042, 'f1': 0.6696562032884903, 'precision': 0.6956521739130435, 'recall': 0.6455331412103746}
+2026-04-24 01:31:39,590 - INFO - save checkpoint: ..\models_checkpoints/resnet_18_backbone_cv/2026-04-24_00_06_06_full_tuning_video/fold5/checkpoint/best_model.pth
+2026-04-24 01:31:44,845 - INFO - epoch 1 | batch 300 | train_loss: 0.02743281
+2026-04-24 01:31:57,254 - INFO - metrics:
+{'accuracy': 0.6691230655858511, 'balanced_accuracy': 0.6648573639165265, 'f1': 0.7247087676272226, 'precision': 0.6307363927427961, 'recall': 0.8515850144092219}
+2026-04-24 01:32:01,735 - INFO - epoch 1 | batch 350 | train_loss: 0.02564511
+2026-04-24 01:32:15,124 - INFO - metrics:
+{'accuracy': 0.6440677966101694, 'balanced_accuracy': 0.6389805312504075, 'f1': 0.7123287671232876, 'precision': 0.6071065989847716, 'recall': 0.861671469740634}
+2026-04-24 01:32:29,103 - INFO - ================= epoch end =================
+2026-04-24 01:32:29,104 - INFO - epoch 1 | train_loss: 0.40118805 | valid_loss: 0.87387462 | valid balanc. acc.: 0.64366625
+2026-04-24 01:32:29,106 - INFO - metrics:
+{'accuracy': 0.6499631540162122, 'balanced_accuracy': 0.6436662450393591, 'f1': 0.728726442033124, 'precision': 0.6035950804162725, 'recall': 0.9193083573487032}
+2026-04-24 01:32:33,654 - INFO - epoch 2 | batch 50 | train_loss: 0.02611402
+2026-04-24 01:32:46,451 - INFO - metrics:
+{'accuracy': 0.6978629329403095, 'balanced_accuracy': 0.6979746675881613, 'f1': 0.7011661807580175, 'precision': 0.7094395280235988, 'recall': 0.6930835734870316}
+2026-04-24 01:32:46,650 - INFO - save checkpoint: ..\models_checkpoints/resnet_18_backbone_cv/2026-04-24_00_06_06_full_tuning_video/fold5/checkpoint/best_model.pth
+2026-04-24 01:32:50,931 - INFO - epoch 2 | batch 100 | train_loss: 0.02030930
+2026-04-24 01:33:03,158 - INFO - metrics:
+{'accuracy': 0.6433308769344142, 'balanced_accuracy': 0.6366767944153942, 'f1': 0.7268623024830699, 'precision': 0.5974025974025974, 'recall': 0.9279538904899135}
+2026-04-24 01:33:07,706 - INFO - epoch 2 | batch 150 | train_loss: 0.01755246
+2026-04-24 01:33:20,273 - INFO - metrics:
+{'accuracy': 0.6735445836403832, 'balanced_accuracy': 0.6721782483776042, 'f1': 0.6963673749143249, 'precision': 0.6640522875816993, 'recall': 0.7319884726224783}
+2026-04-24 01:33:24,986 - INFO - epoch 2 | batch 200 | train_loss: 0.01573029
+2026-04-24 01:33:42,466 - INFO - metrics:
+{'accuracy': 0.6595431098010317, 'balanced_accuracy': 0.6557271767053086, 'f1': 0.7119700748129676, 'precision': 0.6274725274725275, 'recall': 0.8227665706051873}
+2026-04-24 01:33:46,665 - INFO - epoch 2 | batch 250 | train_loss: 0.01412963
+2026-04-24 01:34:02,009 - INFO - metrics:
+{'accuracy': 0.6315401621223287, 'balanced_accuracy': 0.624273562229148, 'f1': 0.7234513274336283, 'precision': 0.5870736086175943, 'recall': 0.9423631123919308}
+2026-04-24 01:34:06,591 - INFO - epoch 2 | batch 300 | train_loss: 0.01311008
+2026-04-24 01:34:18,585 - INFO - metrics:
+{'accuracy': 0.6521739130434783, 'balanced_accuracy': 0.6470403501679989, 'f1': 0.7193816884661117, 'precision': 0.6123481781376519, 'recall': 0.8717579250720461}
+2026-04-24 01:34:23,058 - INFO - epoch 2 | batch 350 | train_loss: 0.01237159
+2026-04-24 01:34:35,755 - INFO - metrics:
+{'accuracy': 0.6573323507737656, 'balanced_accuracy': 0.6530268059340784, 'f1': 0.7152480097979179, 'precision': 0.6219382321618744, 'recall': 0.8414985590778098}
+2026-04-24 01:34:48,703 - INFO - ================= epoch end =================
+2026-04-24 01:34:48,703 - INFO - epoch 2 | train_loss: 0.19064513 | valid_loss: 0.91245667 | valid balanc. acc.: 0.64139837
+2026-04-24 01:34:48,704 - INFO - metrics:
+{'accuracy': 0.6455416359616801, 'balanced_accuracy': 0.6413983682588531, 'f1': 0.7036352433764633, 'precision': 0.6146393972012917, 'recall': 0.8227665706051873}
+2026-04-24 01:34:52,748 - INFO - epoch 3 | batch 50 | train_loss: 0.01656340
+2026-04-24 01:35:04,323 - INFO - metrics:
+{'accuracy': 0.6868091378039793, 'balanced_accuracy': 0.686999317572296, 'f1': 0.6891002194586686, 'precision': 0.6998514115898959, 'recall': 0.6786743515850144}
+2026-04-24 01:35:09,664 - INFO - epoch 3 | batch 100 | train_loss: 0.01197385
+2026-04-24 01:35:27,482 - INFO - metrics:
+{'accuracy': 0.5880619012527635, 'balanced_accuracy': 0.5791387936242997, 'f1': 0.7065616797900263, 'precision': 0.555739058629232, 'recall': 0.9697406340057637}
+2026-04-24 01:35:32,826 - INFO - epoch 3 | batch 150 | train_loss: 0.01009406
+2026-04-24 01:35:48,452 - INFO - metrics:
+{'accuracy': 0.6455416359616801, 'balanced_accuracy': 0.6401856464155159, 'f1': 0.7162241887905605, 'precision': 0.6063936063936064, 'recall': 0.8746397694524496}
+2026-04-24 01:35:52,690 - INFO - epoch 3 | batch 200 | train_loss: 0.00834777
+2026-04-24 01:36:04,684 - INFO - metrics:
+{'accuracy': 0.6455416359616801, 'balanced_accuracy': 0.643082704152377, 'f1': 0.6841759684832567, 'precision': 0.6284680337756333, 'recall': 0.7507204610951008}
+2026-04-24 01:36:08,784 - INFO - epoch 3 | batch 250 | train_loss: 0.00872979
+2026-04-24 01:36:19,983 - INFO - metrics:
+{'accuracy': 0.6403831982313928, 'balanced_accuracy': 0.6346708046996231, 'f1': 0.7156177156177156, 'precision': 0.6007827788649707, 'recall': 0.8847262247838616}
+2026-04-24 01:36:23,947 - INFO - epoch 3 | batch 300 | train_loss: 0.00786374
+2026-04-24 01:36:36,639 - INFO - metrics:
+{'accuracy': 0.6425939572586588, 'balanced_accuracy': 0.6378427895210401, 'f1': 0.707655213984328, 'precision': 0.6082901554404145, 'recall': 0.845821325648415}
+2026-04-24 01:36:41,079 - INFO - epoch 3 | batch 350 | train_loss: 0.00725488
+2026-04-24 01:36:52,772 - INFO - metrics:
+{'accuracy': 0.660280029476787, 'balanced_accuracy': 0.659513129126623, 'f1': 0.6760365425158117, 'precision': 0.6598079561042524, 'recall': 0.6930835734870316}
+2026-04-24 01:37:07,292 - INFO - ================= epoch end =================
+2026-04-24 01:37:07,293 - INFO - epoch 3 | train_loss: 0.11301059 | valid_loss: 1.84031550 | valid balanc. acc.: 0.59549750
+2026-04-24 01:37:07,294 - INFO - metrics:
+{'accuracy': 0.5873249815770081, 'balanced_accuracy': 0.595497498489531, 'f1': 0.3707865168539326, 'precision': 0.8418367346938775, 'recall': 0.2377521613832853}
+2026-04-24 01:37:12,460 - INFO - epoch 4 | batch 50 | train_loss: 0.00994867
+2026-04-24 01:37:24,652 - INFO - metrics:
+{'accuracy': 0.6565954310980103, 'balanced_accuracy': 0.6546981018077813, 'f1': 0.687248322147651, 'precision': 0.6432160804020101, 'recall': 0.7377521613832853}
+2026-04-24 01:37:28,687 - INFO - epoch 4 | batch 100 | train_loss: 0.00702287
+2026-04-24 01:37:39,261 - INFO - metrics:
+{'accuracy': 0.658069270449521, 'balanced_accuracy': 0.6558021568192784, 'f1': 0.6931216931216931, 'precision': 0.6405867970660146, 'recall': 0.7550432276657061}
+2026-04-24 01:37:43,225 - INFO - epoch 4 | batch 150 | train_loss: 0.00558544
+2026-04-24 01:37:54,036 - INFO - metrics:
+{'accuracy': 0.6212232866617539, 'balanced_accuracy': 0.6156693224840368, 'f1': 0.6987104337631888, 'precision': 0.5889328063241107, 'recall': 0.8587896253602305}
+2026-04-24 01:37:59,096 - INFO - epoch 4 | batch 200 | train_loss: 0.00494257
+2026-04-24 01:38:12,011 - INFO - metrics:
+{'accuracy': 0.6204863669859986, 'balanced_accuracy': 0.613399272366894, 'f1': 0.7134112409571508, 'precision': 0.5811423390752494, 'recall': 0.9236311239193083}
+2026-04-24 01:38:16,228 - INFO - epoch 4 | batch 250 | train_loss: 0.00446734
+2026-04-24 01:38:28,818 - INFO - metrics:
+{'accuracy': 0.6101694915254238, 'balanced_accuracy': 0.6022348420636265, 'f1': 0.713589604764483, 'precision': 0.5715524718126627, 'recall': 0.9495677233429395}
+2026-04-24 01:38:33,990 - INFO - epoch 4 | batch 300 | train_loss: 0.00474538
+2026-04-24 01:38:48,457 - INFO - metrics:
+{'accuracy': 0.6337509211495947, 'balanced_accuracy': 0.626468632232321, 'f1': 0.7252625760088447, 'precision': 0.5883408071748879, 'recall': 0.9452449567723343}
+2026-04-24 01:38:52,485 - INFO - epoch 4 | batch 350 | train_loss: 0.00433503
+2026-04-24 01:39:02,751 - INFO - metrics:
+{'accuracy': 0.6484893146647015, 'balanced_accuracy': 0.6437412251533289, 'f1': 0.7124773960216998, 'precision': 0.6124352331606218, 'recall': 0.8515850144092219}
+2026-04-24 01:39:14,886 - INFO - ================= epoch end =================
+2026-04-24 01:39:14,896 - INFO - epoch 4 | train_loss: 0.06601133 | valid_loss: 1.12613897 | valid balanc. acc.: 0.65374727
+2026-04-24 01:39:14,896 - INFO - metrics:
+{'accuracy': 0.658069270449521, 'balanced_accuracy': 0.6537472670291793, 'f1': 0.7160342717258262, 'precision': 0.6223404255319149, 'recall': 0.8429394812680115}
+2026-04-24 01:39:19,201 - INFO - epoch 5 | batch 50 | train_loss: 0.00723970
+2026-04-24 01:39:31,598 - INFO - metrics:
+{'accuracy': 0.6558585114222549, 'balanced_accuracy': 0.651754317333229, 'f1': 0.7119062307217767, 'precision': 0.622437971952535, 'recall': 0.8314121037463977}
+2026-04-24 01:39:36,499 - INFO - epoch 5 | batch 100 | train_loss: 0.00473704
+2026-04-24 01:39:52,751 - INFO - metrics:
+{'accuracy': 0.6322770817980841, 'balanced_accuracy': 0.6258698779888812, 'f1': 0.7159931701764372, 'precision': 0.5917215428033866, 'recall': 0.9063400576368876}
+2026-04-24 01:39:57,373 - INFO - epoch 5 | batch 150 | train_loss: 0.00436861
+2026-04-24 01:40:09,954 - INFO - metrics:
+{'accuracy': 0.6521739130434783, 'balanced_accuracy': 0.6503753352371762, 'f1': 0.6819407008086253, 'precision': 0.640506329113924, 'recall': 0.729106628242075}
+2026-04-24 01:40:14,703 - INFO - epoch 5 | batch 200 | train_loss: 0.00355705
+2026-04-24 01:40:26,167 - INFO - metrics:
+{'accuracy': 0.6204863669859986, 'balanced_accuracy': 0.6131297786239301, 'f1': 0.7159404302261445, 'precision': 0.579982126899017, 'recall': 0.9351585014409222}
+2026-04-24 01:40:30,854 - INFO - epoch 5 | batch 250 | train_loss: 0.00331373
+2026-04-24 01:40:43,490 - INFO - metrics:
+{'accuracy': 0.6204863669859986, 'balanced_accuracy': 0.6149825481068065, 'f1': 0.6975924838520259, 'precision': 0.5887016848364718, 'recall': 0.8559077809798271}
+2026-04-24 01:40:47,856 - INFO - epoch 5 | batch 300 | train_loss: 0.00291148
+2026-04-24 01:41:00,724 - INFO - metrics:
+{'accuracy': 0.5917464996315401, 'balanced_accuracy': 0.5831453397142496, 'f1': 0.7062566277836692, 'precision': 0.5587248322147651, 'recall': 0.9596541786743515}
+2026-04-24 01:41:05,436 - INFO - epoch 5 | batch 350 | train_loss: 0.00313681
+2026-04-24 01:41:16,232 - INFO - metrics:
+{'accuracy': 0.653647752394989, 'balanced_accuracy': 0.6486497059475531, 'f1': 0.7192353643966547, 'precision': 0.6142857142857143, 'recall': 0.8674351585014409}
+2026-04-24 01:41:28,754 - INFO - ================= epoch end =================
+2026-04-24 01:41:28,755 - INFO - epoch 5 | train_loss: 0.04829557 | valid_loss: 1.25904704 | valid balanc. acc.: 0.63594329
+2026-04-24 01:41:28,756 - INFO - metrics:
+{'accuracy': 0.6418570375829035, 'balanced_accuracy': 0.6359432933004725, 'f1': 0.71875, 'precision': 0.6005802707930368, 'recall': 0.8948126801152738}
+2026-04-24 01:41:33,679 - INFO - epoch 6 | batch 50 | train_loss: 0.00635400
+2026-04-24 01:41:47,384 - INFO - metrics:
+{'accuracy': 0.6425939572586588, 'balanced_accuracy': 0.6382133434176154, 'f1': 0.7037263286499694, 'precision': 0.6108165429480382, 'recall': 0.829971181556196}
+2026-04-24 01:41:52,037 - INFO - epoch 6 | batch 100 | train_loss: 0.00379983
+2026-04-24 01:42:05,205 - INFO - metrics:
+{'accuracy': 0.6153279292557111, 'balanced_accuracy': 0.6077159970616488, 'f1': 0.7144420131291028, 'precision': 0.5758377425044092, 'recall': 0.9409221902017291}
+2026-04-24 01:42:10,850 - INFO - epoch 6 | batch 150 | train_loss: 0.00279759
+2026-04-24 01:42:23,517 - INFO - metrics:
+{'accuracy': 0.6212232866617539, 'balanced_accuracy': 0.6145239740764407, 'f1': 0.7102593010146562, 'precision': 0.5833333333333334, 'recall': 0.9077809798270894}
+2026-04-24 01:42:27,908 - INFO - epoch 6 | batch 200 | train_loss: 0.00336013
+2026-04-24 01:42:39,979 - INFO - metrics:
+{'accuracy': 0.6352247605011054, 'balanced_accuracy': 0.628987529394378, 'f1': 0.7166571265025758, 'precision': 0.5944919278252612, 'recall': 0.9020172910662824}
+2026-04-24 01:42:44,448 - INFO - epoch 6 | batch 250 | train_loss: 0.00276919
+2026-04-24 01:42:59,297 - INFO - metrics:
+{'accuracy': 0.636698599852616, 'balanced_accuracy': 0.6319780406066217, 'f1': 0.7024743512371756, 'precision': 0.6043613707165109, 'recall': 0.8386167146974063}
+2026-04-24 01:43:04,850 - INFO - epoch 6 | batch 300 | train_loss: 0.00235487
+2026-04-24 01:43:19,834 - INFO - metrics:
+{'accuracy': 0.6079587324981577, 'balanced_accuracy': 0.6012188071859202, 'f1': 0.7004504504504504, 'precision': 0.5748613678373382, 'recall': 0.8962536023054755}
+2026-04-24 01:43:24,224 - INFO - epoch 6 | batch 350 | train_loss: 0.00206994
+2026-04-24 01:43:38,798 - INFO - metrics:
+{'accuracy': 0.5851142225497421, 'balanced_accuracy': 0.5755158414507457, 'f1': 0.7105398457583547, 'precision': 0.5523581135091926, 'recall': 0.9956772334293948}
+2026-04-24 01:43:51,826 - INFO - ================= epoch end =================
+2026-04-24 01:43:51,827 - INFO - epoch 6 | train_loss: 0.04379754 | valid_loss: 1.08273316 | valid balanc. acc.: 0.60950900
+2026-04-24 01:43:51,828 - INFO - metrics:
+{'accuracy': 0.6138540899042004, 'balanced_accuracy': 0.609508999787013, 'f1': 0.6793145654834761, 'precision': 0.5904255319148937, 'recall': 0.7997118155619597}
+2026-04-24 01:43:56,268 - INFO - epoch 7 | batch 50 | train_loss: 0.00495769
+2026-04-24 01:44:09,368 - INFO - metrics:
+{'accuracy': 0.6322770817980841, 'balanced_accuracy': 0.627823707625369, 'f1': 0.6959171237050579, 'precision': 0.6029567053854277, 'recall': 0.8227665706051873}
+2026-04-24 01:44:13,543 - INFO - epoch 7 | batch 100 | train_loss: 0.00290805
+2026-04-24 01:44:26,538 - INFO - metrics:
+{'accuracy': 0.6219602063375093, 'balanced_accuracy': 0.616625590604231, 'f1': 0.6969875959834613, 'precision': 0.5905905905905906, 'recall': 0.8501440922190202}
+2026-04-24 01:44:30,732 - INFO - epoch 7 | batch 150 | train_loss: 0.00204194
+2026-04-24 01:44:44,659 - INFO - metrics:
+{'accuracy': 0.6204863669859986, 'balanced_accuracy': 0.6151846684140293, 'f1': 0.6954464813719693, 'precision': 0.5897693079237714, 'recall': 0.8472622478386167}
+2026-04-24 01:44:49,881 - INFO - epoch 7 | batch 200 | train_loss: 0.00156880
+2026-04-24 01:45:03,706 - INFO - metrics:
+{'accuracy': 0.6256448047162859, 'balanced_accuracy': 0.6196552218759372, 'f1': 0.7066974595842956, 'precision': 0.5895953757225434, 'recall': 0.8818443804034583}
+2026-04-24 01:45:08,024 - INFO - epoch 7 | batch 250 | train_loss: 0.00127580
+2026-04-24 01:45:18,560 - INFO - metrics:
+{'accuracy': 0.6190125276344879, 'balanced_accuracy': 0.6128342048413247, 'f1': 0.7033849684452094, 'precision': 0.5843660629170638, 'recall': 0.8832853025936599}
+2026-04-24 01:45:22,690 - INFO - epoch 7 | batch 300 | train_loss: 0.00225317
+2026-04-24 01:45:34,988 - INFO - metrics:
+{'accuracy': 0.6565954310980103, 'balanced_accuracy': 0.6517336706351793, 'f1': 0.7202881152460985, 'precision': 0.6172839506172839, 'recall': 0.8645533141210374}
+2026-04-24 01:45:39,286 - INFO - epoch 7 | batch 350 | train_loss: 0.00218978
+2026-04-24 01:45:49,634 - INFO - metrics:
+{'accuracy': 0.6448047162859248, 'balanced_accuracy': 0.6393641251668036, 'f1': 0.7164705882352941, 'precision': 0.6053677932405567, 'recall': 0.877521613832853}
+2026-04-24 01:46:03,850 - INFO - ================= epoch end =================
+2026-04-24 01:46:03,851 - INFO - epoch 7 | train_loss: 0.03326520 | valid_loss: 1.41103384 | valid balanc. acc.: 0.63244205
+2026-04-24 01:46:03,852 - INFO - metrics:
+{'accuracy': 0.6381724392041267, 'balanced_accuracy': 0.6324420479785795, 'f1': 0.7140361094933023, 'precision': 0.5992179863147605, 'recall': 0.8832853025936599}
+2026-04-24 01:46:08,013 - INFO - epoch 8 | batch 50 | train_loss: 0.00359393
+2026-04-24 01:46:20,276 - INFO - metrics:
+{'accuracy': 0.6433308769344142, 'balanced_accuracy': 0.6374179022085447, 'f1': 0.7199074074074074, 'precision': 0.6015473887814313, 'recall': 0.8962536023054755}
+2026-04-24 01:46:24,507 - INFO - epoch 8 | batch 100 | train_loss: 0.00205044
+2026-04-24 01:46:36,370 - INFO - metrics:
+{'accuracy': 0.6337509211495947, 'balanced_accuracy': 0.6271086798718601, 'f1': 0.7193675889328063, 'precision': 0.5914577530176416, 'recall': 0.9178674351585014}
+2026-04-24 01:46:40,489 - INFO - epoch 8 | batch 150 | train_loss: 0.00142353
+2026-04-24 01:46:53,056 - INFO - metrics:
+{'accuracy': 0.6352247605011054, 'balanced_accuracy': 0.6304023715449381, 'f1': 0.7023451593505713, 'precision': 0.6026831785345718, 'recall': 0.8414985590778098}
+2026-04-24 01:46:57,274 - INFO - epoch 8 | batch 200 | train_loss: 0.00108630
+2026-04-24 01:47:10,426 - INFO - metrics:
+{'accuracy': 0.627855563743552, 'balanced_accuracy': 0.6214797379825351, 'f1': 0.7122507122507122, 'precision': 0.589066918001885, 'recall': 0.9005763688760807}
+2026-04-24 01:47:18,046 - INFO - epoch 8 | batch 250 | train_loss: 0.00088201
+2026-04-24 01:47:28,557 - INFO - metrics:
+{'accuracy': 0.627855563743552, 'balanced_accuracy': 0.6220860989042036, 'f1': 0.7062245491564864, 'precision': 0.5921951219512195, 'recall': 0.8746397694524496}
+2026-04-24 01:47:35,062 - INFO - epoch 8 | batch 300 | train_loss: 0.00223362
+2026-04-24 01:47:47,866 - INFO - metrics:
+{'accuracy': 0.664701547531319, 'balanced_accuracy': 0.6611746449854603, 'f1': 0.7132955261499685, 'precision': 0.6338185890257558, 'recall': 0.8155619596541787}
+2026-04-24 01:47:52,270 - INFO - epoch 8 | batch 350 | train_loss: 0.00204316
+2026-04-24 01:48:04,431 - INFO - metrics:
+{'accuracy': 0.6639646278555638, 'balanced_accuracy': 0.6595783292257271, 'f1': 0.7216117216117216, 'precision': 0.6260593220338984, 'recall': 0.8515850144092219}
+2026-04-24 01:48:19,108 - INFO - ================= epoch end =================
+2026-04-24 01:48:19,109 - INFO - epoch 8 | train_loss: 0.03104835 | valid_loss: 1.28810592 | valid balanc. acc.: 0.65778750
+2026-04-24 01:48:19,110 - INFO - metrics:
+{'accuracy': 0.6617538688282977, 'balanced_accuracy': 0.6577874998369998, 'f1': 0.7154370737755734, 'precision': 0.6278563656147987, 'recall': 0.8314121037463977}
+2026-04-24 01:48:24,614 - INFO - epoch 9 | batch 50 | train_loss: 0.00335707
+2026-04-24 01:48:38,312 - INFO - metrics:
+{'accuracy': 0.6470154753131908, 'balanced_accuracy': 0.6411886412734014, 'f1': 0.7219965177016832, 'precision': 0.6044703595724004, 'recall': 0.8962536023054755}
+2026-04-24 01:48:42,556 - INFO - epoch 9 | batch 100 | train_loss: 0.00186873
+2026-04-24 01:48:54,694 - INFO - metrics:
+{'accuracy': 0.6374355195283714, 'balanced_accuracy': 0.6318563337549606, 'f1': 0.711943793911007, 'precision': 0.5996055226824457, 'recall': 0.8760806916426513}
+2026-04-24 01:48:59,103 - INFO - epoch 9 | batch 150 | train_loss: 0.00127610
+2026-04-24 01:49:12,345 - INFO - metrics:
+{'accuracy': 0.6330140014738393, 'balanced_accuracy': 0.6279714945166717, 'f1': 0.7028639618138425, 'precision': 0.59979633401222, 'recall': 0.8487031700288185}
+2026-04-24 01:49:17,451 - INFO - epoch 9 | batch 200 | train_loss: 0.00097697
+2026-04-24 01:49:31,874 - INFO - metrics:
+{'accuracy': 0.6160648489314665, 'balanced_accuracy': 0.6106597815362013, 'f1': 0.6929876252209782, 'precision': 0.5862412761714856, 'recall': 0.8472622478386167}
+2026-04-24 01:49:37,051 - INFO - epoch 9 | batch 250 | train_loss: 0.00178671
+2026-04-24 01:49:51,465 - INFO - metrics:
+{'accuracy': 0.6595431098010317, 'balanced_accuracy': 0.6541439009653961, 'f1': 0.7279151943462897, 'precision': 0.6155378486055777, 'recall': 0.8904899135446686}
+2026-04-24 01:49:56,394 - INFO - epoch 9 | batch 300 | train_loss: 0.00153091
+2026-04-24 01:50:11,509 - INFO - metrics:
+{'accuracy': 0.6462785556374355, 'balanced_accuracy': 0.6410408543820987, 'f1': 0.7156398104265402, 'precision': 0.607645875251509, 'recall': 0.8703170028818443}
+2026-04-24 01:50:15,919 - INFO - epoch 9 | batch 350 | train_loss: 0.00133326
+2026-04-24 01:50:28,718 - INFO - metrics:
+{'accuracy': 0.6403831982313928, 'balanced_accuracy': 0.6346371179817527, 'f1': 0.7159487776484285, 'precision': 0.6005859375, 'recall': 0.8861671469740634}
+2026-04-24 01:50:43,390 - INFO - ================= epoch end =================
+2026-04-24 01:50:43,391 - INFO - epoch 9 | train_loss: 0.02017872 | valid_loss: 1.62710810 | valid balanc. acc.: 0.63254311
+2026-04-24 01:50:43,392 - INFO - metrics:
+{'accuracy': 0.6381724392041267, 'balanced_accuracy': 0.6325431081321911, 'f1': 0.7130333138515488, 'precision': 0.599803343166175, 'recall': 0.8789625360230547}
+2026-04-24 01:50:47,931 - INFO - epoch 10 | batch 50 | train_loss: 0.00207181
+2026-04-24 01:51:00,398 - INFO - metrics:
+{'accuracy': 0.6484893146647015, 'balanced_accuracy': 0.6435054181282356, 'f1': 0.7148834429169157, 'precision': 0.6108273748723186, 'recall': 0.861671469740634}
+2026-04-24 01:51:04,457 - INFO - epoch 10 | batch 100 | train_loss: 0.00113557
+2026-04-24 01:51:17,893 - INFO - metrics:
+{'accuracy': 0.6381724392041267, 'balanced_accuracy': 0.6331157823359892, 'f1': 0.7072152653548003, 'precision': 0.6032553407934893, 'recall': 0.8544668587896254}
+2026-04-24 01:51:22,485 - INFO - epoch 10 | batch 150 | train_loss: 0.00077729
+2026-04-24 01:51:35,726 - INFO - metrics:
+{'accuracy': 0.6403831982313928, 'balanced_accuracy': 0.6352097921855508, 'f1': 0.7102137767220903, 'precision': 0.604040404040404, 'recall': 0.861671469740634}
+2026-04-24 01:51:39,795 - INFO - epoch 10 | batch 200 | train_loss: 0.00059167
+2026-04-24 01:51:52,767 - INFO - metrics:
+{'accuracy': 0.6396462785556374, 'balanced_accuracy': 0.6340177170402632, 'f1': 0.7142022209234365, 'precision': 0.6007866273352999, 'recall': 0.8804034582132565}
+2026-04-24 01:51:57,253 - INFO - epoch 10 | batch 250 | train_loss: 0.00047728
+2026-04-24 01:52:08,258 - INFO - metrics:
+{'accuracy': 0.6330140014738393, 'balanced_accuracy': 0.6276346273379669, 'f1': 0.7063679245283019, 'precision': 0.5978043912175649, 'recall': 0.8631123919308358}
+2026-04-24 01:52:12,230 - INFO - epoch 10 | batch 300 | train_loss: 0.00040162
+2026-04-24 01:52:23,386 - INFO - metrics:
+{'accuracy': 0.6330140014738393, 'balanced_accuracy': 0.627499880466485, 'f1': 0.7077464788732394, 'precision': 0.597029702970297, 'recall': 0.8688760806916427}
+2026-04-24 01:52:27,543 - INFO - epoch 10 | batch 350 | train_loss: 0.00034553
+2026-04-24 01:52:41,718 - INFO - metrics:
+{'accuracy': 0.627855563743552, 'balanced_accuracy': 0.6216481715718875, 'f1': 0.7106017191977078, 'precision': 0.5899143672692674, 'recall': 0.8933717579250721}
+2026-04-24 01:52:59,084 - INFO - ================= epoch end =================
+2026-04-24 01:52:59,086 - INFO - epoch 10 | train_loss: 0.00522435 | valid_loss: 2.26089934 | valid balanc. acc.: 0.62119720
+2026-04-24 01:52:59,087 - INFO - metrics:
+{'accuracy': 0.6271186440677966, 'balanced_accuracy': 0.6211972042197504, 'f1': 0.7071759259259259, 'precision': 0.5909090909090909, 'recall': 0.8804034582132565}

@@ -1,0 +1,2142 @@
+2026-04-23 18:17:44,577 - INFO -  
+===== general parameters =====
+SEED: 42
+DEVICE: cuda
+
+BATCH_SIZE: 16
+input_img_shape: (3, 224, 224)
+split_level: video_id
+
+===== train parameters =====
+
+LR: 0.0001
+
+
+CV_N: 5
+EPOCHS: 10
+STEP_BATCH_LOG: 10
+
+===== about model and save =====
+base_dir_for_model_save: ..\models_checkpoints
+
+model_name: resnet_18_backbone_cv
+prefix_train: full_tuning_patient
+
+===== comments =====
+LCA
+cross-validation
+split patient level
+SGDM optimizer
+use augmentation
+use ImageNet stats for (mean, std) normalization 
+
+2026-04-23 18:17:46,444 - INFO - Fold 1
+2026-04-23 18:17:46,473 - INFO - 
+    ======= about folds =======
+    ((5601, 8), (1679, 8))
+    set()
+    label
+0    2619
+1    2982
+Name: image_path, dtype: int64     
+    label
+0    1021
+1     658
+Name: image_path, dtype: int64
+    
+2026-04-23 18:17:47,405 - INFO - 
+    Всего параметров: 11,177,538
+    Обучаемых:       11,177,538
+    
+2026-04-23 18:17:50,792 - INFO - epoch 1 | batch 10 | train_loss: 0.05596096
+2026-04-23 18:17:52,802 - INFO - epoch 1 | batch 20 | train_loss: 0.04783927
+2026-04-23 18:17:54,806 - INFO - epoch 1 | batch 30 | train_loss: 0.04296825
+2026-04-23 18:17:56,836 - INFO - epoch 1 | batch 40 | train_loss: 0.03839317
+2026-04-23 18:17:58,706 - INFO - epoch 1 | batch 50 | train_loss: 0.03687996
+2026-04-23 18:18:00,412 - INFO - epoch 1 | batch 60 | train_loss: 0.03374212
+2026-04-23 18:18:02,438 - INFO - epoch 1 | batch 70 | train_loss: 0.03175075
+2026-04-23 18:18:04,606 - INFO - epoch 1 | batch 80 | train_loss: 0.03017354
+2026-04-23 18:18:06,636 - INFO - epoch 1 | batch 90 | train_loss: 0.02899897
+2026-04-23 18:18:08,548 - INFO - epoch 1 | batch 100 | train_loss: 0.02794673
+2026-04-23 18:18:10,220 - INFO - epoch 1 | batch 110 | train_loss: 0.02702486
+2026-04-23 18:18:12,103 - INFO - epoch 1 | batch 120 | train_loss: 0.02584891
+2026-04-23 18:18:14,438 - INFO - epoch 1 | batch 130 | train_loss: 0.02499922
+2026-04-23 18:18:16,384 - INFO - epoch 1 | batch 140 | train_loss: 0.02404297
+2026-04-23 18:18:18,292 - INFO - epoch 1 | batch 150 | train_loss: 0.02285489
+2026-04-23 18:18:20,002 - INFO - epoch 1 | batch 160 | train_loss: 0.02230760
+2026-04-23 18:18:21,710 - INFO - epoch 1 | batch 170 | train_loss: 0.02167125
+2026-04-23 18:18:23,442 - INFO - epoch 1 | batch 180 | train_loss: 0.02081620
+2026-04-23 18:18:25,162 - INFO - epoch 1 | batch 190 | train_loss: 0.02035161
+2026-04-23 18:18:26,887 - INFO - epoch 1 | batch 200 | train_loss: 0.01973119
+2026-04-23 18:18:28,592 - INFO - epoch 1 | batch 210 | train_loss: 0.01950215
+2026-04-23 18:18:30,312 - INFO - epoch 1 | batch 220 | train_loss: 0.01912939
+2026-04-23 18:18:31,948 - INFO - epoch 1 | batch 230 | train_loss: 0.01854929
+2026-04-23 18:18:33,637 - INFO - epoch 1 | batch 240 | train_loss: 0.01819626
+2026-04-23 18:18:35,346 - INFO - epoch 1 | batch 250 | train_loss: 0.01781796
+2026-04-23 18:18:36,972 - INFO - epoch 1 | batch 260 | train_loss: 0.01729512
+2026-04-23 18:18:38,592 - INFO - epoch 1 | batch 270 | train_loss: 0.01686464
+2026-04-23 18:18:40,302 - INFO - epoch 1 | batch 280 | train_loss: 0.01665487
+2026-04-23 18:18:41,947 - INFO - epoch 1 | batch 290 | train_loss: 0.01629489
+2026-04-23 18:18:43,785 - INFO - epoch 1 | batch 300 | train_loss: 0.01608527
+2026-04-23 18:18:45,525 - INFO - epoch 1 | batch 310 | train_loss: 0.01586566
+2026-04-23 18:18:47,390 - INFO - epoch 1 | batch 320 | train_loss: 0.01550795
+2026-04-23 18:18:49,212 - INFO - epoch 1 | batch 330 | train_loss: 0.01514786
+2026-04-23 18:18:50,976 - INFO - epoch 1 | batch 340 | train_loss: 0.01483676
+2026-04-23 18:18:52,775 - INFO - epoch 1 | batch 350 | train_loss: 0.01465010
+2026-04-23 18:19:20,574 - INFO - ================= epoch end =================
+2026-04-23 18:19:20,576 - INFO - epoch 1 | train_loss: 0.23486306 | valid_loss: 1.76044167 | valid balanc. acc.: 0.61762040
+2026-04-23 18:19:20,578 - INFO - metrics:
+{'accuracy': 0.5878499106611078, 'balanced_accuracy': 0.6176203971909059, 'f1': 0.5895610913404508, 'precision': 0.48346303501945526, 'recall': 0.7553191489361702}
+2026-04-23 18:19:20,698 - INFO - save checkpoint: ..\models_checkpoints/resnet_18_backbone_cv/2026-04-23_18_17_44_full_tuning_patient/fold1/checkpoint/best_model.pth
+2026-04-23 18:19:21,509 - INFO - epoch 2 | batch 10 | train_loss: 0.00272490
+2026-04-23 18:19:22,319 - INFO - epoch 2 | batch 20 | train_loss: 0.00471286
+2026-04-23 18:19:23,132 - INFO - epoch 2 | batch 30 | train_loss: 0.00395682
+2026-04-23 18:19:23,944 - INFO - epoch 2 | batch 40 | train_loss: 0.00347260
+2026-04-23 18:19:24,755 - INFO - epoch 2 | batch 50 | train_loss: 0.00313493
+2026-04-23 18:19:25,671 - INFO - epoch 2 | batch 60 | train_loss: 0.00293169
+2026-04-23 18:19:26,482 - INFO - epoch 2 | batch 70 | train_loss: 0.00257895
+2026-04-23 18:19:27,287 - INFO - epoch 2 | batch 80 | train_loss: 0.00255908
+2026-04-23 18:19:28,099 - INFO - epoch 2 | batch 90 | train_loss: 0.00236300
+2026-04-23 18:19:28,903 - INFO - epoch 2 | batch 100 | train_loss: 0.00230937
+2026-04-23 18:19:29,712 - INFO - epoch 2 | batch 110 | train_loss: 0.00250496
+2026-04-23 18:19:30,515 - INFO - epoch 2 | batch 120 | train_loss: 0.00275931
+2026-04-23 18:19:31,344 - INFO - epoch 2 | batch 130 | train_loss: 0.00340856
+2026-04-23 18:19:32,149 - INFO - epoch 2 | batch 140 | train_loss: 0.00344234
+2026-04-23 18:19:32,962 - INFO - epoch 2 | batch 150 | train_loss: 0.00333032
+2026-04-23 18:19:33,768 - INFO - epoch 2 | batch 160 | train_loss: 0.00336549
+2026-04-23 18:19:34,576 - INFO - epoch 2 | batch 170 | train_loss: 0.00324505
+2026-04-23 18:19:35,382 - INFO - epoch 2 | batch 180 | train_loss: 0.00346104
+2026-04-23 18:19:36,186 - INFO - epoch 2 | batch 190 | train_loss: 0.00350847
+2026-04-23 18:19:36,987 - INFO - epoch 2 | batch 200 | train_loss: 0.00340538
+2026-04-23 18:19:37,809 - INFO - epoch 2 | batch 210 | train_loss: 0.00359138
+2026-04-23 18:19:38,627 - INFO - epoch 2 | batch 220 | train_loss: 0.00375251
+2026-04-23 18:19:39,434 - INFO - epoch 2 | batch 230 | train_loss: 0.00368519
+2026-04-23 18:19:40,242 - INFO - epoch 2 | batch 240 | train_loss: 0.00405992
+2026-04-23 18:19:41,047 - INFO - epoch 2 | batch 250 | train_loss: 0.00414347
+2026-04-23 18:19:41,851 - INFO - epoch 2 | batch 260 | train_loss: 0.00409440
+2026-04-23 18:19:42,656 - INFO - epoch 2 | batch 270 | train_loss: 0.00402078
+2026-04-23 18:19:43,463 - INFO - epoch 2 | batch 280 | train_loss: 0.00393529
+2026-04-23 18:19:44,273 - INFO - epoch 2 | batch 290 | train_loss: 0.00387767
+2026-04-23 18:19:45,082 - INFO - epoch 2 | batch 300 | train_loss: 0.00391177
+2026-04-23 18:19:45,892 - INFO - epoch 2 | batch 310 | train_loss: 0.00400275
+2026-04-23 18:19:46,702 - INFO - epoch 2 | batch 320 | train_loss: 0.00400068
+2026-04-23 18:19:47,507 - INFO - epoch 2 | batch 330 | train_loss: 0.00393352
+2026-04-23 18:19:48,312 - INFO - epoch 2 | batch 340 | train_loss: 0.00387328
+2026-04-23 18:19:49,114 - INFO - epoch 2 | batch 350 | train_loss: 0.00380612
+2026-04-23 18:20:00,803 - INFO - ================= epoch end =================
+2026-04-23 18:20:00,812 - INFO - epoch 2 | train_loss: 0.06120349 | valid_loss: 2.62198521 | valid balanc. acc.: 0.58430185
+2026-04-23 18:20:00,812 - INFO - metrics:
+{'accuracy': 0.5348421679571174, 'balanced_accuracy': 0.5843018496080783, 'f1': 0.5780659103187467, 'precision': 0.4484492875104778, 'recall': 0.8130699088145896}
+2026-04-23 18:20:01,602 - INFO - epoch 3 | batch 10 | train_loss: 0.00337820
+2026-04-23 18:20:02,404 - INFO - epoch 3 | batch 20 | train_loss: 0.00453769
+2026-04-23 18:20:03,202 - INFO - epoch 3 | batch 30 | train_loss: 0.00334158
+2026-04-23 18:20:04,010 - INFO - epoch 3 | batch 40 | train_loss: 0.00305489
+2026-04-23 18:20:04,812 - INFO - epoch 3 | batch 50 | train_loss: 0.00300209
+2026-04-23 18:20:05,625 - INFO - epoch 3 | batch 60 | train_loss: 0.00261413
+2026-04-23 18:20:06,432 - INFO - epoch 3 | batch 70 | train_loss: 0.00235101
+2026-04-23 18:20:07,236 - INFO - epoch 3 | batch 80 | train_loss: 0.00223974
+2026-04-23 18:20:08,039 - INFO - epoch 3 | batch 90 | train_loss: 0.00213071
+2026-04-23 18:20:08,841 - INFO - epoch 3 | batch 100 | train_loss: 0.00201148
+2026-04-23 18:20:09,644 - INFO - epoch 3 | batch 110 | train_loss: 0.00193005
+2026-04-23 18:20:10,442 - INFO - epoch 3 | batch 120 | train_loss: 0.00181165
+2026-04-23 18:20:11,250 - INFO - epoch 3 | batch 130 | train_loss: 0.00182883
+2026-04-23 18:20:12,050 - INFO - epoch 3 | batch 140 | train_loss: 0.00245675
+2026-04-23 18:20:12,852 - INFO - epoch 3 | batch 150 | train_loss: 0.00267638
+2026-04-23 18:20:13,654 - INFO - epoch 3 | batch 160 | train_loss: 0.00309449
+2026-04-23 18:20:14,456 - INFO - epoch 3 | batch 170 | train_loss: 0.00314895
+2026-04-23 18:20:15,262 - INFO - epoch 3 | batch 180 | train_loss: 0.00308995
+2026-04-23 18:20:16,062 - INFO - epoch 3 | batch 190 | train_loss: 0.00314043
+2026-04-23 18:20:16,866 - INFO - epoch 3 | batch 200 | train_loss: 0.00325074
+2026-04-23 18:20:17,666 - INFO - epoch 3 | batch 210 | train_loss: 0.00322771
+2026-04-23 18:20:18,472 - INFO - epoch 3 | batch 220 | train_loss: 0.00316506
+2026-04-23 18:20:19,278 - INFO - epoch 3 | batch 230 | train_loss: 0.00340445
+2026-04-23 18:20:20,074 - INFO - epoch 3 | batch 240 | train_loss: 0.00345047
+2026-04-23 18:20:20,923 - INFO - epoch 3 | batch 250 | train_loss: 0.00341628
+2026-04-23 18:20:21,733 - INFO - epoch 3 | batch 260 | train_loss: 0.00335578
+2026-04-23 18:20:22,539 - INFO - epoch 3 | batch 270 | train_loss: 0.00333525
+2026-04-23 18:20:23,344 - INFO - epoch 3 | batch 280 | train_loss: 0.00325245
+2026-04-23 18:20:24,142 - INFO - epoch 3 | batch 290 | train_loss: 0.00319120
+2026-04-23 18:20:24,950 - INFO - epoch 3 | batch 300 | train_loss: 0.00318725
+2026-04-23 18:20:25,753 - INFO - epoch 3 | batch 310 | train_loss: 0.00315237
+2026-04-23 18:20:26,556 - INFO - epoch 3 | batch 320 | train_loss: 0.00306546
+2026-04-23 18:20:27,362 - INFO - epoch 3 | batch 330 | train_loss: 0.00300538
+2026-04-23 18:20:28,163 - INFO - epoch 3 | batch 340 | train_loss: 0.00321127
+2026-04-23 18:20:28,968 - INFO - epoch 3 | batch 350 | train_loss: 0.00316957
+2026-04-23 18:20:41,090 - INFO - ================= epoch end =================
+2026-04-23 18:20:41,091 - INFO - epoch 3 | train_loss: 0.05109391 | valid_loss: 2.57850239 | valid balanc. acc.: 0.54450089
+2026-04-23 18:20:41,092 - INFO - metrics:
+{'accuracy': 0.5008933889219773, 'balanced_accuracy': 0.5445008916105255, 'f1': 0.5395604395604395, 'precision': 0.4225473321858864, 'recall': 0.7462006079027356}
+2026-04-23 18:20:41,900 - INFO - epoch 4 | batch 10 | train_loss: 0.00093512
+2026-04-23 18:20:42,715 - INFO - epoch 4 | batch 20 | train_loss: 0.00088637
+2026-04-23 18:20:43,545 - INFO - epoch 4 | batch 30 | train_loss: 0.00191885
+2026-04-23 18:20:44,354 - INFO - epoch 4 | batch 40 | train_loss: 0.00188868
+2026-04-23 18:20:45,162 - INFO - epoch 4 | batch 50 | train_loss: 0.00178744
+2026-04-23 18:20:45,964 - INFO - epoch 4 | batch 60 | train_loss: 0.00217689
+2026-04-23 18:20:46,779 - INFO - epoch 4 | batch 70 | train_loss: 0.00199474
+2026-04-23 18:20:47,582 - INFO - epoch 4 | batch 80 | train_loss: 0.00181349
+2026-04-23 18:20:48,382 - INFO - epoch 4 | batch 90 | train_loss: 0.00188952
+2026-04-23 18:20:49,193 - INFO - epoch 4 | batch 100 | train_loss: 0.00192671
+2026-04-23 18:20:49,997 - INFO - epoch 4 | batch 110 | train_loss: 0.00177576
+2026-04-23 18:20:50,802 - INFO - epoch 4 | batch 120 | train_loss: 0.00170453
+2026-04-23 18:20:51,611 - INFO - epoch 4 | batch 130 | train_loss: 0.00167098
+2026-04-23 18:20:52,420 - INFO - epoch 4 | batch 140 | train_loss: 0.00160477
+2026-04-23 18:20:53,224 - INFO - epoch 4 | batch 150 | train_loss: 0.00153082
+2026-04-23 18:20:54,031 - INFO - epoch 4 | batch 160 | train_loss: 0.00152235
+2026-04-23 18:20:54,837 - INFO - epoch 4 | batch 170 | train_loss: 0.00148376
+2026-04-23 18:20:55,691 - INFO - epoch 4 | batch 180 | train_loss: 0.00147360
+2026-04-23 18:20:56,498 - INFO - epoch 4 | batch 190 | train_loss: 0.00160921
+2026-04-23 18:20:57,378 - INFO - epoch 4 | batch 200 | train_loss: 0.00182978
+2026-04-23 18:20:58,192 - INFO - epoch 4 | batch 210 | train_loss: 0.00176980
+2026-04-23 18:20:59,030 - INFO - epoch 4 | batch 220 | train_loss: 0.00174761
+2026-04-23 18:20:59,835 - INFO - epoch 4 | batch 230 | train_loss: 0.00168769
+2026-04-23 18:21:00,643 - INFO - epoch 4 | batch 240 | train_loss: 0.00172312
+2026-04-23 18:21:01,450 - INFO - epoch 4 | batch 250 | train_loss: 0.00177129
+2026-04-23 18:21:02,258 - INFO - epoch 4 | batch 260 | train_loss: 0.00172288
+2026-04-23 18:21:03,068 - INFO - epoch 4 | batch 270 | train_loss: 0.00167462
+2026-04-23 18:21:03,874 - INFO - epoch 4 | batch 280 | train_loss: 0.00165873
+2026-04-23 18:21:04,680 - INFO - epoch 4 | batch 290 | train_loss: 0.00169131
+2026-04-23 18:21:05,487 - INFO - epoch 4 | batch 300 | train_loss: 0.00170261
+2026-04-23 18:21:06,296 - INFO - epoch 4 | batch 310 | train_loss: 0.00169066
+2026-04-23 18:21:07,103 - INFO - epoch 4 | batch 320 | train_loss: 0.00166285
+2026-04-23 18:21:07,911 - INFO - epoch 4 | batch 330 | train_loss: 0.00163628
+2026-04-23 18:21:08,717 - INFO - epoch 4 | batch 340 | train_loss: 0.00159045
+2026-04-23 18:21:09,523 - INFO - epoch 4 | batch 350 | train_loss: 0.00155457
+2026-04-23 18:21:22,856 - INFO - ================= epoch end =================
+2026-04-23 18:21:22,857 - INFO - epoch 4 | train_loss: 0.03109924 | valid_loss: 3.21564574 | valid balanc. acc.: 0.56749894
+2026-04-23 18:21:22,858 - INFO - metrics:
+{'accuracy': 0.5068493150684932, 'balanced_accuracy': 0.5674989357236633, 'f1': 0.5740740740740741, 'precision': 0.43390357698289267, 'recall': 0.8480243161094225}
+2026-04-23 18:21:23,667 - INFO - epoch 5 | batch 10 | train_loss: 0.00079218
+2026-04-23 18:21:24,477 - INFO - epoch 5 | batch 20 | train_loss: 0.00071823
+2026-04-23 18:21:25,288 - INFO - epoch 5 | batch 30 | train_loss: 0.00053896
+2026-04-23 18:21:26,104 - INFO - epoch 5 | batch 40 | train_loss: 0.00048078
+2026-04-23 18:21:26,934 - INFO - epoch 5 | batch 50 | train_loss: 0.00088845
+2026-04-23 18:21:27,739 - INFO - epoch 5 | batch 60 | train_loss: 0.00109550
+2026-04-23 18:21:28,545 - INFO - epoch 5 | batch 70 | train_loss: 0.00103342
+2026-04-23 18:21:29,351 - INFO - epoch 5 | batch 80 | train_loss: 0.00109220
+2026-04-23 18:21:30,159 - INFO - epoch 5 | batch 90 | train_loss: 0.00160503
+2026-04-23 18:21:30,969 - INFO - epoch 5 | batch 100 | train_loss: 0.00238222
+2026-04-23 18:21:31,777 - INFO - epoch 5 | batch 110 | train_loss: 0.00223525
+2026-04-23 18:21:32,618 - INFO - epoch 5 | batch 120 | train_loss: 0.00248658
+2026-04-23 18:21:33,424 - INFO - epoch 5 | batch 130 | train_loss: 0.00240971
+2026-04-23 18:21:34,243 - INFO - epoch 5 | batch 140 | train_loss: 0.00242934
+2026-04-23 18:21:35,052 - INFO - epoch 5 | batch 150 | train_loss: 0.00231016
+2026-04-23 18:21:35,858 - INFO - epoch 5 | batch 160 | train_loss: 0.00220914
+2026-04-23 18:21:36,665 - INFO - epoch 5 | batch 170 | train_loss: 0.00214184
+2026-04-23 18:21:37,472 - INFO - epoch 5 | batch 180 | train_loss: 0.00204219
+2026-04-23 18:21:38,300 - INFO - epoch 5 | batch 190 | train_loss: 0.00194171
+2026-04-23 18:21:39,110 - INFO - epoch 5 | batch 200 | train_loss: 0.00187493
+2026-04-23 18:21:40,005 - INFO - epoch 5 | batch 210 | train_loss: 0.00181959
+2026-04-23 18:21:40,841 - INFO - epoch 5 | batch 220 | train_loss: 0.00191139
+2026-04-23 18:21:41,649 - INFO - epoch 5 | batch 230 | train_loss: 0.00201026
+2026-04-23 18:21:42,454 - INFO - epoch 5 | batch 240 | train_loss: 0.00206961
+2026-04-23 18:21:43,306 - INFO - epoch 5 | batch 250 | train_loss: 0.00200764
+2026-04-23 18:21:44,136 - INFO - epoch 5 | batch 260 | train_loss: 0.00202675
+2026-04-23 18:21:44,982 - INFO - epoch 5 | batch 270 | train_loss: 0.00229797
+2026-04-23 18:21:45,787 - INFO - epoch 5 | batch 280 | train_loss: 0.00229660
+2026-04-23 18:21:46,597 - INFO - epoch 5 | batch 290 | train_loss: 0.00232673
+2026-04-23 18:21:47,406 - INFO - epoch 5 | batch 300 | train_loss: 0.00230389
+2026-04-23 18:21:48,210 - INFO - epoch 5 | batch 310 | train_loss: 0.00225449
+2026-04-23 18:21:49,017 - INFO - epoch 5 | batch 320 | train_loss: 0.00222406
+2026-04-23 18:21:49,824 - INFO - epoch 5 | batch 330 | train_loss: 0.00219658
+2026-04-23 18:21:50,627 - INFO - epoch 5 | batch 340 | train_loss: 0.00215054
+2026-04-23 18:21:51,445 - INFO - epoch 5 | batch 350 | train_loss: 0.00216312
+2026-04-23 18:22:03,916 - INFO - ================= epoch end =================
+2026-04-23 18:22:03,916 - INFO - epoch 5 | train_loss: 0.03871000 | valid_loss: 3.68323637 | valid balanc. acc.: 0.55250455
+2026-04-23 18:22:03,917 - INFO - metrics:
+{'accuracy': 0.5020845741512805, 'balanced_accuracy': 0.5525045473625297, 'f1': 0.5529411764705883, 'precision': 0.4265676567656766, 'recall': 0.7857142857142857}
+2026-04-23 18:22:04,713 - INFO - epoch 6 | batch 10 | train_loss: 0.00051689
+2026-04-23 18:22:05,524 - INFO - epoch 6 | batch 20 | train_loss: 0.00036263
+2026-04-23 18:22:06,333 - INFO - epoch 6 | batch 30 | train_loss: 0.00032555
+2026-04-23 18:22:07,187 - INFO - epoch 6 | batch 40 | train_loss: 0.00036358
+2026-04-23 18:22:07,994 - INFO - epoch 6 | batch 50 | train_loss: 0.00039643
+2026-04-23 18:22:08,812 - INFO - epoch 6 | batch 60 | train_loss: 0.00035606
+2026-04-23 18:22:09,616 - INFO - epoch 6 | batch 70 | train_loss: 0.00036955
+2026-04-23 18:22:10,428 - INFO - epoch 6 | batch 80 | train_loss: 0.00035474
+2026-04-23 18:22:11,230 - INFO - epoch 6 | batch 90 | train_loss: 0.00037702
+2026-04-23 18:22:12,037 - INFO - epoch 6 | batch 100 | train_loss: 0.00037245
+2026-04-23 18:22:12,842 - INFO - epoch 6 | batch 110 | train_loss: 0.00070433
+2026-04-23 18:22:13,677 - INFO - epoch 6 | batch 120 | train_loss: 0.00086944
+2026-04-23 18:22:14,483 - INFO - epoch 6 | batch 130 | train_loss: 0.00085086
+2026-04-23 18:22:15,330 - INFO - epoch 6 | batch 140 | train_loss: 0.00081012
+2026-04-23 18:22:16,161 - INFO - epoch 6 | batch 150 | train_loss: 0.00077545
+2026-04-23 18:22:16,974 - INFO - epoch 6 | batch 160 | train_loss: 0.00078119
+2026-04-23 18:22:17,867 - INFO - epoch 6 | batch 170 | train_loss: 0.00075938
+2026-04-23 18:22:18,699 - INFO - epoch 6 | batch 180 | train_loss: 0.00080231
+2026-04-23 18:22:19,697 - INFO - epoch 6 | batch 190 | train_loss: 0.00091493
+2026-04-23 18:22:20,505 - INFO - epoch 6 | batch 200 | train_loss: 0.00095468
+2026-04-23 18:22:21,342 - INFO - epoch 6 | batch 210 | train_loss: 0.00102824
+2026-04-23 18:22:22,171 - INFO - epoch 6 | batch 220 | train_loss: 0.00101268
+2026-04-23 18:22:23,135 - INFO - epoch 6 | batch 230 | train_loss: 0.00100175
+2026-04-23 18:22:23,965 - INFO - epoch 6 | batch 240 | train_loss: 0.00110810
+2026-04-23 18:22:24,773 - INFO - epoch 6 | batch 250 | train_loss: 0.00112056
+2026-04-23 18:22:25,578 - INFO - epoch 6 | batch 260 | train_loss: 0.00119358
+2026-04-23 18:22:26,386 - INFO - epoch 6 | batch 270 | train_loss: 0.00115808
+2026-04-23 18:22:27,190 - INFO - epoch 6 | batch 280 | train_loss: 0.00118206
+2026-04-23 18:22:27,995 - INFO - epoch 6 | batch 290 | train_loss: 0.00132673
+2026-04-23 18:22:28,799 - INFO - epoch 6 | batch 300 | train_loss: 0.00132040
+2026-04-23 18:22:29,601 - INFO - epoch 6 | batch 310 | train_loss: 0.00128797
+2026-04-23 18:22:30,406 - INFO - epoch 6 | batch 320 | train_loss: 0.00126981
+2026-04-23 18:22:31,216 - INFO - epoch 6 | batch 330 | train_loss: 0.00124231
+2026-04-23 18:22:32,332 - INFO - epoch 6 | batch 340 | train_loss: 0.00121504
+2026-04-23 18:22:33,173 - INFO - epoch 6 | batch 350 | train_loss: 0.00121919
+2026-04-23 18:22:46,014 - INFO - ================= epoch end =================
+2026-04-23 18:22:46,015 - INFO - epoch 6 | train_loss: 0.02035362 | valid_loss: 1.72932115 | valid balanc. acc.: 0.64090647
+2026-04-23 18:22:46,016 - INFO - metrics:
+{'accuracy': 0.6063132817153067, 'balanced_accuracy': 0.6409064657392329, 'f1': 0.6145772594752187, 'precision': 0.4985808893093661, 'recall': 0.8009118541033434}
+2026-04-23 18:22:46,158 - INFO - save checkpoint: ..\models_checkpoints/resnet_18_backbone_cv/2026-04-23_18_17_44_full_tuning_patient/fold1/checkpoint/best_model.pth
+2026-04-23 18:22:46,973 - INFO - epoch 7 | batch 10 | train_loss: 0.00376177
+2026-04-23 18:22:47,782 - INFO - epoch 7 | batch 20 | train_loss: 0.00225865
+2026-04-23 18:22:48,590 - INFO - epoch 7 | batch 30 | train_loss: 0.00159624
+2026-04-23 18:22:49,396 - INFO - epoch 7 | batch 40 | train_loss: 0.00133218
+2026-04-23 18:22:50,202 - INFO - epoch 7 | batch 50 | train_loss: 0.00126139
+2026-04-23 18:22:51,040 - INFO - epoch 7 | batch 60 | train_loss: 0.00112367
+2026-04-23 18:22:51,859 - INFO - epoch 7 | batch 70 | train_loss: 0.00100795
+2026-04-23 18:22:52,665 - INFO - epoch 7 | batch 80 | train_loss: 0.00090272
+2026-04-23 18:22:53,476 - INFO - epoch 7 | batch 90 | train_loss: 0.00105686
+2026-04-23 18:22:54,322 - INFO - epoch 7 | batch 100 | train_loss: 0.00108640
+2026-04-23 18:22:55,129 - INFO - epoch 7 | batch 110 | train_loss: 0.00103595
+2026-04-23 18:22:55,938 - INFO - epoch 7 | batch 120 | train_loss: 0.00096413
+2026-04-23 18:22:56,742 - INFO - epoch 7 | batch 130 | train_loss: 0.00089846
+2026-04-23 18:22:57,547 - INFO - epoch 7 | batch 140 | train_loss: 0.00090591
+2026-04-23 18:22:58,367 - INFO - epoch 7 | batch 150 | train_loss: 0.00100775
+2026-04-23 18:22:59,174 - INFO - epoch 7 | batch 160 | train_loss: 0.00095692
+2026-04-23 18:22:59,973 - INFO - epoch 7 | batch 170 | train_loss: 0.00091354
+2026-04-23 18:23:00,778 - INFO - epoch 7 | batch 180 | train_loss: 0.00093477
+2026-04-23 18:23:01,586 - INFO - epoch 7 | batch 190 | train_loss: 0.00090494
+2026-04-23 18:23:02,393 - INFO - epoch 7 | batch 200 | train_loss: 0.00086353
+2026-04-23 18:23:03,196 - INFO - epoch 7 | batch 210 | train_loss: 0.00087069
+2026-04-23 18:23:04,033 - INFO - epoch 7 | batch 220 | train_loss: 0.00100138
+2026-04-23 18:23:04,838 - INFO - epoch 7 | batch 230 | train_loss: 0.00117090
+2026-04-23 18:23:05,642 - INFO - epoch 7 | batch 240 | train_loss: 0.00150018
+2026-04-23 18:23:06,453 - INFO - epoch 7 | batch 250 | train_loss: 0.00151558
+2026-04-23 18:23:07,265 - INFO - epoch 7 | batch 260 | train_loss: 0.00153779
+2026-04-23 18:23:08,077 - INFO - epoch 7 | batch 270 | train_loss: 0.00149655
+2026-04-23 18:23:08,875 - INFO - epoch 7 | batch 280 | train_loss: 0.00144959
+2026-04-23 18:23:09,688 - INFO - epoch 7 | batch 290 | train_loss: 0.00140962
+2026-04-23 18:23:10,491 - INFO - epoch 7 | batch 300 | train_loss: 0.00138519
+2026-04-23 18:23:11,294 - INFO - epoch 7 | batch 310 | train_loss: 0.00145731
+2026-04-23 18:23:12,101 - INFO - epoch 7 | batch 320 | train_loss: 0.00145022
+2026-04-23 18:23:12,905 - INFO - epoch 7 | batch 330 | train_loss: 0.00141931
+2026-04-23 18:23:13,712 - INFO - epoch 7 | batch 340 | train_loss: 0.00143206
+2026-04-23 18:23:14,518 - INFO - epoch 7 | batch 350 | train_loss: 0.00153119
+2026-04-23 18:23:26,574 - INFO - ================= epoch end =================
+2026-04-23 18:23:26,575 - INFO - epoch 7 | train_loss: 0.02505317 | valid_loss: 1.86018548 | valid balanc. acc.: 0.60615375
+2026-04-23 18:23:26,575 - INFO - metrics:
+{'accuracy': 0.5670041691483025, 'balanced_accuracy': 0.6061537499739513, 'f1': 0.5876347135564379, 'precision': 0.4687782805429864, 'recall': 0.7872340425531915}
+2026-04-23 18:23:27,369 - INFO - epoch 8 | batch 10 | train_loss: 0.00049946
+2026-04-23 18:23:28,175 - INFO - epoch 8 | batch 20 | train_loss: 0.00051974
+2026-04-23 18:23:28,978 - INFO - epoch 8 | batch 30 | train_loss: 0.00041808
+2026-04-23 18:23:29,784 - INFO - epoch 8 | batch 40 | train_loss: 0.00036310
+2026-04-23 18:23:30,582 - INFO - epoch 8 | batch 50 | train_loss: 0.00031316
+2026-04-23 18:23:31,426 - INFO - epoch 8 | batch 60 | train_loss: 0.00028661
+2026-04-23 18:23:32,233 - INFO - epoch 8 | batch 70 | train_loss: 0.00027584
+2026-04-23 18:23:33,042 - INFO - epoch 8 | batch 80 | train_loss: 0.00025735
+2026-04-23 18:23:33,842 - INFO - epoch 8 | batch 90 | train_loss: 0.00029199
+2026-04-23 18:23:34,650 - INFO - epoch 8 | batch 100 | train_loss: 0.00027053
+2026-04-23 18:23:35,456 - INFO - epoch 8 | batch 110 | train_loss: 0.00025886
+2026-04-23 18:23:36,302 - INFO - epoch 8 | batch 120 | train_loss: 0.00024007
+2026-04-23 18:23:37,111 - INFO - epoch 8 | batch 130 | train_loss: 0.00022689
+2026-04-23 18:23:37,917 - INFO - epoch 8 | batch 140 | train_loss: 0.00026256
+2026-04-23 18:23:38,723 - INFO - epoch 8 | batch 150 | train_loss: 0.00026932
+2026-04-23 18:23:39,522 - INFO - epoch 8 | batch 160 | train_loss: 0.00036230
+2026-04-23 18:23:40,332 - INFO - epoch 8 | batch 170 | train_loss: 0.00035265
+2026-04-23 18:23:41,132 - INFO - epoch 8 | batch 180 | train_loss: 0.00035443
+2026-04-23 18:23:41,934 - INFO - epoch 8 | batch 190 | train_loss: 0.00034933
+2026-04-23 18:23:42,743 - INFO - epoch 8 | batch 200 | train_loss: 0.00033425
+2026-04-23 18:23:43,549 - INFO - epoch 8 | batch 210 | train_loss: 0.00031998
+2026-04-23 18:23:44,364 - INFO - epoch 8 | batch 220 | train_loss: 0.00030697
+2026-04-23 18:23:45,169 - INFO - epoch 8 | batch 230 | train_loss: 0.00036985
+2026-04-23 18:23:45,978 - INFO - epoch 8 | batch 240 | train_loss: 0.00035995
+2026-04-23 18:23:46,902 - INFO - epoch 8 | batch 250 | train_loss: 0.00035596
+2026-04-23 18:23:47,837 - INFO - epoch 8 | batch 260 | train_loss: 0.00037888
+2026-04-23 18:23:48,701 - INFO - epoch 8 | batch 270 | train_loss: 0.00041111
+2026-04-23 18:23:49,549 - INFO - epoch 8 | batch 280 | train_loss: 0.00040504
+2026-04-23 18:23:50,357 - INFO - epoch 8 | batch 290 | train_loss: 0.00044942
+2026-04-23 18:23:51,166 - INFO - epoch 8 | batch 300 | train_loss: 0.00046401
+2026-04-23 18:23:51,978 - INFO - epoch 8 | batch 310 | train_loss: 0.00047798
+2026-04-23 18:23:52,788 - INFO - epoch 8 | batch 320 | train_loss: 0.00054332
+2026-04-23 18:23:53,596 - INFO - epoch 8 | batch 330 | train_loss: 0.00055233
+2026-04-23 18:23:54,427 - INFO - epoch 8 | batch 340 | train_loss: 0.00055355
+2026-04-23 18:23:55,253 - INFO - epoch 8 | batch 350 | train_loss: 0.00054637
+2026-04-23 18:24:08,338 - INFO - ================= epoch end =================
+2026-04-23 18:24:08,339 - INFO - epoch 8 | train_loss: 0.00920485 | valid_loss: 2.61503417 | valid balanc. acc.: 0.54998824
+2026-04-23 18:24:08,340 - INFO - metrics:
+{'accuracy': 0.49672424061941634, 'balanced_accuracy': 0.5499882408628527, 'f1': 0.5536185948230322, 'precision': 0.4242914979757085, 'recall': 0.7963525835866262}
+2026-04-23 18:24:09,155 - INFO - epoch 9 | batch 10 | train_loss: 0.00008305
+2026-04-23 18:24:09,963 - INFO - epoch 9 | batch 20 | train_loss: 0.00040204
+2026-04-23 18:24:10,773 - INFO - epoch 9 | batch 30 | train_loss: 0.00029717
+2026-04-23 18:24:11,608 - INFO - epoch 9 | batch 40 | train_loss: 0.00027931
+2026-04-23 18:24:12,416 - INFO - epoch 9 | batch 50 | train_loss: 0.00066620
+2026-04-23 18:24:13,241 - INFO - epoch 9 | batch 60 | train_loss: 0.00112823
+2026-04-23 18:24:14,048 - INFO - epoch 9 | batch 70 | train_loss: 0.00166364
+2026-04-23 18:24:14,859 - INFO - epoch 9 | batch 80 | train_loss: 0.00160762
+2026-04-23 18:24:15,705 - INFO - epoch 9 | batch 90 | train_loss: 0.00148057
+2026-04-23 18:24:16,536 - INFO - epoch 9 | batch 100 | train_loss: 0.00138941
+2026-04-23 18:24:17,341 - INFO - epoch 9 | batch 110 | train_loss: 0.00170682
+2026-04-23 18:24:18,152 - INFO - epoch 9 | batch 120 | train_loss: 0.00168674
+2026-04-23 18:24:19,006 - INFO - epoch 9 | batch 130 | train_loss: 0.00180836
+2026-04-23 18:24:19,813 - INFO - epoch 9 | batch 140 | train_loss: 0.00190339
+2026-04-23 18:24:20,618 - INFO - epoch 9 | batch 150 | train_loss: 0.00180299
+2026-04-23 18:24:21,426 - INFO - epoch 9 | batch 160 | train_loss: 0.00179024
+2026-04-23 18:24:22,232 - INFO - epoch 9 | batch 170 | train_loss: 0.00171762
+2026-04-23 18:24:23,039 - INFO - epoch 9 | batch 180 | train_loss: 0.00164539
+2026-04-23 18:24:23,850 - INFO - epoch 9 | batch 190 | train_loss: 0.00158071
+2026-04-23 18:24:24,666 - INFO - epoch 9 | batch 200 | train_loss: 0.00150361
+2026-04-23 18:24:25,472 - INFO - epoch 9 | batch 210 | train_loss: 0.00149990
+2026-04-23 18:24:26,276 - INFO - epoch 9 | batch 220 | train_loss: 0.00147648
+2026-04-23 18:24:27,083 - INFO - epoch 9 | batch 230 | train_loss: 0.00141995
+2026-04-23 18:24:27,941 - INFO - epoch 9 | batch 240 | train_loss: 0.00136417
+2026-04-23 18:24:28,751 - INFO - epoch 9 | batch 250 | train_loss: 0.00131796
+2026-04-23 18:24:29,556 - INFO - epoch 9 | batch 260 | train_loss: 0.00127335
+2026-04-23 18:24:30,361 - INFO - epoch 9 | batch 270 | train_loss: 0.00122855
+2026-04-23 18:24:31,165 - INFO - epoch 9 | batch 280 | train_loss: 0.00118900
+2026-04-23 18:24:32,011 - INFO - epoch 9 | batch 290 | train_loss: 0.00114940
+2026-04-23 18:24:32,817 - INFO - epoch 9 | batch 300 | train_loss: 0.00111401
+2026-04-23 18:24:33,624 - INFO - epoch 9 | batch 310 | train_loss: 0.00107971
+2026-04-23 18:24:34,427 - INFO - epoch 9 | batch 320 | train_loss: 0.00105384
+2026-04-23 18:24:35,259 - INFO - epoch 9 | batch 330 | train_loss: 0.00102696
+2026-04-23 18:24:36,064 - INFO - epoch 9 | batch 340 | train_loss: 0.00101183
+2026-04-23 18:24:36,869 - INFO - epoch 9 | batch 350 | train_loss: 0.00107564
+2026-04-23 18:24:49,326 - INFO - ================= epoch end =================
+2026-04-23 18:24:49,327 - INFO - epoch 9 | train_loss: 0.02389205 | valid_loss: 4.57851262 | valid balanc. acc.: 0.56057593
+2026-04-23 18:24:49,328 - INFO - metrics:
+{'accuracy': 0.50565812983919, 'balanced_accuracy': 0.5605759297905087, 'f1': 0.5636172450052577, 'precision': 0.43086816720257237, 'recall': 0.8145896656534954}
+2026-04-23 18:24:50,123 - INFO - epoch 10 | batch 10 | train_loss: 0.00621521
+2026-04-23 18:24:50,928 - INFO - epoch 10 | batch 20 | train_loss: 0.00394308
+2026-04-23 18:24:51,760 - INFO - epoch 10 | batch 30 | train_loss: 0.00269620
+2026-04-23 18:24:52,562 - INFO - epoch 10 | batch 40 | train_loss: 0.00209870
+2026-04-23 18:24:53,368 - INFO - epoch 10 | batch 50 | train_loss: 0.00169564
+2026-04-23 18:24:54,174 - INFO - epoch 10 | batch 60 | train_loss: 0.00145759
+2026-04-23 18:24:54,984 - INFO - epoch 10 | batch 70 | train_loss: 0.00133804
+2026-04-23 18:24:55,791 - INFO - epoch 10 | batch 80 | train_loss: 0.00119825
+2026-04-23 18:24:56,597 - INFO - epoch 10 | batch 90 | train_loss: 0.00110090
+2026-04-23 18:24:57,402 - INFO - epoch 10 | batch 100 | train_loss: 0.00103357
+2026-04-23 18:24:58,207 - INFO - epoch 10 | batch 110 | train_loss: 0.00094493
+2026-04-23 18:24:59,024 - INFO - epoch 10 | batch 120 | train_loss: 0.00088752
+2026-04-23 18:24:59,830 - INFO - epoch 10 | batch 130 | train_loss: 0.00082380
+2026-04-23 18:25:00,634 - INFO - epoch 10 | batch 140 | train_loss: 0.00077787
+2026-04-23 18:25:01,439 - INFO - epoch 10 | batch 150 | train_loss: 0.00076258
+2026-04-23 18:25:02,241 - INFO - epoch 10 | batch 160 | train_loss: 0.00073335
+2026-04-23 18:25:03,047 - INFO - epoch 10 | batch 170 | train_loss: 0.00070200
+2026-04-23 18:25:03,852 - INFO - epoch 10 | batch 180 | train_loss: 0.00067333
+2026-04-23 18:25:04,658 - INFO - epoch 10 | batch 190 | train_loss: 0.00064085
+2026-04-23 18:25:05,463 - INFO - epoch 10 | batch 200 | train_loss: 0.00062584
+2026-04-23 18:25:06,268 - INFO - epoch 10 | batch 210 | train_loss: 0.00060356
+2026-04-23 18:25:07,152 - INFO - epoch 10 | batch 220 | train_loss: 0.00061274
+2026-04-23 18:25:07,957 - INFO - epoch 10 | batch 230 | train_loss: 0.00059596
+2026-04-23 18:25:08,768 - INFO - epoch 10 | batch 240 | train_loss: 0.00067812
+2026-04-23 18:25:09,575 - INFO - epoch 10 | batch 250 | train_loss: 0.00065735
+2026-04-23 18:25:10,378 - INFO - epoch 10 | batch 260 | train_loss: 0.00064416
+2026-04-23 18:25:11,182 - INFO - epoch 10 | batch 270 | train_loss: 0.00062157
+2026-04-23 18:25:11,988 - INFO - epoch 10 | batch 280 | train_loss: 0.00060652
+2026-04-23 18:25:12,791 - INFO - epoch 10 | batch 290 | train_loss: 0.00059842
+2026-04-23 18:25:13,616 - INFO - epoch 10 | batch 300 | train_loss: 0.00058211
+2026-04-23 18:25:14,423 - INFO - epoch 10 | batch 310 | train_loss: 0.00056480
+2026-04-23 18:25:15,229 - INFO - epoch 10 | batch 320 | train_loss: 0.00055129
+2026-04-23 18:25:16,062 - INFO - epoch 10 | batch 330 | train_loss: 0.00053605
+2026-04-23 18:25:16,867 - INFO - epoch 10 | batch 340 | train_loss: 0.00052255
+2026-04-23 18:25:17,672 - INFO - epoch 10 | batch 350 | train_loss: 0.00051379
+2026-04-23 18:25:30,038 - INFO - ================= epoch end =================
+2026-04-23 18:25:30,039 - INFO - epoch 10 | train_loss: 0.01276068 | valid_loss: 4.20414571 | valid balanc. acc.: 0.57526666
+2026-04-23 18:25:30,040 - INFO - metrics:
+{'accuracy': 0.5139964264443121, 'balanced_accuracy': 0.5752666644835357, 'f1': 0.5806783144912642, 'precision': 0.4386645962732919, 'recall': 0.8586626139817629}
+2026-04-23 18:25:30,045 - INFO - Fold 2
+2026-04-23 18:25:30,056 - INFO - 
+    ======= about folds =======
+    ((5771, 8), (1509, 8))
+    set()
+    label
+0    2993
+1    2778
+Name: image_path, dtype: int64     
+    label
+0    647
+1    862
+Name: image_path, dtype: int64
+    
+2026-04-23 18:25:30,288 - INFO - 
+    Всего параметров: 11,177,538
+    Обучаемых:       11,177,538
+    
+2026-04-23 18:25:31,097 - INFO - epoch 1 | batch 10 | train_loss: 0.05031802
+2026-04-23 18:25:31,906 - INFO - epoch 1 | batch 20 | train_loss: 0.05025048
+2026-04-23 18:25:32,711 - INFO - epoch 1 | batch 30 | train_loss: 0.04529735
+2026-04-23 18:25:33,516 - INFO - epoch 1 | batch 40 | train_loss: 0.03999170
+2026-04-23 18:25:34,321 - INFO - epoch 1 | batch 50 | train_loss: 0.03616018
+2026-04-23 18:25:35,155 - INFO - epoch 1 | batch 60 | train_loss: 0.03580594
+2026-04-23 18:25:35,960 - INFO - epoch 1 | batch 70 | train_loss: 0.03388265
+2026-04-23 18:25:36,765 - INFO - epoch 1 | batch 80 | train_loss: 0.03242331
+2026-04-23 18:25:37,571 - INFO - epoch 1 | batch 90 | train_loss: 0.03080908
+2026-04-23 18:25:38,376 - INFO - epoch 1 | batch 100 | train_loss: 0.03017285
+2026-04-23 18:25:39,180 - INFO - epoch 1 | batch 110 | train_loss: 0.02893485
+2026-04-23 18:25:39,987 - INFO - epoch 1 | batch 120 | train_loss: 0.02789335
+2026-04-23 18:25:40,793 - INFO - epoch 1 | batch 130 | train_loss: 0.02662435
+2026-04-23 18:25:41,597 - INFO - epoch 1 | batch 140 | train_loss: 0.02534827
+2026-04-23 18:25:42,402 - INFO - epoch 1 | batch 150 | train_loss: 0.02445390
+2026-04-23 18:25:43,206 - INFO - epoch 1 | batch 160 | train_loss: 0.02358633
+2026-04-23 18:25:44,014 - INFO - epoch 1 | batch 170 | train_loss: 0.02261099
+2026-04-23 18:25:44,828 - INFO - epoch 1 | batch 180 | train_loss: 0.02175391
+2026-04-23 18:25:45,634 - INFO - epoch 1 | batch 190 | train_loss: 0.02121251
+2026-04-23 18:25:46,439 - INFO - epoch 1 | batch 200 | train_loss: 0.02066351
+2026-04-23 18:25:47,242 - INFO - epoch 1 | batch 210 | train_loss: 0.02008426
+2026-04-23 18:25:48,047 - INFO - epoch 1 | batch 220 | train_loss: 0.01946334
+2026-04-23 18:25:48,856 - INFO - epoch 1 | batch 230 | train_loss: 0.01891452
+2026-04-23 18:25:49,661 - INFO - epoch 1 | batch 240 | train_loss: 0.01841400
+2026-04-23 18:25:50,466 - INFO - epoch 1 | batch 250 | train_loss: 0.01805078
+2026-04-23 18:25:51,303 - INFO - epoch 1 | batch 260 | train_loss: 0.01779065
+2026-04-23 18:25:52,124 - INFO - epoch 1 | batch 270 | train_loss: 0.01751863
+2026-04-23 18:25:52,930 - INFO - epoch 1 | batch 280 | train_loss: 0.01718328
+2026-04-23 18:25:53,745 - INFO - epoch 1 | batch 290 | train_loss: 0.01684561
+2026-04-23 18:25:54,551 - INFO - epoch 1 | batch 300 | train_loss: 0.01647680
+2026-04-23 18:25:55,356 - INFO - epoch 1 | batch 310 | train_loss: 0.01603170
+2026-04-23 18:25:56,161 - INFO - epoch 1 | batch 320 | train_loss: 0.01590698
+2026-04-23 18:25:56,967 - INFO - epoch 1 | batch 330 | train_loss: 0.01566760
+2026-04-23 18:25:57,775 - INFO - epoch 1 | batch 340 | train_loss: 0.01543696
+2026-04-23 18:25:58,584 - INFO - epoch 1 | batch 350 | train_loss: 0.01529563
+2026-04-23 18:25:59,388 - INFO - epoch 1 | batch 360 | train_loss: 0.01515079
+2026-04-23 18:26:10,947 - INFO - ================= epoch end =================
+2026-04-23 18:26:10,948 - INFO - epoch 1 | train_loss: 0.24195978 | valid_loss: 1.01803227 | valid balanc. acc.: 0.63566362
+2026-04-23 18:26:10,949 - INFO - metrics:
+{'accuracy': 0.6302186878727635, 'balanced_accuracy': 0.6356636197047232, 'f1': 0.6486146095717884, 'precision': 0.709366391184573, 'recall': 0.5974477958236659}
+2026-04-23 18:26:11,074 - INFO - save checkpoint: ..\models_checkpoints/resnet_18_backbone_cv/2026-04-23_18_17_44_full_tuning_patient/fold2/checkpoint/best_model.pth
+2026-04-23 18:26:11,880 - INFO - epoch 2 | batch 10 | train_loss: 0.00708386
+2026-04-23 18:26:12,686 - INFO - epoch 2 | batch 20 | train_loss: 0.00748778
+2026-04-23 18:26:13,492 - INFO - epoch 2 | batch 30 | train_loss: 0.00572232
+2026-04-23 18:26:14,296 - INFO - epoch 2 | batch 40 | train_loss: 0.00598275
+2026-04-23 18:26:15,104 - INFO - epoch 2 | batch 50 | train_loss: 0.00543196
+2026-04-23 18:26:15,929 - INFO - epoch 2 | batch 60 | train_loss: 0.00494187
+2026-04-23 18:26:16,733 - INFO - epoch 2 | batch 70 | train_loss: 0.00475185
+2026-04-23 18:26:17,537 - INFO - epoch 2 | batch 80 | train_loss: 0.00426993
+2026-04-23 18:26:18,397 - INFO - epoch 2 | batch 90 | train_loss: 0.00404424
+2026-04-23 18:26:19,257 - INFO - epoch 2 | batch 100 | train_loss: 0.00400938
+2026-04-23 18:26:20,109 - INFO - epoch 2 | batch 110 | train_loss: 0.00437774
+2026-04-23 18:26:20,951 - INFO - epoch 2 | batch 120 | train_loss: 0.00426319
+2026-04-23 18:26:21,755 - INFO - epoch 2 | batch 130 | train_loss: 0.00404061
+2026-04-23 18:26:22,571 - INFO - epoch 2 | batch 140 | train_loss: 0.00450811
+2026-04-23 18:26:23,374 - INFO - epoch 2 | batch 150 | train_loss: 0.00449781
+2026-04-23 18:26:24,178 - INFO - epoch 2 | batch 160 | train_loss: 0.00459897
+2026-04-23 18:26:24,989 - INFO - epoch 2 | batch 170 | train_loss: 0.00449424
+2026-04-23 18:26:25,794 - INFO - epoch 2 | batch 180 | train_loss: 0.00448125
+2026-04-23 18:26:26,601 - INFO - epoch 2 | batch 190 | train_loss: 0.00461490
+2026-04-23 18:26:27,406 - INFO - epoch 2 | batch 200 | train_loss: 0.00462278
+2026-04-23 18:26:28,212 - INFO - epoch 2 | batch 210 | train_loss: 0.00447359
+2026-04-23 18:26:29,017 - INFO - epoch 2 | batch 220 | train_loss: 0.00471722
+2026-04-23 18:26:29,832 - INFO - epoch 2 | batch 230 | train_loss: 0.00474248
+2026-04-23 18:26:30,638 - INFO - epoch 2 | batch 240 | train_loss: 0.00471122
+2026-04-23 18:26:31,443 - INFO - epoch 2 | batch 250 | train_loss: 0.00469015
+2026-04-23 18:26:32,249 - INFO - epoch 2 | batch 260 | train_loss: 0.00462187
+2026-04-23 18:26:33,068 - INFO - epoch 2 | batch 270 | train_loss: 0.00476863
+2026-04-23 18:26:33,874 - INFO - epoch 2 | batch 280 | train_loss: 0.00469145
+2026-04-23 18:26:34,681 - INFO - epoch 2 | batch 290 | train_loss: 0.00466488
+2026-04-23 18:26:35,485 - INFO - epoch 2 | batch 300 | train_loss: 0.00463612
+2026-04-23 18:26:36,292 - INFO - epoch 2 | batch 310 | train_loss: 0.00460749
+2026-04-23 18:26:37,097 - INFO - epoch 2 | batch 320 | train_loss: 0.00450071
+2026-04-23 18:26:37,901 - INFO - epoch 2 | batch 330 | train_loss: 0.00448357
+2026-04-23 18:26:38,706 - INFO - epoch 2 | batch 340 | train_loss: 0.00447498
+2026-04-23 18:26:39,511 - INFO - epoch 2 | batch 350 | train_loss: 0.00463027
+2026-04-23 18:26:40,389 - INFO - epoch 2 | batch 360 | train_loss: 0.00455335
+2026-04-23 18:26:52,034 - INFO - ================= epoch end =================
+2026-04-23 18:26:52,035 - INFO - epoch 2 | train_loss: 0.07311708 | valid_loss: 1.80892686 | valid balanc. acc.: 0.59767730
+2026-04-23 18:26:52,036 - INFO - metrics:
+{'accuracy': 0.6249171636845593, 'balanced_accuracy': 0.5976773041379632, 'f1': 0.7061266874350987, 'precision': 0.6390977443609023, 'recall': 0.7888631090487239}
+2026-04-23 18:26:52,838 - INFO - epoch 3 | batch 10 | train_loss: 0.00111814
+2026-04-23 18:26:53,690 - INFO - epoch 3 | batch 20 | train_loss: 0.00135895
+2026-04-23 18:26:54,487 - INFO - epoch 3 | batch 30 | train_loss: 0.00166506
+2026-04-23 18:26:55,300 - INFO - epoch 3 | batch 40 | train_loss: 0.00141627
+2026-04-23 18:26:56,104 - INFO - epoch 3 | batch 50 | train_loss: 0.00127968
+2026-04-23 18:26:56,908 - INFO - epoch 3 | batch 60 | train_loss: 0.00148062
+2026-04-23 18:26:57,713 - INFO - epoch 3 | batch 70 | train_loss: 0.00161081
+2026-04-23 18:26:58,518 - INFO - epoch 3 | batch 80 | train_loss: 0.00165035
+2026-04-23 18:26:59,321 - INFO - epoch 3 | batch 90 | train_loss: 0.00216329
+2026-04-23 18:27:00,116 - INFO - epoch 3 | batch 100 | train_loss: 0.00224182
+2026-04-23 18:27:00,929 - INFO - epoch 3 | batch 110 | train_loss: 0.00208705
+2026-04-23 18:27:01,726 - INFO - epoch 3 | batch 120 | train_loss: 0.00195117
+2026-04-23 18:27:02,541 - INFO - epoch 3 | batch 130 | train_loss: 0.00188271
+2026-04-23 18:27:03,345 - INFO - epoch 3 | batch 140 | train_loss: 0.00193998
+2026-04-23 18:27:04,149 - INFO - epoch 3 | batch 150 | train_loss: 0.00195495
+2026-04-23 18:27:04,951 - INFO - epoch 3 | batch 160 | train_loss: 0.00212810
+2026-04-23 18:27:05,753 - INFO - epoch 3 | batch 170 | train_loss: 0.00223243
+2026-04-23 18:27:06,559 - INFO - epoch 3 | batch 180 | train_loss: 0.00213137
+2026-04-23 18:27:07,360 - INFO - epoch 3 | batch 190 | train_loss: 0.00237234
+2026-04-23 18:27:08,206 - INFO - epoch 3 | batch 200 | train_loss: 0.00241637
+2026-04-23 18:27:09,002 - INFO - epoch 3 | batch 210 | train_loss: 0.00235884
+2026-04-23 18:27:09,827 - INFO - epoch 3 | batch 220 | train_loss: 0.00233423
+2026-04-23 18:27:10,626 - INFO - epoch 3 | batch 230 | train_loss: 0.00232075
+2026-04-23 18:27:11,437 - INFO - epoch 3 | batch 240 | train_loss: 0.00251222
+2026-04-23 18:27:12,241 - INFO - epoch 3 | batch 250 | train_loss: 0.00267700
+2026-04-23 18:27:13,053 - INFO - epoch 3 | batch 260 | train_loss: 0.00259449
+2026-04-23 18:27:13,859 - INFO - epoch 3 | batch 270 | train_loss: 0.00260315
+2026-04-23 18:27:14,684 - INFO - epoch 3 | batch 280 | train_loss: 0.00274150
+2026-04-23 18:27:15,492 - INFO - epoch 3 | batch 290 | train_loss: 0.00285092
+2026-04-23 18:27:16,289 - INFO - epoch 3 | batch 300 | train_loss: 0.00282595
+2026-04-23 18:27:17,096 - INFO - epoch 3 | batch 310 | train_loss: 0.00287359
+2026-04-23 18:27:17,893 - INFO - epoch 3 | batch 320 | train_loss: 0.00282621
+2026-04-23 18:27:18,703 - INFO - epoch 3 | batch 330 | train_loss: 0.00276944
+2026-04-23 18:27:19,510 - INFO - epoch 3 | batch 340 | train_loss: 0.00270519
+2026-04-23 18:27:20,313 - INFO - epoch 3 | batch 350 | train_loss: 0.00265549
+2026-04-23 18:27:21,118 - INFO - epoch 3 | batch 360 | train_loss: 0.00267665
+2026-04-23 18:27:32,768 - INFO - ================= epoch end =================
+2026-04-23 18:27:32,769 - INFO - epoch 3 | train_loss: 0.04271214 | valid_loss: 1.41012680 | valid balanc. acc.: 0.59684892
+2026-04-23 18:27:32,770 - INFO - metrics:
+{'accuracy': 0.6037110669317429, 'balanced_accuracy': 0.5968489225660464, 'f1': 0.6502923976608187, 'precision': 0.6556603773584906, 'recall': 0.6450116009280742}
+2026-04-23 18:27:33,575 - INFO - epoch 4 | batch 10 | train_loss: 0.00156690
+2026-04-23 18:27:34,393 - INFO - epoch 4 | batch 20 | train_loss: 0.00100509
+2026-04-23 18:27:35,209 - INFO - epoch 4 | batch 30 | train_loss: 0.00102851
+2026-04-23 18:27:36,068 - INFO - epoch 4 | batch 40 | train_loss: 0.00090292
+2026-04-23 18:27:36,876 - INFO - epoch 4 | batch 50 | train_loss: 0.00089792
+2026-04-23 18:27:37,676 - INFO - epoch 4 | batch 60 | train_loss: 0.00091107
+2026-04-23 18:27:38,479 - INFO - epoch 4 | batch 70 | train_loss: 0.00080850
+2026-04-23 18:27:39,292 - INFO - epoch 4 | batch 80 | train_loss: 0.00078375
+2026-04-23 18:27:40,099 - INFO - epoch 4 | batch 90 | train_loss: 0.00083633
+2026-04-23 18:27:40,904 - INFO - epoch 4 | batch 100 | train_loss: 0.00142519
+2026-04-23 18:27:41,705 - INFO - epoch 4 | batch 110 | train_loss: 0.00140159
+2026-04-23 18:27:42,525 - INFO - epoch 4 | batch 120 | train_loss: 0.00137736
+2026-04-23 18:27:43,329 - INFO - epoch 4 | batch 130 | train_loss: 0.00134989
+2026-04-23 18:27:44,129 - INFO - epoch 4 | batch 140 | train_loss: 0.00168510
+2026-04-23 18:27:44,947 - INFO - epoch 4 | batch 150 | train_loss: 0.00161822
+2026-04-23 18:27:45,758 - INFO - epoch 4 | batch 160 | train_loss: 0.00211282
+2026-04-23 18:27:46,580 - INFO - epoch 4 | batch 170 | train_loss: 0.00205932
+2026-04-23 18:27:47,384 - INFO - epoch 4 | batch 180 | train_loss: 0.00207390
+2026-04-23 18:27:48,191 - INFO - epoch 4 | batch 190 | train_loss: 0.00211786
+2026-04-23 18:27:48,992 - INFO - epoch 4 | batch 200 | train_loss: 0.00208325
+2026-04-23 18:27:49,794 - INFO - epoch 4 | batch 210 | train_loss: 0.00215202
+2026-04-23 18:27:50,595 - INFO - epoch 4 | batch 220 | train_loss: 0.00209505
+2026-04-23 18:27:51,396 - INFO - epoch 4 | batch 230 | train_loss: 0.00203908
+2026-04-23 18:27:52,200 - INFO - epoch 4 | batch 240 | train_loss: 0.00198948
+2026-04-23 18:27:53,012 - INFO - epoch 4 | batch 250 | train_loss: 0.00205915
+2026-04-23 18:27:53,815 - INFO - epoch 4 | batch 260 | train_loss: 0.00202015
+2026-04-23 18:27:54,623 - INFO - epoch 4 | batch 270 | train_loss: 0.00197905
+2026-04-23 18:27:55,439 - INFO - epoch 4 | batch 280 | train_loss: 0.00192424
+2026-04-23 18:27:56,243 - INFO - epoch 4 | batch 290 | train_loss: 0.00205764
+2026-04-23 18:27:57,048 - INFO - epoch 4 | batch 300 | train_loss: 0.00224497
+2026-04-23 18:27:57,860 - INFO - epoch 4 | batch 310 | train_loss: 0.00221036
+2026-04-23 18:27:58,755 - INFO - epoch 4 | batch 320 | train_loss: 0.00237993
+2026-04-23 18:28:00,011 - INFO - epoch 4 | batch 330 | train_loss: 0.00239802
+2026-04-23 18:28:01,144 - INFO - epoch 4 | batch 340 | train_loss: 0.00235884
+2026-04-23 18:28:02,274 - INFO - epoch 4 | batch 350 | train_loss: 0.00243687
+2026-04-23 18:28:03,449 - INFO - epoch 4 | batch 360 | train_loss: 0.00241926
+2026-04-23 18:28:17,034 - INFO - ================= epoch end =================
+2026-04-23 18:28:17,035 - INFO - epoch 4 | train_loss: 0.03863116 | valid_loss: 1.69505322 | valid balanc. acc.: 0.60148212
+2026-04-23 18:28:17,035 - INFO - metrics:
+{'accuracy': 0.6063618290258449, 'balanced_accuracy': 0.601482121660923, 'f1': 0.6485207100591716, 'precision': 0.6618357487922706, 'recall': 0.6357308584686775}
+2026-04-23 18:28:17,934 - INFO - epoch 5 | batch 10 | train_loss: 0.00145733
+2026-04-23 18:28:18,793 - INFO - epoch 5 | batch 20 | train_loss: 0.00219935
+2026-04-23 18:28:19,617 - INFO - epoch 5 | batch 30 | train_loss: 0.00178659
+2026-04-23 18:28:20,448 - INFO - epoch 5 | batch 40 | train_loss: 0.00144833
+2026-04-23 18:28:21,268 - INFO - epoch 5 | batch 50 | train_loss: 0.00126063
+2026-04-23 18:28:22,086 - INFO - epoch 5 | batch 60 | train_loss: 0.00120202
+2026-04-23 18:28:22,897 - INFO - epoch 5 | batch 70 | train_loss: 0.00105864
+2026-04-23 18:28:23,717 - INFO - epoch 5 | batch 80 | train_loss: 0.00096820
+2026-04-23 18:28:24,528 - INFO - epoch 5 | batch 90 | train_loss: 0.00099035
+2026-04-23 18:28:25,388 - INFO - epoch 5 | batch 100 | train_loss: 0.00093057
+2026-04-23 18:28:26,196 - INFO - epoch 5 | batch 110 | train_loss: 0.00088093
+2026-04-23 18:28:27,020 - INFO - epoch 5 | batch 120 | train_loss: 0.00092068
+2026-04-23 18:28:28,157 - INFO - epoch 5 | batch 130 | train_loss: 0.00092994
+2026-04-23 18:28:28,972 - INFO - epoch 5 | batch 140 | train_loss: 0.00087757
+2026-04-23 18:28:29,773 - INFO - epoch 5 | batch 150 | train_loss: 0.00083234
+2026-04-23 18:28:30,592 - INFO - epoch 5 | batch 160 | train_loss: 0.00079399
+2026-04-23 18:28:31,399 - INFO - epoch 5 | batch 170 | train_loss: 0.00076596
+2026-04-23 18:28:32,206 - INFO - epoch 5 | batch 180 | train_loss: 0.00077747
+2026-04-23 18:28:33,094 - INFO - epoch 5 | batch 190 | train_loss: 0.00115171
+2026-04-23 18:28:34,114 - INFO - epoch 5 | batch 200 | train_loss: 0.00117556
+2026-04-23 18:28:35,359 - INFO - epoch 5 | batch 210 | train_loss: 0.00118248
+2026-04-23 18:28:36,449 - INFO - epoch 5 | batch 220 | train_loss: 0.00113771
+2026-04-23 18:28:37,811 - INFO - epoch 5 | batch 230 | train_loss: 0.00116229
+2026-04-23 18:28:38,852 - INFO - epoch 5 | batch 240 | train_loss: 0.00146897
+2026-04-23 18:28:39,683 - INFO - epoch 5 | batch 250 | train_loss: 0.00164325
+2026-04-23 18:28:40,506 - INFO - epoch 5 | batch 260 | train_loss: 0.00174963
+2026-04-23 18:28:41,316 - INFO - epoch 5 | batch 270 | train_loss: 0.00175522
+2026-04-23 18:28:42,130 - INFO - epoch 5 | batch 280 | train_loss: 0.00175979
+2026-04-23 18:28:42,934 - INFO - epoch 5 | batch 290 | train_loss: 0.00171835
+2026-04-23 18:28:43,754 - INFO - epoch 5 | batch 300 | train_loss: 0.00168822
+2026-04-23 18:28:44,564 - INFO - epoch 5 | batch 310 | train_loss: 0.00165134
+2026-04-23 18:28:45,370 - INFO - epoch 5 | batch 320 | train_loss: 0.00169659
+2026-04-23 18:28:46,184 - INFO - epoch 5 | batch 330 | train_loss: 0.00171697
+2026-04-23 18:28:46,984 - INFO - epoch 5 | batch 340 | train_loss: 0.00173074
+2026-04-23 18:28:47,792 - INFO - epoch 5 | batch 350 | train_loss: 0.00170887
+2026-04-23 18:28:48,654 - INFO - epoch 5 | batch 360 | train_loss: 0.00170364
+2026-04-23 18:29:00,488 - INFO - ================= epoch end =================
+2026-04-23 18:29:00,488 - INFO - epoch 5 | train_loss: 0.02718816 | valid_loss: 1.56418953 | valid balanc. acc.: 0.57716141
+2026-04-23 18:29:00,490 - INFO - metrics:
+{'accuracy': 0.5937707090788602, 'balanced_accuracy': 0.5771614124802318, 'f1': 0.6611387506909895, 'precision': 0.6314677930306231, 'recall': 0.6937354988399071}
+2026-04-23 18:29:01,301 - INFO - epoch 6 | batch 10 | train_loss: 0.00038045
+2026-04-23 18:29:02,235 - INFO - epoch 6 | batch 20 | train_loss: 0.00049634
+2026-04-23 18:29:03,045 - INFO - epoch 6 | batch 30 | train_loss: 0.00049317
+2026-04-23 18:29:03,860 - INFO - epoch 6 | batch 40 | train_loss: 0.00112266
+2026-04-23 18:29:04,728 - INFO - epoch 6 | batch 50 | train_loss: 0.00105621
+2026-04-23 18:29:05,544 - INFO - epoch 6 | batch 60 | train_loss: 0.00101570
+2026-04-23 18:29:06,355 - INFO - epoch 6 | batch 70 | train_loss: 0.00093760
+2026-04-23 18:29:07,189 - INFO - epoch 6 | batch 80 | train_loss: 0.00086656
+2026-04-23 18:29:08,007 - INFO - epoch 6 | batch 90 | train_loss: 0.00082909
+2026-04-23 18:29:08,896 - INFO - epoch 6 | batch 100 | train_loss: 0.00087012
+2026-04-23 18:29:09,724 - INFO - epoch 6 | batch 110 | train_loss: 0.00081514
+2026-04-23 18:29:10,555 - INFO - epoch 6 | batch 120 | train_loss: 0.00079646
+2026-04-23 18:29:11,362 - INFO - epoch 6 | batch 130 | train_loss: 0.00074350
+2026-04-23 18:29:12,174 - INFO - epoch 6 | batch 140 | train_loss: 0.00078984
+2026-04-23 18:29:12,987 - INFO - epoch 6 | batch 150 | train_loss: 0.00078138
+2026-04-23 18:29:13,802 - INFO - epoch 6 | batch 160 | train_loss: 0.00084068
+2026-04-23 18:29:14,656 - INFO - epoch 6 | batch 170 | train_loss: 0.00085229
+2026-04-23 18:29:15,495 - INFO - epoch 6 | batch 180 | train_loss: 0.00097334
+2026-04-23 18:29:16,383 - INFO - epoch 6 | batch 190 | train_loss: 0.00094922
+2026-04-23 18:29:17,206 - INFO - epoch 6 | batch 200 | train_loss: 0.00123525
+2026-04-23 18:29:18,033 - INFO - epoch 6 | batch 210 | train_loss: 0.00123639
+2026-04-23 18:29:18,869 - INFO - epoch 6 | batch 220 | train_loss: 0.00120133
+2026-04-23 18:29:19,703 - INFO - epoch 6 | batch 230 | train_loss: 0.00118438
+2026-04-23 18:29:20,518 - INFO - epoch 6 | batch 240 | train_loss: 0.00118702
+2026-04-23 18:29:21,328 - INFO - epoch 6 | batch 250 | train_loss: 0.00115237
+2026-04-23 18:29:22,150 - INFO - epoch 6 | batch 260 | train_loss: 0.00142734
+2026-04-23 18:29:23,135 - INFO - epoch 6 | batch 270 | train_loss: 0.00143318
+2026-04-23 18:29:24,042 - INFO - epoch 6 | batch 280 | train_loss: 0.00140689
+2026-04-23 18:29:24,852 - INFO - epoch 6 | batch 290 | train_loss: 0.00137040
+2026-04-23 18:29:25,654 - INFO - epoch 6 | batch 300 | train_loss: 0.00132999
+2026-04-23 18:29:26,474 - INFO - epoch 6 | batch 310 | train_loss: 0.00129896
+2026-04-23 18:29:27,290 - INFO - epoch 6 | batch 320 | train_loss: 0.00126486
+2026-04-23 18:29:28,176 - INFO - epoch 6 | batch 330 | train_loss: 0.00122984
+2026-04-23 18:29:29,054 - INFO - epoch 6 | batch 340 | train_loss: 0.00121470
+2026-04-23 18:29:29,867 - INFO - epoch 6 | batch 350 | train_loss: 0.00123349
+2026-04-23 18:29:30,684 - INFO - epoch 6 | batch 360 | train_loss: 0.00124079
+2026-04-23 18:29:43,500 - INFO - ================= epoch end =================
+2026-04-23 18:29:43,501 - INFO - epoch 6 | train_loss: 0.01989039 | valid_loss: 2.18149870 | valid balanc. acc.: 0.62195319
+2026-04-23 18:29:43,502 - INFO - metrics:
+{'accuracy': 0.6209410205434063, 'balanced_accuracy': 0.6219531874760182, 'f1': 0.6495098039215687, 'precision': 0.6883116883116883, 'recall': 0.6148491879350348}
+2026-04-23 18:29:44,430 - INFO - epoch 7 | batch 10 | train_loss: 0.00114677
+2026-04-23 18:29:45,241 - INFO - epoch 7 | batch 20 | train_loss: 0.00347079
+2026-04-23 18:29:46,051 - INFO - epoch 7 | batch 30 | train_loss: 0.00247502
+2026-04-23 18:29:46,861 - INFO - epoch 7 | batch 40 | train_loss: 0.00260313
+2026-04-23 18:29:47,672 - INFO - epoch 7 | batch 50 | train_loss: 0.00279364
+2026-04-23 18:29:48,483 - INFO - epoch 7 | batch 60 | train_loss: 0.00238746
+2026-04-23 18:29:49,292 - INFO - epoch 7 | batch 70 | train_loss: 0.00211878
+2026-04-23 18:29:50,110 - INFO - epoch 7 | batch 80 | train_loss: 0.00186837
+2026-04-23 18:29:50,916 - INFO - epoch 7 | batch 90 | train_loss: 0.00167530
+2026-04-23 18:29:51,730 - INFO - epoch 7 | batch 100 | train_loss: 0.00158012
+2026-04-23 18:29:52,567 - INFO - epoch 7 | batch 110 | train_loss: 0.00148711
+2026-04-23 18:29:53,486 - INFO - epoch 7 | batch 120 | train_loss: 0.00141472
+2026-04-23 18:29:54,320 - INFO - epoch 7 | batch 130 | train_loss: 0.00145427
+2026-04-23 18:29:55,131 - INFO - epoch 7 | batch 140 | train_loss: 0.00142853
+2026-04-23 18:29:55,942 - INFO - epoch 7 | batch 150 | train_loss: 0.00140255
+2026-04-23 18:29:56,748 - INFO - epoch 7 | batch 160 | train_loss: 0.00137420
+2026-04-23 18:29:57,554 - INFO - epoch 7 | batch 170 | train_loss: 0.00142844
+2026-04-23 18:29:58,363 - INFO - epoch 7 | batch 180 | train_loss: 0.00151515
+2026-04-23 18:29:59,172 - INFO - epoch 7 | batch 190 | train_loss: 0.00155306
+2026-04-23 18:29:59,999 - INFO - epoch 7 | batch 200 | train_loss: 0.00150366
+2026-04-23 18:30:00,807 - INFO - epoch 7 | batch 210 | train_loss: 0.00143977
+2026-04-23 18:30:01,609 - INFO - epoch 7 | batch 220 | train_loss: 0.00156102
+2026-04-23 18:30:02,414 - INFO - epoch 7 | batch 230 | train_loss: 0.00153032
+2026-04-23 18:30:03,224 - INFO - epoch 7 | batch 240 | train_loss: 0.00148421
+2026-04-23 18:30:04,030 - INFO - epoch 7 | batch 250 | train_loss: 0.00144632
+2026-04-23 18:30:04,834 - INFO - epoch 7 | batch 260 | train_loss: 0.00143537
+2026-04-23 18:30:05,643 - INFO - epoch 7 | batch 270 | train_loss: 0.00139423
+2026-04-23 18:30:06,449 - INFO - epoch 7 | batch 280 | train_loss: 0.00136386
+2026-04-23 18:30:07,294 - INFO - epoch 7 | batch 290 | train_loss: 0.00132089
+2026-04-23 18:30:08,104 - INFO - epoch 7 | batch 300 | train_loss: 0.00127988
+2026-04-23 18:30:08,912 - INFO - epoch 7 | batch 310 | train_loss: 0.00134809
+2026-04-23 18:30:09,714 - INFO - epoch 7 | batch 320 | train_loss: 0.00131878
+2026-04-23 18:30:10,525 - INFO - epoch 7 | batch 330 | train_loss: 0.00128961
+2026-04-23 18:30:11,329 - INFO - epoch 7 | batch 340 | train_loss: 0.00127260
+2026-04-23 18:30:12,138 - INFO - epoch 7 | batch 350 | train_loss: 0.00125840
+2026-04-23 18:30:12,942 - INFO - epoch 7 | batch 360 | train_loss: 0.00130089
+2026-04-23 18:30:25,380 - INFO - ================= epoch end =================
+2026-04-23 18:30:25,381 - INFO - epoch 7 | train_loss: 0.02075739 | valid_loss: 1.64504425 | valid balanc. acc.: 0.55981381
+2026-04-23 18:30:25,382 - INFO - metrics:
+{'accuracy': 0.5937707090788602, 'balanced_accuracy': 0.5598138113800263, 'f1': 0.6918049270990447, 'precision': 0.6104702750665484, 'recall': 0.7981438515081206}
+2026-04-23 18:30:26,200 - INFO - epoch 8 | batch 10 | train_loss: 0.00022696
+2026-04-23 18:30:27,011 - INFO - epoch 8 | batch 20 | train_loss: 0.00019496
+2026-04-23 18:30:27,853 - INFO - epoch 8 | batch 30 | train_loss: 0.00016538
+2026-04-23 18:30:28,663 - INFO - epoch 8 | batch 40 | train_loss: 0.00016441
+2026-04-23 18:30:29,474 - INFO - epoch 8 | batch 50 | train_loss: 0.00017064
+2026-04-23 18:30:30,285 - INFO - epoch 8 | batch 60 | train_loss: 0.00018522
+2026-04-23 18:30:31,097 - INFO - epoch 8 | batch 70 | train_loss: 0.00017774
+2026-04-23 18:30:31,910 - INFO - epoch 8 | batch 80 | train_loss: 0.00016524
+2026-04-23 18:30:32,721 - INFO - epoch 8 | batch 90 | train_loss: 0.00019826
+2026-04-23 18:30:33,533 - INFO - epoch 8 | batch 100 | train_loss: 0.00022495
+2026-04-23 18:30:34,374 - INFO - epoch 8 | batch 110 | train_loss: 0.00021706
+2026-04-23 18:30:35,242 - INFO - epoch 8 | batch 120 | train_loss: 0.00020605
+2026-04-23 18:30:36,059 - INFO - epoch 8 | batch 130 | train_loss: 0.00019390
+2026-04-23 18:30:36,869 - INFO - epoch 8 | batch 140 | train_loss: 0.00019010
+2026-04-23 18:30:37,676 - INFO - epoch 8 | batch 150 | train_loss: 0.00018821
+2026-04-23 18:30:38,484 - INFO - epoch 8 | batch 160 | train_loss: 0.00018676
+2026-04-23 18:30:39,295 - INFO - epoch 8 | batch 170 | train_loss: 0.00017735
+2026-04-23 18:30:40,105 - INFO - epoch 8 | batch 180 | train_loss: 0.00016915
+2026-04-23 18:30:40,912 - INFO - epoch 8 | batch 190 | train_loss: 0.00016805
+2026-04-23 18:30:41,724 - INFO - epoch 8 | batch 200 | train_loss: 0.00016684
+2026-04-23 18:30:42,536 - INFO - epoch 8 | batch 210 | train_loss: 0.00019570
+2026-04-23 18:30:43,372 - INFO - epoch 8 | batch 220 | train_loss: 0.00028395
+2026-04-23 18:30:44,233 - INFO - epoch 8 | batch 230 | train_loss: 0.00046479
+2026-04-23 18:30:45,044 - INFO - epoch 8 | batch 240 | train_loss: 0.00068964
+2026-04-23 18:30:45,852 - INFO - epoch 8 | batch 250 | train_loss: 0.00107079
+2026-04-23 18:30:46,663 - INFO - epoch 8 | batch 260 | train_loss: 0.00122764
+2026-04-23 18:30:47,504 - INFO - epoch 8 | batch 270 | train_loss: 0.00120377
+2026-04-23 18:30:48,404 - INFO - epoch 8 | batch 280 | train_loss: 0.00126228
+2026-04-23 18:30:49,222 - INFO - epoch 8 | batch 290 | train_loss: 0.00131686
+2026-04-23 18:30:50,074 - INFO - epoch 8 | batch 300 | train_loss: 0.00141289
+2026-04-23 18:30:50,902 - INFO - epoch 8 | batch 310 | train_loss: 0.00138331
+2026-04-23 18:30:51,763 - INFO - epoch 8 | batch 320 | train_loss: 0.00167496
+2026-04-23 18:30:52,695 - INFO - epoch 8 | batch 330 | train_loss: 0.00171964
+2026-04-23 18:30:53,517 - INFO - epoch 8 | batch 340 | train_loss: 0.00168330
+2026-04-23 18:30:54,340 - INFO - epoch 8 | batch 350 | train_loss: 0.00165316
+2026-04-23 18:30:55,171 - INFO - epoch 8 | batch 360 | train_loss: 0.00164665
+2026-04-23 18:31:06,942 - INFO - ================= epoch end =================
+2026-04-23 18:31:06,942 - INFO - epoch 8 | train_loss: 0.02627386 | valid_loss: 1.13531759 | valid balanc. acc.: 0.62007588
+2026-04-23 18:31:06,944 - INFO - metrics:
+{'accuracy': 0.6394963552021206, 'balanced_accuracy': 0.6200758811864145, 'f1': 0.7056277056277056, 'precision': 0.6612576064908722, 'recall': 0.7563805104408353}
+2026-04-23 18:31:07,769 - INFO - epoch 9 | batch 10 | train_loss: 0.00324250
+2026-04-23 18:31:08,579 - INFO - epoch 9 | batch 20 | train_loss: 0.00245324
+2026-04-23 18:31:09,389 - INFO - epoch 9 | batch 30 | train_loss: 0.00178336
+2026-04-23 18:31:10,199 - INFO - epoch 9 | batch 40 | train_loss: 0.00155257
+2026-04-23 18:31:11,025 - INFO - epoch 9 | batch 50 | train_loss: 0.00136786
+2026-04-23 18:31:11,842 - INFO - epoch 9 | batch 60 | train_loss: 0.00165861
+2026-04-23 18:31:12,685 - INFO - epoch 9 | batch 70 | train_loss: 0.00153488
+2026-04-23 18:31:13,506 - INFO - epoch 9 | batch 80 | train_loss: 0.00137188
+2026-04-23 18:31:14,314 - INFO - epoch 9 | batch 90 | train_loss: 0.00123683
+2026-04-23 18:31:15,125 - INFO - epoch 9 | batch 100 | train_loss: 0.00117121
+2026-04-23 18:31:15,935 - INFO - epoch 9 | batch 110 | train_loss: 0.00108663
+2026-04-23 18:31:16,760 - INFO - epoch 9 | batch 120 | train_loss: 0.00102156
+2026-04-23 18:31:17,568 - INFO - epoch 9 | batch 130 | train_loss: 0.00095770
+2026-04-23 18:31:18,376 - INFO - epoch 9 | batch 140 | train_loss: 0.00090599
+2026-04-23 18:31:19,185 - INFO - epoch 9 | batch 150 | train_loss: 0.00087178
+2026-04-23 18:31:19,998 - INFO - epoch 9 | batch 160 | train_loss: 0.00082537
+2026-04-23 18:31:20,838 - INFO - epoch 9 | batch 170 | train_loss: 0.00080183
+2026-04-23 18:31:21,666 - INFO - epoch 9 | batch 180 | train_loss: 0.00077794
+2026-04-23 18:31:22,478 - INFO - epoch 9 | batch 190 | train_loss: 0.00076888
+2026-04-23 18:31:23,287 - INFO - epoch 9 | batch 200 | train_loss: 0.00074396
+2026-04-23 18:31:24,095 - INFO - epoch 9 | batch 210 | train_loss: 0.00071333
+2026-04-23 18:31:24,903 - INFO - epoch 9 | batch 220 | train_loss: 0.00068357
+2026-04-23 18:31:25,711 - INFO - epoch 9 | batch 230 | train_loss: 0.00066378
+2026-04-23 18:31:26,522 - INFO - epoch 9 | batch 240 | train_loss: 0.00063798
+2026-04-23 18:31:27,331 - INFO - epoch 9 | batch 250 | train_loss: 0.00061526
+2026-04-23 18:31:28,204 - INFO - epoch 9 | batch 260 | train_loss: 0.00059208
+2026-04-23 18:31:29,011 - INFO - epoch 9 | batch 270 | train_loss: 0.00058286
+2026-04-23 18:31:29,818 - INFO - epoch 9 | batch 280 | train_loss: 0.00056835
+2026-04-23 18:31:30,627 - INFO - epoch 9 | batch 290 | train_loss: 0.00056023
+2026-04-23 18:31:31,437 - INFO - epoch 9 | batch 300 | train_loss: 0.00054837
+2026-04-23 18:31:32,249 - INFO - epoch 9 | batch 310 | train_loss: 0.00055764
+2026-04-23 18:31:33,057 - INFO - epoch 9 | batch 320 | train_loss: 0.00054570
+2026-04-23 18:31:33,865 - INFO - epoch 9 | batch 330 | train_loss: 0.00053418
+2026-04-23 18:31:34,672 - INFO - epoch 9 | batch 340 | train_loss: 0.00052096
+2026-04-23 18:31:35,510 - INFO - epoch 9 | batch 350 | train_loss: 0.00051021
+2026-04-23 18:31:36,323 - INFO - epoch 9 | batch 360 | train_loss: 0.00049853
+2026-04-23 18:31:48,187 - INFO - ================= epoch end =================
+2026-04-23 18:31:48,188 - INFO - epoch 9 | train_loss: 0.00795480 | valid_loss: 1.63293204 | valid balanc. acc.: 0.57678667
+2026-04-23 18:31:48,188 - INFO - metrics:
+{'accuracy': 0.5977468522200132, 'balanced_accuracy': 0.5767866684357932, 'f1': 0.6727762803234502, 'precision': 0.6283987915407855, 'recall': 0.7238979118329466}
+2026-04-23 18:31:48,990 - INFO - epoch 10 | batch 10 | train_loss: 0.00592733
+2026-04-23 18:31:49,799 - INFO - epoch 10 | batch 20 | train_loss: 0.00568617
+2026-04-23 18:31:50,634 - INFO - epoch 10 | batch 30 | train_loss: 0.00437103
+2026-04-23 18:31:51,442 - INFO - epoch 10 | batch 40 | train_loss: 0.00357928
+2026-04-23 18:31:52,253 - INFO - epoch 10 | batch 50 | train_loss: 0.00294267
+2026-04-23 18:31:53,108 - INFO - epoch 10 | batch 60 | train_loss: 0.00250649
+2026-04-23 18:31:53,917 - INFO - epoch 10 | batch 70 | train_loss: 0.00258453
+2026-04-23 18:31:54,728 - INFO - epoch 10 | batch 80 | train_loss: 0.00330953
+2026-04-23 18:31:55,537 - INFO - epoch 10 | batch 90 | train_loss: 0.00320351
+2026-04-23 18:31:56,345 - INFO - epoch 10 | batch 100 | train_loss: 0.00290618
+2026-04-23 18:31:57,173 - INFO - epoch 10 | batch 110 | train_loss: 0.00276912
+2026-04-23 18:31:58,112 - INFO - epoch 10 | batch 120 | train_loss: 0.00259905
+2026-04-23 18:31:58,927 - INFO - epoch 10 | batch 130 | train_loss: 0.00241199
+2026-04-23 18:31:59,744 - INFO - epoch 10 | batch 140 | train_loss: 0.00236041
+2026-04-23 18:32:00,653 - INFO - epoch 10 | batch 150 | train_loss: 0.00224038
+2026-04-23 18:32:01,474 - INFO - epoch 10 | batch 160 | train_loss: 0.00211351
+2026-04-23 18:32:02,331 - INFO - epoch 10 | batch 170 | train_loss: 0.00200040
+2026-04-23 18:32:03,163 - INFO - epoch 10 | batch 180 | train_loss: 0.00192731
+2026-04-23 18:32:03,973 - INFO - epoch 10 | batch 190 | train_loss: 0.00197536
+2026-04-23 18:32:04,788 - INFO - epoch 10 | batch 200 | train_loss: 0.00190385
+2026-04-23 18:32:05,600 - INFO - epoch 10 | batch 210 | train_loss: 0.00183337
+2026-04-23 18:32:06,422 - INFO - epoch 10 | batch 220 | train_loss: 0.00176385
+2026-04-23 18:32:07,236 - INFO - epoch 10 | batch 230 | train_loss: 0.00170480
+2026-04-23 18:32:08,148 - INFO - epoch 10 | batch 240 | train_loss: 0.00164266
+2026-04-23 18:32:08,961 - INFO - epoch 10 | batch 250 | train_loss: 0.00158630
+2026-04-23 18:32:09,773 - INFO - epoch 10 | batch 260 | train_loss: 0.00153201
+2026-04-23 18:32:10,586 - INFO - epoch 10 | batch 270 | train_loss: 0.00147965
+2026-04-23 18:32:11,407 - INFO - epoch 10 | batch 280 | train_loss: 0.00142858
+2026-04-23 18:32:12,221 - INFO - epoch 10 | batch 290 | train_loss: 0.00138172
+2026-04-23 18:32:13,048 - INFO - epoch 10 | batch 300 | train_loss: 0.00134968
+2026-04-23 18:32:13,862 - INFO - epoch 10 | batch 310 | train_loss: 0.00130979
+2026-04-23 18:32:14,726 - INFO - epoch 10 | batch 320 | train_loss: 0.00127171
+2026-04-23 18:32:15,542 - INFO - epoch 10 | batch 330 | train_loss: 0.00124057
+2026-04-23 18:32:16,355 - INFO - epoch 10 | batch 340 | train_loss: 0.00120545
+2026-04-23 18:32:17,175 - INFO - epoch 10 | batch 350 | train_loss: 0.00117556
+2026-04-23 18:32:17,987 - INFO - epoch 10 | batch 360 | train_loss: 0.00114739
+2026-04-23 18:32:30,735 - INFO - ================= epoch end =================
+2026-04-23 18:32:30,735 - INFO - epoch 10 | train_loss: 0.01830758 | valid_loss: 1.74211393 | valid balanc. acc.: 0.62411290
+2026-04-23 18:32:30,735 - INFO - metrics:
+{'accuracy': 0.6355202120609675, 'balanced_accuracy': 0.6241128965742297, 'f1': 0.6882086167800453, 'precision': 0.6729490022172949, 'recall': 0.7041763341067285}
+2026-04-23 18:32:30,749 - INFO - Fold 3
+2026-04-23 18:32:30,764 - INFO - 
+    ======= about folds =======
+    ((5937, 8), (1343, 8))
+    set()
+    label
+0    2961
+1    2976
+Name: image_path, dtype: int64     
+    label
+0    679
+1    664
+Name: image_path, dtype: int64
+    
+2026-04-23 18:32:31,053 - INFO - 
+    Всего параметров: 11,177,538
+    Обучаемых:       11,177,538
+    
+2026-04-23 18:32:31,874 - INFO - epoch 1 | batch 10 | train_loss: 0.05716363
+2026-04-23 18:32:32,692 - INFO - epoch 1 | batch 20 | train_loss: 0.04885728
+2026-04-23 18:32:33,496 - INFO - epoch 1 | batch 30 | train_loss: 0.04470951
+2026-04-23 18:32:34,441 - INFO - epoch 1 | batch 40 | train_loss: 0.04138267
+2026-04-23 18:32:35,334 - INFO - epoch 1 | batch 50 | train_loss: 0.03939951
+2026-04-23 18:32:36,144 - INFO - epoch 1 | batch 60 | train_loss: 0.03706768
+2026-04-23 18:32:36,958 - INFO - epoch 1 | batch 70 | train_loss: 0.03461561
+2026-04-23 18:32:37,768 - INFO - epoch 1 | batch 80 | train_loss: 0.03365401
+2026-04-23 18:32:38,613 - INFO - epoch 1 | batch 90 | train_loss: 0.03171734
+2026-04-23 18:32:39,451 - INFO - epoch 1 | batch 100 | train_loss: 0.03038586
+2026-04-23 18:32:40,376 - INFO - epoch 1 | batch 110 | train_loss: 0.02859482
+2026-04-23 18:32:41,294 - INFO - epoch 1 | batch 120 | train_loss: 0.02725059
+2026-04-23 18:32:42,134 - INFO - epoch 1 | batch 130 | train_loss: 0.02620042
+2026-04-23 18:32:43,005 - INFO - epoch 1 | batch 140 | train_loss: 0.02526806
+2026-04-23 18:32:43,881 - INFO - epoch 1 | batch 150 | train_loss: 0.02464442
+2026-04-23 18:32:44,738 - INFO - epoch 1 | batch 160 | train_loss: 0.02384746
+2026-04-23 18:32:45,608 - INFO - epoch 1 | batch 170 | train_loss: 0.02312415
+2026-04-23 18:32:46,424 - INFO - epoch 1 | batch 180 | train_loss: 0.02234467
+2026-04-23 18:32:47,230 - INFO - epoch 1 | batch 190 | train_loss: 0.02179547
+2026-04-23 18:32:48,051 - INFO - epoch 1 | batch 200 | train_loss: 0.02130399
+2026-04-23 18:32:48,895 - INFO - epoch 1 | batch 210 | train_loss: 0.02089747
+2026-04-23 18:32:49,720 - INFO - epoch 1 | batch 220 | train_loss: 0.02032664
+2026-04-23 18:32:50,566 - INFO - epoch 1 | batch 230 | train_loss: 0.01993309
+2026-04-23 18:32:51,402 - INFO - epoch 1 | batch 240 | train_loss: 0.01940393
+2026-04-23 18:32:52,214 - INFO - epoch 1 | batch 250 | train_loss: 0.01903737
+2026-04-23 18:32:53,055 - INFO - epoch 1 | batch 260 | train_loss: 0.01884259
+2026-04-23 18:32:53,884 - INFO - epoch 1 | batch 270 | train_loss: 0.01831624
+2026-04-23 18:32:54,697 - INFO - epoch 1 | batch 280 | train_loss: 0.01817688
+2026-04-23 18:32:55,510 - INFO - epoch 1 | batch 290 | train_loss: 0.01781657
+2026-04-23 18:32:56,319 - INFO - epoch 1 | batch 300 | train_loss: 0.01757593
+2026-04-23 18:32:57,251 - INFO - epoch 1 | batch 310 | train_loss: 0.01716316
+2026-04-23 18:32:58,117 - INFO - epoch 1 | batch 320 | train_loss: 0.01671325
+2026-04-23 18:32:58,929 - INFO - epoch 1 | batch 330 | train_loss: 0.01666791
+2026-04-23 18:32:59,739 - INFO - epoch 1 | batch 340 | train_loss: 0.01640237
+2026-04-23 18:33:00,550 - INFO - epoch 1 | batch 350 | train_loss: 0.01621031
+2026-04-23 18:33:01,372 - INFO - epoch 1 | batch 360 | train_loss: 0.01599820
+2026-04-23 18:33:02,215 - INFO - epoch 1 | batch 370 | train_loss: 0.01583165
+2026-04-23 18:33:13,218 - INFO - ================= epoch end =================
+2026-04-23 18:33:13,219 - INFO - epoch 1 | train_loss: 0.25473966 | valid_loss: 1.74542313 | valid balanc. acc.: 0.59131962
+2026-04-23 18:33:13,220 - INFO - metrics:
+{'accuracy': 0.5882352941176471, 'balanced_accuracy': 0.5913196231169153, 'f1': 0.6756598240469208, 'precision': 0.553314121037464, 'recall': 0.8674698795180723}
+2026-04-23 18:33:13,343 - INFO - save checkpoint: ..\models_checkpoints/resnet_18_backbone_cv/2026-04-23_18_17_44_full_tuning_patient/fold3/checkpoint/best_model.pth
+2026-04-23 18:33:14,152 - INFO - epoch 2 | batch 10 | train_loss: 0.00328198
+2026-04-23 18:33:14,965 - INFO - epoch 2 | batch 20 | train_loss: 0.00252220
+2026-04-23 18:33:15,777 - INFO - epoch 2 | batch 30 | train_loss: 0.00259076
+2026-04-23 18:33:16,633 - INFO - epoch 2 | batch 40 | train_loss: 0.00268353
+2026-04-23 18:33:17,441 - INFO - epoch 2 | batch 50 | train_loss: 0.00380041
+2026-04-23 18:33:18,354 - INFO - epoch 2 | batch 60 | train_loss: 0.00352543
+2026-04-23 18:33:19,164 - INFO - epoch 2 | batch 70 | train_loss: 0.00339352
+2026-04-23 18:33:19,970 - INFO - epoch 2 | batch 80 | train_loss: 0.00330372
+2026-04-23 18:33:20,778 - INFO - epoch 2 | batch 90 | train_loss: 0.00312495
+2026-04-23 18:33:21,584 - INFO - epoch 2 | batch 100 | train_loss: 0.00312334
+2026-04-23 18:33:22,453 - INFO - epoch 2 | batch 110 | train_loss: 0.00313480
+2026-04-23 18:33:23,273 - INFO - epoch 2 | batch 120 | train_loss: 0.00304575
+2026-04-23 18:33:24,138 - INFO - epoch 2 | batch 130 | train_loss: 0.00297639
+2026-04-23 18:33:24,952 - INFO - epoch 2 | batch 140 | train_loss: 0.00316567
+2026-04-23 18:33:25,778 - INFO - epoch 2 | batch 150 | train_loss: 0.00340101
+2026-04-23 18:33:26,630 - INFO - epoch 2 | batch 160 | train_loss: 0.00389767
+2026-04-23 18:33:27,438 - INFO - epoch 2 | batch 170 | train_loss: 0.00381108
+2026-04-23 18:33:28,249 - INFO - epoch 2 | batch 180 | train_loss: 0.00376030
+2026-04-23 18:33:29,075 - INFO - epoch 2 | batch 190 | train_loss: 0.00396801
+2026-04-23 18:33:29,946 - INFO - epoch 2 | batch 200 | train_loss: 0.00395134
+2026-04-23 18:33:30,757 - INFO - epoch 2 | batch 210 | train_loss: 0.00380487
+2026-04-23 18:33:31,563 - INFO - epoch 2 | batch 220 | train_loss: 0.00378083
+2026-04-23 18:33:32,404 - INFO - epoch 2 | batch 230 | train_loss: 0.00375657
+2026-04-23 18:33:33,218 - INFO - epoch 2 | batch 240 | train_loss: 0.00432746
+2026-04-23 18:33:34,034 - INFO - epoch 2 | batch 250 | train_loss: 0.00464924
+2026-04-23 18:33:34,846 - INFO - epoch 2 | batch 260 | train_loss: 0.00468426
+2026-04-23 18:33:35,662 - INFO - epoch 2 | batch 270 | train_loss: 0.00470382
+2026-04-23 18:33:36,468 - INFO - epoch 2 | batch 280 | train_loss: 0.00459950
+2026-04-23 18:33:37,269 - INFO - epoch 2 | batch 290 | train_loss: 0.00464992
+2026-04-23 18:33:38,074 - INFO - epoch 2 | batch 300 | train_loss: 0.00469691
+2026-04-23 18:33:38,887 - INFO - epoch 2 | batch 310 | train_loss: 0.00463376
+2026-04-23 18:33:39,761 - INFO - epoch 2 | batch 320 | train_loss: 0.00465930
+2026-04-23 18:33:40,663 - INFO - epoch 2 | batch 330 | train_loss: 0.00461468
+2026-04-23 18:33:41,490 - INFO - epoch 2 | batch 340 | train_loss: 0.00450414
+2026-04-23 18:33:42,294 - INFO - epoch 2 | batch 350 | train_loss: 0.00445842
+2026-04-23 18:33:43,094 - INFO - epoch 2 | batch 360 | train_loss: 0.00452356
+2026-04-23 18:33:43,908 - INFO - epoch 2 | batch 370 | train_loss: 0.00446116
+2026-04-23 18:33:54,856 - INFO - ================= epoch end =================
+2026-04-23 18:33:54,858 - INFO - epoch 2 | train_loss: 0.07339151 | valid_loss: 1.38976756 | valid balanc. acc.: 0.65350467
+2026-04-23 18:33:54,859 - INFO - metrics:
+{'accuracy': 0.6530156366344005, 'balanced_accuracy': 0.653504666678496, 'f1': 0.6652298850574713, 'precision': 0.635989010989011, 'recall': 0.697289156626506}
+2026-04-23 18:33:55,021 - INFO - save checkpoint: ..\models_checkpoints/resnet_18_backbone_cv/2026-04-23_18_17_44_full_tuning_patient/fold3/checkpoint/best_model.pth
+2026-04-23 18:33:55,880 - INFO - epoch 3 | batch 10 | train_loss: 0.00740733
+2026-04-23 18:33:56,692 - INFO - epoch 3 | batch 20 | train_loss: 0.00441985
+2026-04-23 18:33:57,503 - INFO - epoch 3 | batch 30 | train_loss: 0.00355732
+2026-04-23 18:33:58,349 - INFO - epoch 3 | batch 40 | train_loss: 0.00348278
+2026-04-23 18:33:59,161 - INFO - epoch 3 | batch 50 | train_loss: 0.00386673
+2026-04-23 18:33:59,978 - INFO - epoch 3 | batch 60 | train_loss: 0.00396559
+2026-04-23 18:34:00,814 - INFO - epoch 3 | batch 70 | train_loss: 0.00356331
+2026-04-23 18:34:01,636 - INFO - epoch 3 | batch 80 | train_loss: 0.00361624
+2026-04-23 18:34:02,445 - INFO - epoch 3 | batch 90 | train_loss: 0.00328927
+2026-04-23 18:34:03,257 - INFO - epoch 3 | batch 100 | train_loss: 0.00305698
+2026-04-23 18:34:04,067 - INFO - epoch 3 | batch 110 | train_loss: 0.00296251
+2026-04-23 18:34:04,895 - INFO - epoch 3 | batch 120 | train_loss: 0.00323366
+2026-04-23 18:34:05,875 - INFO - epoch 3 | batch 130 | train_loss: 0.00305350
+2026-04-23 18:34:06,743 - INFO - epoch 3 | batch 140 | train_loss: 0.00314545
+2026-04-23 18:34:07,553 - INFO - epoch 3 | batch 150 | train_loss: 0.00318661
+2026-04-23 18:34:08,365 - INFO - epoch 3 | batch 160 | train_loss: 0.00322835
+2026-04-23 18:34:09,179 - INFO - epoch 3 | batch 170 | train_loss: 0.00326515
+2026-04-23 18:34:09,991 - INFO - epoch 3 | batch 180 | train_loss: 0.00326407
+2026-04-23 18:34:10,800 - INFO - epoch 3 | batch 190 | train_loss: 0.00320698
+2026-04-23 18:34:11,622 - INFO - epoch 3 | batch 200 | train_loss: 0.00308387
+2026-04-23 18:34:12,471 - INFO - epoch 3 | batch 210 | train_loss: 0.00299667
+2026-04-23 18:34:13,352 - INFO - epoch 3 | batch 220 | train_loss: 0.00297023
+2026-04-23 18:34:14,196 - INFO - epoch 3 | batch 230 | train_loss: 0.00309917
+2026-04-23 18:34:15,019 - INFO - epoch 3 | batch 240 | train_loss: 0.00299935
+2026-04-23 18:34:15,858 - INFO - epoch 3 | batch 250 | train_loss: 0.00297919
+2026-04-23 18:34:16,750 - INFO - epoch 3 | batch 260 | train_loss: 0.00288464
+2026-04-23 18:34:17,564 - INFO - epoch 3 | batch 270 | train_loss: 0.00282484
+2026-04-23 18:34:18,450 - INFO - epoch 3 | batch 280 | train_loss: 0.00277499
+2026-04-23 18:34:19,265 - INFO - epoch 3 | batch 290 | train_loss: 0.00270716
+2026-04-23 18:34:20,098 - INFO - epoch 3 | batch 300 | train_loss: 0.00279173
+2026-04-23 18:34:21,210 - INFO - epoch 3 | batch 310 | train_loss: 0.00276836
+2026-04-23 18:34:22,483 - INFO - epoch 3 | batch 320 | train_loss: 0.00274611
+2026-04-23 18:34:24,118 - INFO - epoch 3 | batch 330 | train_loss: 0.00268794
+2026-04-23 18:34:25,369 - INFO - epoch 3 | batch 340 | train_loss: 0.00269191
+2026-04-23 18:34:26,200 - INFO - epoch 3 | batch 350 | train_loss: 0.00272032
+2026-04-23 18:34:27,029 - INFO - epoch 3 | batch 360 | train_loss: 0.00273639
+2026-04-23 18:34:27,843 - INFO - epoch 3 | batch 370 | train_loss: 0.00287245
+2026-04-23 18:34:39,064 - INFO - ================= epoch end =================
+2026-04-23 18:34:39,065 - INFO - epoch 3 | train_loss: 0.04663255 | valid_loss: 1.64287655 | valid balanc. acc.: 0.62979089
+2026-04-23 18:34:39,066 - INFO - metrics:
+{'accuracy': 0.6291883842144452, 'balanced_accuracy': 0.6297908866689141, 'f1': 0.6458036984352774, 'precision': 0.6118598382749326, 'recall': 0.6837349397590361}
+2026-04-23 18:34:39,896 - INFO - epoch 4 | batch 10 | train_loss: 0.00479209
+2026-04-23 18:34:40,708 - INFO - epoch 4 | batch 20 | train_loss: 0.00290575
+2026-04-23 18:34:41,540 - INFO - epoch 4 | batch 30 | train_loss: 0.00251356
+2026-04-23 18:34:42,394 - INFO - epoch 4 | batch 40 | train_loss: 0.00333915
+2026-04-23 18:34:43,247 - INFO - epoch 4 | batch 50 | train_loss: 0.00321746
+2026-04-23 18:34:44,062 - INFO - epoch 4 | batch 60 | train_loss: 0.00283393
+2026-04-23 18:34:44,883 - INFO - epoch 4 | batch 70 | train_loss: 0.00266248
+2026-04-23 18:34:45,694 - INFO - epoch 4 | batch 80 | train_loss: 0.00271170
+2026-04-23 18:34:46,519 - INFO - epoch 4 | batch 90 | train_loss: 0.00275276
+2026-04-23 18:34:47,336 - INFO - epoch 4 | batch 100 | train_loss: 0.00271888
+2026-04-23 18:34:48,158 - INFO - epoch 4 | batch 110 | train_loss: 0.00251959
+2026-04-23 18:34:49,023 - INFO - epoch 4 | batch 120 | train_loss: 0.00245912
+2026-04-23 18:34:49,905 - INFO - epoch 4 | batch 130 | train_loss: 0.00241403
+2026-04-23 18:34:50,719 - INFO - epoch 4 | batch 140 | train_loss: 0.00227623
+2026-04-23 18:34:51,553 - INFO - epoch 4 | batch 150 | train_loss: 0.00226041
+2026-04-23 18:34:52,363 - INFO - epoch 4 | batch 160 | train_loss: 0.00217932
+2026-04-23 18:34:53,244 - INFO - epoch 4 | batch 170 | train_loss: 0.00225319
+2026-04-23 18:34:54,050 - INFO - epoch 4 | batch 180 | train_loss: 0.00219560
+2026-04-23 18:34:54,851 - INFO - epoch 4 | batch 190 | train_loss: 0.00215970
+2026-04-23 18:34:55,660 - INFO - epoch 4 | batch 200 | train_loss: 0.00212659
+2026-04-23 18:34:56,467 - INFO - epoch 4 | batch 210 | train_loss: 0.00205740
+2026-04-23 18:34:57,273 - INFO - epoch 4 | batch 220 | train_loss: 0.00200546
+2026-04-23 18:34:58,080 - INFO - epoch 4 | batch 230 | train_loss: 0.00203576
+2026-04-23 18:34:58,889 - INFO - epoch 4 | batch 240 | train_loss: 0.00210224
+2026-04-23 18:34:59,703 - INFO - epoch 4 | batch 250 | train_loss: 0.00216805
+2026-04-23 18:35:00,510 - INFO - epoch 4 | batch 260 | train_loss: 0.00216274
+2026-04-23 18:35:01,309 - INFO - epoch 4 | batch 270 | train_loss: 0.00217343
+2026-04-23 18:35:02,121 - INFO - epoch 4 | batch 280 | train_loss: 0.00213689
+2026-04-23 18:35:02,925 - INFO - epoch 4 | batch 290 | train_loss: 0.00211264
+2026-04-23 18:35:03,729 - INFO - epoch 4 | batch 300 | train_loss: 0.00211783
+2026-04-23 18:35:04,531 - INFO - epoch 4 | batch 310 | train_loss: 0.00211954
+2026-04-23 18:35:05,338 - INFO - epoch 4 | batch 320 | train_loss: 0.00210633
+2026-04-23 18:35:06,144 - INFO - epoch 4 | batch 330 | train_loss: 0.00212883
+2026-04-23 18:35:06,949 - INFO - epoch 4 | batch 340 | train_loss: 0.00208677
+2026-04-23 18:35:07,751 - INFO - epoch 4 | batch 350 | train_loss: 0.00209781
+2026-04-23 18:35:08,560 - INFO - epoch 4 | batch 360 | train_loss: 0.00216236
+2026-04-23 18:35:09,363 - INFO - epoch 4 | batch 370 | train_loss: 0.00214430
+2026-04-23 18:35:19,326 - INFO - ================= epoch end =================
+2026-04-23 18:35:19,326 - INFO - epoch 4 | train_loss: 0.03749584 | valid_loss: 1.80858454 | valid balanc. acc.: 0.65885449
+2026-04-23 18:35:19,327 - INFO - metrics:
+{'accuracy': 0.6574832464631423, 'balanced_accuracy': 0.6588544901254503, 'f1': 0.6929238985313751, 'precision': 0.6223021582733813, 'recall': 0.7816265060240963}
+2026-04-23 18:35:19,451 - INFO - save checkpoint: ..\models_checkpoints/resnet_18_backbone_cv/2026-04-23_18_17_44_full_tuning_patient/fold3/checkpoint/best_model.pth
+2026-04-23 18:35:20,242 - INFO - epoch 5 | batch 10 | train_loss: 0.00093908
+2026-04-23 18:35:21,930 - INFO - epoch 5 | batch 20 | train_loss: 0.00319543
+2026-04-23 18:35:22,763 - INFO - epoch 5 | batch 30 | train_loss: 0.00269041
+2026-04-23 18:35:23,679 - INFO - epoch 5 | batch 40 | train_loss: 0.00230372
+2026-04-23 18:35:24,494 - INFO - epoch 5 | batch 50 | train_loss: 0.00201808
+2026-04-23 18:35:25,357 - INFO - epoch 5 | batch 60 | train_loss: 0.00173577
+2026-04-23 18:35:26,177 - INFO - epoch 5 | batch 70 | train_loss: 0.00158608
+2026-04-23 18:35:27,014 - INFO - epoch 5 | batch 80 | train_loss: 0.00159958
+2026-04-23 18:35:27,841 - INFO - epoch 5 | batch 90 | train_loss: 0.00148303
+2026-04-23 18:35:28,673 - INFO - epoch 5 | batch 100 | train_loss: 0.00147926
+2026-04-23 18:35:29,542 - INFO - epoch 5 | batch 110 | train_loss: 0.00138143
+2026-04-23 18:35:30,363 - INFO - epoch 5 | batch 120 | train_loss: 0.00130817
+2026-04-23 18:35:31,236 - INFO - epoch 5 | batch 130 | train_loss: 0.00122273
+2026-04-23 18:35:32,051 - INFO - epoch 5 | batch 140 | train_loss: 0.00135911
+2026-04-23 18:35:32,914 - INFO - epoch 5 | batch 150 | train_loss: 0.00130137
+2026-04-23 18:35:33,729 - INFO - epoch 5 | batch 160 | train_loss: 0.00123765
+2026-04-23 18:35:34,546 - INFO - epoch 5 | batch 170 | train_loss: 0.00122518
+2026-04-23 18:35:35,351 - INFO - epoch 5 | batch 180 | train_loss: 0.00119363
+2026-04-23 18:35:36,159 - INFO - epoch 5 | batch 190 | train_loss: 0.00117528
+2026-04-23 18:35:36,969 - INFO - epoch 5 | batch 200 | train_loss: 0.00120620
+2026-04-23 18:35:37,786 - INFO - epoch 5 | batch 210 | train_loss: 0.00119769
+2026-04-23 18:35:38,590 - INFO - epoch 5 | batch 220 | train_loss: 0.00144069
+2026-04-23 18:35:39,395 - INFO - epoch 5 | batch 230 | train_loss: 0.00151775
+2026-04-23 18:35:40,204 - INFO - epoch 5 | batch 240 | train_loss: 0.00158752
+2026-04-23 18:35:41,009 - INFO - epoch 5 | batch 250 | train_loss: 0.00184834
+2026-04-23 18:35:41,830 - INFO - epoch 5 | batch 260 | train_loss: 0.00185698
+2026-04-23 18:35:42,667 - INFO - epoch 5 | batch 270 | train_loss: 0.00180733
+2026-04-23 18:35:43,539 - INFO - epoch 5 | batch 280 | train_loss: 0.00184173
+2026-04-23 18:35:44,356 - INFO - epoch 5 | batch 290 | train_loss: 0.00179402
+2026-04-23 18:35:45,182 - INFO - epoch 5 | batch 300 | train_loss: 0.00185098
+2026-04-23 18:35:45,990 - INFO - epoch 5 | batch 310 | train_loss: 0.00179849
+2026-04-23 18:35:46,798 - INFO - epoch 5 | batch 320 | train_loss: 0.00180121
+2026-04-23 18:35:47,612 - INFO - epoch 5 | batch 330 | train_loss: 0.00203111
+2026-04-23 18:35:48,418 - INFO - epoch 5 | batch 340 | train_loss: 0.00208970
+2026-04-23 18:35:49,226 - INFO - epoch 5 | batch 350 | train_loss: 0.00205882
+2026-04-23 18:35:50,029 - INFO - epoch 5 | batch 360 | train_loss: 0.00205446
+2026-04-23 18:35:50,834 - INFO - epoch 5 | batch 370 | train_loss: 0.00203880
+2026-04-23 18:36:02,153 - INFO - ================= epoch end =================
+2026-04-23 18:36:02,153 - INFO - epoch 5 | train_loss: 0.03494212 | valid_loss: 1.80585519 | valid balanc. acc.: 0.62950366
+2026-04-23 18:36:02,155 - INFO - metrics:
+{'accuracy': 0.6284437825763217, 'balanced_accuracy': 0.6295036552690881, 'f1': 0.6584531143052703, 'precision': 0.6035131744040151, 'recall': 0.7243975903614458}
+2026-04-23 18:36:03,016 - INFO - epoch 6 | batch 10 | train_loss: 0.00032307
+2026-04-23 18:36:03,950 - INFO - epoch 6 | batch 20 | train_loss: 0.00079248
+2026-04-23 18:36:04,824 - INFO - epoch 6 | batch 30 | train_loss: 0.00060734
+2026-04-23 18:36:05,641 - INFO - epoch 6 | batch 40 | train_loss: 0.00050177
+2026-04-23 18:36:06,542 - INFO - epoch 6 | batch 50 | train_loss: 0.00097456
+2026-04-23 18:36:07,515 - INFO - epoch 6 | batch 60 | train_loss: 0.00100031
+2026-04-23 18:36:08,344 - INFO - epoch 6 | batch 70 | train_loss: 0.00091849
+2026-04-23 18:36:09,179 - INFO - epoch 6 | batch 80 | train_loss: 0.00087378
+2026-04-23 18:36:09,985 - INFO - epoch 6 | batch 90 | train_loss: 0.00088580
+2026-04-23 18:36:10,793 - INFO - epoch 6 | batch 100 | train_loss: 0.00101412
+2026-04-23 18:36:11,598 - INFO - epoch 6 | batch 110 | train_loss: 0.00104667
+2026-04-23 18:36:12,410 - INFO - epoch 6 | batch 120 | train_loss: 0.00105829
+2026-04-23 18:36:13,219 - INFO - epoch 6 | batch 130 | train_loss: 0.00105335
+2026-04-23 18:36:14,027 - INFO - epoch 6 | batch 140 | train_loss: 0.00105255
+2026-04-23 18:36:14,850 - INFO - epoch 6 | batch 150 | train_loss: 0.00150272
+2026-04-23 18:36:15,660 - INFO - epoch 6 | batch 160 | train_loss: 0.00154985
+2026-04-23 18:36:16,466 - INFO - epoch 6 | batch 170 | train_loss: 0.00151706
+2026-04-23 18:36:17,273 - INFO - epoch 6 | batch 180 | train_loss: 0.00147026
+2026-04-23 18:36:18,081 - INFO - epoch 6 | batch 190 | train_loss: 0.00177240
+2026-04-23 18:36:18,887 - INFO - epoch 6 | batch 200 | train_loss: 0.00171692
+2026-04-23 18:36:19,689 - INFO - epoch 6 | batch 210 | train_loss: 0.00171901
+2026-04-23 18:36:20,564 - INFO - epoch 6 | batch 220 | train_loss: 0.00168037
+2026-04-23 18:36:21,475 - INFO - epoch 6 | batch 230 | train_loss: 0.00165664
+2026-04-23 18:36:22,311 - INFO - epoch 6 | batch 240 | train_loss: 0.00166793
+2026-04-23 18:36:23,112 - INFO - epoch 6 | batch 250 | train_loss: 0.00165002
+2026-04-23 18:36:23,924 - INFO - epoch 6 | batch 260 | train_loss: 0.00159705
+2026-04-23 18:36:24,730 - INFO - epoch 6 | batch 270 | train_loss: 0.00162413
+2026-04-23 18:36:25,529 - INFO - epoch 6 | batch 280 | train_loss: 0.00166895
+2026-04-23 18:36:26,355 - INFO - epoch 6 | batch 290 | train_loss: 0.00169856
+2026-04-23 18:36:27,164 - INFO - epoch 6 | batch 300 | train_loss: 0.00188961
+2026-04-23 18:36:27,971 - INFO - epoch 6 | batch 310 | train_loss: 0.00191737
+2026-04-23 18:36:28,790 - INFO - epoch 6 | batch 320 | train_loss: 0.00193097
+2026-04-23 18:36:29,625 - INFO - epoch 6 | batch 330 | train_loss: 0.00209779
+2026-04-23 18:36:30,450 - INFO - epoch 6 | batch 340 | train_loss: 0.00211501
+2026-04-23 18:36:31,280 - INFO - epoch 6 | batch 350 | train_loss: 0.00210276
+2026-04-23 18:36:32,101 - INFO - epoch 6 | batch 360 | train_loss: 0.00208667
+2026-04-23 18:36:32,905 - INFO - epoch 6 | batch 370 | train_loss: 0.00205840
+2026-04-23 18:36:43,665 - INFO - ================= epoch end =================
+2026-04-23 18:36:43,666 - INFO - epoch 6 | train_loss: 0.03499399 | valid_loss: 1.52839050 | valid balanc. acc.: 0.60588081
+2026-04-23 18:36:43,667 - INFO - metrics:
+{'accuracy': 0.6031273268801192, 'balanced_accuracy': 0.6058808133860922, 'f1': 0.6798798798798799, 'precision': 0.5654345654345654, 'recall': 0.8524096385542169}
+2026-04-23 18:36:44,514 - INFO - epoch 7 | batch 10 | train_loss: 0.00032912
+2026-04-23 18:36:45,324 - INFO - epoch 7 | batch 20 | train_loss: 0.00031689
+2026-04-23 18:36:46,146 - INFO - epoch 7 | batch 30 | train_loss: 0.00028582
+2026-04-23 18:36:46,978 - INFO - epoch 7 | batch 40 | train_loss: 0.00046554
+2026-04-23 18:36:47,789 - INFO - epoch 7 | batch 50 | train_loss: 0.00062813
+2026-04-23 18:36:48,601 - INFO - epoch 7 | batch 60 | train_loss: 0.00057033
+2026-04-23 18:36:49,410 - INFO - epoch 7 | batch 70 | train_loss: 0.00052912
+2026-04-23 18:36:50,275 - INFO - epoch 7 | batch 80 | train_loss: 0.00050950
+2026-04-23 18:36:51,091 - INFO - epoch 7 | batch 90 | train_loss: 0.00050504
+2026-04-23 18:36:51,903 - INFO - epoch 7 | batch 100 | train_loss: 0.00048168
+2026-04-23 18:36:52,722 - INFO - epoch 7 | batch 110 | train_loss: 0.00044870
+2026-04-23 18:36:53,535 - INFO - epoch 7 | batch 120 | train_loss: 0.00042680
+2026-04-23 18:36:54,369 - INFO - epoch 7 | batch 130 | train_loss: 0.00040397
+2026-04-23 18:36:55,179 - INFO - epoch 7 | batch 140 | train_loss: 0.00038500
+2026-04-23 18:36:56,005 - INFO - epoch 7 | batch 150 | train_loss: 0.00045902
+2026-04-23 18:36:56,900 - INFO - epoch 7 | batch 160 | train_loss: 0.00045770
+2026-04-23 18:36:57,720 - INFO - epoch 7 | batch 170 | train_loss: 0.00043668
+2026-04-23 18:36:58,541 - INFO - epoch 7 | batch 180 | train_loss: 0.00042879
+2026-04-23 18:36:59,369 - INFO - epoch 7 | batch 190 | train_loss: 0.00046677
+2026-04-23 18:37:00,173 - INFO - epoch 7 | batch 200 | train_loss: 0.00050055
+2026-04-23 18:37:00,973 - INFO - epoch 7 | batch 210 | train_loss: 0.00049237
+2026-04-23 18:37:01,813 - INFO - epoch 7 | batch 220 | train_loss: 0.00047221
+2026-04-23 18:37:02,623 - INFO - epoch 7 | batch 230 | train_loss: 0.00046244
+2026-04-23 18:37:03,427 - INFO - epoch 7 | batch 240 | train_loss: 0.00049641
+2026-04-23 18:37:04,229 - INFO - epoch 7 | batch 250 | train_loss: 0.00050634
+2026-04-23 18:37:05,043 - INFO - epoch 7 | batch 260 | train_loss: 0.00051700
+2026-04-23 18:37:05,859 - INFO - epoch 7 | batch 270 | train_loss: 0.00052339
+2026-04-23 18:37:06,690 - INFO - epoch 7 | batch 280 | train_loss: 0.00053412
+2026-04-23 18:37:07,495 - INFO - epoch 7 | batch 290 | train_loss: 0.00064659
+2026-04-23 18:37:08,325 - INFO - epoch 7 | batch 300 | train_loss: 0.00068920
+2026-04-23 18:37:09,147 - INFO - epoch 7 | batch 310 | train_loss: 0.00070923
+2026-04-23 18:37:09,958 - INFO - epoch 7 | batch 320 | train_loss: 0.00071660
+2026-04-23 18:37:10,768 - INFO - epoch 7 | batch 330 | train_loss: 0.00074249
+2026-04-23 18:37:11,569 - INFO - epoch 7 | batch 340 | train_loss: 0.00074512
+2026-04-23 18:37:12,390 - INFO - epoch 7 | batch 350 | train_loss: 0.00074938
+2026-04-23 18:37:13,197 - INFO - epoch 7 | batch 360 | train_loss: 0.00080408
+2026-04-23 18:37:14,019 - INFO - epoch 7 | batch 370 | train_loss: 0.00092007
+2026-04-23 18:37:24,761 - INFO - ================= epoch end =================
+2026-04-23 18:37:24,762 - INFO - epoch 7 | train_loss: 0.01592783 | valid_loss: 2.02508277 | valid balanc. acc.: 0.64592021
+2026-04-23 18:37:24,762 - INFO - metrics:
+{'accuracy': 0.6448250186150409, 'balanced_accuracy': 0.6459202051209256, 'f1': 0.6744027303754266, 'precision': 0.616729088639201, 'recall': 0.7439759036144579}
+2026-04-23 18:37:25,587 - INFO - epoch 8 | batch 10 | train_loss: 0.00163565
+2026-04-23 18:37:26,417 - INFO - epoch 8 | batch 20 | train_loss: 0.00141501
+2026-04-23 18:37:27,238 - INFO - epoch 8 | batch 30 | train_loss: 0.00098109
+2026-04-23 18:37:28,052 - INFO - epoch 8 | batch 40 | train_loss: 0.00113346
+2026-04-23 18:37:28,879 - INFO - epoch 8 | batch 50 | train_loss: 0.00102731
+2026-04-23 18:37:29,821 - INFO - epoch 8 | batch 60 | train_loss: 0.00092567
+2026-04-23 18:37:30,647 - INFO - epoch 8 | batch 70 | train_loss: 0.00083138
+2026-04-23 18:37:31,466 - INFO - epoch 8 | batch 80 | train_loss: 0.00073787
+2026-04-23 18:37:32,282 - INFO - epoch 8 | batch 90 | train_loss: 0.00068500
+2026-04-23 18:37:33,133 - INFO - epoch 8 | batch 100 | train_loss: 0.00062885
+2026-04-23 18:37:33,951 - INFO - epoch 8 | batch 110 | train_loss: 0.00061531
+2026-04-23 18:37:34,765 - INFO - epoch 8 | batch 120 | train_loss: 0.00061518
+2026-04-23 18:37:35,630 - INFO - epoch 8 | batch 130 | train_loss: 0.00096607
+2026-04-23 18:37:36,452 - INFO - epoch 8 | batch 140 | train_loss: 0.00111737
+2026-04-23 18:37:37,269 - INFO - epoch 8 | batch 150 | train_loss: 0.00107660
+2026-04-23 18:37:38,075 - INFO - epoch 8 | batch 160 | train_loss: 0.00102931
+2026-04-23 18:37:38,886 - INFO - epoch 8 | batch 170 | train_loss: 0.00110281
+2026-04-23 18:37:39,696 - INFO - epoch 8 | batch 180 | train_loss: 0.00115654
+2026-04-23 18:37:40,553 - INFO - epoch 8 | batch 190 | train_loss: 0.00111556
+2026-04-23 18:37:41,362 - INFO - epoch 8 | batch 200 | train_loss: 0.00125344
+2026-04-23 18:37:42,171 - INFO - epoch 8 | batch 210 | train_loss: 0.00122570
+2026-04-23 18:37:42,982 - INFO - epoch 8 | batch 220 | train_loss: 0.00137475
+2026-04-23 18:37:43,791 - INFO - epoch 8 | batch 230 | train_loss: 0.00150917
+2026-04-23 18:37:44,623 - INFO - epoch 8 | batch 240 | train_loss: 0.00146799
+2026-04-23 18:37:45,442 - INFO - epoch 8 | batch 250 | train_loss: 0.00143370
+2026-04-23 18:37:46,287 - INFO - epoch 8 | batch 260 | train_loss: 0.00139339
+2026-04-23 18:37:47,097 - INFO - epoch 8 | batch 270 | train_loss: 0.00135867
+2026-04-23 18:37:47,907 - INFO - epoch 8 | batch 280 | train_loss: 0.00132565
+2026-04-23 18:37:48,754 - INFO - epoch 8 | batch 290 | train_loss: 0.00129204
+2026-04-23 18:37:49,565 - INFO - epoch 8 | batch 300 | train_loss: 0.00137037
+2026-04-23 18:37:50,380 - INFO - epoch 8 | batch 310 | train_loss: 0.00135216
+2026-04-23 18:37:51,235 - INFO - epoch 8 | batch 320 | train_loss: 0.00131905
+2026-04-23 18:37:52,049 - INFO - epoch 8 | batch 330 | train_loss: 0.00128813
+2026-04-23 18:37:52,871 - INFO - epoch 8 | batch 340 | train_loss: 0.00126269
+2026-04-23 18:37:53,683 - INFO - epoch 8 | batch 350 | train_loss: 0.00123400
+2026-04-23 18:37:54,504 - INFO - epoch 8 | batch 360 | train_loss: 0.00121493
+2026-04-23 18:37:55,366 - INFO - epoch 8 | batch 370 | train_loss: 0.00124911
+2026-04-23 18:38:06,094 - INFO - ================= epoch end =================
+2026-04-23 18:38:06,095 - INFO - epoch 8 | train_loss: 0.02030771 | valid_loss: 1.51623773 | valid balanc. acc.: 0.67771306
+2026-04-23 18:38:06,096 - INFO - metrics:
+{'accuracy': 0.6760982874162323, 'balanced_accuracy': 0.6777130613765814, 'f1': 0.7151277013752456, 'precision': 0.6326767091541136, 'recall': 0.822289156626506}
+2026-04-23 18:38:06,234 - INFO - save checkpoint: ..\models_checkpoints/resnet_18_backbone_cv/2026-04-23_18_17_44_full_tuning_patient/fold3/checkpoint/best_model.pth
+2026-04-23 18:38:07,057 - INFO - epoch 9 | batch 10 | train_loss: 0.00344568
+2026-04-23 18:38:07,890 - INFO - epoch 9 | batch 20 | train_loss: 0.00362215
+2026-04-23 18:38:08,701 - INFO - epoch 9 | batch 30 | train_loss: 0.00247777
+2026-04-23 18:38:09,510 - INFO - epoch 9 | batch 40 | train_loss: 0.00209012
+2026-04-23 18:38:10,425 - INFO - epoch 9 | batch 50 | train_loss: 0.00173175
+2026-04-23 18:38:11,243 - INFO - epoch 9 | batch 60 | train_loss: 0.00147889
+2026-04-23 18:38:12,060 - INFO - epoch 9 | batch 70 | train_loss: 0.00128848
+2026-04-23 18:38:12,893 - INFO - epoch 9 | batch 80 | train_loss: 0.00114120
+2026-04-23 18:38:13,759 - INFO - epoch 9 | batch 90 | train_loss: 0.00101687
+2026-04-23 18:38:14,578 - INFO - epoch 9 | batch 100 | train_loss: 0.00092154
+2026-04-23 18:38:15,384 - INFO - epoch 9 | batch 110 | train_loss: 0.00085689
+2026-04-23 18:38:16,184 - INFO - epoch 9 | batch 120 | train_loss: 0.00080461
+2026-04-23 18:38:16,994 - INFO - epoch 9 | batch 130 | train_loss: 0.00083547
+2026-04-23 18:38:17,803 - INFO - epoch 9 | batch 140 | train_loss: 0.00111561
+2026-04-23 18:38:18,620 - INFO - epoch 9 | batch 150 | train_loss: 0.00119569
+2026-04-23 18:38:19,425 - INFO - epoch 9 | batch 160 | train_loss: 0.00115269
+2026-04-23 18:38:20,231 - INFO - epoch 9 | batch 170 | train_loss: 0.00116288
+2026-04-23 18:38:21,034 - INFO - epoch 9 | batch 180 | train_loss: 0.00130669
+2026-04-23 18:38:21,844 - INFO - epoch 9 | batch 190 | train_loss: 0.00130395
+2026-04-23 18:38:22,652 - INFO - epoch 9 | batch 200 | train_loss: 0.00146186
+2026-04-23 18:38:23,460 - INFO - epoch 9 | batch 210 | train_loss: 0.00145227
+2026-04-23 18:38:24,267 - INFO - epoch 9 | batch 220 | train_loss: 0.00142262
+2026-04-23 18:38:25,069 - INFO - epoch 9 | batch 230 | train_loss: 0.00140559
+2026-04-23 18:38:25,873 - INFO - epoch 9 | batch 240 | train_loss: 0.00135727
+2026-04-23 18:38:26,683 - INFO - epoch 9 | batch 250 | train_loss: 0.00131369
+2026-04-23 18:38:27,489 - INFO - epoch 9 | batch 260 | train_loss: 0.00128406
+2026-04-23 18:38:28,305 - INFO - epoch 9 | batch 270 | train_loss: 0.00127519
+2026-04-23 18:38:29,111 - INFO - epoch 9 | batch 280 | train_loss: 0.00123999
+2026-04-23 18:38:29,914 - INFO - epoch 9 | batch 290 | train_loss: 0.00122662
+2026-04-23 18:38:30,726 - INFO - epoch 9 | batch 300 | train_loss: 0.00118909
+2026-04-23 18:38:31,530 - INFO - epoch 9 | batch 310 | train_loss: 0.00115813
+2026-04-23 18:38:32,331 - INFO - epoch 9 | batch 320 | train_loss: 0.00130166
+2026-04-23 18:38:33,142 - INFO - epoch 9 | batch 330 | train_loss: 0.00127299
+2026-04-23 18:38:33,981 - INFO - epoch 9 | batch 340 | train_loss: 0.00123999
+2026-04-23 18:38:34,787 - INFO - epoch 9 | batch 350 | train_loss: 0.00121045
+2026-04-23 18:38:35,589 - INFO - epoch 9 | batch 360 | train_loss: 0.00118106
+2026-04-23 18:38:36,392 - INFO - epoch 9 | batch 370 | train_loss: 0.00118558
+2026-04-23 18:38:46,347 - INFO - ================= epoch end =================
+2026-04-23 18:38:46,349 - INFO - epoch 9 | train_loss: 0.01935719 | valid_loss: 2.32541308 | valid balanc. acc.: 0.62979421
+2026-04-23 18:38:46,349 - INFO - metrics:
+{'accuracy': 0.6269545793000745, 'balanced_accuracy': 0.6297942136735455, 'f1': 0.7008955223880597, 'precision': 0.5806132542037586, 'recall': 0.8840361445783133}
+2026-04-23 18:38:47,147 - INFO - epoch 10 | batch 10 | train_loss: 0.00154770
+2026-04-23 18:38:47,953 - INFO - epoch 10 | batch 20 | train_loss: 0.00085931
+2026-04-23 18:38:48,758 - INFO - epoch 10 | batch 30 | train_loss: 0.00085051
+2026-04-23 18:38:49,570 - INFO - epoch 10 | batch 40 | train_loss: 0.00075818
+2026-04-23 18:38:50,383 - INFO - epoch 10 | batch 50 | train_loss: 0.00063635
+2026-04-23 18:38:51,189 - INFO - epoch 10 | batch 60 | train_loss: 0.00055986
+2026-04-23 18:38:51,994 - INFO - epoch 10 | batch 70 | train_loss: 0.00048828
+2026-04-23 18:38:52,799 - INFO - epoch 10 | batch 80 | train_loss: 0.00046424
+2026-04-23 18:38:53,632 - INFO - epoch 10 | batch 90 | train_loss: 0.00041958
+2026-04-23 18:38:54,437 - INFO - epoch 10 | batch 100 | train_loss: 0.00038143
+2026-04-23 18:38:55,243 - INFO - epoch 10 | batch 110 | train_loss: 0.00036173
+2026-04-23 18:38:56,051 - INFO - epoch 10 | batch 120 | train_loss: 0.00035005
+2026-04-23 18:38:56,854 - INFO - epoch 10 | batch 130 | train_loss: 0.00032841
+2026-04-23 18:38:57,702 - INFO - epoch 10 | batch 140 | train_loss: 0.00032468
+2026-04-23 18:38:58,515 - INFO - epoch 10 | batch 150 | train_loss: 0.00030626
+2026-04-23 18:38:59,467 - INFO - epoch 10 | batch 160 | train_loss: 0.00030124
+2026-04-23 18:39:00,295 - INFO - epoch 10 | batch 170 | train_loss: 0.00028607
+2026-04-23 18:39:01,123 - INFO - epoch 10 | batch 180 | train_loss: 0.00027252
+2026-04-23 18:39:02,077 - INFO - epoch 10 | batch 190 | train_loss: 0.00026026
+2026-04-23 18:39:02,885 - INFO - epoch 10 | batch 200 | train_loss: 0.00024893
+2026-04-23 18:39:03,690 - INFO - epoch 10 | batch 210 | train_loss: 0.00023872
+2026-04-23 18:39:04,498 - INFO - epoch 10 | batch 220 | train_loss: 0.00023076
+2026-04-23 18:39:05,304 - INFO - epoch 10 | batch 230 | train_loss: 0.00022244
+2026-04-23 18:39:06,133 - INFO - epoch 10 | batch 240 | train_loss: 0.00021370
+2026-04-23 18:39:06,948 - INFO - epoch 10 | batch 250 | train_loss: 0.00020671
+2026-04-23 18:39:07,754 - INFO - epoch 10 | batch 260 | train_loss: 0.00020088
+2026-04-23 18:39:08,595 - INFO - epoch 10 | batch 270 | train_loss: 0.00019499
+2026-04-23 18:39:09,410 - INFO - epoch 10 | batch 280 | train_loss: 0.00018907
+2026-04-23 18:39:10,217 - INFO - epoch 10 | batch 290 | train_loss: 0.00018681
+2026-04-23 18:39:11,035 - INFO - epoch 10 | batch 300 | train_loss: 0.00019231
+2026-04-23 18:39:11,841 - INFO - epoch 10 | batch 310 | train_loss: 0.00019235
+2026-04-23 18:39:12,648 - INFO - epoch 10 | batch 320 | train_loss: 0.00018782
+2026-04-23 18:39:13,455 - INFO - epoch 10 | batch 330 | train_loss: 0.00050905
+2026-04-23 18:39:14,253 - INFO - epoch 10 | batch 340 | train_loss: 0.00061999
+2026-04-23 18:39:15,090 - INFO - epoch 10 | batch 350 | train_loss: 0.00072605
+2026-04-23 18:39:15,894 - INFO - epoch 10 | batch 360 | train_loss: 0.00078940
+2026-04-23 18:39:16,700 - INFO - epoch 10 | batch 370 | train_loss: 0.00085562
+2026-04-23 18:39:28,218 - INFO - ================= epoch end =================
+2026-04-23 18:39:28,218 - INFO - epoch 10 | train_loss: 0.01455319 | valid_loss: 1.52329754 | valid balanc. acc.: 0.59143718
+2026-04-23 18:39:28,218 - INFO - metrics:
+{'accuracy': 0.5912137006701415, 'balanced_accuracy': 0.5914371772805508, 'f1': 0.5966201322556943, 'precision': 0.5824964131994261, 'recall': 0.6114457831325302}
+2026-04-23 18:39:28,230 - INFO - Fold 4
+2026-04-23 18:39:28,240 - INFO - 
+    ======= about folds =======
+    ((5888, 8), (1392, 8))
+    set()
+    label
+0    3010
+1    2878
+Name: image_path, dtype: int64     
+    label
+0    630
+1    762
+Name: image_path, dtype: int64
+    
+2026-04-23 18:39:28,549 - INFO - 
+    Всего параметров: 11,177,538
+    Обучаемых:       11,177,538
+    
+2026-04-23 18:39:29,483 - INFO - epoch 1 | batch 10 | train_loss: 0.05386972
+2026-04-23 18:39:30,393 - INFO - epoch 1 | batch 20 | train_loss: 0.04911334
+2026-04-23 18:39:31,294 - INFO - epoch 1 | batch 30 | train_loss: 0.04326970
+2026-04-23 18:39:32,122 - INFO - epoch 1 | batch 40 | train_loss: 0.03917641
+2026-04-23 18:39:32,974 - INFO - epoch 1 | batch 50 | train_loss: 0.03483864
+2026-04-23 18:39:33,790 - INFO - epoch 1 | batch 60 | train_loss: 0.03264318
+2026-04-23 18:39:34,641 - INFO - epoch 1 | batch 70 | train_loss: 0.03182649
+2026-04-23 18:39:35,463 - INFO - epoch 1 | batch 80 | train_loss: 0.03008637
+2026-04-23 18:39:36,279 - INFO - epoch 1 | batch 90 | train_loss: 0.02874279
+2026-04-23 18:39:37,198 - INFO - epoch 1 | batch 100 | train_loss: 0.02747245
+2026-04-23 18:39:38,039 - INFO - epoch 1 | batch 110 | train_loss: 0.02599947
+2026-04-23 18:39:39,058 - INFO - epoch 1 | batch 120 | train_loss: 0.02533607
+2026-04-23 18:39:39,910 - INFO - epoch 1 | batch 130 | train_loss: 0.02434042
+2026-04-23 18:39:40,730 - INFO - epoch 1 | batch 140 | train_loss: 0.02349178
+2026-04-23 18:39:41,541 - INFO - epoch 1 | batch 150 | train_loss: 0.02314006
+2026-04-23 18:39:42,384 - INFO - epoch 1 | batch 160 | train_loss: 0.02227901
+2026-04-23 18:39:43,243 - INFO - epoch 1 | batch 170 | train_loss: 0.02210122
+2026-04-23 18:39:44,052 - INFO - epoch 1 | batch 180 | train_loss: 0.02148290
+2026-04-23 18:39:44,865 - INFO - epoch 1 | batch 190 | train_loss: 0.02094931
+2026-04-23 18:39:45,716 - INFO - epoch 1 | batch 200 | train_loss: 0.02041079
+2026-04-23 18:39:46,543 - INFO - epoch 1 | batch 210 | train_loss: 0.01976592
+2026-04-23 18:39:47,399 - INFO - epoch 1 | batch 220 | train_loss: 0.01939211
+2026-04-23 18:39:48,225 - INFO - epoch 1 | batch 230 | train_loss: 0.01932156
+2026-04-23 18:39:49,041 - INFO - epoch 1 | batch 240 | train_loss: 0.01888416
+2026-04-23 18:39:49,916 - INFO - epoch 1 | batch 250 | train_loss: 0.01848199
+2026-04-23 18:39:50,746 - INFO - epoch 1 | batch 260 | train_loss: 0.01799829
+2026-04-23 18:39:51,635 - INFO - epoch 1 | batch 270 | train_loss: 0.01775570
+2026-04-23 18:39:52,447 - INFO - epoch 1 | batch 280 | train_loss: 0.01734225
+2026-04-23 18:39:53,264 - INFO - epoch 1 | batch 290 | train_loss: 0.01712903
+2026-04-23 18:39:54,077 - INFO - epoch 1 | batch 300 | train_loss: 0.01685182
+2026-04-23 18:39:54,893 - INFO - epoch 1 | batch 310 | train_loss: 0.01654011
+2026-04-23 18:39:55,751 - INFO - epoch 1 | batch 320 | train_loss: 0.01621203
+2026-04-23 18:39:56,567 - INFO - epoch 1 | batch 330 | train_loss: 0.01595163
+2026-04-23 18:39:57,377 - INFO - epoch 1 | batch 340 | train_loss: 0.01573258
+2026-04-23 18:39:58,190 - INFO - epoch 1 | batch 350 | train_loss: 0.01558570
+2026-04-23 18:39:58,999 - INFO - epoch 1 | batch 360 | train_loss: 0.01541389
+2026-04-23 18:40:10,904 - INFO - ================= epoch end =================
+2026-04-23 18:40:10,905 - INFO - epoch 1 | train_loss: 0.24522977 | valid_loss: 1.06638785 | valid balanc. acc.: 0.65528684
+2026-04-23 18:40:10,905 - INFO - metrics:
+{'accuracy': 0.665948275862069, 'balanced_accuracy': 0.6552868391451068, 'f1': 0.7155963302752294, 'precision': 0.6701030927835051, 'recall': 0.7677165354330708}
+2026-04-23 18:40:11,016 - INFO - save checkpoint: ..\models_checkpoints/resnet_18_backbone_cv/2026-04-23_18_17_44_full_tuning_patient/fold4/checkpoint/best_model.pth
+2026-04-23 18:40:11,931 - INFO - epoch 2 | batch 10 | train_loss: 0.00275102
+2026-04-23 18:40:12,748 - INFO - epoch 2 | batch 20 | train_loss: 0.00422730
+2026-04-23 18:40:13,570 - INFO - epoch 2 | batch 30 | train_loss: 0.00394964
+2026-04-23 18:40:14,400 - INFO - epoch 2 | batch 40 | train_loss: 0.00382308
+2026-04-23 18:40:15,212 - INFO - epoch 2 | batch 50 | train_loss: 0.00368008
+2026-04-23 18:40:16,020 - INFO - epoch 2 | batch 60 | train_loss: 0.00374244
+2026-04-23 18:40:16,826 - INFO - epoch 2 | batch 70 | train_loss: 0.00355094
+2026-04-23 18:40:17,631 - INFO - epoch 2 | batch 80 | train_loss: 0.00366333
+2026-04-23 18:40:18,452 - INFO - epoch 2 | batch 90 | train_loss: 0.00358965
+2026-04-23 18:40:19,260 - INFO - epoch 2 | batch 100 | train_loss: 0.00338697
+2026-04-23 18:40:20,062 - INFO - epoch 2 | batch 110 | train_loss: 0.00375906
+2026-04-23 18:40:20,874 - INFO - epoch 2 | batch 120 | train_loss: 0.00397854
+2026-04-23 18:40:21,683 - INFO - epoch 2 | batch 130 | train_loss: 0.00378789
+2026-04-23 18:40:22,506 - INFO - epoch 2 | batch 140 | train_loss: 0.00423390
+2026-04-23 18:40:23,309 - INFO - epoch 2 | batch 150 | train_loss: 0.00548475
+2026-04-23 18:40:24,115 - INFO - epoch 2 | batch 160 | train_loss: 0.00531522
+2026-04-23 18:40:24,920 - INFO - epoch 2 | batch 170 | train_loss: 0.00514849
+2026-04-23 18:40:25,727 - INFO - epoch 2 | batch 180 | train_loss: 0.00508429
+2026-04-23 18:40:26,571 - INFO - epoch 2 | batch 190 | train_loss: 0.00504957
+2026-04-23 18:40:27,371 - INFO - epoch 2 | batch 200 | train_loss: 0.00487605
+2026-04-23 18:40:28,183 - INFO - epoch 2 | batch 210 | train_loss: 0.00478483
+2026-04-23 18:40:28,993 - INFO - epoch 2 | batch 220 | train_loss: 0.00478043
+2026-04-23 18:40:29,803 - INFO - epoch 2 | batch 230 | train_loss: 0.00468270
+2026-04-23 18:40:30,633 - INFO - epoch 2 | batch 240 | train_loss: 0.00466379
+2026-04-23 18:40:31,444 - INFO - epoch 2 | batch 250 | train_loss: 0.00454293
+2026-04-23 18:40:32,249 - INFO - epoch 2 | batch 260 | train_loss: 0.00463584
+2026-04-23 18:40:33,050 - INFO - epoch 2 | batch 270 | train_loss: 0.00459390
+2026-04-23 18:40:33,861 - INFO - epoch 2 | batch 280 | train_loss: 0.00463362
+2026-04-23 18:40:34,701 - INFO - epoch 2 | batch 290 | train_loss: 0.00451015
+2026-04-23 18:40:35,509 - INFO - epoch 2 | batch 300 | train_loss: 0.00444147
+2026-04-23 18:40:36,314 - INFO - epoch 2 | batch 310 | train_loss: 0.00467167
+2026-04-23 18:40:37,117 - INFO - epoch 2 | batch 320 | train_loss: 0.00484349
+2026-04-23 18:40:37,924 - INFO - epoch 2 | batch 330 | train_loss: 0.00483203
+2026-04-23 18:40:38,761 - INFO - epoch 2 | batch 340 | train_loss: 0.00479724
+2026-04-23 18:40:39,568 - INFO - epoch 2 | batch 350 | train_loss: 0.00471198
+2026-04-23 18:40:40,369 - INFO - epoch 2 | batch 360 | train_loss: 0.00472447
+2026-04-23 18:40:52,338 - INFO - ================= epoch end =================
+2026-04-23 18:40:52,340 - INFO - epoch 2 | train_loss: 0.07446942 | valid_loss: 1.92989243 | valid balanc. acc.: 0.56916010
+2026-04-23 18:40:52,340 - INFO - metrics:
+{'accuracy': 0.5883620689655172, 'balanced_accuracy': 0.5691601049868766, 'f1': 0.6723842195540308, 'precision': 0.5957446808510638, 'recall': 0.7716535433070866}
+2026-04-23 18:40:53,200 - INFO - epoch 3 | batch 10 | train_loss: 0.00151806
+2026-04-23 18:40:54,032 - INFO - epoch 3 | batch 20 | train_loss: 0.00147343
+2026-04-23 18:40:54,900 - INFO - epoch 3 | batch 30 | train_loss: 0.00188253
+2026-04-23 18:40:55,721 - INFO - epoch 3 | batch 40 | train_loss: 0.00226426
+2026-04-23 18:40:56,593 - INFO - epoch 3 | batch 50 | train_loss: 0.00307578
+2026-04-23 18:40:57,420 - INFO - epoch 3 | batch 60 | train_loss: 0.00277497
+2026-04-23 18:40:58,234 - INFO - epoch 3 | batch 70 | train_loss: 0.00274748
+2026-04-23 18:40:59,088 - INFO - epoch 3 | batch 80 | train_loss: 0.00272922
+2026-04-23 18:40:59,898 - INFO - epoch 3 | batch 90 | train_loss: 0.00266550
+2026-04-23 18:41:00,711 - INFO - epoch 3 | batch 100 | train_loss: 0.00276122
+2026-04-23 18:41:01,518 - INFO - epoch 3 | batch 110 | train_loss: 0.00316621
+2026-04-23 18:41:02,328 - INFO - epoch 3 | batch 120 | train_loss: 0.00317659
+2026-04-23 18:41:03,166 - INFO - epoch 3 | batch 130 | train_loss: 0.00340538
+2026-04-23 18:41:03,978 - INFO - epoch 3 | batch 140 | train_loss: 0.00336944
+2026-04-23 18:41:04,842 - INFO - epoch 3 | batch 150 | train_loss: 0.00329073
+2026-04-23 18:41:05,650 - INFO - epoch 3 | batch 160 | train_loss: 0.00323793
+2026-04-23 18:41:06,493 - INFO - epoch 3 | batch 170 | train_loss: 0.00317434
+2026-04-23 18:41:07,302 - INFO - epoch 3 | batch 180 | train_loss: 0.00304552
+2026-04-23 18:41:08,112 - INFO - epoch 3 | batch 190 | train_loss: 0.00294694
+2026-04-23 18:41:08,922 - INFO - epoch 3 | batch 200 | train_loss: 0.00297957
+2026-04-23 18:41:09,734 - INFO - epoch 3 | batch 210 | train_loss: 0.00303271
+2026-04-23 18:41:10,563 - INFO - epoch 3 | batch 220 | train_loss: 0.00326594
+2026-04-23 18:41:11,376 - INFO - epoch 3 | batch 230 | train_loss: 0.00345947
+2026-04-23 18:41:12,188 - INFO - epoch 3 | batch 240 | train_loss: 0.00347604
+2026-04-23 18:41:13,070 - INFO - epoch 3 | batch 250 | train_loss: 0.00357538
+2026-04-23 18:41:13,880 - INFO - epoch 3 | batch 260 | train_loss: 0.00350465
+2026-04-23 18:41:14,752 - INFO - epoch 3 | batch 270 | train_loss: 0.00345451
+2026-04-23 18:41:15,561 - INFO - epoch 3 | batch 280 | train_loss: 0.00341232
+2026-04-23 18:41:16,373 - INFO - epoch 3 | batch 290 | train_loss: 0.00332682
+2026-04-23 18:41:17,182 - INFO - epoch 3 | batch 300 | train_loss: 0.00326698
+2026-04-23 18:41:18,091 - INFO - epoch 3 | batch 310 | train_loss: 0.00318784
+2026-04-23 18:41:18,900 - INFO - epoch 3 | batch 320 | train_loss: 0.00310853
+2026-04-23 18:41:19,713 - INFO - epoch 3 | batch 330 | train_loss: 0.00302716
+2026-04-23 18:41:20,521 - INFO - epoch 3 | batch 340 | train_loss: 0.00297174
+2026-04-23 18:41:21,331 - INFO - epoch 3 | batch 350 | train_loss: 0.00291286
+2026-04-23 18:41:22,158 - INFO - epoch 3 | batch 360 | train_loss: 0.00292061
+2026-04-23 18:41:34,331 - INFO - ================= epoch end =================
+2026-04-23 18:41:34,332 - INFO - epoch 3 | train_loss: 0.04906026 | valid_loss: 2.20668444 | valid balanc. acc.: 0.55436820
+2026-04-23 18:41:34,333 - INFO - metrics:
+{'accuracy': 0.5775862068965517, 'balanced_accuracy': 0.5543682039745033, 'f1': 0.6744186046511628, 'precision': 0.5833333333333334, 'recall': 0.7992125984251969}
+2026-04-23 18:41:35,157 - INFO - epoch 4 | batch 10 | train_loss: 0.00161300
+2026-04-23 18:41:36,030 - INFO - epoch 4 | batch 20 | train_loss: 0.00211069
+2026-04-23 18:41:36,920 - INFO - epoch 4 | batch 30 | train_loss: 0.00181367
+2026-04-23 18:41:37,741 - INFO - epoch 4 | batch 40 | train_loss: 0.00480139
+2026-04-23 18:41:38,751 - INFO - epoch 4 | batch 50 | train_loss: 0.00501072
+2026-04-23 18:41:39,610 - INFO - epoch 4 | batch 60 | train_loss: 0.00475395
+2026-04-23 18:41:40,443 - INFO - epoch 4 | batch 70 | train_loss: 0.00415940
+2026-04-23 18:41:41,254 - INFO - epoch 4 | batch 80 | train_loss: 0.00384616
+2026-04-23 18:41:42,070 - INFO - epoch 4 | batch 90 | train_loss: 0.00350664
+2026-04-23 18:41:42,942 - INFO - epoch 4 | batch 100 | train_loss: 0.00322609
+2026-04-23 18:41:43,757 - INFO - epoch 4 | batch 110 | train_loss: 0.00310079
+2026-04-23 18:41:44,568 - INFO - epoch 4 | batch 120 | train_loss: 0.00296262
+2026-04-23 18:41:45,393 - INFO - epoch 4 | batch 130 | train_loss: 0.00310357
+2026-04-23 18:41:46,238 - INFO - epoch 4 | batch 140 | train_loss: 0.00317854
+2026-04-23 18:41:47,074 - INFO - epoch 4 | batch 150 | train_loss: 0.00333308
+2026-04-23 18:41:47,884 - INFO - epoch 4 | batch 160 | train_loss: 0.00327641
+2026-04-23 18:41:48,696 - INFO - epoch 4 | batch 170 | train_loss: 0.00333441
+2026-04-23 18:41:49,503 - INFO - epoch 4 | batch 180 | train_loss: 0.00319290
+2026-04-23 18:41:50,344 - INFO - epoch 4 | batch 190 | train_loss: 0.00310089
+2026-04-23 18:41:51,152 - INFO - epoch 4 | batch 200 | train_loss: 0.00307916
+2026-04-23 18:41:51,962 - INFO - epoch 4 | batch 210 | train_loss: 0.00295860
+2026-04-23 18:41:52,775 - INFO - epoch 4 | batch 220 | train_loss: 0.00287712
+2026-04-23 18:41:53,691 - INFO - epoch 4 | batch 230 | train_loss: 0.00279427
+2026-04-23 18:41:54,537 - INFO - epoch 4 | batch 240 | train_loss: 0.00269729
+2026-04-23 18:41:55,356 - INFO - epoch 4 | batch 250 | train_loss: 0.00260286
+2026-04-23 18:41:56,171 - INFO - epoch 4 | batch 260 | train_loss: 0.00251418
+2026-04-23 18:41:56,996 - INFO - epoch 4 | batch 270 | train_loss: 0.00253428
+2026-04-23 18:41:57,821 - INFO - epoch 4 | batch 280 | train_loss: 0.00271346
+2026-04-23 18:41:58,658 - INFO - epoch 4 | batch 290 | train_loss: 0.00276303
+2026-04-23 18:41:59,468 - INFO - epoch 4 | batch 300 | train_loss: 0.00271637
+2026-04-23 18:42:00,280 - INFO - epoch 4 | batch 310 | train_loss: 0.00264695
+2026-04-23 18:42:01,115 - INFO - epoch 4 | batch 320 | train_loss: 0.00258449
+2026-04-23 18:42:01,946 - INFO - epoch 4 | batch 330 | train_loss: 0.00251376
+2026-04-23 18:42:02,756 - INFO - epoch 4 | batch 340 | train_loss: 0.00246204
+2026-04-23 18:42:03,579 - INFO - epoch 4 | batch 350 | train_loss: 0.00240658
+2026-04-23 18:42:04,445 - INFO - epoch 4 | batch 360 | train_loss: 0.00240013
+2026-04-23 18:42:17,120 - INFO - ================= epoch end =================
+2026-04-23 18:42:17,121 - INFO - epoch 4 | train_loss: 0.03809648 | valid_loss: 1.89952523 | valid balanc. acc.: 0.58935133
+2026-04-23 18:42:17,122 - INFO - metrics:
+{'accuracy': 0.6077586206896551, 'balanced_accuracy': 0.5893513310836146, 'f1': 0.6862068965517242, 'precision': 0.6104294478527608, 'recall': 0.7834645669291339}
+2026-04-23 18:42:18,031 - INFO - epoch 5 | batch 10 | train_loss: 0.00084257
+2026-04-23 18:42:18,873 - INFO - epoch 5 | batch 20 | train_loss: 0.00091750
+2026-04-23 18:42:19,725 - INFO - epoch 5 | batch 30 | train_loss: 0.00145888
+2026-04-23 18:42:20,542 - INFO - epoch 5 | batch 40 | train_loss: 0.00269825
+2026-04-23 18:42:21,367 - INFO - epoch 5 | batch 50 | train_loss: 0.00306337
+2026-04-23 18:42:22,176 - INFO - epoch 5 | batch 60 | train_loss: 0.00336097
+2026-04-23 18:42:22,986 - INFO - epoch 5 | batch 70 | train_loss: 0.00326040
+2026-04-23 18:42:23,862 - INFO - epoch 5 | batch 80 | train_loss: 0.00296931
+2026-04-23 18:42:24,670 - INFO - epoch 5 | batch 90 | train_loss: 0.00280581
+2026-04-23 18:42:25,496 - INFO - epoch 5 | batch 100 | train_loss: 0.00275813
+2026-04-23 18:42:26,390 - INFO - epoch 5 | batch 110 | train_loss: 0.00265530
+2026-04-23 18:42:27,205 - INFO - epoch 5 | batch 120 | train_loss: 0.00247515
+2026-04-23 18:42:28,013 - INFO - epoch 5 | batch 130 | train_loss: 0.00240477
+2026-04-23 18:42:28,830 - INFO - epoch 5 | batch 140 | train_loss: 0.00245531
+2026-04-23 18:42:29,642 - INFO - epoch 5 | batch 150 | train_loss: 0.00232911
+2026-04-23 18:42:30,456 - INFO - epoch 5 | batch 160 | train_loss: 0.00220444
+2026-04-23 18:42:31,274 - INFO - epoch 5 | batch 170 | train_loss: 0.00213796
+2026-04-23 18:42:32,084 - INFO - epoch 5 | batch 180 | train_loss: 0.00205642
+2026-04-23 18:42:32,888 - INFO - epoch 5 | batch 190 | train_loss: 0.00197205
+2026-04-23 18:42:33,691 - INFO - epoch 5 | batch 200 | train_loss: 0.00195822
+2026-04-23 18:42:34,505 - INFO - epoch 5 | batch 210 | train_loss: 0.00191940
+2026-04-23 18:42:35,325 - INFO - epoch 5 | batch 220 | train_loss: 0.00184834
+2026-04-23 18:42:36,130 - INFO - epoch 5 | batch 230 | train_loss: 0.00180708
+2026-04-23 18:42:36,932 - INFO - epoch 5 | batch 240 | train_loss: 0.00174692
+2026-04-23 18:42:37,735 - INFO - epoch 5 | batch 250 | train_loss: 0.00170429
+2026-04-23 18:42:38,563 - INFO - epoch 5 | batch 260 | train_loss: 0.00164938
+2026-04-23 18:42:39,464 - INFO - epoch 5 | batch 270 | train_loss: 0.00171602
+2026-04-23 18:42:40,398 - INFO - epoch 5 | batch 280 | train_loss: 0.00199545
+2026-04-23 18:42:41,294 - INFO - epoch 5 | batch 290 | train_loss: 0.00197123
+2026-04-23 18:42:42,190 - INFO - epoch 5 | batch 300 | train_loss: 0.00194497
+2026-04-23 18:42:43,244 - INFO - epoch 5 | batch 310 | train_loss: 0.00195158
+2026-04-23 18:42:44,066 - INFO - epoch 5 | batch 320 | train_loss: 0.00199915
+2026-04-23 18:42:44,892 - INFO - epoch 5 | batch 330 | train_loss: 0.00197833
+2026-04-23 18:42:45,706 - INFO - epoch 5 | batch 340 | train_loss: 0.00205461
+2026-04-23 18:42:46,527 - INFO - epoch 5 | batch 350 | train_loss: 0.00200290
+2026-04-23 18:42:47,335 - INFO - epoch 5 | batch 360 | train_loss: 0.00212515
+2026-04-23 18:42:58,030 - INFO - ================= epoch end =================
+2026-04-23 18:42:58,031 - INFO - epoch 5 | train_loss: 0.03639603 | valid_loss: 1.46821541 | valid balanc. acc.: 0.62303462
+2026-04-23 18:42:58,031 - INFO - metrics:
+{'accuracy': 0.639367816091954, 'balanced_accuracy': 0.623034620672416, 'f1': 0.7071178529754959, 'precision': 0.6365546218487395, 'recall': 0.7952755905511811}
+2026-04-23 18:42:58,825 - INFO - epoch 6 | batch 10 | train_loss: 0.00073956
+2026-04-23 18:42:59,631 - INFO - epoch 6 | batch 20 | train_loss: 0.00082254
+2026-04-23 18:43:00,437 - INFO - epoch 6 | batch 30 | train_loss: 0.00078568
+2026-04-23 18:43:01,264 - INFO - epoch 6 | batch 40 | train_loss: 0.00084386
+2026-04-23 18:43:02,130 - INFO - epoch 6 | batch 50 | train_loss: 0.00075142
+2026-04-23 18:43:02,943 - INFO - epoch 6 | batch 60 | train_loss: 0.00065617
+2026-04-23 18:43:03,750 - INFO - epoch 6 | batch 70 | train_loss: 0.00060462
+2026-04-23 18:43:04,556 - INFO - epoch 6 | batch 80 | train_loss: 0.00058377
+2026-04-23 18:43:05,362 - INFO - epoch 6 | batch 90 | train_loss: 0.00055519
+2026-04-23 18:43:06,167 - INFO - epoch 6 | batch 100 | train_loss: 0.00059821
+2026-04-23 18:43:06,973 - INFO - epoch 6 | batch 110 | train_loss: 0.00055554
+2026-04-23 18:43:07,780 - INFO - epoch 6 | batch 120 | train_loss: 0.00053911
+2026-04-23 18:43:08,585 - INFO - epoch 6 | batch 130 | train_loss: 0.00051637
+2026-04-23 18:43:09,391 - INFO - epoch 6 | batch 140 | train_loss: 0.00049957
+2026-04-23 18:43:10,198 - INFO - epoch 6 | batch 150 | train_loss: 0.00047422
+2026-04-23 18:43:11,003 - INFO - epoch 6 | batch 160 | train_loss: 0.00044825
+2026-04-23 18:43:11,811 - INFO - epoch 6 | batch 170 | train_loss: 0.00042865
+2026-04-23 18:43:12,616 - INFO - epoch 6 | batch 180 | train_loss: 0.00046248
+2026-04-23 18:43:13,422 - INFO - epoch 6 | batch 190 | train_loss: 0.00064120
+2026-04-23 18:43:14,228 - INFO - epoch 6 | batch 200 | train_loss: 0.00065298
+2026-04-23 18:43:15,033 - INFO - epoch 6 | batch 210 | train_loss: 0.00102004
+2026-04-23 18:43:15,839 - INFO - epoch 6 | batch 220 | train_loss: 0.00105635
+2026-04-23 18:43:16,647 - INFO - epoch 6 | batch 230 | train_loss: 0.00113541
+2026-04-23 18:43:17,451 - INFO - epoch 6 | batch 240 | train_loss: 0.00121925
+2026-04-23 18:43:18,259 - INFO - epoch 6 | batch 250 | train_loss: 0.00119928
+2026-04-23 18:43:19,065 - INFO - epoch 6 | batch 260 | train_loss: 0.00134994
+2026-04-23 18:43:19,871 - INFO - epoch 6 | batch 270 | train_loss: 0.00157301
+2026-04-23 18:43:20,678 - INFO - epoch 6 | batch 280 | train_loss: 0.00156294
+2026-04-23 18:43:21,480 - INFO - epoch 6 | batch 290 | train_loss: 0.00153032
+2026-04-23 18:43:22,287 - INFO - epoch 6 | batch 300 | train_loss: 0.00151859
+2026-04-23 18:43:23,093 - INFO - epoch 6 | batch 310 | train_loss: 0.00148737
+2026-04-23 18:43:23,900 - INFO - epoch 6 | batch 320 | train_loss: 0.00145076
+2026-04-23 18:43:24,706 - INFO - epoch 6 | batch 330 | train_loss: 0.00143891
+2026-04-23 18:43:25,510 - INFO - epoch 6 | batch 340 | train_loss: 0.00147433
+2026-04-23 18:43:26,315 - INFO - epoch 6 | batch 350 | train_loss: 0.00153623
+2026-04-23 18:43:27,124 - INFO - epoch 6 | batch 360 | train_loss: 0.00155342
+2026-04-23 18:43:37,796 - INFO - ================= epoch end =================
+2026-04-23 18:43:37,797 - INFO - epoch 6 | train_loss: 0.02436779 | valid_loss: 1.36520249 | valid balanc. acc.: 0.60193726
+2026-04-23 18:43:37,798 - INFO - metrics:
+{'accuracy': 0.625, 'balanced_accuracy': 0.6019372578427696, 'f1': 0.7116022099447514, 'precision': 0.6145038167938931, 'recall': 0.8451443569553806}
+2026-04-23 18:43:38,587 - INFO - epoch 7 | batch 10 | train_loss: 0.00046887
+2026-04-23 18:43:39,392 - INFO - epoch 7 | batch 20 | train_loss: 0.00030054
+2026-04-23 18:43:40,200 - INFO - epoch 7 | batch 30 | train_loss: 0.00029064
+2026-04-23 18:43:41,008 - INFO - epoch 7 | batch 40 | train_loss: 0.00030068
+2026-04-23 18:43:41,814 - INFO - epoch 7 | batch 50 | train_loss: 0.00026613
+2026-04-23 18:43:42,621 - INFO - epoch 7 | batch 60 | train_loss: 0.00028191
+2026-04-23 18:43:43,431 - INFO - epoch 7 | batch 70 | train_loss: 0.00027143
+2026-04-23 18:43:44,246 - INFO - epoch 7 | batch 80 | train_loss: 0.00032017
+2026-04-23 18:43:45,051 - INFO - epoch 7 | batch 90 | train_loss: 0.00029347
+2026-04-23 18:43:45,854 - INFO - epoch 7 | batch 100 | train_loss: 0.00048547
+2026-04-23 18:43:46,658 - INFO - epoch 7 | batch 110 | train_loss: 0.00047473
+2026-04-23 18:43:47,464 - INFO - epoch 7 | batch 120 | train_loss: 0.00048227
+2026-04-23 18:43:48,273 - INFO - epoch 7 | batch 130 | train_loss: 0.00049177
+2026-04-23 18:43:49,098 - INFO - epoch 7 | batch 140 | train_loss: 0.00065751
+2026-04-23 18:43:50,006 - INFO - epoch 7 | batch 150 | train_loss: 0.00148284
+2026-04-23 18:43:50,836 - INFO - epoch 7 | batch 160 | train_loss: 0.00158390
+2026-04-23 18:43:51,638 - INFO - epoch 7 | batch 170 | train_loss: 0.00153188
+2026-04-23 18:43:52,442 - INFO - epoch 7 | batch 180 | train_loss: 0.00149151
+2026-04-23 18:43:53,248 - INFO - epoch 7 | batch 190 | train_loss: 0.00143435
+2026-04-23 18:43:54,055 - INFO - epoch 7 | batch 200 | train_loss: 0.00147212
+2026-04-23 18:43:54,864 - INFO - epoch 7 | batch 210 | train_loss: 0.00162370
+2026-04-23 18:43:55,681 - INFO - epoch 7 | batch 220 | train_loss: 0.00162358
+2026-04-23 18:43:56,503 - INFO - epoch 7 | batch 230 | train_loss: 0.00158863
+2026-04-23 18:43:57,313 - INFO - epoch 7 | batch 240 | train_loss: 0.00155667
+2026-04-23 18:43:58,119 - INFO - epoch 7 | batch 250 | train_loss: 0.00150221
+2026-04-23 18:43:58,924 - INFO - epoch 7 | batch 260 | train_loss: 0.00145531
+2026-04-23 18:43:59,728 - INFO - epoch 7 | batch 270 | train_loss: 0.00142603
+2026-04-23 18:44:00,532 - INFO - epoch 7 | batch 280 | train_loss: 0.00138902
+2026-04-23 18:44:01,336 - INFO - epoch 7 | batch 290 | train_loss: 0.00135781
+2026-04-23 18:44:02,140 - INFO - epoch 7 | batch 300 | train_loss: 0.00131500
+2026-04-23 18:44:02,942 - INFO - epoch 7 | batch 310 | train_loss: 0.00127712
+2026-04-23 18:44:03,745 - INFO - epoch 7 | batch 320 | train_loss: 0.00124451
+2026-04-23 18:44:04,550 - INFO - epoch 7 | batch 330 | train_loss: 0.00120826
+2026-04-23 18:44:05,360 - INFO - epoch 7 | batch 340 | train_loss: 0.00117638
+2026-04-23 18:44:06,173 - INFO - epoch 7 | batch 350 | train_loss: 0.00114621
+2026-04-23 18:44:06,983 - INFO - epoch 7 | batch 360 | train_loss: 0.00111777
+2026-04-23 18:44:20,985 - INFO - ================= epoch end =================
+2026-04-23 18:44:20,986 - INFO - epoch 7 | train_loss: 0.01760406 | valid_loss: 1.55914097 | valid balanc. acc.: 0.62653418
+2026-04-23 18:44:20,988 - INFO - metrics:
+{'accuracy': 0.6379310344827587, 'balanced_accuracy': 0.6265341832270965, 'f1': 0.6930572472594397, 'precision': 0.6465909090909091, 'recall': 0.7467191601049868}
+2026-04-23 18:44:21,991 - INFO - epoch 8 | batch 10 | train_loss: 0.00045123
+2026-04-23 18:44:22,975 - INFO - epoch 8 | batch 20 | train_loss: 0.00045584
+2026-04-23 18:44:23,924 - INFO - epoch 8 | batch 30 | train_loss: 0.00047745
+2026-04-23 18:44:24,779 - INFO - epoch 8 | batch 40 | train_loss: 0.00038970
+2026-04-23 18:44:25,606 - INFO - epoch 8 | batch 50 | train_loss: 0.00032037
+2026-04-23 18:44:26,452 - INFO - epoch 8 | batch 60 | train_loss: 0.00027202
+2026-04-23 18:44:27,299 - INFO - epoch 8 | batch 70 | train_loss: 0.00029332
+2026-04-23 18:44:28,109 - INFO - epoch 8 | batch 80 | train_loss: 0.00029747
+2026-04-23 18:44:28,927 - INFO - epoch 8 | batch 90 | train_loss: 0.00027946
+2026-04-23 18:44:29,740 - INFO - epoch 8 | batch 100 | train_loss: 0.00025573
+2026-04-23 18:44:30,554 - INFO - epoch 8 | batch 110 | train_loss: 0.00023683
+2026-04-23 18:44:31,402 - INFO - epoch 8 | batch 120 | train_loss: 0.00024890
+2026-04-23 18:44:32,213 - INFO - epoch 8 | batch 130 | train_loss: 0.00024346
+2026-04-23 18:44:33,025 - INFO - epoch 8 | batch 140 | train_loss: 0.00028359
+2026-04-23 18:44:33,831 - INFO - epoch 8 | batch 150 | train_loss: 0.00026853
+2026-04-23 18:44:34,666 - INFO - epoch 8 | batch 160 | train_loss: 0.00025619
+2026-04-23 18:44:35,508 - INFO - epoch 8 | batch 170 | train_loss: 0.00034480
+2026-04-23 18:44:36,329 - INFO - epoch 8 | batch 180 | train_loss: 0.00041636
+2026-04-23 18:44:37,128 - INFO - epoch 8 | batch 190 | train_loss: 0.00042660
+2026-04-23 18:44:37,992 - INFO - epoch 8 | batch 200 | train_loss: 0.00047724
+2026-04-23 18:44:38,801 - INFO - epoch 8 | batch 210 | train_loss: 0.00060755
+2026-04-23 18:44:39,607 - INFO - epoch 8 | batch 220 | train_loss: 0.00061735
+2026-04-23 18:44:40,412 - INFO - epoch 8 | batch 230 | train_loss: 0.00073606
+2026-04-23 18:44:41,218 - INFO - epoch 8 | batch 240 | train_loss: 0.00075488
+2026-04-23 18:44:42,023 - INFO - epoch 8 | batch 250 | train_loss: 0.00130665
+2026-04-23 18:44:42,830 - INFO - epoch 8 | batch 260 | train_loss: 0.00130083
+2026-04-23 18:44:43,637 - INFO - epoch 8 | batch 270 | train_loss: 0.00130033
+2026-04-23 18:44:44,441 - INFO - epoch 8 | batch 280 | train_loss: 0.00130099
+2026-04-23 18:44:45,248 - INFO - epoch 8 | batch 290 | train_loss: 0.00127039
+2026-04-23 18:44:46,054 - INFO - epoch 8 | batch 300 | train_loss: 0.00124320
+2026-04-23 18:44:46,859 - INFO - epoch 8 | batch 310 | train_loss: 0.00123758
+2026-04-23 18:44:47,666 - INFO - epoch 8 | batch 320 | train_loss: 0.00121548
+2026-04-23 18:44:48,469 - INFO - epoch 8 | batch 330 | train_loss: 0.00122468
+2026-04-23 18:44:49,275 - INFO - epoch 8 | batch 340 | train_loss: 0.00123146
+2026-04-23 18:44:50,084 - INFO - epoch 8 | batch 350 | train_loss: 0.00124225
+2026-04-23 18:44:50,889 - INFO - epoch 8 | batch 360 | train_loss: 0.00122719
+2026-04-23 18:45:01,539 - INFO - ================= epoch end =================
+2026-04-23 18:45:01,539 - INFO - epoch 8 | train_loss: 0.02003463 | valid_loss: 1.53596583 | valid balanc. acc.: 0.63625797
+2026-04-23 18:45:01,540 - INFO - metrics:
+{'accuracy': 0.6451149425287356, 'balanced_accuracy': 0.6362579677540308, 'f1': 0.6924034869240349, 'precision': 0.6587677725118484, 'recall': 0.7296587926509186}
+2026-04-23 18:45:02,335 - INFO - epoch 9 | batch 10 | train_loss: 0.00088364
+2026-04-23 18:45:03,142 - INFO - epoch 9 | batch 20 | train_loss: 0.00084454
+2026-04-23 18:45:03,949 - INFO - epoch 9 | batch 30 | train_loss: 0.00196985
+2026-04-23 18:45:04,754 - INFO - epoch 9 | batch 40 | train_loss: 0.00171650
+2026-04-23 18:45:05,561 - INFO - epoch 9 | batch 50 | train_loss: 0.00150116
+2026-04-23 18:45:06,367 - INFO - epoch 9 | batch 60 | train_loss: 0.00187568
+2026-04-23 18:45:07,173 - INFO - epoch 9 | batch 70 | train_loss: 0.00174951
+2026-04-23 18:45:07,978 - INFO - epoch 9 | batch 80 | train_loss: 0.00158175
+2026-04-23 18:45:08,783 - INFO - epoch 9 | batch 90 | train_loss: 0.00144510
+2026-04-23 18:45:09,586 - INFO - epoch 9 | batch 100 | train_loss: 0.00130610
+2026-04-23 18:45:10,393 - INFO - epoch 9 | batch 110 | train_loss: 0.00125464
+2026-04-23 18:45:11,206 - INFO - epoch 9 | batch 120 | train_loss: 0.00117380
+2026-04-23 18:45:12,011 - INFO - epoch 9 | batch 130 | train_loss: 0.00110798
+2026-04-23 18:45:12,818 - INFO - epoch 9 | batch 140 | train_loss: 0.00103263
+2026-04-23 18:45:13,628 - INFO - epoch 9 | batch 150 | train_loss: 0.00097279
+2026-04-23 18:45:14,473 - INFO - epoch 9 | batch 160 | train_loss: 0.00093709
+2026-04-23 18:45:15,295 - INFO - epoch 9 | batch 170 | train_loss: 0.00088511
+2026-04-23 18:45:16,096 - INFO - epoch 9 | batch 180 | train_loss: 0.00087628
+2026-04-23 18:45:16,915 - INFO - epoch 9 | batch 190 | train_loss: 0.00085080
+2026-04-23 18:45:17,725 - INFO - epoch 9 | batch 200 | train_loss: 0.00089455
+2026-04-23 18:45:18,528 - INFO - epoch 9 | batch 210 | train_loss: 0.00086859
+2026-04-23 18:45:19,334 - INFO - epoch 9 | batch 220 | train_loss: 0.00085168
+2026-04-23 18:45:20,137 - INFO - epoch 9 | batch 230 | train_loss: 0.00085459
+2026-04-23 18:45:20,941 - INFO - epoch 9 | batch 240 | train_loss: 0.00083815
+2026-04-23 18:45:21,811 - INFO - epoch 9 | batch 250 | train_loss: 0.00080833
+2026-04-23 18:45:22,668 - INFO - epoch 9 | batch 260 | train_loss: 0.00090497
+2026-04-23 18:45:23,474 - INFO - epoch 9 | batch 270 | train_loss: 0.00087893
+2026-04-23 18:45:24,313 - INFO - epoch 9 | batch 280 | train_loss: 0.00091818
+2026-04-23 18:45:25,118 - INFO - epoch 9 | batch 290 | train_loss: 0.00091607
+2026-04-23 18:45:25,920 - INFO - epoch 9 | batch 300 | train_loss: 0.00089076
+2026-04-23 18:45:26,711 - INFO - epoch 9 | batch 310 | train_loss: 0.00087726
+2026-04-23 18:45:27,520 - INFO - epoch 9 | batch 320 | train_loss: 0.00087153
+2026-04-23 18:45:28,326 - INFO - epoch 9 | batch 330 | train_loss: 0.00087742
+2026-04-23 18:45:29,138 - INFO - epoch 9 | batch 340 | train_loss: 0.00099649
+2026-04-23 18:45:29,945 - INFO - epoch 9 | batch 350 | train_loss: 0.00101686
+2026-04-23 18:45:30,750 - INFO - epoch 9 | batch 360 | train_loss: 0.00100108
+2026-04-23 18:45:42,113 - INFO - ================= epoch end =================
+2026-04-23 18:45:42,115 - INFO - epoch 9 | train_loss: 0.01638757 | valid_loss: 1.68737384 | valid balanc. acc.: 0.58690789
+2026-04-23 18:45:42,115 - INFO - metrics:
+{'accuracy': 0.6070402298850575, 'balanced_accuracy': 0.5869078865141857, 'f1': 0.690084985835694, 'precision': 0.6071784646061814, 'recall': 0.7992125984251969}
+2026-04-23 18:45:42,922 - INFO - epoch 10 | batch 10 | train_loss: 0.00050368
+2026-04-23 18:45:43,731 - INFO - epoch 10 | batch 20 | train_loss: 0.00027798
+2026-04-23 18:45:44,533 - INFO - epoch 10 | batch 30 | train_loss: 0.00022120
+2026-04-23 18:45:45,363 - INFO - epoch 10 | batch 40 | train_loss: 0.00027119
+2026-04-23 18:45:46,172 - INFO - epoch 10 | batch 50 | train_loss: 0.00023309
+2026-04-23 18:45:46,985 - INFO - epoch 10 | batch 60 | train_loss: 0.00026194
+2026-04-23 18:45:47,898 - INFO - epoch 10 | batch 70 | train_loss: 0.00024593
+2026-04-23 18:45:48,742 - INFO - epoch 10 | batch 80 | train_loss: 0.00022031
+2026-04-23 18:45:49,696 - INFO - epoch 10 | batch 90 | train_loss: 0.00022307
+2026-04-23 18:45:50,523 - INFO - epoch 10 | batch 100 | train_loss: 0.00020585
+2026-04-23 18:45:51,346 - INFO - epoch 10 | batch 110 | train_loss: 0.00020247
+2026-04-23 18:45:52,163 - INFO - epoch 10 | batch 120 | train_loss: 0.00022367
+2026-04-23 18:45:52,975 - INFO - epoch 10 | batch 130 | train_loss: 0.00024348
+2026-04-23 18:45:53,785 - INFO - epoch 10 | batch 140 | train_loss: 0.00025638
+2026-04-23 18:45:54,618 - INFO - epoch 10 | batch 150 | train_loss: 0.00025099
+2026-04-23 18:45:55,431 - INFO - epoch 10 | batch 160 | train_loss: 0.00023707
+2026-04-23 18:45:56,241 - INFO - epoch 10 | batch 170 | train_loss: 0.00023674
+2026-04-23 18:45:57,048 - INFO - epoch 10 | batch 180 | train_loss: 0.00022517
+2026-04-23 18:45:57,860 - INFO - epoch 10 | batch 190 | train_loss: 0.00021479
+2026-04-23 18:45:58,675 - INFO - epoch 10 | batch 200 | train_loss: 0.00020710
+2026-04-23 18:45:59,480 - INFO - epoch 10 | batch 210 | train_loss: 0.00019943
+2026-04-23 18:46:00,289 - INFO - epoch 10 | batch 220 | train_loss: 0.00020221
+2026-04-23 18:46:01,093 - INFO - epoch 10 | batch 230 | train_loss: 0.00025586
+2026-04-23 18:46:01,898 - INFO - epoch 10 | batch 240 | train_loss: 0.00087035
+2026-04-23 18:46:02,715 - INFO - epoch 10 | batch 250 | train_loss: 0.00091222
+2026-04-23 18:46:03,518 - INFO - epoch 10 | batch 260 | train_loss: 0.00089367
+2026-04-23 18:46:04,325 - INFO - epoch 10 | batch 270 | train_loss: 0.00086938
+2026-04-23 18:46:05,133 - INFO - epoch 10 | batch 280 | train_loss: 0.00085085
+2026-04-23 18:46:05,940 - INFO - epoch 10 | batch 290 | train_loss: 0.00088379
+2026-04-23 18:46:06,743 - INFO - epoch 10 | batch 300 | train_loss: 0.00086467
+2026-04-23 18:46:07,548 - INFO - epoch 10 | batch 310 | train_loss: 0.00088123
+2026-04-23 18:46:08,352 - INFO - epoch 10 | batch 320 | train_loss: 0.00086836
+2026-04-23 18:46:09,161 - INFO - epoch 10 | batch 330 | train_loss: 0.00087957
+2026-04-23 18:46:09,965 - INFO - epoch 10 | batch 340 | train_loss: 0.00086761
+2026-04-23 18:46:10,776 - INFO - epoch 10 | batch 350 | train_loss: 0.00084588
+2026-04-23 18:46:11,594 - INFO - epoch 10 | batch 360 | train_loss: 0.00085541
+2026-04-23 18:46:22,392 - INFO - ================= epoch end =================
+2026-04-23 18:46:22,393 - INFO - epoch 10 | train_loss: 0.01343498 | valid_loss: 2.08709904 | valid balanc. acc.: 0.62192226
+2026-04-23 18:46:22,394 - INFO - metrics:
+{'accuracy': 0.6364942528735632, 'balanced_accuracy': 0.6219222597175353, 'f1': 0.7002369668246445, 'precision': 0.6382289416846653, 'recall': 0.7755905511811023}
+2026-04-23 18:46:22,398 - INFO - Fold 5
+2026-04-23 18:46:22,404 - INFO - 
+    ======= about folds =======
+    ((5923, 8), (1357, 8))
+    set()
+    label
+0    2977
+1    2946
+Name: image_path, dtype: int64     
+    label
+0    663
+1    694
+Name: image_path, dtype: int64
+    
+2026-04-23 18:46:22,622 - INFO - 
+    Всего параметров: 11,177,538
+    Обучаемых:       11,177,538
+    
+2026-04-23 18:46:23,418 - INFO - epoch 1 | batch 10 | train_loss: 0.05434652
+2026-04-23 18:46:24,224 - INFO - epoch 1 | batch 20 | train_loss: 0.04904418
+2026-04-23 18:46:25,028 - INFO - epoch 1 | batch 30 | train_loss: 0.04159796
+2026-04-23 18:46:25,833 - INFO - epoch 1 | batch 40 | train_loss: 0.03935375
+2026-04-23 18:46:26,638 - INFO - epoch 1 | batch 50 | train_loss: 0.03616962
+2026-04-23 18:46:27,445 - INFO - epoch 1 | batch 60 | train_loss: 0.03411382
+2026-04-23 18:46:28,274 - INFO - epoch 1 | batch 70 | train_loss: 0.03286071
+2026-04-23 18:46:29,078 - INFO - epoch 1 | batch 80 | train_loss: 0.03055141
+2026-04-23 18:46:29,884 - INFO - epoch 1 | batch 90 | train_loss: 0.02882962
+2026-04-23 18:46:30,694 - INFO - epoch 1 | batch 100 | train_loss: 0.02720905
+2026-04-23 18:46:31,502 - INFO - epoch 1 | batch 110 | train_loss: 0.02610495
+2026-04-23 18:46:32,305 - INFO - epoch 1 | batch 120 | train_loss: 0.02506082
+2026-04-23 18:46:33,109 - INFO - epoch 1 | batch 130 | train_loss: 0.02438547
+2026-04-23 18:46:33,915 - INFO - epoch 1 | batch 140 | train_loss: 0.02336818
+2026-04-23 18:46:34,725 - INFO - epoch 1 | batch 150 | train_loss: 0.02245420
+2026-04-23 18:46:35,541 - INFO - epoch 1 | batch 160 | train_loss: 0.02183927
+2026-04-23 18:46:36,421 - INFO - epoch 1 | batch 170 | train_loss: 0.02100079
+2026-04-23 18:46:37,231 - INFO - epoch 1 | batch 180 | train_loss: 0.02032739
+2026-04-23 18:46:38,046 - INFO - epoch 1 | batch 190 | train_loss: 0.01984092
+2026-04-23 18:46:38,860 - INFO - epoch 1 | batch 200 | train_loss: 0.01918361
+2026-04-23 18:46:39,674 - INFO - epoch 1 | batch 210 | train_loss: 0.01863852
+2026-04-23 18:46:40,482 - INFO - epoch 1 | batch 220 | train_loss: 0.01838852
+2026-04-23 18:46:41,291 - INFO - epoch 1 | batch 230 | train_loss: 0.01806262
+2026-04-23 18:46:42,106 - INFO - epoch 1 | batch 240 | train_loss: 0.01770350
+2026-04-23 18:46:42,937 - INFO - epoch 1 | batch 250 | train_loss: 0.01743435
+2026-04-23 18:46:43,747 - INFO - epoch 1 | batch 260 | train_loss: 0.01715181
+2026-04-23 18:46:44,555 - INFO - epoch 1 | batch 270 | train_loss: 0.01667969
+2026-04-23 18:46:45,367 - INFO - epoch 1 | batch 280 | train_loss: 0.01633681
+2026-04-23 18:46:46,185 - INFO - epoch 1 | batch 290 | train_loss: 0.01608971
+2026-04-23 18:46:46,991 - INFO - epoch 1 | batch 300 | train_loss: 0.01575056
+2026-04-23 18:46:47,798 - INFO - epoch 1 | batch 310 | train_loss: 0.01559103
+2026-04-23 18:46:48,610 - INFO - epoch 1 | batch 320 | train_loss: 0.01525701
+2026-04-23 18:46:49,416 - INFO - epoch 1 | batch 330 | train_loss: 0.01499951
+2026-04-23 18:46:50,231 - INFO - epoch 1 | batch 340 | train_loss: 0.01466369
+2026-04-23 18:46:51,046 - INFO - epoch 1 | batch 350 | train_loss: 0.01443738
+2026-04-23 18:46:51,865 - INFO - epoch 1 | batch 360 | train_loss: 0.01431426
+2026-04-23 18:46:52,696 - INFO - epoch 1 | batch 370 | train_loss: 0.01407975
+2026-04-23 18:47:03,138 - INFO - ================= epoch end =================
+2026-04-23 18:47:03,139 - INFO - epoch 1 | train_loss: 0.22493304 | valid_loss: 1.00207005 | valid balanc. acc.: 0.61919121
+2026-04-23 18:47:03,140 - INFO - metrics:
+{'accuracy': 0.6241709653647752, 'balanced_accuracy': 0.6191912145039794, 'f1': 0.6949760765550239, 'precision': 0.5940695296523517, 'recall': 0.8371757925072046}
+2026-04-23 18:47:03,251 - INFO - save checkpoint: ..\models_checkpoints/resnet_18_backbone_cv/2026-04-23_18_17_44_full_tuning_patient/fold5/checkpoint/best_model.pth
+2026-04-23 18:47:04,051 - INFO - epoch 2 | batch 10 | train_loss: 0.00414099
+2026-04-23 18:47:04,886 - INFO - epoch 2 | batch 20 | train_loss: 0.00299957
+2026-04-23 18:47:05,698 - INFO - epoch 2 | batch 30 | train_loss: 0.00299225
+2026-04-23 18:47:06,510 - INFO - epoch 2 | batch 40 | train_loss: 0.00312677
+2026-04-23 18:47:07,315 - INFO - epoch 2 | batch 50 | train_loss: 0.00301804
+2026-04-23 18:47:08,126 - INFO - epoch 2 | batch 60 | train_loss: 0.00332836
+2026-04-23 18:47:08,936 - INFO - epoch 2 | batch 70 | train_loss: 0.00297358
+2026-04-23 18:47:09,746 - INFO - epoch 2 | batch 80 | train_loss: 0.00276581
+2026-04-23 18:47:10,553 - INFO - epoch 2 | batch 90 | train_loss: 0.00335608
+2026-04-23 18:47:11,364 - INFO - epoch 2 | batch 100 | train_loss: 0.00341317
+2026-04-23 18:47:12,171 - INFO - epoch 2 | batch 110 | train_loss: 0.00392918
+2026-04-23 18:47:13,045 - INFO - epoch 2 | batch 120 | train_loss: 0.00401859
+2026-04-23 18:47:13,855 - INFO - epoch 2 | batch 130 | train_loss: 0.00395277
+2026-04-23 18:47:14,663 - INFO - epoch 2 | batch 140 | train_loss: 0.00387206
+2026-04-23 18:47:15,473 - INFO - epoch 2 | batch 150 | train_loss: 0.00383825
+2026-04-23 18:47:16,284 - INFO - epoch 2 | batch 160 | train_loss: 0.00373761
+2026-04-23 18:47:17,092 - INFO - epoch 2 | batch 170 | train_loss: 0.00374513
+2026-04-23 18:47:17,898 - INFO - epoch 2 | batch 180 | train_loss: 0.00361380
+2026-04-23 18:47:18,708 - INFO - epoch 2 | batch 190 | train_loss: 0.00373881
+2026-04-23 18:47:19,555 - INFO - epoch 2 | batch 200 | train_loss: 0.00387635
+2026-04-23 18:47:20,364 - INFO - epoch 2 | batch 210 | train_loss: 0.00387757
+2026-04-23 18:47:21,172 - INFO - epoch 2 | batch 220 | train_loss: 0.00394804
+2026-04-23 18:47:21,983 - INFO - epoch 2 | batch 230 | train_loss: 0.00389576
+2026-04-23 18:47:22,794 - INFO - epoch 2 | batch 240 | train_loss: 0.00388987
+2026-04-23 18:47:23,601 - INFO - epoch 2 | batch 250 | train_loss: 0.00418132
+2026-04-23 18:47:24,408 - INFO - epoch 2 | batch 260 | train_loss: 0.00440402
+2026-04-23 18:47:25,218 - INFO - epoch 2 | batch 270 | train_loss: 0.00434935
+2026-04-23 18:47:26,025 - INFO - epoch 2 | batch 280 | train_loss: 0.00426587
+2026-04-23 18:47:26,839 - INFO - epoch 2 | batch 290 | train_loss: 0.00416418
+2026-04-23 18:47:27,669 - INFO - epoch 2 | batch 300 | train_loss: 0.00439428
+2026-04-23 18:47:28,479 - INFO - epoch 2 | batch 310 | train_loss: 0.00434097
+2026-04-23 18:47:29,320 - INFO - epoch 2 | batch 320 | train_loss: 0.00423294
+2026-04-23 18:47:30,128 - INFO - epoch 2 | batch 330 | train_loss: 0.00422899
+2026-04-23 18:47:30,945 - INFO - epoch 2 | batch 340 | train_loss: 0.00427249
+2026-04-23 18:47:31,752 - INFO - epoch 2 | batch 350 | train_loss: 0.00426118
+2026-04-23 18:47:32,562 - INFO - epoch 2 | batch 360 | train_loss: 0.00421310
+2026-04-23 18:47:33,422 - INFO - epoch 2 | batch 370 | train_loss: 0.00412710
+2026-04-23 18:47:44,086 - INFO - ================= epoch end =================
+2026-04-23 18:47:44,088 - INFO - epoch 2 | train_loss: 0.06586419 | valid_loss: 1.54452971 | valid balanc. acc.: 0.69269889
+2026-04-23 18:47:44,089 - INFO - metrics:
+{'accuracy': 0.6985998526160648, 'balanced_accuracy': 0.6926988929023172, 'f1': 0.763447079236553, 'precision': 0.6376811594202898, 'recall': 0.9510086455331412}
+2026-04-23 18:47:44,221 - INFO - save checkpoint: ..\models_checkpoints/resnet_18_backbone_cv/2026-04-23_18_17_44_full_tuning_patient/fold5/checkpoint/best_model.pth
+2026-04-23 18:47:45,020 - INFO - epoch 3 | batch 10 | train_loss: 0.00065249
+2026-04-23 18:47:45,828 - INFO - epoch 3 | batch 20 | train_loss: 0.00121957
+2026-04-23 18:47:46,636 - INFO - epoch 3 | batch 30 | train_loss: 0.00115816
+2026-04-23 18:47:47,452 - INFO - epoch 3 | batch 40 | train_loss: 0.00103129
+2026-04-23 18:47:48,279 - INFO - epoch 3 | batch 50 | train_loss: 0.00096065
+2026-04-23 18:47:49,088 - INFO - epoch 3 | batch 60 | train_loss: 0.00090074
+2026-04-23 18:47:49,896 - INFO - epoch 3 | batch 70 | train_loss: 0.00079843
+2026-04-23 18:47:50,716 - INFO - epoch 3 | batch 80 | train_loss: 0.00116616
+2026-04-23 18:47:51,524 - INFO - epoch 3 | batch 90 | train_loss: 0.00127724
+2026-04-23 18:47:52,336 - INFO - epoch 3 | batch 100 | train_loss: 0.00121756
+2026-04-23 18:47:53,185 - INFO - epoch 3 | batch 110 | train_loss: 0.00152298
+2026-04-23 18:47:53,998 - INFO - epoch 3 | batch 120 | train_loss: 0.00151434
+2026-04-23 18:47:54,806 - INFO - epoch 3 | batch 130 | train_loss: 0.00187507
+2026-04-23 18:47:55,614 - INFO - epoch 3 | batch 140 | train_loss: 0.00178557
+2026-04-23 18:47:56,425 - INFO - epoch 3 | batch 150 | train_loss: 0.00220146
+2026-04-23 18:47:57,236 - INFO - epoch 3 | batch 160 | train_loss: 0.00229276
+2026-04-23 18:47:58,046 - INFO - epoch 3 | batch 170 | train_loss: 0.00229246
+2026-04-23 18:47:58,855 - INFO - epoch 3 | batch 180 | train_loss: 0.00242908
+2026-04-23 18:47:59,664 - INFO - epoch 3 | batch 190 | train_loss: 0.00255123
+2026-04-23 18:48:00,476 - INFO - epoch 3 | batch 200 | train_loss: 0.00254962
+2026-04-23 18:48:01,286 - INFO - epoch 3 | batch 210 | train_loss: 0.00253649
+2026-04-23 18:48:02,094 - INFO - epoch 3 | batch 220 | train_loss: 0.00245224
+2026-04-23 18:48:02,903 - INFO - epoch 3 | batch 230 | train_loss: 0.00237671
+2026-04-23 18:48:03,806 - INFO - epoch 3 | batch 240 | train_loss: 0.00233465
+2026-04-23 18:48:04,742 - INFO - epoch 3 | batch 250 | train_loss: 0.00243126
+2026-04-23 18:48:05,591 - INFO - epoch 3 | batch 260 | train_loss: 0.00257952
+2026-04-23 18:48:06,444 - INFO - epoch 3 | batch 270 | train_loss: 0.00254803
+2026-04-23 18:48:07,299 - INFO - epoch 3 | batch 280 | train_loss: 0.00248942
+2026-04-23 18:48:08,119 - INFO - epoch 3 | batch 290 | train_loss: 0.00241345
+2026-04-23 18:48:09,075 - INFO - epoch 3 | batch 300 | train_loss: 0.00236398
+2026-04-23 18:48:09,905 - INFO - epoch 3 | batch 310 | train_loss: 0.00235645
+2026-04-23 18:48:10,764 - INFO - epoch 3 | batch 320 | train_loss: 0.00232608
+2026-04-23 18:48:11,585 - INFO - epoch 3 | batch 330 | train_loss: 0.00231511
+2026-04-23 18:48:12,518 - INFO - epoch 3 | batch 340 | train_loss: 0.00228669
+2026-04-23 18:48:13,368 - INFO - epoch 3 | batch 350 | train_loss: 0.00230747
+2026-04-23 18:48:14,300 - INFO - epoch 3 | batch 360 | train_loss: 0.00244084
+2026-04-23 18:48:15,118 - INFO - epoch 3 | batch 370 | train_loss: 0.00241332
+2026-04-23 18:48:27,262 - INFO - ================= epoch end =================
+2026-04-23 18:48:27,263 - INFO - epoch 3 | train_loss: 0.04500751 | valid_loss: 2.09700540 | valid balanc. acc.: 0.61143132
+2026-04-23 18:48:27,264 - INFO - metrics:
+{'accuracy': 0.6101694915254238, 'balanced_accuracy': 0.6114313160422671, 'f1': 0.5933897002305919, 'precision': 0.6359143327841845, 'recall': 0.5561959654178674}
+2026-04-23 18:48:28,125 - INFO - epoch 4 | batch 10 | train_loss: 0.01394277
+2026-04-23 18:48:28,937 - INFO - epoch 4 | batch 20 | train_loss: 0.01090136
+2026-04-23 18:48:29,747 - INFO - epoch 4 | batch 30 | train_loss: 0.00774716
+2026-04-23 18:48:30,603 - INFO - epoch 4 | batch 40 | train_loss: 0.00649705
+2026-04-23 18:48:31,413 - INFO - epoch 4 | batch 50 | train_loss: 0.00673359
+2026-04-23 18:48:32,228 - INFO - epoch 4 | batch 60 | train_loss: 0.00597158
+2026-04-23 18:48:33,120 - INFO - epoch 4 | batch 70 | train_loss: 0.00527645
+2026-04-23 18:48:33,936 - INFO - epoch 4 | batch 80 | train_loss: 0.00472842
+2026-04-23 18:48:34,754 - INFO - epoch 4 | batch 90 | train_loss: 0.00440945
+2026-04-23 18:48:35,565 - INFO - epoch 4 | batch 100 | train_loss: 0.00419573
+2026-04-23 18:48:36,384 - INFO - epoch 4 | batch 110 | train_loss: 0.00404902
+2026-04-23 18:48:37,264 - INFO - epoch 4 | batch 120 | train_loss: 0.00386501
+2026-04-23 18:48:38,074 - INFO - epoch 4 | batch 130 | train_loss: 0.00366878
+2026-04-23 18:48:38,894 - INFO - epoch 4 | batch 140 | train_loss: 0.00349648
+2026-04-23 18:48:39,722 - INFO - epoch 4 | batch 150 | train_loss: 0.00339977
+2026-04-23 18:48:40,602 - INFO - epoch 4 | batch 160 | train_loss: 0.00327909
+2026-04-23 18:48:41,429 - INFO - epoch 4 | batch 170 | train_loss: 0.00313586
+2026-04-23 18:48:42,245 - INFO - epoch 4 | batch 180 | train_loss: 0.00308813
+2026-04-23 18:48:43,068 - INFO - epoch 4 | batch 190 | train_loss: 0.00294671
+2026-04-23 18:48:43,946 - INFO - epoch 4 | batch 200 | train_loss: 0.00284977
+2026-04-23 18:48:44,761 - INFO - epoch 4 | batch 210 | train_loss: 0.00272521
+2026-04-23 18:48:45,603 - INFO - epoch 4 | batch 220 | train_loss: 0.00261888
+2026-04-23 18:48:46,616 - INFO - epoch 4 | batch 230 | train_loss: 0.00251610
+2026-04-23 18:48:47,664 - INFO - epoch 4 | batch 240 | train_loss: 0.00241640
+2026-04-23 18:48:48,574 - INFO - epoch 4 | batch 250 | train_loss: 0.00233608
+2026-04-23 18:48:49,381 - INFO - epoch 4 | batch 260 | train_loss: 0.00225646
+2026-04-23 18:48:50,184 - INFO - epoch 4 | batch 270 | train_loss: 0.00219194
+2026-04-23 18:48:50,990 - INFO - epoch 4 | batch 280 | train_loss: 0.00212594
+2026-04-23 18:48:51,798 - INFO - epoch 4 | batch 290 | train_loss: 0.00206190
+2026-04-23 18:48:52,606 - INFO - epoch 4 | batch 300 | train_loss: 0.00200969
+2026-04-23 18:48:53,413 - INFO - epoch 4 | batch 310 | train_loss: 0.00197058
+2026-04-23 18:48:54,256 - INFO - epoch 4 | batch 320 | train_loss: 0.00193358
+2026-04-23 18:48:55,168 - INFO - epoch 4 | batch 330 | train_loss: 0.00196884
+2026-04-23 18:48:56,086 - INFO - epoch 4 | batch 340 | train_loss: 0.00194993
+2026-04-23 18:48:56,899 - INFO - epoch 4 | batch 350 | train_loss: 0.00192171
+2026-04-23 18:48:57,719 - INFO - epoch 4 | batch 360 | train_loss: 0.00202353
+2026-04-23 18:48:58,589 - INFO - epoch 4 | batch 370 | train_loss: 0.00219228
+2026-04-23 18:49:09,684 - INFO - ================= epoch end =================
+2026-04-23 18:49:09,685 - INFO - epoch 4 | train_loss: 0.03498272 | valid_loss: 1.93825357 | valid balanc. acc.: 0.55378465
+2026-04-23 18:49:09,686 - INFO - metrics:
+{'accuracy': 0.5563743551952837, 'balanced_accuracy': 0.5537846484193323, 'f1': 0.606020942408377, 'precision': 0.5551558752997602, 'recall': 0.6671469740634006}
+2026-04-23 18:49:10,548 - INFO - epoch 5 | batch 10 | train_loss: 0.00094940
+2026-04-23 18:49:11,391 - INFO - epoch 5 | batch 20 | train_loss: 0.00137758
+2026-04-23 18:49:12,261 - INFO - epoch 5 | batch 30 | train_loss: 0.00153403
+2026-04-23 18:49:13,082 - INFO - epoch 5 | batch 40 | train_loss: 0.00130727
+2026-04-23 18:49:13,909 - INFO - epoch 5 | batch 50 | train_loss: 0.00115755
+2026-04-23 18:49:14,745 - INFO - epoch 5 | batch 60 | train_loss: 0.00141650
+2026-04-23 18:49:15,616 - INFO - epoch 5 | batch 70 | train_loss: 0.00142006
+2026-04-23 18:49:16,444 - INFO - epoch 5 | batch 80 | train_loss: 0.00150582
+2026-04-23 18:49:17,331 - INFO - epoch 5 | batch 90 | train_loss: 0.00143061
+2026-04-23 18:49:18,170 - INFO - epoch 5 | batch 100 | train_loss: 0.00134498
+2026-04-23 18:49:19,061 - INFO - epoch 5 | batch 110 | train_loss: 0.00133055
+2026-04-23 18:49:19,973 - INFO - epoch 5 | batch 120 | train_loss: 0.00123956
+2026-04-23 18:49:20,892 - INFO - epoch 5 | batch 130 | train_loss: 0.00168149
+2026-04-23 18:49:21,702 - INFO - epoch 5 | batch 140 | train_loss: 0.00180054
+2026-04-23 18:49:22,514 - INFO - epoch 5 | batch 150 | train_loss: 0.00182105
+2026-04-23 18:49:23,325 - INFO - epoch 5 | batch 160 | train_loss: 0.00178049
+2026-04-23 18:49:24,143 - INFO - epoch 5 | batch 170 | train_loss: 0.00181272
+2026-04-23 18:49:25,018 - INFO - epoch 5 | batch 180 | train_loss: 0.00181960
+2026-04-23 18:49:25,824 - INFO - epoch 5 | batch 190 | train_loss: 0.00184748
+2026-04-23 18:49:26,632 - INFO - epoch 5 | batch 200 | train_loss: 0.00181921
+2026-04-23 18:49:27,438 - INFO - epoch 5 | batch 210 | train_loss: 0.00176662
+2026-04-23 18:49:28,258 - INFO - epoch 5 | batch 220 | train_loss: 0.00176840
+2026-04-23 18:49:29,078 - INFO - epoch 5 | batch 230 | train_loss: 0.00170448
+2026-04-23 18:49:29,898 - INFO - epoch 5 | batch 240 | train_loss: 0.00172870
+2026-04-23 18:49:30,708 - INFO - epoch 5 | batch 250 | train_loss: 0.00170520
+2026-04-23 18:49:31,508 - INFO - epoch 5 | batch 260 | train_loss: 0.00173007
+2026-04-23 18:49:32,318 - INFO - epoch 5 | batch 270 | train_loss: 0.00170916
+2026-04-23 18:49:33,168 - INFO - epoch 5 | batch 280 | train_loss: 0.00167432
+2026-04-23 18:49:34,029 - INFO - epoch 5 | batch 290 | train_loss: 0.00168369
+2026-04-23 18:49:34,882 - INFO - epoch 5 | batch 300 | train_loss: 0.00163677
+2026-04-23 18:49:35,688 - INFO - epoch 5 | batch 310 | train_loss: 0.00158914
+2026-04-23 18:49:36,508 - INFO - epoch 5 | batch 320 | train_loss: 0.00154377
+2026-04-23 18:49:37,320 - INFO - epoch 5 | batch 330 | train_loss: 0.00150018
+2026-04-23 18:49:38,167 - INFO - epoch 5 | batch 340 | train_loss: 0.00146654
+2026-04-23 18:49:39,108 - INFO - epoch 5 | batch 350 | train_loss: 0.00142719
+2026-04-23 18:49:39,946 - INFO - epoch 5 | batch 360 | train_loss: 0.00144693
+2026-04-23 18:49:40,786 - INFO - epoch 5 | batch 370 | train_loss: 0.00141948
+2026-04-23 18:49:52,030 - INFO - ================= epoch end =================
+2026-04-23 18:49:52,031 - INFO - epoch 5 | train_loss: 0.02265090 | valid_loss: 2.22955602 | valid balanc. acc.: 0.57712737
+2026-04-23 18:49:52,032 - INFO - metrics:
+{'accuracy': 0.582903463522476, 'balanced_accuracy': 0.5771273705669366, 'f1': 0.670547147846333, 'precision': 0.5625, 'recall': 0.829971181556196}
+2026-04-23 18:49:52,846 - INFO - epoch 6 | batch 10 | train_loss: 0.00370762
+2026-04-23 18:49:53,698 - INFO - epoch 6 | batch 20 | train_loss: 0.00314886
+2026-04-23 18:49:54,502 - INFO - epoch 6 | batch 30 | train_loss: 0.00278287
+2026-04-23 18:49:55,319 - INFO - epoch 6 | batch 40 | train_loss: 0.00249299
+2026-04-23 18:49:56,216 - INFO - epoch 6 | batch 50 | train_loss: 0.00216774
+2026-04-23 18:49:57,114 - INFO - epoch 6 | batch 60 | train_loss: 0.00205203
+2026-04-23 18:49:57,930 - INFO - epoch 6 | batch 70 | train_loss: 0.00182035
+2026-04-23 18:49:58,758 - INFO - epoch 6 | batch 80 | train_loss: 0.00212280
+2026-04-23 18:49:59,580 - INFO - epoch 6 | batch 90 | train_loss: 0.00193553
+2026-04-23 18:50:00,408 - INFO - epoch 6 | batch 100 | train_loss: 0.00237132
+2026-04-23 18:50:01,254 - INFO - epoch 6 | batch 110 | train_loss: 0.00245358
+2026-04-23 18:50:02,058 - INFO - epoch 6 | batch 120 | train_loss: 0.00253412
+2026-04-23 18:50:02,884 - INFO - epoch 6 | batch 130 | train_loss: 0.00237345
+2026-04-23 18:50:03,698 - INFO - epoch 6 | batch 140 | train_loss: 0.00223958
+2026-04-23 18:50:04,545 - INFO - epoch 6 | batch 150 | train_loss: 0.00225747
+2026-04-23 18:50:05,350 - INFO - epoch 6 | batch 160 | train_loss: 0.00213796
+2026-04-23 18:50:06,159 - INFO - epoch 6 | batch 170 | train_loss: 0.00202983
+2026-04-23 18:50:06,969 - INFO - epoch 6 | batch 180 | train_loss: 0.00194464
+2026-04-23 18:50:07,774 - INFO - epoch 6 | batch 190 | train_loss: 0.00185744
+2026-04-23 18:50:08,586 - INFO - epoch 6 | batch 200 | train_loss: 0.00183708
+2026-04-23 18:50:09,398 - INFO - epoch 6 | batch 210 | train_loss: 0.00180848
+2026-04-23 18:50:10,212 - INFO - epoch 6 | batch 220 | train_loss: 0.00175004
+2026-04-23 18:50:11,107 - INFO - epoch 6 | batch 230 | train_loss: 0.00167787
+2026-04-23 18:50:11,911 - INFO - epoch 6 | batch 240 | train_loss: 0.00163521
+2026-04-23 18:50:12,755 - INFO - epoch 6 | batch 250 | train_loss: 0.00158922
+2026-04-23 18:50:13,582 - INFO - epoch 6 | batch 260 | train_loss: 0.00154915
+2026-04-23 18:50:14,444 - INFO - epoch 6 | batch 270 | train_loss: 0.00149803
+2026-04-23 18:50:15,258 - INFO - epoch 6 | batch 280 | train_loss: 0.00145742
+2026-04-23 18:50:16,093 - INFO - epoch 6 | batch 290 | train_loss: 0.00151596
+2026-04-23 18:50:16,903 - INFO - epoch 6 | batch 300 | train_loss: 0.00148520
+2026-04-23 18:50:17,711 - INFO - epoch 6 | batch 310 | train_loss: 0.00149342
+2026-04-23 18:50:18,531 - INFO - epoch 6 | batch 320 | train_loss: 0.00147808
+2026-04-23 18:50:19,342 - INFO - epoch 6 | batch 330 | train_loss: 0.00145517
+2026-04-23 18:50:20,179 - INFO - epoch 6 | batch 340 | train_loss: 0.00154901
+2026-04-23 18:50:20,990 - INFO - epoch 6 | batch 350 | train_loss: 0.00151120
+2026-04-23 18:50:21,840 - INFO - epoch 6 | batch 360 | train_loss: 0.00151316
+2026-04-23 18:50:22,653 - INFO - epoch 6 | batch 370 | train_loss: 0.00154382
+2026-04-23 18:50:33,473 - INFO - ================= epoch end =================
+2026-04-23 18:50:33,474 - INFO - epoch 6 | train_loss: 0.02463620 | valid_loss: 2.07786037 | valid balanc. acc.: 0.63180961
+2026-04-23 18:50:33,474 - INFO - metrics:
+{'accuracy': 0.636698599852616, 'balanced_accuracy': 0.6318096070172693, 'f1': 0.704259148170366, 'precision': 0.6032887975334018, 'recall': 0.845821325648415}
+2026-04-23 18:50:34,296 - INFO - epoch 7 | batch 10 | train_loss: 0.00127424
+2026-04-23 18:50:35,144 - INFO - epoch 7 | batch 20 | train_loss: 0.00259159
+2026-04-23 18:50:36,021 - INFO - epoch 7 | batch 30 | train_loss: 0.00260129
+2026-04-23 18:50:36,830 - INFO - epoch 7 | batch 40 | train_loss: 0.00231823
+2026-04-23 18:50:37,642 - INFO - epoch 7 | batch 50 | train_loss: 0.00198518
+2026-04-23 18:50:38,511 - INFO - epoch 7 | batch 60 | train_loss: 0.00172262
+2026-04-23 18:50:39,322 - INFO - epoch 7 | batch 70 | train_loss: 0.00152730
+2026-04-23 18:50:40,140 - INFO - epoch 7 | batch 80 | train_loss: 0.00138035
+2026-04-23 18:50:40,950 - INFO - epoch 7 | batch 90 | train_loss: 0.00126203
+2026-04-23 18:50:41,797 - INFO - epoch 7 | batch 100 | train_loss: 0.00113985
+2026-04-23 18:50:42,635 - INFO - epoch 7 | batch 110 | train_loss: 0.00106357
+2026-04-23 18:50:43,484 - INFO - epoch 7 | batch 120 | train_loss: 0.00098446
+2026-04-23 18:50:44,296 - INFO - epoch 7 | batch 130 | train_loss: 0.00091611
+2026-04-23 18:50:45,157 - INFO - epoch 7 | batch 140 | train_loss: 0.00085693
+2026-04-23 18:50:45,967 - INFO - epoch 7 | batch 150 | train_loss: 0.00082263
+2026-04-23 18:50:46,778 - INFO - epoch 7 | batch 160 | train_loss: 0.00077688
+2026-04-23 18:50:47,588 - INFO - epoch 7 | batch 170 | train_loss: 0.00079905
+2026-04-23 18:50:48,445 - INFO - epoch 7 | batch 180 | train_loss: 0.00077511
+2026-04-23 18:50:49,254 - INFO - epoch 7 | batch 190 | train_loss: 0.00074541
+2026-04-23 18:50:50,065 - INFO - epoch 7 | batch 200 | train_loss: 0.00078227
+2026-04-23 18:50:50,908 - INFO - epoch 7 | batch 210 | train_loss: 0.00083315
+2026-04-23 18:50:51,795 - INFO - epoch 7 | batch 220 | train_loss: 0.00107939
+2026-04-23 18:50:52,608 - INFO - epoch 7 | batch 230 | train_loss: 0.00106131
+2026-04-23 18:50:53,419 - INFO - epoch 7 | batch 240 | train_loss: 0.00103169
+2026-04-23 18:50:54,260 - INFO - epoch 7 | batch 250 | train_loss: 0.00103822
+2026-04-23 18:50:55,115 - INFO - epoch 7 | batch 260 | train_loss: 0.00101223
+2026-04-23 18:50:55,931 - INFO - epoch 7 | batch 270 | train_loss: 0.00097796
+2026-04-23 18:50:56,763 - INFO - epoch 7 | batch 280 | train_loss: 0.00094832
+2026-04-23 18:50:57,593 - INFO - epoch 7 | batch 290 | train_loss: 0.00092085
+2026-04-23 18:50:58,493 - INFO - epoch 7 | batch 300 | train_loss: 0.00089685
+2026-04-23 18:50:59,296 - INFO - epoch 7 | batch 310 | train_loss: 0.00087407
+2026-04-23 18:51:00,103 - INFO - epoch 7 | batch 320 | train_loss: 0.00085032
+2026-04-23 18:51:00,909 - INFO - epoch 7 | batch 330 | train_loss: 0.00083957
+2026-04-23 18:51:01,736 - INFO - epoch 7 | batch 340 | train_loss: 0.00081628
+2026-04-23 18:51:02,538 - INFO - epoch 7 | batch 350 | train_loss: 0.00083078
+2026-04-23 18:51:03,346 - INFO - epoch 7 | batch 360 | train_loss: 0.00083510
+2026-04-23 18:51:04,150 - INFO - epoch 7 | batch 370 | train_loss: 0.00082638
+2026-04-23 18:51:14,303 - INFO - ================= epoch end =================
+2026-04-23 18:51:14,304 - INFO - epoch 7 | train_loss: 0.01318808 | valid_loss: 2.14277606 | valid balanc. acc.: 0.57616567
+2026-04-23 18:51:14,305 - INFO - metrics:
+{'accuracy': 0.5799557848194546, 'balanced_accuracy': 0.5761656691051504, 'f1': 0.64375, 'precision': 0.5684326710816777, 'recall': 0.7420749279538905}
+2026-04-23 18:51:15,101 - INFO - epoch 8 | batch 10 | train_loss: 0.00043793
+2026-04-23 18:51:15,905 - INFO - epoch 8 | batch 20 | train_loss: 0.00192961
+2026-04-23 18:51:16,747 - INFO - epoch 8 | batch 30 | train_loss: 0.00344712
+2026-04-23 18:51:17,550 - INFO - epoch 8 | batch 40 | train_loss: 0.00272703
+2026-04-23 18:51:18,354 - INFO - epoch 8 | batch 50 | train_loss: 0.00246855
+2026-04-23 18:51:19,159 - INFO - epoch 8 | batch 60 | train_loss: 0.00209518
+2026-04-23 18:51:19,978 - INFO - epoch 8 | batch 70 | train_loss: 0.00214773
+2026-04-23 18:51:20,787 - INFO - epoch 8 | batch 80 | train_loss: 0.00259320
+2026-04-23 18:51:21,598 - INFO - epoch 8 | batch 90 | train_loss: 0.00255066
+2026-04-23 18:51:22,472 - INFO - epoch 8 | batch 100 | train_loss: 0.00249002
+2026-04-23 18:51:23,488 - INFO - epoch 8 | batch 110 | train_loss: 0.00231868
+2026-04-23 18:51:24,303 - INFO - epoch 8 | batch 120 | train_loss: 0.00214797
+2026-04-23 18:51:25,111 - INFO - epoch 8 | batch 130 | train_loss: 0.00198628
+2026-04-23 18:51:25,954 - INFO - epoch 8 | batch 140 | train_loss: 0.00189429
+2026-04-23 18:51:26,803 - INFO - epoch 8 | batch 150 | train_loss: 0.00186902
+2026-04-23 18:51:27,613 - INFO - epoch 8 | batch 160 | train_loss: 0.00181759
+2026-04-23 18:51:28,455 - INFO - epoch 8 | batch 170 | train_loss: 0.00172825
+2026-04-23 18:51:29,263 - INFO - epoch 8 | batch 180 | train_loss: 0.00163828
+2026-04-23 18:51:30,105 - INFO - epoch 8 | batch 190 | train_loss: 0.00155378
+2026-04-23 18:51:30,913 - INFO - epoch 8 | batch 200 | train_loss: 0.00149148
+2026-04-23 18:51:31,722 - INFO - epoch 8 | batch 210 | train_loss: 0.00145262
+2026-04-23 18:51:32,529 - INFO - epoch 8 | batch 220 | train_loss: 0.00139112
+2026-04-23 18:51:33,351 - INFO - epoch 8 | batch 230 | train_loss: 0.00134204
+2026-04-23 18:51:34,154 - INFO - epoch 8 | batch 240 | train_loss: 0.00129788
+2026-04-23 18:51:34,963 - INFO - epoch 8 | batch 250 | train_loss: 0.00126528
+2026-04-23 18:51:35,773 - INFO - epoch 8 | batch 260 | train_loss: 0.00138866
+2026-04-23 18:51:36,621 - INFO - epoch 8 | batch 270 | train_loss: 0.00139572
+2026-04-23 18:51:37,447 - INFO - epoch 8 | batch 280 | train_loss: 0.00145142
+2026-04-23 18:51:38,249 - INFO - epoch 8 | batch 290 | train_loss: 0.00144859
+2026-04-23 18:51:39,060 - INFO - epoch 8 | batch 300 | train_loss: 0.00167922
+2026-04-23 18:51:39,882 - INFO - epoch 8 | batch 310 | train_loss: 0.00173929
+2026-04-23 18:51:40,689 - INFO - epoch 8 | batch 320 | train_loss: 0.00172197
+2026-04-23 18:51:41,495 - INFO - epoch 8 | batch 330 | train_loss: 0.00171149
+2026-04-23 18:51:42,301 - INFO - epoch 8 | batch 340 | train_loss: 0.00168295
+2026-04-23 18:51:43,209 - INFO - epoch 8 | batch 350 | train_loss: 0.00167303
+2026-04-23 18:51:44,046 - INFO - epoch 8 | batch 360 | train_loss: 0.00164262
+2026-04-23 18:51:44,933 - INFO - epoch 8 | batch 370 | train_loss: 0.00160358
+2026-04-23 18:51:56,385 - INFO - ================= epoch end =================
+2026-04-23 18:51:56,387 - INFO - epoch 8 | train_loss: 0.03373872 | valid_loss: 1.57806185 | valid balanc. acc.: 0.68243096
+2026-04-23 18:51:56,388 - INFO - metrics:
+{'accuracy': 0.6875460574797347, 'balanced_accuracy': 0.6824309639617319, 'f1': 0.7479191438763377, 'precision': 0.6366396761133604, 'recall': 0.9063400576368876}
+2026-04-23 18:51:57,323 - INFO - epoch 9 | batch 10 | train_loss: 0.00373572
+2026-04-23 18:51:58,142 - INFO - epoch 9 | batch 20 | train_loss: 0.00260827
+2026-04-23 18:51:58,957 - INFO - epoch 9 | batch 30 | train_loss: 0.00179910
+2026-04-23 18:51:59,777 - INFO - epoch 9 | batch 40 | train_loss: 0.00170536
+2026-04-23 18:52:00,670 - INFO - epoch 9 | batch 50 | train_loss: 0.00142513
+2026-04-23 18:52:01,675 - INFO - epoch 9 | batch 60 | train_loss: 0.00126582
+2026-04-23 18:52:02,499 - INFO - epoch 9 | batch 70 | train_loss: 0.00109403
+2026-04-23 18:52:03,309 - INFO - epoch 9 | batch 80 | train_loss: 0.00096702
+2026-04-23 18:52:04,120 - INFO - epoch 9 | batch 90 | train_loss: 0.00088253
+2026-04-23 18:52:04,991 - INFO - epoch 9 | batch 100 | train_loss: 0.00089857
+2026-04-23 18:52:05,801 - INFO - epoch 9 | batch 110 | train_loss: 0.00087339
+2026-04-23 18:52:06,749 - INFO - epoch 9 | batch 120 | train_loss: 0.00089653
+2026-04-23 18:52:07,591 - INFO - epoch 9 | batch 130 | train_loss: 0.00088888
+2026-04-23 18:52:08,425 - INFO - epoch 9 | batch 140 | train_loss: 0.00083272
+2026-04-23 18:52:09,239 - INFO - epoch 9 | batch 150 | train_loss: 0.00139579
+2026-04-23 18:52:10,055 - INFO - epoch 9 | batch 160 | train_loss: 0.00134385
+2026-04-23 18:52:10,855 - INFO - epoch 9 | batch 170 | train_loss: 0.00128089
+2026-04-23 18:52:11,672 - INFO - epoch 9 | batch 180 | train_loss: 0.00124843
+2026-04-23 18:52:12,475 - INFO - epoch 9 | batch 190 | train_loss: 0.00118657
+2026-04-23 18:52:13,285 - INFO - epoch 9 | batch 200 | train_loss: 0.00114046
+2026-04-23 18:52:14,097 - INFO - epoch 9 | batch 210 | train_loss: 0.00109448
+2026-04-23 18:52:14,925 - INFO - epoch 9 | batch 220 | train_loss: 0.00109403
+2026-04-23 18:52:15,783 - INFO - epoch 9 | batch 230 | train_loss: 0.00105098
+2026-04-23 18:52:16,677 - INFO - epoch 9 | batch 240 | train_loss: 0.00101059
+2026-04-23 18:52:17,591 - INFO - epoch 9 | batch 250 | train_loss: 0.00099469
+2026-04-23 18:52:18,403 - INFO - epoch 9 | batch 260 | train_loss: 0.00096008
+2026-04-23 18:52:19,215 - INFO - epoch 9 | batch 270 | train_loss: 0.00093203
+2026-04-23 18:52:20,041 - INFO - epoch 9 | batch 280 | train_loss: 0.00096447
+2026-04-23 18:52:21,007 - INFO - epoch 9 | batch 290 | train_loss: 0.00094001
+2026-04-23 18:52:21,840 - INFO - epoch 9 | batch 300 | train_loss: 0.00093460
+2026-04-23 18:52:22,677 - INFO - epoch 9 | batch 310 | train_loss: 0.00090798
+2026-04-23 18:52:23,519 - INFO - epoch 9 | batch 320 | train_loss: 0.00091157
+2026-04-23 18:52:24,453 - INFO - epoch 9 | batch 330 | train_loss: 0.00088783
+2026-04-23 18:52:25,263 - INFO - epoch 9 | batch 340 | train_loss: 0.00089887
+2026-04-23 18:52:26,095 - INFO - epoch 9 | batch 350 | train_loss: 0.00088739
+2026-04-23 18:52:26,982 - INFO - epoch 9 | batch 360 | train_loss: 0.00088804
+2026-04-23 18:52:27,836 - INFO - epoch 9 | batch 370 | train_loss: 0.00090317
+2026-04-23 18:52:39,307 - INFO - ================= epoch end =================
+2026-04-23 18:52:39,309 - INFO - epoch 9 | train_loss: 0.02025546 | valid_loss: 5.54824283 | valid balanc. acc.: 0.55543421
+2026-04-23 18:52:39,310 - INFO - metrics:
+{'accuracy': 0.5467943994104643, 'balanced_accuracy': 0.5554342109266672, 'f1': 0.2857142857142857, 'precision': 0.7365269461077845, 'recall': 0.17723342939481268}
+2026-04-23 18:52:40,178 - INFO - epoch 10 | batch 10 | train_loss: 0.01684851
+2026-04-23 18:52:40,989 - INFO - epoch 10 | batch 20 | train_loss: 0.00863721
+2026-04-23 18:52:41,806 - INFO - epoch 10 | batch 30 | train_loss: 0.00598677
+2026-04-23 18:52:42,618 - INFO - epoch 10 | batch 40 | train_loss: 0.00556953
+2026-04-23 18:52:43,563 - INFO - epoch 10 | batch 50 | train_loss: 0.00483000
+2026-04-23 18:52:44,375 - INFO - epoch 10 | batch 60 | train_loss: 0.00408869
+2026-04-23 18:52:45,192 - INFO - epoch 10 | batch 70 | train_loss: 0.00360099
+2026-04-23 18:52:46,005 - INFO - epoch 10 | batch 80 | train_loss: 0.00319299
+2026-04-23 18:52:46,862 - INFO - epoch 10 | batch 90 | train_loss: 0.00289671
+2026-04-23 18:52:47,696 - INFO - epoch 10 | batch 100 | train_loss: 0.00273129
+2026-04-23 18:52:48,530 - INFO - epoch 10 | batch 110 | train_loss: 0.00253755
+2026-04-23 18:52:49,343 - INFO - epoch 10 | batch 120 | train_loss: 0.00239174
+2026-04-23 18:52:50,171 - INFO - epoch 10 | batch 130 | train_loss: 0.00224631
+2026-04-23 18:52:50,979 - INFO - epoch 10 | batch 140 | train_loss: 0.00210076
+2026-04-23 18:52:51,813 - INFO - epoch 10 | batch 150 | train_loss: 0.00197168
+2026-04-23 18:52:52,637 - INFO - epoch 10 | batch 160 | train_loss: 0.00186466
+2026-04-23 18:52:53,451 - INFO - epoch 10 | batch 170 | train_loss: 0.00176355
+2026-04-23 18:52:54,261 - INFO - epoch 10 | batch 180 | train_loss: 0.00168319
+2026-04-23 18:52:55,070 - INFO - epoch 10 | batch 190 | train_loss: 0.00172899
+2026-04-23 18:52:55,901 - INFO - epoch 10 | batch 200 | train_loss: 0.00176479
+2026-04-23 18:52:56,717 - INFO - epoch 10 | batch 210 | train_loss: 0.00169194
+2026-04-23 18:52:57,532 - INFO - epoch 10 | batch 220 | train_loss: 0.00162136
+2026-04-23 18:52:58,375 - INFO - epoch 10 | batch 230 | train_loss: 0.00155512
+2026-04-23 18:52:59,234 - INFO - epoch 10 | batch 240 | train_loss: 0.00150337
+2026-04-23 18:53:00,046 - INFO - epoch 10 | batch 250 | train_loss: 0.00145481
+2026-04-23 18:53:00,856 - INFO - epoch 10 | batch 260 | train_loss: 0.00157383
+2026-04-23 18:53:01,666 - INFO - epoch 10 | batch 270 | train_loss: 0.00155742
+2026-04-23 18:53:02,508 - INFO - epoch 10 | batch 280 | train_loss: 0.00152030
+2026-04-23 18:53:03,326 - INFO - epoch 10 | batch 290 | train_loss: 0.00147182
+2026-04-23 18:53:04,135 - INFO - epoch 10 | batch 300 | train_loss: 0.00142590
+2026-04-23 18:53:04,960 - INFO - epoch 10 | batch 310 | train_loss: 0.00138223
+2026-04-23 18:53:05,785 - INFO - epoch 10 | batch 320 | train_loss: 0.00134190
+2026-04-23 18:53:06,657 - INFO - epoch 10 | batch 330 | train_loss: 0.00132767
+2026-04-23 18:53:07,467 - INFO - epoch 10 | batch 340 | train_loss: 0.00129328
+2026-04-23 18:53:08,303 - INFO - epoch 10 | batch 350 | train_loss: 0.00126777
+2026-04-23 18:53:09,122 - INFO - epoch 10 | batch 360 | train_loss: 0.00123467
+2026-04-23 18:53:09,934 - INFO - epoch 10 | batch 370 | train_loss: 0.00121540
+2026-04-23 18:53:20,891 - INFO - ================= epoch end =================
+2026-04-23 18:53:20,892 - INFO - epoch 10 | train_loss: 0.01939613 | valid_loss: 2.02188696 | valid balanc. acc.: 0.60614793
+2026-04-23 18:53:20,893 - INFO - metrics:
+{'accuracy': 0.6123802505526897, 'balanced_accuracy': 0.6061479346781941, 'f1': 0.6987399770904925, 'precision': 0.5798479087452472, 'recall': 0.8789625360230547}
