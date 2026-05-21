@@ -62,3 +62,17 @@ LCA, ResNet-18, 16, 1e-5, RMSProp, Валидация каждые 50 итера
 * F1: 0.658 ± 0.048
 * Balanced Accuracy: 0.609 ± 0.022
 * Accuracy: 0.605 ± 0.042
+
+## Визуализация
+
+Блокноты для визуализации датасета:
+* `./notebooks/dataset_visualization.ipynb`
+* `./notebooks/cadica_visualization.ipynb`
+
+### Примеры видео сосудов с поражениями
+
+#### Пример фреймов с поражениями (p12, v7)
+![Картинка](output_graphics/p12_v7_output_image.png)
+
+#### Пример видео (p12, v7)
+![Гифка](output_graphics/p12_v7_output_video.gif)
