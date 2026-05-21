@@ -1,0 +1,110 @@
+2026-04-09 13:20:39,590 - INFO -  
+===== general parameters =====
+SEED: 42
+DEVICE: cuda
+
+PATH_SELECTED_VIDEO: ..\..\datasets\CADICA\selectedVideos
+
+TRAIN_SIZE_DATA: 0.8
+BATCH_SIZE: 64
+input_img_shape: (3, 224, 224)
+
+===== train parameters =====
+class_weights: [1.7, 1]
+weights: tensor([1.7000, 1.0000], device='cuda:0')
+
+LR: 0.001
+MOMENTUM: 0.9
+LAMBDA_LR: 0.0001
+
+===== about model and save =====
+base_dir_for_model_save: ../models_checkpoints
+
+model_name: resnet_18_backbone
+prefix_train: classifier_layer_train_v2
+
+===== comments =====
+LCA
+split video level
+SGDM optimizer
+use augmentation
+use ImageNet stats for (mean, std) normalization 
+
+2026-04-09 13:20:58,266 - INFO - epoch 1 | batch 10 | train_loss: 0.01068538
+2026-04-09 13:21:07,591 - INFO - epoch 1 | batch 20 | train_loss: 0.01039058
+2026-04-09 13:21:17,225 - INFO - epoch 1 | batch 30 | train_loss: 0.01005800
+2026-04-09 13:21:38,653 - INFO - ================= epoch end =================
+2026-04-09 13:21:38,654 - INFO - epoch 1 | train_loss: 0.64109684 | valid_loss: 0.67219371 | valid balanc. acc.: 0.57863289
+2026-04-09 13:21:38,655 - INFO - metrics:
+{'accuracy': 0.6875, 'balanced_accuracy': 0.5786328920057231, 'f1': 0.7919463087248322, 'precision': 0.7603092783505154, 'recall': 0.8263305322128851}
+2026-04-09 13:21:40,235 - INFO - save checkpoint: ../models_checkpoints/resnet_18_backbone/2026-04-09_13_20_39_classifier_layer_train_v2/checkpoint/best_model.pth
+2026-04-09 13:21:57,455 - INFO - epoch 2 | batch 10 | train_loss: 0.00827277
+2026-04-09 13:22:06,687 - INFO - epoch 2 | batch 20 | train_loss: 0.00804882
+2026-04-09 13:22:15,605 - INFO - epoch 2 | batch 30 | train_loss: 0.00777187
+2026-04-09 13:22:33,710 - INFO - ================= epoch end =================
+2026-04-09 13:22:33,711 - INFO - epoch 2 | train_loss: 0.49122940 | valid_loss: 0.74439652 | valid balanc. acc.: 0.53667654
+2026-04-09 13:22:33,712 - INFO - metrics:
+{'accuracy': 0.6713709677419355, 'balanced_accuracy': 0.5366765411200451, 'f1': 0.7869281045751634, 'precision': 0.7377450980392157, 'recall': 0.8431372549019608}
+2026-04-09 13:22:46,045 - INFO - epoch 3 | batch 10 | train_loss: 0.00677587
+2026-04-09 13:22:54,905 - INFO - epoch 3 | batch 20 | train_loss: 0.00655723
+2026-04-09 13:23:04,430 - INFO - epoch 3 | batch 30 | train_loss: 0.00617950
+2026-04-09 13:23:22,555 - INFO - ================= epoch end =================
+2026-04-09 13:23:22,555 - INFO - epoch 3 | train_loss: 0.39021045 | valid_loss: 0.73799999 | valid balanc. acc.: 0.56742841
+2026-04-09 13:23:22,556 - INFO - metrics:
+{'accuracy': 0.6713709677419355, 'balanced_accuracy': 0.567428410213006, 'f1': 0.7788331071913162, 'precision': 0.7552631578947369, 'recall': 0.803921568627451}
+2026-04-09 13:23:34,853 - INFO - epoch 4 | batch 10 | train_loss: 0.00469290
+2026-04-09 13:23:43,496 - INFO - epoch 4 | batch 20 | train_loss: 0.00436434
+2026-04-09 13:23:52,101 - INFO - epoch 4 | batch 30 | train_loss: 0.00420549
+2026-04-09 13:24:08,821 - INFO - ================= epoch end =================
+2026-04-09 13:24:08,822 - INFO - epoch 4 | train_loss: 0.26951720 | valid_loss: 0.75083699 | valid balanc. acc.: 0.60257340
+2026-04-09 13:24:08,823 - INFO - metrics:
+{'accuracy': 0.6713709677419355, 'balanced_accuracy': 0.6025734034621042, 'f1': 0.7687943262411348, 'precision': 0.7787356321839081, 'recall': 0.7591036414565826}
+2026-04-09 13:24:08,938 - INFO - save checkpoint: ../models_checkpoints/resnet_18_backbone/2026-04-09_13_20_39_classifier_layer_train_v2/checkpoint/best_model.pth
+2026-04-09 13:24:20,484 - INFO - epoch 5 | batch 10 | train_loss: 0.00326360
+2026-04-09 13:24:28,882 - INFO - epoch 5 | batch 20 | train_loss: 0.00345179
+2026-04-09 13:24:37,230 - INFO - epoch 5 | batch 30 | train_loss: 0.00314828
+2026-04-09 13:24:53,729 - INFO - ================= epoch end =================
+2026-04-09 13:24:53,730 - INFO - epoch 5 | train_loss: 0.20099456 | valid_loss: 0.80038747 | valid balanc. acc.: 0.63080628
+2026-04-09 13:24:53,730 - INFO - metrics:
+{'accuracy': 0.7278225806451613, 'balanced_accuracy': 0.6308062793462709, 'f1': 0.8183041722745625, 'precision': 0.7875647668393783, 'recall': 0.8515406162464986}
+2026-04-09 13:24:53,851 - INFO - save checkpoint: ../models_checkpoints/resnet_18_backbone/2026-04-09_13_20_39_classifier_layer_train_v2/checkpoint/best_model.pth
+2026-04-09 13:25:05,357 - INFO - epoch 6 | batch 10 | train_loss: 0.00261524
+2026-04-09 13:25:13,684 - INFO - epoch 6 | batch 20 | train_loss: 0.00238217
+2026-04-09 13:25:21,987 - INFO - epoch 6 | batch 30 | train_loss: 0.00227057
+2026-04-09 13:25:38,777 - INFO - ================= epoch end =================
+2026-04-09 13:25:38,778 - INFO - epoch 6 | train_loss: 0.14674108 | valid_loss: 0.79410896 | valid balanc. acc.: 0.62756182
+2026-04-09 13:25:38,779 - INFO - metrics:
+{'accuracy': 0.6915322580645161, 'balanced_accuracy': 0.6275618160933438, 'f1': 0.7829787234042553, 'precision': 0.7931034482758621, 'recall': 0.773109243697479}
+2026-04-09 13:25:50,516 - INFO - epoch 7 | batch 10 | train_loss: 0.00181054
+2026-04-09 13:25:58,916 - INFO - epoch 7 | batch 20 | train_loss: 0.00163817
+2026-04-09 13:26:07,351 - INFO - epoch 7 | batch 30 | train_loss: 0.00156539
+2026-04-09 13:26:24,286 - INFO - ================= epoch end =================
+2026-04-09 13:26:24,287 - INFO - epoch 7 | train_loss: 0.10020289 | valid_loss: 0.94070016 | valid balanc. acc.: 0.57080386
+2026-04-09 13:26:24,287 - INFO - metrics:
+{'accuracy': 0.657258064516129, 'balanced_accuracy': 0.5708038611127905, 'f1': 0.7632311977715878, 'precision': 0.7590027700831025, 'recall': 0.7675070028011205}
+2026-04-09 13:26:36,345 - INFO - epoch 8 | batch 10 | train_loss: 0.00166075
+2026-04-09 13:26:44,438 - INFO - epoch 8 | batch 20 | train_loss: 0.00147173
+2026-04-09 13:26:53,069 - INFO - epoch 8 | batch 30 | train_loss: 0.00136832
+2026-04-09 13:27:09,851 - INFO - ================= epoch end =================
+2026-04-09 13:27:09,853 - INFO - epoch 8 | train_loss: 0.08616394 | valid_loss: 0.95968744 | valid balanc. acc.: 0.55746327
+2026-04-09 13:27:09,854 - INFO - metrics:
+{'accuracy': 0.6854838709677419, 'balanced_accuracy': 0.5574632730790158, 'f1': 0.7952755905511811, 'precision': 0.7481481481481481, 'recall': 0.8487394957983193}
+2026-04-09 13:27:21,743 - INFO - epoch 9 | batch 10 | train_loss: 0.00100498
+2026-04-09 13:27:30,367 - INFO - epoch 9 | batch 20 | train_loss: 0.00099970
+2026-04-09 13:27:38,145 - INFO - epoch 9 | batch 30 | train_loss: 0.00112970
+2026-04-09 13:27:54,404 - INFO - ================= epoch end =================
+2026-04-09 13:27:54,404 - INFO - epoch 9 | train_loss: 0.07191791 | valid_loss: 0.96505128 | valid balanc. acc.: 0.57420954
+2026-04-09 13:27:54,405 - INFO - metrics:
+{'accuracy': 0.6653225806451613, 'balanced_accuracy': 0.5742095399310804, 'f1': 0.7707182320441989, 'precision': 0.7602179836512262, 'recall': 0.7815126050420168}
+2026-04-09 13:28:05,735 - INFO - epoch 10 | batch 10 | train_loss: 0.00098492
+2026-04-09 13:28:14,213 - INFO - epoch 10 | batch 20 | train_loss: 0.00100286
+2026-04-09 13:28:22,615 - INFO - epoch 10 | batch 30 | train_loss: 0.00096045
+2026-04-09 13:28:41,181 - INFO - ================= epoch end =================
+2026-04-09 13:28:41,181 - INFO - epoch 10 | train_loss: 0.06306148 | valid_loss: 1.12890548 | valid balanc. acc.: 0.54202688
+2026-04-09 13:28:41,183 - INFO - metrics:
+{'accuracy': 0.6411290322580645, 'balanced_accuracy': 0.5420268826955242, 'f1': 0.7548209366391184, 'precision': 0.7425474254742548, 'recall': 0.7675070028011205}
+2026-04-09 13:28:41,184 - INFO - Early stopping. Epoch: 10
+2026-04-09 13:28:41,184 - INFO - best balanced accuracy: 0.6308062793462709
+2026-04-09 14:03:51,928 - INFO - 
+Test metrics:
+{'accuracy': 0.6062874251497006, 'balanced_accuracy': 0.5019463255580637, 'f1': 0.7346115035317861, 'precision': 0.6642335766423357, 'recall': 0.8216704288939052}
