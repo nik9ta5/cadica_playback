@@ -71,8 +71,18 @@ LCA, ResNet-18, 16, 1e-5, RMSProp, Валидация каждые 50 итера
 
 ### Примеры видео сосудов с поражениями
 
-#### Пример фреймов с поражениями (p12, v7)
-![Картинка](output_graphics/p12_v7_output_image.png)
-
 #### Пример видео (p12, v7)
 ![Гифка](output_graphics/p12_v7_output_video.gif)
+
+#### Пример видео (p11, v8)
+![Гифка](output_graphics/p11_v8_output_video.gif)
+
+#### Пример видео (p11, v16)
+![Гифка](output_graphics/p11_v16_output_video.gif)
+
+#### Пример видео (p40, v1)
+![Гифка](output_graphics/p40_v1_output_video.gif)
+
+
+#### Пример фреймов с поражениями (p12, v7)
+![Картинка](output_graphics/p12_v7_output_image.png)
